@@ -10,6 +10,22 @@ npm run dev
 
 打开 `http://localhost:4173/`。
 
+## 生成音频
+
+当前页面会优先播放 `audio/` 目录里的 MP3 文件。音频已经生成好并可以直接部署。
+
+如果以后新增单词或例句，可以先安装生成工具：
+
+```sh
+python3 -m pip install --target ./.python-packages -r requirements.txt
+```
+
+然后补齐缺失音频：
+
+```sh
+npm run audio
+```
+
 ## 部署到 Vercel
 
 1. 把这个文件夹推到 GitHub 仓库。

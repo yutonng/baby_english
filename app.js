@@ -285,6 +285,7 @@ let currentScene = scenes[0];
 let currentWord = scenes[0].words[0];
 let voices = [];
 let activeUtterance = null;
+let activeAudio = null;
 let audioToastTimer = null;
 
 function renderScenes() {
@@ -339,6 +340,19 @@ function getEnglishVoice() {
   return preferred || voices.find((voice) => voice.lang === "en-US") || voices.find((voice) => voice.lang.startsWith("en")) || null;
 }
 
+function slugify(text) {
+  return text
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function getAudioUrl(text, kind) {
+  if (!kind) return "";
+  return `./audio/${kind}/${slugify(text)}.mp3`;
+}
+
 function showAudioMessage(message) {
   audioToast.textContent = message;
   audioToast.classList.remove("is-hidden");
@@ -372,17 +386,62 @@ function waitForVoices(timeout = 900) {
   });
 }
 
-async function speak(text, target, retried = false) {
+function playLocalAudio(text, target, kind) {
+  const audioUrl = getAudioUrl(text, kind);
+  if (!audioUrl) return Promise.reject(new Error("No local audio path"));
+
+  if (activeAudio) {
+    activeAudio.pause();
+    activeAudio.currentTime = 0;
+  }
+
+  activeAudio = new Audio(audioUrl);
+  activeAudio.preload = "auto";
+  activeAudio.playbackRate = 1;
+
+  if (target) target.classList.add("is-speaking");
+
+  return new Promise((resolve, reject) => {
+    activeAudio.addEventListener("ended", () => {
+      target?.classList.remove("is-speaking");
+      resolve();
+    }, { once: true });
+
+    activeAudio.addEventListener("error", () => {
+      target?.classList.remove("is-speaking");
+      reject(new Error("Local audio failed"));
+    }, { once: true });
+
+    activeAudio.play().catch((error) => {
+      target?.classList.remove("is-speaking");
+      reject(error);
+    });
+  });
+}
+
+async function speak(text, target, kind, retried = false) {
+  document.querySelectorAll(".is-speaking").forEach((item) => item.classList.remove("is-speaking"));
+
+  try {
+    await playLocalAudio(text, target, kind);
+    return;
+  } catch {
+    activeAudio = null;
+  }
+
   if (!canUseSpeech()) {
-    showAudioMessage("这个浏览器不支持直接朗读，可以换 Chrome 或 Safari 试试。");
+    showAudioMessage("这个浏览器不能播放朗读。请确认音频文件已部署，或换 Chrome/Safari 试试。");
     return;
   }
 
   await waitForVoices();
 
+  if (activeAudio) {
+    activeAudio.pause();
+    activeAudio.currentTime = 0;
+  }
   window.speechSynthesis.cancel();
   window.speechSynthesis.resume();
-  document.querySelectorAll(".is-speaking").forEach((item) => item.classList.remove("is-speaking"));
 
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "en-US";
@@ -397,10 +456,10 @@ async function speak(text, target, retried = false) {
   utterance.onerror = () => {
     target?.classList.remove("is-speaking");
     if (!retried) {
-      window.setTimeout(() => speak(text, target, true), 180);
+      window.setTimeout(() => speak(text, target, kind, true), 180);
       return;
     }
-    showAudioMessage("朗读没有启动。Android 上建议用 Chrome，并确认系统文字转语音已开启。");
+    showAudioMessage("朗读没有启动。请确认音频文件已部署，或换 Chrome/Safari 试试。");
   };
 
   activeUtterance = utterance;
@@ -409,7 +468,7 @@ async function speak(text, target, retried = false) {
   window.setTimeout(() => {
     const synth = window.speechSynthesis;
     if (!retried && !synth.speaking && !synth.pending) {
-      speak(text, target, true);
+      speak(text, target, kind, true);
     }
   }, 280);
 }
@@ -424,13 +483,18 @@ function openWordSheet(item, scene) {
   sheetSentence.textContent = item.sentence;
   wordSheet.classList.remove("is-hidden");
   scrim.classList.remove("is-hidden");
-  speak(item.word, wordSoundButton);
+  speak(item.word, wordSoundButton, "words");
 }
 
 function closeWordSheet() {
   wordSheet.classList.add("is-hidden");
   scrim.classList.add("is-hidden");
+  if (activeAudio) {
+    activeAudio.pause();
+    activeAudio.currentTime = 0;
+  }
   window.speechSynthesis?.cancel();
+  activeAudio = null;
   activeUtterance = null;
   document.querySelectorAll(".is-speaking").forEach((item) => item.classList.remove("is-speaking"));
 }
@@ -472,5 +536,5 @@ backButton.addEventListener("click", showHome);
 voiceButton.addEventListener("click", () => speak("Hello! Let's learn English.", voiceButton));
 closeSheet.addEventListener("click", closeWordSheet);
 scrim.addEventListener("click", closeWordSheet);
-wordSoundButton.addEventListener("click", () => speak(currentWord.word, wordSoundButton));
-sentenceSoundButton.addEventListener("click", () => speak(currentWord.sentence, sentenceSoundButton));
+wordSoundButton.addEventListener("click", () => speak(currentWord.word, wordSoundButton, "words"));
+sentenceSoundButton.addEventListener("click", () => speak(currentWord.sentence, sentenceSoundButton, "sentences"));

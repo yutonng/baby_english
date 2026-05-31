@@ -5,6 +5,7 @@
   "description": "A static H5 English learning app for young children.",
   "scripts": {
     "dev": "python3 -m http.server 4173",
+    "audio": "node scripts/generate-audio.js",
     "check": "node --check app.js"
   }
 }
