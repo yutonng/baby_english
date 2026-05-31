@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#fff7e8" />
+    <title>Little English</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="home-view" id="homeView" aria-labelledby="homeTitle">
+        <header class="top-bar">
+          <div>
+            <p class="eyebrow">4 岁启蒙</p>
+            <h1 id="homeTitle">Little English</h1>
+          </div>
+          <button class="icon-button" type="button" id="voiceButton" aria-label="测试声音">▶</button>
+        </header>
+
+        <div class="scene-grid" id="sceneGrid"></div>
+      </section>
+
+      <section class="scene-view is-hidden" id="sceneView" aria-labelledby="sceneTitle">
+        <header class="scene-header">
+          <button class="back-button" type="button" id="backButton" aria-label="返回">‹</button>
+          <div>
+            <p class="eyebrow" id="sceneSubtitle"></p>
+            <h2 id="sceneTitle"></h2>
+          </div>
+        </header>
+
+        <div class="word-grid" id="wordGrid"></div>
+      </section>
+
+      <div class="word-sheet is-hidden" id="wordSheet" role="dialog" aria-modal="true" aria-labelledby="sheetWord">
+        <button class="sheet-close" type="button" id="closeSheet" aria-label="关闭">×</button>
+        <div class="sheet-picture" id="sheetPicture"></div>
+        <p class="word-label" id="sheetWord"></p>
+        <button class="sound-row" type="button" id="wordSoundButton">
+          <span>▶</span>
+          <strong id="wordSoundText"></strong>
+        </button>
+        <button class="sentence-row" type="button" id="sentenceSoundButton">
+          <span>▶</span>
+          <strong id="sheetSentence"></strong>
+        </button>
+      </div>
+      <div class="scrim is-hidden" id="scrim"></div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
