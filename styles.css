@@ -198,6 +198,24 @@ h2 {
   background: rgba(39, 49, 60, 0.36);
 }
 
+.audio-toast {
+  position: fixed;
+  left: 50%;
+  bottom: max(18px, env(safe-area-inset-bottom));
+  z-index: 40;
+  width: min(calc(100% - 36px), 440px);
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: rgba(39, 49, 60, 0.92);
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(39, 49, 60, 0.2);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
 .word-sheet {
   position: fixed;
   left: 50%;

@@ -279,10 +279,13 @@ const sheetSentence = document.querySelector("#sheetSentence");
 const wordSoundButton = document.querySelector("#wordSoundButton");
 const wordSoundText = document.querySelector("#wordSoundText");
 const sentenceSoundButton = document.querySelector("#sentenceSoundButton");
+const audioToast = document.querySelector("#audioToast");
 
 let currentScene = scenes[0];
 let currentWord = scenes[0].words[0];
 let voices = [];
+let activeUtterance = null;
+let audioToastTimer = null;
 
 function renderScenes() {
   sceneGrid.innerHTML = scenes
@@ -336,10 +339,49 @@ function getEnglishVoice() {
   return preferred || voices.find((voice) => voice.lang === "en-US") || voices.find((voice) => voice.lang.startsWith("en")) || null;
 }
 
-function speak(text, target) {
-  if (!("speechSynthesis" in window)) return;
+function showAudioMessage(message) {
+  audioToast.textContent = message;
+  audioToast.classList.remove("is-hidden");
+  window.clearTimeout(audioToastTimer);
+  audioToastTimer = window.setTimeout(() => audioToast.classList.add("is-hidden"), 2600);
+}
+
+function canUseSpeech() {
+  return "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
+}
+
+function refreshVoices() {
+  if (!canUseSpeech()) return [];
+  voices = window.speechSynthesis.getVoices() || [];
+  return voices;
+}
+
+function waitForVoices(timeout = 900) {
+  refreshVoices();
+  if (voices.length > 0) return Promise.resolve(voices);
+
+  return new Promise((resolve) => {
+    const startedAt = Date.now();
+    const timer = window.setInterval(() => {
+      refreshVoices();
+      if (voices.length > 0 || Date.now() - startedAt > timeout) {
+        window.clearInterval(timer);
+        resolve(voices);
+      }
+    }, 120);
+  });
+}
+
+async function speak(text, target, retried = false) {
+  if (!canUseSpeech()) {
+    showAudioMessage("这个浏览器不支持直接朗读，可以换 Chrome 或 Safari 试试。");
+    return;
+  }
+
+  await waitForVoices();
 
   window.speechSynthesis.cancel();
+  window.speechSynthesis.resume();
   document.querySelectorAll(".is-speaking").forEach((item) => item.classList.remove("is-speaking"));
 
   const utterance = new SpeechSynthesisUtterance(text);
@@ -352,9 +394,24 @@ function speak(text, target) {
 
   if (target) target.classList.add("is-speaking");
   utterance.onend = () => target?.classList.remove("is-speaking");
-  utterance.onerror = () => target?.classList.remove("is-speaking");
+  utterance.onerror = () => {
+    target?.classList.remove("is-speaking");
+    if (!retried) {
+      window.setTimeout(() => speak(text, target, true), 180);
+      return;
+    }
+    showAudioMessage("朗读没有启动。Android 上建议用 Chrome，并确认系统文字转语音已开启。");
+  };
 
+  activeUtterance = utterance;
   window.speechSynthesis.speak(utterance);
+
+  window.setTimeout(() => {
+    const synth = window.speechSynthesis;
+    if (!retried && !synth.speaking && !synth.pending) {
+      speak(text, target, true);
+    }
+  }, 280);
 }
 
 function openWordSheet(item, scene) {
@@ -374,16 +431,29 @@ function closeWordSheet() {
   wordSheet.classList.add("is-hidden");
   scrim.classList.add("is-hidden");
   window.speechSynthesis?.cancel();
+  activeUtterance = null;
   document.querySelectorAll(".is-speaking").forEach((item) => item.classList.remove("is-speaking"));
 }
 
 function loadVoices() {
-  voices = window.speechSynthesis?.getVoices?.() || [];
+  refreshVoices();
+}
+
+function primeSpeech() {
+  if (!canUseSpeech()) return;
+  refreshVoices();
+  window.speechSynthesis.resume();
 }
 
 renderScenes();
 loadVoices();
-window.speechSynthesis?.addEventListener("voiceschanged", loadVoices);
+if (canUseSpeech() && typeof window.speechSynthesis.addEventListener === "function") {
+  window.speechSynthesis.addEventListener("voiceschanged", loadVoices);
+} else if (canUseSpeech()) {
+  window.speechSynthesis.onvoiceschanged = loadVoices;
+}
+
+document.addEventListener("pointerdown", primeSpeech, { once: true });
 
 sceneGrid.addEventListener("click", (event) => {
   const card = event.target.closest("[data-scene]");
