@@ -139,6 +139,13 @@ h2 {
   font-size: 46px;
 }
 
+.picture-frame img,
+.sheet-picture img {
+  width: 78%;
+  height: 78%;
+  object-fit: contain;
+}
+
 .scene-card h3 {
   margin: 0 0 6px;
   font-size: 24px;
@@ -254,6 +261,11 @@ h2 {
   width: 140px;
   margin: 8px auto 12px;
   font-size: 76px;
+}
+
+.sheet-picture img {
+  width: 84%;
+  height: 84%;
 }
 
 .word-label {

@@ -8,7 +8,7 @@ const scenes = [
     words: [
       { word: "sofa", cn: "沙发", picture: "🛋️", sentence: "I sit on the sofa." },
       { word: "TV", cn: "电视", picture: "📺", sentence: "The TV is on." },
-      { word: "table", cn: "桌子", picture: "🪵", sentence: "This is a table." },
+      { word: "table", cn: "桌子", picture: "🪑", image: "./assets/words/table.svg", sentence: "This is a table." },
       { word: "chair", cn: "椅子", picture: "🪑", sentence: "I sit on a chair." },
       { word: "lamp", cn: "台灯", picture: "💡", sentence: "The lamp is on." },
       { word: "book", cn: "书", picture: "📘", sentence: "I read a book." },
@@ -28,7 +28,7 @@ const scenes = [
     colors: ["#e6d7ff", "#c8f0ff"],
     words: [
       { word: "bed", cn: "床", picture: "🛏️", sentence: "This is my bed." },
-      { word: "pillow", cn: "枕头", picture: "🛏️", sentence: "My pillow is soft." },
+      { word: "pillow", cn: "枕头", picture: "🛏️", image: "./assets/words/pillow.svg", sentence: "My pillow is soft." },
       { word: "blanket", cn: "毯子", picture: "🧺", sentence: "I have a blanket." },
       { word: "teddy bear", cn: "玩具熊", picture: "🧸", sentence: "I hug my teddy bear." },
       { word: "pajamas", cn: "睡衣", picture: "👕", sentence: "I wear pajamas." },
@@ -78,7 +78,7 @@ const scenes = [
       { word: "pencil", cn: "铅笔", picture: "✏️", sentence: "I have a pencil." },
       { word: "crayon", cn: "蜡笔", picture: "🖍️", sentence: "I color with a crayon." },
       { word: "paper", cn: "纸", picture: "📄", sentence: "Draw on the paper." },
-      { word: "desk", cn: "课桌", picture: "🪵", sentence: "This is my desk." },
+      { word: "desk", cn: "课桌", picture: "🪑", image: "./assets/words/desk.svg", sentence: "This is my desk." },
       { word: "chair", cn: "椅子", picture: "🪑", sentence: "Sit on the chair." },
       { word: "blocks", cn: "积木", picture: "🧱", sentence: "I play with blocks." },
       { word: "music", cn: "音乐", picture: "🎵", sentence: "I like music." },
@@ -116,10 +116,10 @@ const scenes = [
     words: [
       { word: "slide", cn: "滑梯", picture: "🛝", sentence: "I go down the slide." },
       { word: "swing", cn: "秋千", picture: "🌈", sentence: "I play on the swing." },
-      { word: "seesaw", cn: "跷跷板", picture: "⚖️", sentence: "I ride the seesaw." },
+      { word: "seesaw", cn: "跷跷板", picture: "🛝", image: "./assets/words/seesaw.svg", sentence: "I ride the seesaw." },
       { word: "sand", cn: "沙子", picture: "🏖️", sentence: "I play with sand." },
       { word: "bucket", cn: "桶", picture: "🪣", sentence: "This is a bucket." },
-      { word: "shovel", cn: "铲子", picture: "🥄", sentence: "I dig with a shovel." },
+      { word: "shovel", cn: "铲子", picture: "🪣", image: "./assets/words/shovel.svg", sentence: "I dig with a shovel." },
       { word: "ball", cn: "球", picture: "⚽", sentence: "Throw the ball." },
       { word: "kite", cn: "风筝", picture: "🪁", sentence: "The kite is up." },
       { word: "bike", cn: "自行车", picture: "🚲", sentence: "I ride a bike." },
@@ -180,13 +180,13 @@ const scenes = [
       { word: "toilet", cn: "马桶", picture: "🚽", sentence: "This is a toilet." },
       { word: "sink", cn: "洗手池", picture: "🚰", sentence: "Wash at the sink." },
       { word: "soap", cn: "香皂", picture: "🧼", sentence: "Use the soap." },
-      { word: "towel", cn: "毛巾", picture: "🧻", sentence: "Dry with a towel." },
+      { word: "towel", cn: "毛巾", picture: "🧼", image: "./assets/words/towel.svg", sentence: "Dry with a towel." },
       { word: "water", cn: "水", picture: "💧", sentence: "The water is warm." },
       { word: "bath", cn: "洗澡", picture: "🛁", sentence: "I take a bath." },
       { word: "shower", cn: "淋浴", picture: "🚿", sentence: "Take a shower." },
       { word: "toothbrush", cn: "牙刷", picture: "🪥", sentence: "Use a toothbrush." },
-      { word: "toothpaste", cn: "牙膏", picture: "🦷", sentence: "Put on toothpaste." },
-      { word: "comb", cn: "梳子", picture: "💇", sentence: "I use a comb." },
+      { word: "toothpaste", cn: "牙膏", picture: "🦷", image: "./assets/words/toothpaste.svg", sentence: "Put on toothpaste." },
+      { word: "comb", cn: "梳子", picture: "💇", image: "./assets/words/comb.svg", sentence: "I use a comb." },
       { word: "mirror", cn: "镜子", picture: "🪞", sentence: "Look in the mirror." },
       { word: "clean", cn: "干净", picture: "✨", sentence: "My hands are clean." },
     ],
@@ -322,6 +322,14 @@ function renderScenes() {
     .join("");
 }
 
+function renderPicture(item) {
+  if (item.image) {
+    return `<img src="${item.image}" alt="" />`;
+  }
+
+  return item.picture;
+}
+
 function renderWords(scene) {
   sceneTitle.textContent = scene.title;
   sceneSubtitle.textContent = scene.subtitle;
@@ -329,7 +337,7 @@ function renderWords(scene) {
     .map(
       (item, index) => `
         <button class="word-card" type="button" data-word="${index}" style="--accent-a: ${scene.colors[0]}; --accent-b: ${scene.colors[1]}">
-          <span class="picture-frame" aria-hidden="true">${item.picture}</span>
+          <span class="picture-frame" aria-hidden="true">${renderPicture(item)}</span>
           <strong>${item.word}</strong>
           <span>${item.cn}</span>
         </button>
@@ -537,7 +545,7 @@ function openWordSheet(item, scene, options = {}) {
   currentWord = item;
   const shouldPlayDebugCompletion = options.skipVisit ? false : markDebugWordVisited(scene, item);
 
-  sheetPicture.textContent = item.picture;
+  sheetPicture.innerHTML = renderPicture(item);
   sheetPicture.style.setProperty("--accent-a", scene.colors[0]);
   sheetPicture.style.setProperty("--accent-b", scene.colors[1]);
   sheetWord.textContent = item.word;

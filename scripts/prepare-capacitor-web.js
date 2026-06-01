@@ -5,7 +5,7 @@ const rootDir = join(__dirname, "..");
 const webDir = join(rootDir, "www");
 const buildType = process.argv.includes("--release") ? "release" : "debug";
 
-const entries = ["index.html", "styles.css", "app.js", "audio"];
+const entries = ["index.html", "styles.css", "app.js", "audio", "assets"];
 
 async function main() {
   await rm(webDir, { recursive: true, force: true });
