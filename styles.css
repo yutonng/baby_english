@@ -93,8 +93,18 @@ h2 {
 .back-button {
   width: 48px;
   height: 48px;
-  font-size: 38px;
-  line-height: 1;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(39, 49, 60, 0.12);
+}
+
+.back-button span {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-bottom: 4px solid var(--ink);
+  border-left: 4px solid var(--ink);
+  border-radius: 2px;
+  transform: translateX(3px) rotate(45deg);
 }
 
 .scene-grid {

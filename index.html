@@ -23,7 +23,6 @@
             <p class="eyebrow">4 岁启蒙</p>
             <h1 id="homeTitle">Little English</h1>
           </div>
-          <button class="icon-button" type="button" id="voiceButton" aria-label="测试声音">▶</button>
         </header>
 
         <div class="scene-grid" id="sceneGrid"></div>
@@ -31,7 +30,9 @@
 
       <section class="scene-view is-hidden" id="sceneView" aria-labelledby="sceneTitle">
         <header class="scene-header">
-          <button class="back-button" type="button" id="backButton" aria-label="返回">‹</button>
+          <button class="back-button" type="button" id="backButton" aria-label="返回">
+            <span aria-hidden="true"></span>
+          </button>
           <div>
             <p class="eyebrow" id="sceneSubtitle"></p>
             <h2 id="sceneTitle"></h2>
@@ -58,6 +59,7 @@
       <div class="audio-toast is-hidden" id="audioToast" role="status" aria-live="polite"></div>
     </main>
 
+    <script src="./build-env.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>

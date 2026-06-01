@@ -6,6 +6,19 @@
   "scripts": {
     "dev": "python3 -m http.server 4173",
     "audio": "node scripts/generate-audio.js",
-    "check": "node --check app.js"
+    "prepare:apk": "node scripts/prepare-capacitor-web.js",
+    "prepare:apk:debug": "node scripts/prepare-capacitor-web.js --debug",
+    "prepare:apk:release": "node scripts/prepare-capacitor-web.js --release",
+    "cap:copy": "npm run prepare:apk:debug && npx cap copy android",
+    "cap:copy:release": "npm run prepare:apk:release && npx cap copy android",
+    "cap:open": "npm run cap:copy && npx cap open android",
+    "build:release": "npm run cap:copy:release && cd android && JAVA_HOME='/Applications/Android Studio.app/Contents/jbr/Contents/Home' GRADLE_USER_HOME='../.gradle-cache' ANDROID_USER_HOME='../.android-user-home' ./gradlew --no-daemon assembleRelease bundleRelease",
+    "check": "node --check app.js && node --check scripts/generate-audio.js && node --check scripts/prepare-capacitor-web.js"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^8.3.4",
+    "@capacitor/cli": "^8.3.4",
+    "@capacitor/core": "^8.3.4",
+    "7zip-bin": "^5.2.0"
   }
 }

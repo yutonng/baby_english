@@ -36,3 +36,45 @@ npm run audio
 6. 点击 Deploy。
 
 内容数据在 `app.js` 的 `scenes` 数组里。
+
+## 打包 Android APK
+
+当前项目可以继续作为 H5 使用，也可以用 Capacitor 打包成 Android APP。
+
+H5 访问时 `window.APP_BUILD_TYPE` 默认是 `web`。Debug APK 会注入 `debug`，Release APK 会注入 `release`。
+
+第一次准备 Android 工程：
+
+```sh
+npm run prepare:apk
+npx cap add android
+```
+
+之后每次内容、样式或音频更新后：
+
+```sh
+npm run cap:copy
+```
+
+打开 Android Studio：
+
+```sh
+npm run cap:open
+```
+
+在 Android Studio 里选择 `Build > Build Bundle(s) / APK(s) > Build APK(s)`。
+
+## 正式发布包
+
+正式签名配置读取 `android/keystore.properties`，签名文件在 `android/keystores/little-english-release.jks`。这两个文件不会提交到仓库，务必单独备份；以后更新同一个 Android 应用必须继续使用同一个签名文件。
+
+生成正式 APK 和 Google Play 使用的 AAB：
+
+```sh
+npm run build:release
+```
+
+构建产物位置：
+
+- APK: `android/app/build/outputs/apk/release/app-release.apk`
+- AAB: `android/app/build/outputs/bundle/release/app-release.aab`

@@ -1,8 +1,16 @@
 .DS_Store
+.idea/
 node_modules/
 .npm-cache/
 .python-packages/
+.android-sdk/
+.android-user-home/
+.gradle-cache/
 .vercel/
+www/
 dist/
 build/
 *.log
+*.jks
+keystore.properties
+release/

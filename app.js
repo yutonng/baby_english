@@ -267,7 +267,6 @@ const sceneView = document.querySelector("#sceneView");
 const sceneGrid = document.querySelector("#sceneGrid");
 const wordGrid = document.querySelector("#wordGrid");
 const backButton = document.querySelector("#backButton");
-const voiceButton = document.querySelector("#voiceButton");
 const sceneTitle = document.querySelector("#sceneTitle");
 const sceneSubtitle = document.querySelector("#sceneSubtitle");
 const wordSheet = document.querySelector("#wordSheet");
@@ -281,12 +280,30 @@ const wordSoundText = document.querySelector("#wordSoundText");
 const sentenceSoundButton = document.querySelector("#sentenceSoundButton");
 const audioToast = document.querySelector("#audioToast");
 
+const AppEnv = Object.freeze({
+  buildType: window.APP_BUILD_TYPE || "web",
+  get isDebugApp() {
+    return this.buildType === "debug";
+  },
+  get isReleaseApp() {
+    return this.buildType === "release";
+  },
+  get isWeb() {
+    return this.buildType === "web";
+  },
+});
+
+const DEBUG_SCENE_COMPLETE_AUDIO = "./audio/debug/amazing.m4a";
+
 let currentScene = scenes[0];
 let currentWord = scenes[0].words[0];
 let voices = [];
 let activeUtterance = null;
 let activeAudio = null;
 let audioToastTimer = null;
+let isRestoringHistory = false;
+const debugVisitedWordsByScene = new Map();
+const debugCompletedScenes = new Set();
 
 function renderScenes() {
   sceneGrid.innerHTML = scenes
@@ -321,18 +338,24 @@ function renderWords(scene) {
     .join("");
 }
 
-function showScene(sceneId) {
+function showScene(sceneId, options = {}) {
   currentScene = scenes.find((scene) => scene.id === sceneId) || scenes[0];
   renderWords(currentScene);
   homeView.classList.add("is-hidden");
   sceneView.classList.remove("is-hidden");
+  if (!options.skipHistory) {
+    history.pushState({ view: "scene", sceneId: currentScene.id }, "", `#${currentScene.id}`);
+  }
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-function showHome() {
+function showHome(options = {}) {
   closeWordSheet();
   sceneView.classList.add("is-hidden");
   homeView.classList.remove("is-hidden");
+  if (!options.skipHistory) {
+    history.pushState({ view: "home" }, "", location.pathname);
+  }
 }
 
 function getEnglishVoice() {
@@ -419,6 +442,26 @@ function playLocalAudio(text, target, kind) {
   });
 }
 
+function playStandaloneAudio(audioUrl) {
+  const rewardAudio = new Audio(audioUrl);
+  rewardAudio.preload = "auto";
+  return rewardAudio.play().catch(() => {
+    showAudioMessage("奖励音频播放失败，请确认音频文件已打包。");
+  });
+}
+
+function wait(ms) {
+  return new Promise((resolve) => {
+    window.setTimeout(resolve, ms);
+  });
+}
+
+function playDebugCompletionAudioAfter(wordAudioPromise) {
+  Promise.race([wordAudioPromise.catch(() => undefined), wait(2200)]).then(() => {
+    playStandaloneAudio(DEBUG_SCENE_COMPLETE_AUDIO);
+  });
+}
+
 async function speak(text, target, kind, retried = false) {
   document.querySelectorAll(".is-speaking").forEach((item) => item.classList.remove("is-speaking"));
 
@@ -473,8 +516,27 @@ async function speak(text, target, kind, retried = false) {
   }, 280);
 }
 
-function openWordSheet(item, scene) {
+function markDebugWordVisited(scene, item) {
+  if (!AppEnv.isDebugApp) return false;
+  if (debugCompletedScenes.has(scene.id)) return false;
+
+  if (!debugVisitedWordsByScene.has(scene.id)) {
+    debugVisitedWordsByScene.set(scene.id, new Set());
+  }
+
+  const visitedWords = debugVisitedWordsByScene.get(scene.id);
+  visitedWords.add(item.word);
+
+  if (visitedWords.size < scene.words.length) return false;
+
+  debugCompletedScenes.add(scene.id);
+  return true;
+}
+
+function openWordSheet(item, scene, options = {}) {
   currentWord = item;
+  const shouldPlayDebugCompletion = options.skipVisit ? false : markDebugWordVisited(scene, item);
+
   sheetPicture.textContent = item.picture;
   sheetPicture.style.setProperty("--accent-a", scene.colors[0]);
   sheetPicture.style.setProperty("--accent-b", scene.colors[1]);
@@ -483,10 +545,20 @@ function openWordSheet(item, scene) {
   sheetSentence.textContent = item.sentence;
   wordSheet.classList.remove("is-hidden");
   scrim.classList.remove("is-hidden");
-  speak(item.word, wordSoundButton, "words");
+  if (!options.skipHistory) {
+    history.pushState(
+      { view: "word", sceneId: scene.id, word: item.word },
+      "",
+      `#${scene.id}/${slugify(item.word)}`
+    );
+  }
+  const wordAudioPromise = speak(item.word, wordSoundButton, "words");
+  if (shouldPlayDebugCompletion) {
+    playDebugCompletionAudioAfter(wordAudioPromise);
+  }
 }
 
-function closeWordSheet() {
+function closeWordSheet(options = {}) {
   wordSheet.classList.add("is-hidden");
   scrim.classList.add("is-hidden");
   if (activeAudio) {
@@ -497,6 +569,9 @@ function closeWordSheet() {
   activeAudio = null;
   activeUtterance = null;
   document.querySelectorAll(".is-speaking").forEach((item) => item.classList.remove("is-speaking"));
+  if (!options.skipHistory && !isRestoringHistory) {
+    history.back();
+  }
 }
 
 function loadVoices() {
@@ -509,8 +584,18 @@ function primeSpeech() {
   window.speechSynthesis.resume();
 }
 
+function handleAppBack() {
+  if (!wordSheet.classList.contains("is-hidden") || !sceneView.classList.contains("is-hidden")) {
+    history.back();
+    return true;
+  }
+
+  return false;
+}
+
 renderScenes();
 loadVoices();
+history.replaceState({ view: "home" }, "", location.pathname);
 if (canUseSpeech() && typeof window.speechSynthesis.addEventListener === "function") {
   window.speechSynthesis.addEventListener("voiceschanged", loadVoices);
 } else if (canUseSpeech()) {
@@ -518,6 +603,7 @@ if (canUseSpeech() && typeof window.speechSynthesis.addEventListener === "functi
 }
 
 document.addEventListener("pointerdown", primeSpeech, { once: true });
+window.littleEnglishHandleBack = handleAppBack;
 
 sceneGrid.addEventListener("click", (event) => {
   const card = event.target.closest("[data-scene]");
@@ -532,9 +618,27 @@ wordGrid.addEventListener("click", (event) => {
   openWordSheet(item, currentScene);
 });
 
-backButton.addEventListener("click", showHome);
-voiceButton.addEventListener("click", () => speak("Hello! Let's learn English.", voiceButton));
-closeSheet.addEventListener("click", closeWordSheet);
-scrim.addEventListener("click", closeWordSheet);
+window.addEventListener("popstate", (event) => {
+  const state = event.state || { view: "home" };
+  isRestoringHistory = true;
+
+  if (state.view === "word") {
+    const scene = scenes.find((item) => item.id === state.sceneId) || scenes[0];
+    const word = scene.words.find((item) => item.word === state.word) || scene.words[0];
+    showScene(scene.id, { skipHistory: true });
+    openWordSheet(word, scene, { skipHistory: true, skipVisit: true });
+  } else if (state.view === "scene") {
+    closeWordSheet({ skipHistory: true });
+    showScene(state.sceneId, { skipHistory: true });
+  } else {
+    showHome({ skipHistory: true });
+  }
+
+  isRestoringHistory = false;
+});
+
+backButton.addEventListener("click", () => history.back());
+closeSheet.addEventListener("click", () => closeWordSheet());
+scrim.addEventListener("click", () => closeWordSheet());
 wordSoundButton.addEventListener("click", () => speak(currentWord.word, wordSoundButton, "words"));
 sentenceSoundButton.addEventListener("click", () => speak(currentWord.sentence, sentenceSoundButton, "sentences"));
