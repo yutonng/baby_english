@@ -1,6 +1,26 @@
 let scenes = [];
 const sceneCacheKey = "little-english-published-scenes";
 const APP_VERSION = "0.1.0";
+const SCENE_COLOR_PALETTE = [
+  "#FFE2A3",
+  "#E3D2FF",
+  "#FFC8B8",
+  "#B8F0D4",
+  "#C8F0B8",
+  "#FFB8CF",
+  "#B8E2FF",
+  "#FFD06B",
+  "#C8D8FF",
+  "#FFB99A",
+  "#D8C8A8",
+  "#B8F0EE",
+  "#F3C0FF",
+  "#D6EE8F",
+  "#FFB8B8",
+  "#BEE4A8",
+  "#B8C8FF",
+  "#FFE6C8",
+];
 
 function getContentApiBase() {
   return (window.CONTENT_API_BASE || "").replace(/\/$/, "");
@@ -28,6 +48,16 @@ function normalizeSceneImages(items) {
   }));
 }
 
+function assignSceneColors(items) {
+  return items.map((scene, index) => ({
+    ...scene,
+    colors: [
+      SCENE_COLOR_PALETTE[index % SCENE_COLOR_PALETTE.length],
+      SCENE_COLOR_PALETTE[(index + 5) % SCENE_COLOR_PALETTE.length],
+    ],
+  }));
+}
+
 function getSceneTime(scene) {
   return Date.parse(scene.publishedAt || scene.updatedAt || scene.createdAt || "") || 0;
 }
@@ -45,7 +75,7 @@ async function loadPublishedScenes() {
   try {
     const response = await fetch(`${getContentApiBase()}/api/scenes/published`, { cache: "no-store" });
     if (!response.ok) throw new Error(`Scene data request failed: ${response.status}`);
-    const loadedScenes = normalizeSceneImages(await response.json());
+    const loadedScenes = assignSceneColors(normalizeSceneImages(await response.json()));
     if (!Array.isArray(loadedScenes) || loadedScenes.length === 0) {
       throw new Error("Scene data is empty");
     }
@@ -54,13 +84,13 @@ async function loadPublishedScenes() {
   } catch (error) {
     console.error(error);
     const cachedScenes = readCachedScenes();
-    if (cachedScenes.length > 0) return cachedScenes;
+    if (cachedScenes.length > 0) return assignSceneColors(cachedScenes);
   }
 
   try {
     const response = await fetch("./data/scenes.published.json", { cache: "no-cache" });
     if (!response.ok) throw new Error(`Bundled scene data request failed: ${response.status}`);
-    return normalizeSceneImages(await response.json());
+    return assignSceneColors(normalizeSceneImages(await response.json()));
   } catch (error) {
     console.error(error);
     return [];
@@ -85,11 +115,9 @@ const wordSoundText = document.querySelector("#wordSoundText");
 const sentenceSoundButton = document.querySelector("#sentenceSoundButton");
 const audioToast = document.querySelector("#audioToast");
 const searchButton = document.querySelector("#searchButton");
-const searchSheet = document.querySelector("#searchSheet");
-const closeSearch = document.querySelector("#closeSearch");
+const inlineSearch = document.querySelector("#inlineSearch");
 const sceneSearchInput = document.querySelector("#sceneSearchInput");
 const clearSearchButton = document.querySelector("#clearSearchButton");
-const searchResults = document.querySelector("#searchResults");
 const settingsButton = document.querySelector("#settingsButton");
 const settingsSheet = document.querySelector("#settingsSheet");
 const closeSettings = document.querySelector("#closeSettings");
@@ -115,14 +143,22 @@ let activeUtterance = null;
 let activeAudio = null;
 let audioToastTimer = null;
 let isRestoringHistory = false;
+let sceneSearchQuery = "";
 
 function renderScenes() {
+  const visibleScenes = getSearchMatches(sceneSearchQuery);
+
   if (scenes.length === 0) {
     sceneGrid.innerHTML = '<p class="empty-state">还没有可用场景。</p>';
     return;
   }
 
-  sceneGrid.innerHTML = scenes
+  if (visibleScenes.length === 0) {
+    sceneGrid.innerHTML = '<p class="empty-state">没有找到对应内容。</p>';
+    return;
+  }
+
+  sceneGrid.innerHTML = visibleScenes
     .map(
       (scene) => `
         <button class="scene-card" type="button" data-scene="${scene.id}" style="--accent-a: ${scene.colors[0]}; --accent-b: ${scene.colors[1]}">
@@ -156,46 +192,32 @@ function getSearchMatches(query) {
   });
 }
 
-function renderSearchResults() {
-  const matches = getSearchMatches(sceneSearchInput.value);
-  if (matches.length === 0) {
-    searchResults.innerHTML = '<p class="empty-state">没有找到对应内容。</p>';
-    return;
-  }
-
-  searchResults.innerHTML = matches
-    .map(
-      (scene) => `
-        <button class="search-result" type="button" data-scene-result="${scene.id}">
-          <span class="scene-art" aria-hidden="true" style="--accent-a: ${scene.colors[0]}; --accent-b: ${scene.colors[1]}">${scene.icon}</span>
-          <span>
-            <strong>${scene.title}</strong>
-            <small>${scene.subtitle} · ${scene.words.length} words</small>
-          </span>
-        </button>
-      `
-    )
-    .join("");
-}
-
-function openSearchSheet() {
+function openInlineSearch() {
   sceneSearchInput.value = "";
-  renderSearchResults();
-  searchSheet.classList.remove("is-hidden");
-  scrim.classList.remove("is-hidden");
+  sceneSearchQuery = "";
+  inlineSearch.classList.remove("is-hidden");
+  homeView.classList.add("is-searching");
+  renderScenes();
   window.setTimeout(() => sceneSearchInput.focus(), 40);
 }
 
-function closeSearchSheet() {
-  searchSheet.classList.add("is-hidden");
-  if (wordSheet.classList.contains("is-hidden") && settingsSheet.classList.contains("is-hidden")) {
-    scrim.classList.add("is-hidden");
-  }
+function closeInlineSearch() {
+  sceneSearchQuery = "";
+  sceneSearchInput.value = "";
+  inlineSearch.classList.add("is-hidden");
+  homeView.classList.remove("is-searching");
+  renderScenes();
 }
 
 function clearSearch() {
+  if (!sceneSearchInput.value.trim()) {
+    closeInlineSearch();
+    return;
+  }
+
   sceneSearchInput.value = "";
-  renderSearchResults();
+  sceneSearchQuery = "";
+  renderScenes();
   sceneSearchInput.focus();
 }
 
@@ -461,8 +483,8 @@ function primeSpeech() {
 }
 
 function handleAppBack() {
-  if (!searchSheet.classList.contains("is-hidden")) {
-    closeSearchSheet();
+  if (!inlineSearch.classList.contains("is-hidden") && sceneView.classList.contains("is-hidden")) {
+    closeInlineSearch();
     return true;
   }
 
@@ -534,10 +556,6 @@ window.addEventListener("popstate", (event) => {
 backButton.addEventListener("click", () => history.back());
 closeSheet.addEventListener("click", () => closeWordSheet());
 scrim.addEventListener("click", () => {
-  if (!searchSheet.classList.contains("is-hidden")) {
-    closeSearchSheet();
-    return;
-  }
   if (!settingsSheet.classList.contains("is-hidden")) {
     closeSettingsSheet();
     return;
@@ -546,18 +564,12 @@ scrim.addEventListener("click", () => {
 });
 wordSoundButton.addEventListener("click", () => currentWord && speak(currentWord.word, wordSoundButton, "words"));
 sentenceSoundButton.addEventListener("click", () => currentWord && speak(currentWord.sentence, sentenceSoundButton, "sentences"));
-searchButton.addEventListener("click", openSearchSheet);
+searchButton.addEventListener("click", openInlineSearch);
 sceneSearchInput.addEventListener("input", () => {
-  renderSearchResults();
+  sceneSearchQuery = sceneSearchInput.value;
+  renderScenes();
 });
 clearSearchButton.addEventListener("click", clearSearch);
-closeSearch.addEventListener("click", closeSearchSheet);
-searchResults.addEventListener("click", (event) => {
-  const result = event.target.closest("[data-scene-result]");
-  if (!result) return;
-  closeSearchSheet();
-  showScene(result.dataset.sceneResult);
-});
 settingsButton.addEventListener("click", openSettings);
 closeSettings.addEventListener("click", closeSettingsSheet);
 

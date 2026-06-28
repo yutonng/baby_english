@@ -62,23 +62,19 @@ button {
   gap: 10px;
 }
 
-.brand-mark {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  flex: 0 0 auto;
-  place-items: center;
-  border-radius: 14px;
-  background: #ffe4a3;
-  box-shadow: var(--shadow);
-  font-size: 22px;
-}
-
 .top-actions {
   display: flex;
   flex: 0 0 auto;
   align-items: center;
   gap: 8px;
+}
+
+.home-view.is-searching .app-brand {
+  display: none;
+}
+
+.home-view.is-searching .top-actions {
+  display: none;
 }
 
 .top-icon-button {
@@ -92,7 +88,7 @@ button {
 }
 
 .top-icon-button svg,
-.search-panel svg {
+.inline-search svg {
   width: 20px;
   height: 20px;
   color: #9b8bb4;
@@ -160,19 +156,20 @@ h2 {
   transform: translateX(3px) rotate(45deg);
 }
 
-.search-panel {
+.inline-search {
   display: grid;
   grid-template-columns: 24px 1fr 34px;
   align-items: center;
   gap: 8px;
+  width: 100%;
   min-height: 52px;
-  margin-bottom: 12px;
   padding: 8px 10px 8px 14px;
   border-radius: 16px;
-  background: #fff7ed;
+  background: #ffffff;
+  box-shadow: var(--shadow);
 }
 
-.search-panel input {
+.inline-search input {
   width: 100%;
   min-width: 0;
   border: 0;
@@ -184,15 +181,15 @@ h2 {
   font-weight: 500;
 }
 
-.search-panel input::placeholder {
+.inline-search input::placeholder {
   color: #b7abc8;
 }
 
-.search-panel input::-webkit-search-cancel-button {
+.inline-search input::-webkit-search-cancel-button {
   display: none;
 }
 
-.search-panel button {
+.inline-search button {
   display: grid;
   width: 34px;
   height: 34px;
@@ -366,8 +363,7 @@ h2 {
 }
 
 .word-sheet,
-.settings-sheet,
-.search-sheet {
+.settings-sheet {
   position: fixed;
   left: 50%;
   bottom: 0;
@@ -384,58 +380,11 @@ h2 {
   padding-top: 26px;
 }
 
-.settings-sheet h2,
-.search-sheet h2 {
+.settings-sheet h2 {
   margin: 0 0 22px;
   color: var(--ink);
   font-size: 24px;
   font-weight: 600;
-}
-
-.search-sheet {
-  padding-top: 26px;
-}
-
-.search-results {
-  display: grid;
-  max-height: min(52vh, 430px);
-  gap: 10px;
-  overflow-y: auto;
-  padding-bottom: 6px;
-}
-
-.search-result {
-  display: grid;
-  grid-template-columns: 54px 1fr;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
-  min-height: 72px;
-  padding: 10px;
-  border-radius: 16px;
-  background: #ffffff;
-  text-align: left;
-}
-
-.search-result .scene-art {
-  width: 54px;
-  font-size: 25px;
-}
-
-.search-result strong {
-  display: block;
-  color: var(--ink);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-.search-result small {
-  display: block;
-  margin-top: 2px;
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 500;
 }
 
 .settings-row {

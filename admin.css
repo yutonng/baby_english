@@ -27,6 +27,16 @@ button:hover {
   border-color: #9b9488;
 }
 
+.danger-button {
+  border-color: #e3b5aa;
+  color: #9b2f1f;
+}
+
+.danger-button:hover {
+  background: #fff4f1;
+  border-color: #c45c49;
+}
+
 .admin-shell {
   min-height: 100vh;
 }

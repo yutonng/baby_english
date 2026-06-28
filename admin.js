@@ -230,6 +230,12 @@ async function loadContent() {
   const content = await requestJson("/api/content");
   drafts = content.drafts || [];
   published = content.published || [];
+  if (selectedSource === "draft" && selectedId && !drafts.some((scene) => scene.id === selectedId)) {
+    selectedId = "";
+  }
+  if (selectedSource === "published" && selectedId && !published.some((scene) => scene.id === selectedId)) {
+    selectedId = "";
+  }
   if (!selectedId && drafts[0]) {
     selectedId = drafts[0].id;
     selectedSource = "draft";
@@ -269,6 +275,30 @@ async function approveDraft() {
   });
   await loadContent();
   showMessage("已审核通过，并发布到 App 数据");
+}
+
+async function deleteSelectedScene() {
+  const scene = getSelectedScene();
+  if (!scene) {
+    showMessage("请选择要删除的场景");
+    return;
+  }
+
+  const targetLabel = selectedSource === "published" ? "已发布场景" : "草稿";
+  const confirmed = window.confirm(`确定删除${targetLabel}「${scene.title || scene.id}」吗？`);
+  if (!confirmed) return;
+
+  await requestJson("/api/scenes/delete", {
+    method: "POST",
+    body: JSON.stringify({
+      sceneId: scene.id,
+      target: selectedSource,
+    }),
+  });
+
+  selectedId = "";
+  await loadContent();
+  showMessage("场景已删除");
 }
 
 function publishedWordToDraftWord(word) {
@@ -388,6 +418,9 @@ document.querySelector("#saveButton").addEventListener("click", () => {
 });
 document.querySelector("#approveButton").addEventListener("click", () => {
   approveDraft().catch((error) => showMessage(error.message));
+});
+document.querySelector("#deleteSceneButton").addEventListener("click", () => {
+  deleteSelectedScene().catch((error) => showMessage(error.message));
 });
 
 sceneForm.addEventListener("input", (event) => updateSceneField(event.target));
