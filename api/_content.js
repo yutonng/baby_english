@@ -209,6 +209,7 @@ function toPublishedScene(scene) {
     subtitle: scene.subtitle,
     icon: scene.icon,
     colors: scene.colors,
+    publishedAt: scene.publishedAt || new Date().toISOString(),
     words: scene.words.map((word) => ({
       word: word.word,
       cn: word.cn,

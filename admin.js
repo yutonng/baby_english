@@ -58,6 +58,14 @@ function getSelectedScene() {
   return getSelectedDraft();
 }
 
+function getSceneTime(scene) {
+  return Date.parse(scene.publishedAt || scene.updatedAt || scene.createdAt || "") || 0;
+}
+
+function sortScenesNewestFirst(items) {
+  return [...items].sort((a, b) => getSceneTime(b) - getSceneTime(a));
+}
+
 function renderList() {
   draftList.innerHTML = drafts
     .map(
@@ -69,7 +77,7 @@ function renderList() {
     )
     .join("");
 
-  publishedList.innerHTML = published
+  publishedList.innerHTML = sortScenesNewestFirst(published)
     .map(
       (scene) => `
         <button class="scene-button ${selectedSource === "published" && scene.id === selectedId ? "is-active" : ""}" type="button" data-published="${scene.id}">

@@ -207,6 +207,7 @@ function toPublishedScene(scene) {
     subtitle: scene.subtitle,
     icon: scene.icon,
     colors: scene.colors,
+    publishedAt: scene.publishedAt || new Date().toISOString(),
     words: scene.words.map((word) => ({
       word: word.word,
       cn: word.cn,
@@ -311,7 +312,8 @@ async function handleApi(req, res, pathname) {
       return;
     }
 
-    const scene = { ...drafts[draftIndex], status: "approved", updatedAt: new Date().toISOString() };
+    const publishedAt = new Date().toISOString();
+    const scene = { ...drafts[draftIndex], status: "approved", updatedAt: publishedAt, publishedAt };
     const errors = validateScene(scene, { requireReadyImages: true });
     const missingAssets = await validateSceneAssets(scene);
     if (errors.length || missingAssets.length) {
@@ -326,12 +328,11 @@ async function handleApi(req, res, pathname) {
     const publishedScene = toPublishedScene(scene);
     const existingIndex = published.findIndex((item) => item.id === scene.id);
     if (existingIndex >= 0) {
-      published[existingIndex] = publishedScene;
-    } else {
-      published.push(publishedScene);
+      published.splice(existingIndex, 1);
     }
+    published.unshift(publishedScene);
 
-    drafts[draftIndex] = { ...scene, status: "published", publishedAt: new Date().toISOString() };
+    drafts[draftIndex] = { ...scene, status: "published", publishedAt };
     await Promise.all([writeJson(draftsPath, drafts), writeJson(publishedPath, published)]);
     sendJson(res, 200, { draft: drafts[draftIndex], published: publishedScene });
     return;

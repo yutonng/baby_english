@@ -19,13 +19,17 @@ function normalizeRemoteImageUrl(imageUrl, word) {
 }
 
 function normalizeSceneImages(items) {
-  return items.map((scene) => ({
+  return [...items].sort((a, b) => getSceneTime(b) - getSceneTime(a)).map((scene) => ({
     ...scene,
     words: (scene.words || []).map((word) => ({
       ...word,
       image: normalizeRemoteImageUrl(word.image, word),
     })),
   }));
+}
+
+function getSceneTime(scene) {
+  return Date.parse(scene.publishedAt || scene.updatedAt || scene.createdAt || "") || 0;
 }
 
 function readCachedScenes() {

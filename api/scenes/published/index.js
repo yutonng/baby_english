@@ -1,5 +1,9 @@
 const { readPublished, sendJson } = require("../../_content");
 
+function getSceneTime(scene) {
+  return Date.parse(scene.publishedAt || scene.updatedAt || scene.createdAt || "") || 0;
+}
+
 module.exports = async function handler(req, res) {
   if (req.method !== "GET") {
     res.setHeader("allow", "GET");
@@ -7,6 +11,6 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  const scenes = await readPublished();
+  const scenes = (await readPublished()).sort((a, b) => getSceneTime(b) - getSceneTime(a));
   sendJson(res, 200, scenes, "public, max-age=60, stale-while-revalidate=300");
 };
