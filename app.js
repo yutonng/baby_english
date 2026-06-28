@@ -1,5 +1,6 @@
 let scenes = [];
 const sceneCacheKey = "little-english-published-scenes";
+const APP_VERSION = "0.1.0";
 
 function getContentApiBase() {
   return (window.CONTENT_API_BASE || "").replace(/\/$/, "");
@@ -79,6 +80,16 @@ const wordSoundButton = document.querySelector("#wordSoundButton");
 const wordSoundText = document.querySelector("#wordSoundText");
 const sentenceSoundButton = document.querySelector("#sentenceSoundButton");
 const audioToast = document.querySelector("#audioToast");
+const searchButton = document.querySelector("#searchButton");
+const searchSheet = document.querySelector("#searchSheet");
+const closeSearch = document.querySelector("#closeSearch");
+const sceneSearchInput = document.querySelector("#sceneSearchInput");
+const clearSearchButton = document.querySelector("#clearSearchButton");
+const searchResults = document.querySelector("#searchResults");
+const settingsButton = document.querySelector("#settingsButton");
+const settingsSheet = document.querySelector("#settingsSheet");
+const closeSettings = document.querySelector("#closeSettings");
+const versionText = document.querySelector("#versionText");
 
 const AppEnv = Object.freeze({
   buildType: window.APP_BUILD_TYPE || "web",
@@ -103,7 +114,7 @@ let isRestoringHistory = false;
 
 function renderScenes() {
   if (scenes.length === 0) {
-    sceneGrid.innerHTML = "<p>还没有可用场景。</p>";
+    sceneGrid.innerHTML = '<p class="empty-state">还没有可用场景。</p>';
     return;
   }
 
@@ -125,6 +136,76 @@ function renderScenes() {
       `
     )
     .join("");
+}
+
+function getSearchMatches(query) {
+  const normalizedQuery = query.trim().toLowerCase();
+  if (!normalizedQuery) return scenes;
+
+  return scenes.filter((scene) => {
+    const sceneText = `${scene.title} ${scene.subtitle}`.toLowerCase();
+    const wordsText = (scene.words || [])
+      .map((word) => `${word.word} ${word.cn}`)
+      .join(" ")
+      .toLowerCase();
+    return sceneText.includes(normalizedQuery) || wordsText.includes(normalizedQuery);
+  });
+}
+
+function renderSearchResults() {
+  const matches = getSearchMatches(sceneSearchInput.value);
+  if (matches.length === 0) {
+    searchResults.innerHTML = '<p class="empty-state">没有找到对应内容。</p>';
+    return;
+  }
+
+  searchResults.innerHTML = matches
+    .map(
+      (scene) => `
+        <button class="search-result" type="button" data-scene-result="${scene.id}">
+          <span class="scene-art" aria-hidden="true" style="--accent-a: ${scene.colors[0]}; --accent-b: ${scene.colors[1]}">${scene.icon}</span>
+          <span>
+            <strong>${scene.title}</strong>
+            <small>${scene.subtitle} · ${scene.words.length} words</small>
+          </span>
+        </button>
+      `
+    )
+    .join("");
+}
+
+function openSearchSheet() {
+  sceneSearchInput.value = "";
+  renderSearchResults();
+  searchSheet.classList.remove("is-hidden");
+  scrim.classList.remove("is-hidden");
+  window.setTimeout(() => sceneSearchInput.focus(), 40);
+}
+
+function closeSearchSheet() {
+  searchSheet.classList.add("is-hidden");
+  if (wordSheet.classList.contains("is-hidden") && settingsSheet.classList.contains("is-hidden")) {
+    scrim.classList.add("is-hidden");
+  }
+}
+
+function clearSearch() {
+  sceneSearchInput.value = "";
+  renderSearchResults();
+  sceneSearchInput.focus();
+}
+
+function openSettings() {
+  versionText.textContent = APP_VERSION;
+  settingsSheet.classList.remove("is-hidden");
+  scrim.classList.remove("is-hidden");
+}
+
+function closeSettingsSheet() {
+  settingsSheet.classList.add("is-hidden");
+  if (wordSheet.classList.contains("is-hidden")) {
+    scrim.classList.add("is-hidden");
+  }
 }
 
 function renderPicture(item) {
@@ -349,7 +430,9 @@ function openWordSheet(item, scene, options = {}) {
 
 function closeWordSheet(options = {}) {
   wordSheet.classList.add("is-hidden");
-  scrim.classList.add("is-hidden");
+  if (settingsSheet.classList.contains("is-hidden")) {
+    scrim.classList.add("is-hidden");
+  }
   if (activeAudio) {
     activeAudio.pause();
     activeAudio.currentTime = 0;
@@ -374,6 +457,16 @@ function primeSpeech() {
 }
 
 function handleAppBack() {
+  if (!searchSheet.classList.contains("is-hidden")) {
+    closeSearchSheet();
+    return true;
+  }
+
+  if (!settingsSheet.classList.contains("is-hidden")) {
+    closeSettingsSheet();
+    return true;
+  }
+
   if (!wordSheet.classList.contains("is-hidden") || !sceneView.classList.contains("is-hidden")) {
     history.back();
     return true;
@@ -386,6 +479,7 @@ async function initApp() {
   scenes = await loadPublishedScenes();
   currentScene = scenes[0] || null;
   currentWord = currentScene?.words?.[0] || null;
+  versionText.textContent = APP_VERSION;
 
   renderScenes();
   loadVoices();
@@ -435,8 +529,32 @@ window.addEventListener("popstate", (event) => {
 
 backButton.addEventListener("click", () => history.back());
 closeSheet.addEventListener("click", () => closeWordSheet());
-scrim.addEventListener("click", () => closeWordSheet());
+scrim.addEventListener("click", () => {
+  if (!searchSheet.classList.contains("is-hidden")) {
+    closeSearchSheet();
+    return;
+  }
+  if (!settingsSheet.classList.contains("is-hidden")) {
+    closeSettingsSheet();
+    return;
+  }
+  closeWordSheet();
+});
 wordSoundButton.addEventListener("click", () => currentWord && speak(currentWord.word, wordSoundButton, "words"));
 sentenceSoundButton.addEventListener("click", () => currentWord && speak(currentWord.sentence, sentenceSoundButton, "sentences"));
+searchButton.addEventListener("click", openSearchSheet);
+sceneSearchInput.addEventListener("input", () => {
+  renderSearchResults();
+});
+clearSearchButton.addEventListener("click", clearSearch);
+closeSearch.addEventListener("click", closeSearchSheet);
+searchResults.addEventListener("click", (event) => {
+  const result = event.target.closest("[data-scene-result]");
+  if (!result) return;
+  closeSearchSheet();
+  showScene(result.dataset.sceneResult);
+});
+settingsButton.addEventListener("click", openSettings);
+closeSettings.addEventListener("click", closeSettingsSheet);
 
 initApp();

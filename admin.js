@@ -239,16 +239,10 @@ async function saveDraft() {
   if (!scene) throw new Error("请选择草稿后再保存");
   if (!scene.id) throw new Error("草稿缺少 id");
 
-  const existing = drafts.find((item) => item.id === scene.id);
-  const saved = existing
-    ? await requestJson(`/api/scenes/drafts/${encodeURIComponent(scene.id)}`, {
-        method: "PUT",
-        body: JSON.stringify(scene),
-      })
-    : await requestJson("/api/scenes/drafts", {
-        method: "POST",
-        body: JSON.stringify(scene),
-      });
+  const saved = await requestJson("/api/scenes/drafts/save", {
+    method: "POST",
+    body: JSON.stringify({ scene }),
+  });
 
   selectedId = saved.id;
   await loadContent();
@@ -261,9 +255,9 @@ async function approveDraft() {
   if (!scene) throw new Error("请选择草稿后再审核发布");
   if (!scene.id) throw new Error("草稿缺少 id");
   await saveDraft();
-  await requestJson(`/api/scenes/drafts/${encodeURIComponent(scene.id)}/approve`, {
+  await requestJson("/api/scenes/drafts/approve", {
     method: "POST",
-    body: "{}",
+    body: JSON.stringify({ sceneId: scene.id }),
   });
   await loadContent();
   showMessage("已审核通过，并发布到 App 数据");

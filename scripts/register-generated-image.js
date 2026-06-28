@@ -130,9 +130,9 @@ async function registerRemoteImage({ sceneId, word, source, prompt, width, heigh
     updatedAt: new Date().toISOString(),
   };
 
-  await requestRemoteJson(`${contentApiBase}/api/scenes/drafts/${encodeURIComponent(sceneId)}/words/${wordIndex}/image`, {
-    method: "PUT",
-    body: JSON.stringify({ image }),
+  await requestRemoteJson(`${contentApiBase}/api/scenes/drafts/image`, {
+    method: "POST",
+    body: JSON.stringify({ sceneId, wordIndex, image }),
   });
 
   console.log(JSON.stringify(image, null, 2));
