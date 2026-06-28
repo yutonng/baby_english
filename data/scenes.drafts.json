@@ -1,0 +1,70 @@
+[
+  {
+    "id": "fake-review-test",
+    "title": "测试场景",
+    "subtitle": "Review Test",
+    "icon": "🧪",
+    "colors": [
+      "#d8f3dc",
+      "#ffd6a5"
+    ],
+    "status": "published",
+    "words": [
+      {
+        "word": "ball",
+        "cn": "球",
+        "picture": "⚽",
+        "sentence": "I play with a ball.",
+        "image": {
+          "status": "ready",
+          "storageKey": "scenes/fake-review-test/words/ball-v1.svg",
+          "url": "/uploads/scenes/fake-review-test/words/ball-v1.svg",
+          "prompt": "fake test image for ball",
+          "version": 1,
+          "width": null,
+          "height": null,
+          "updatedAt": "2026-06-28T04:36:32.413Z",
+          "candidateName": "ball-v1.png"
+        }
+      },
+      {
+        "word": "book",
+        "cn": "书",
+        "picture": "📘",
+        "sentence": "I read a book.",
+        "image": {
+          "status": "ready",
+          "storageKey": "scenes/fake-review-test/words/book-v1.svg",
+          "url": "/uploads/scenes/fake-review-test/words/book-v1.svg",
+          "prompt": "fake test image for book",
+          "version": 1,
+          "width": null,
+          "height": null,
+          "updatedAt": "2026-06-28T04:36:51.647Z",
+          "candidateName": "book-v1.png"
+        }
+      },
+      {
+        "word": "apple",
+        "cn": "苹果",
+        "picture": "🍎",
+        "sentence": "This is an apple.",
+        "image": {
+          "status": "ready",
+          "storageKey": "scenes/fake-review-test/words/apple-v1.svg",
+          "url": "/uploads/scenes/fake-review-test/words/apple-v1.svg",
+          "prompt": "fake test image for apple",
+          "version": 1,
+          "width": null,
+          "height": null,
+          "updatedAt": "2026-06-28T04:36:51.829Z",
+          "candidateName": "apple-v1.png"
+        }
+      }
+    ],
+    "notes": "",
+    "createdAt": "2026-06-28T04:36:23.848Z",
+    "updatedAt": "2026-06-28T07:20:25.751Z",
+    "publishedAt": "2026-06-28T07:20:25.752Z"
+  }
+]

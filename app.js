@@ -1,266 +1,62 @@
-const scenes = [
-  {
-    id: "living-room",
-    title: "客厅",
-    subtitle: "Living Room",
-    icon: "🛋️",
-    colors: ["#ffe3a3", "#bfe7ff"],
-    words: [
-      { word: "sofa", cn: "沙发", picture: "🛋️", sentence: "I sit on the sofa." },
-      { word: "TV", cn: "电视", picture: "📺", sentence: "The TV is on." },
-      { word: "table", cn: "桌子", picture: "🪑", image: "./assets/words/table.svg", sentence: "This is a table." },
-      { word: "chair", cn: "椅子", picture: "🪑", sentence: "I sit on a chair." },
-      { word: "lamp", cn: "台灯", picture: "💡", sentence: "The lamp is on." },
-      { word: "book", cn: "书", picture: "📘", sentence: "I read a book." },
-      { word: "toy", cn: "玩具", picture: "🧸", sentence: "This is my toy." },
-      { word: "ball", cn: "球", picture: "⚽", sentence: "I kick the ball." },
-      { word: "box", cn: "盒子", picture: "📦", sentence: "The toy is in the box." },
-      { word: "clock", cn: "钟", picture: "🕒", sentence: "This is a clock." },
-      { word: "window", cn: "窗户", picture: "🪟", sentence: "Open the window." },
-      { word: "door", cn: "门", picture: "🚪", sentence: "Close the door." },
-    ],
-  },
-  {
-    id: "bedroom",
-    title: "卧室",
-    subtitle: "Bedroom",
-    icon: "🛏️",
-    colors: ["#e6d7ff", "#c8f0ff"],
-    words: [
-      { word: "bed", cn: "床", picture: "🛏️", sentence: "This is my bed." },
-      { word: "pillow", cn: "枕头", picture: "🛏️", image: "./assets/words/pillow.svg", sentence: "My pillow is soft." },
-      { word: "blanket", cn: "毯子", picture: "🧺", sentence: "I have a blanket." },
-      { word: "teddy bear", cn: "玩具熊", picture: "🧸", sentence: "I hug my teddy bear." },
-      { word: "pajamas", cn: "睡衣", picture: "👕", sentence: "I wear pajamas." },
-      { word: "shoes", cn: "鞋子", picture: "👟", sentence: "Put on your shoes." },
-      { word: "socks", cn: "袜子", picture: "🧦", sentence: "These are my socks." },
-      { word: "shirt", cn: "衬衫", picture: "👕", sentence: "This is my shirt." },
-      { word: "pants", cn: "裤子", picture: "👖", sentence: "These are my pants." },
-      { word: "mirror", cn: "镜子", picture: "🪞", sentence: "I see me in the mirror." },
-      { word: "bag", cn: "包", picture: "🎒", sentence: "My bag is here." },
-      { word: "sleep", cn: "睡觉", picture: "😴", sentence: "I sleep at night." },
-    ],
-  },
-  {
-    id: "kitchen",
-    title: "厨房",
-    subtitle: "Kitchen",
-    icon: "🍽️",
-    colors: ["#ffd2c2", "#fff0a8"],
-    words: [
-      { word: "apple", cn: "苹果", picture: "🍎", sentence: "This is an apple." },
-      { word: "banana", cn: "香蕉", picture: "🍌", sentence: "I like bananas." },
-      { word: "orange", cn: "橙子", picture: "🍊", sentence: "This is an orange." },
-      { word: "bread", cn: "面包", picture: "🍞", sentence: "I eat bread." },
-      { word: "milk", cn: "牛奶", picture: "🥛", sentence: "I drink milk." },
-      { word: "water", cn: "水", picture: "💧", sentence: "I drink water." },
-      { word: "egg", cn: "鸡蛋", picture: "🥚", sentence: "This is an egg." },
-      { word: "cup", cn: "杯子", picture: "☕", sentence: "This is a cup." },
-      { word: "bowl", cn: "碗", picture: "🥣", sentence: "This is a bowl." },
-      { word: "plate", cn: "盘子", picture: "🍽️", sentence: "This is a plate." },
-      { word: "spoon", cn: "勺子", picture: "🥄", sentence: "I use a spoon." },
-      { word: "fork", cn: "叉子", picture: "🍴", sentence: "I use a fork." },
-      { word: "rice", cn: "米饭", picture: "🍚", sentence: "I eat rice." },
-      { word: "soup", cn: "汤", picture: "🍲", sentence: "The soup is hot." },
-    ],
-  },
-  {
-    id: "kindergarten",
-    title: "幼儿园",
-    subtitle: "Kindergarten",
-    icon: "🎒",
-    colors: ["#bff0d8", "#fff0a8"],
-    words: [
-      { word: "teacher", cn: "老师", picture: "👩‍🏫", sentence: "This is my teacher." },
-      { word: "friend", cn: "朋友", picture: "🧒", sentence: "This is my friend." },
-      { word: "bag", cn: "书包", picture: "🎒", sentence: "My bag is red." },
-      { word: "book", cn: "书", picture: "📘", sentence: "Open your book." },
-      { word: "pencil", cn: "铅笔", picture: "✏️", sentence: "I have a pencil." },
-      { word: "crayon", cn: "蜡笔", picture: "🖍️", sentence: "I color with a crayon." },
-      { word: "paper", cn: "纸", picture: "📄", sentence: "Draw on the paper." },
-      { word: "desk", cn: "课桌", picture: "🪑", image: "./assets/words/desk.svg", sentence: "This is my desk." },
-      { word: "chair", cn: "椅子", picture: "🪑", sentence: "Sit on the chair." },
-      { word: "blocks", cn: "积木", picture: "🧱", sentence: "I play with blocks." },
-      { word: "music", cn: "音乐", picture: "🎵", sentence: "I like music." },
-      { word: "nap", cn: "午睡", picture: "😴", sentence: "It is nap time." },
-    ],
-  },
-  {
-    id: "zoo",
-    title: "动物园",
-    subtitle: "Zoo",
-    icon: "🦁",
-    colors: ["#c8efb5", "#bfe4ff"],
-    words: [
-      { word: "lion", cn: "狮子", picture: "🦁", sentence: "I see a lion." },
-      { word: "tiger", cn: "老虎", picture: "🐯", sentence: "I see a tiger." },
-      { word: "monkey", cn: "猴子", picture: "🐵", sentence: "The monkey is funny." },
-      { word: "panda", cn: "熊猫", picture: "🐼", sentence: "I see a panda." },
-      { word: "elephant", cn: "大象", picture: "🐘", sentence: "The elephant is big." },
-      { word: "giraffe", cn: "长颈鹿", picture: "🦒", sentence: "The giraffe is tall." },
-      { word: "zebra", cn: "斑马", picture: "🦓", sentence: "The zebra has stripes." },
-      { word: "bear", cn: "熊", picture: "🐻", sentence: "The bear is big." },
-      { word: "rabbit", cn: "兔子", picture: "🐰", sentence: "The rabbit can hop." },
-      { word: "bird", cn: "鸟", picture: "🐦", sentence: "The bird can fly." },
-      { word: "duck", cn: "鸭子", picture: "🦆", sentence: "The duck can swim." },
-      { word: "fish", cn: "鱼", picture: "🐟", sentence: "The fish is small." },
-      { word: "snake", cn: "蛇", picture: "🐍", sentence: "The snake is long." },
-    ],
-  },
-  {
-    id: "playground",
-    title: "游乐场",
-    subtitle: "Playground",
-    icon: "🎠",
-    colors: ["#ffc2d1", "#bde0fe"],
-    words: [
-      { word: "slide", cn: "滑梯", picture: "🛝", sentence: "I go down the slide." },
-      { word: "swing", cn: "秋千", picture: "🌈", sentence: "I play on the swing." },
-      { word: "seesaw", cn: "跷跷板", picture: "🛝", image: "./assets/words/seesaw.svg", sentence: "I ride the seesaw." },
-      { word: "sand", cn: "沙子", picture: "🏖️", sentence: "I play with sand." },
-      { word: "bucket", cn: "桶", picture: "🪣", sentence: "This is a bucket." },
-      { word: "shovel", cn: "铲子", picture: "🪣", image: "./assets/words/shovel.svg", sentence: "I dig with a shovel." },
-      { word: "ball", cn: "球", picture: "⚽", sentence: "Throw the ball." },
-      { word: "kite", cn: "风筝", picture: "🪁", sentence: "The kite is up." },
-      { word: "bike", cn: "自行车", picture: "🚲", sentence: "I ride a bike." },
-      { word: "car", cn: "小车", picture: "🚗", sentence: "The car goes fast." },
-      { word: "train", cn: "小火车", picture: "🚂", sentence: "The train goes choo choo." },
-      { word: "ticket", cn: "票", picture: "🎟️", sentence: "I have a ticket." },
-    ],
-  },
-  {
-    id: "subway-station",
-    title: "地铁站",
-    subtitle: "Subway Station",
-    icon: "🚇",
-    colors: ["#c8f7dc", "#cdd7ff"],
-    words: [
-      { word: "subway", cn: "地铁", picture: "🚇", sentence: "I take the subway." },
-      { word: "train", cn: "列车", picture: "🚆", sentence: "The train is here." },
-      { word: "station", cn: "车站", picture: "🚉", sentence: "This is the station." },
-      { word: "ticket", cn: "车票", picture: "🎫", sentence: "I have a ticket." },
-      { word: "gate", cn: "闸机", picture: "🚧", sentence: "Go through the gate." },
-      { word: "map", cn: "地图", picture: "🗺️", sentence: "Look at the map." },
-      { word: "stairs", cn: "楼梯", picture: "🪜", sentence: "Go up the stairs." },
-      { word: "elevator", cn: "电梯", picture: "🛗", sentence: "Take the elevator." },
-      { word: "seat", cn: "座位", picture: "💺", sentence: "This is my seat." },
-      { word: "door", cn: "门", picture: "🚪", sentence: "The door is open." },
-      { word: "line", cn: "排队", picture: "🚶", sentence: "Stand in line." },
-      { word: "exit", cn: "出口", picture: "🚪", sentence: "This is the exit." },
-    ],
-  },
-  {
-    id: "bus",
-    title: "公交",
-    subtitle: "Bus",
-    icon: "🚌",
-    colors: ["#ffd166", "#a8dadc"],
-    words: [
-      { word: "bus", cn: "公交车", picture: "🚌", sentence: "I take the bus." },
-      { word: "bus stop", cn: "公交站", picture: "🚏", sentence: "This is the bus stop." },
-      { word: "driver", cn: "司机", picture: "🧑‍✈️", sentence: "The driver is kind." },
-      { word: "seat", cn: "座位", picture: "💺", sentence: "Sit on the seat." },
-      { word: "door", cn: "车门", picture: "🚪", sentence: "The door is open." },
-      { word: "window", cn: "窗户", picture: "🪟", sentence: "Look out the window." },
-      { word: "card", cn: "卡", picture: "💳", sentence: "Tap the card." },
-      { word: "ticket", cn: "车票", picture: "🎫", sentence: "Here is my ticket." },
-      { word: "bell", cn: "铃", picture: "🔔", sentence: "Ring the bell." },
-      { word: "wheel", cn: "轮子", picture: "🛞", sentence: "The wheel goes round." },
-      { word: "stop", cn: "停", picture: "🛑", sentence: "The bus will stop." },
-      { word: "road", cn: "路", picture: "🛣️", sentence: "The bus is on the road." },
-    ],
-  },
-  {
-    id: "bathroom",
-    title: "卫生间",
-    subtitle: "Bathroom",
-    icon: "🧼",
-    colors: ["#bde0fe", "#d9f99d"],
-    words: [
-      { word: "toilet", cn: "马桶", picture: "🚽", sentence: "This is a toilet." },
-      { word: "sink", cn: "洗手池", picture: "🚰", sentence: "Wash at the sink." },
-      { word: "soap", cn: "香皂", picture: "🧼", sentence: "Use the soap." },
-      { word: "towel", cn: "毛巾", picture: "🧼", image: "./assets/words/towel.svg", sentence: "Dry with a towel." },
-      { word: "water", cn: "水", picture: "💧", sentence: "The water is warm." },
-      { word: "bath", cn: "洗澡", picture: "🛁", sentence: "I take a bath." },
-      { word: "shower", cn: "淋浴", picture: "🚿", sentence: "Take a shower." },
-      { word: "toothbrush", cn: "牙刷", picture: "🪥", sentence: "Use a toothbrush." },
-      { word: "toothpaste", cn: "牙膏", picture: "🦷", image: "./assets/words/toothpaste.svg", sentence: "Put on toothpaste." },
-      { word: "comb", cn: "梳子", picture: "💇", image: "./assets/words/comb.svg", sentence: "I use a comb." },
-      { word: "mirror", cn: "镜子", picture: "🪞", sentence: "Look in the mirror." },
-      { word: "clean", cn: "干净", picture: "✨", sentence: "My hands are clean." },
-    ],
-  },
-  {
-    id: "vehicles",
-    title: "交通工具",
-    subtitle: "Vehicles",
-    icon: "🚗",
-    colors: ["#fbc4ab", "#a3cef1"],
-    words: [
-      { word: "car", cn: "汽车", picture: "🚗", sentence: "The car is fast." },
-      { word: "bus", cn: "公交车", picture: "🚌", sentence: "The bus is big." },
-      { word: "taxi", cn: "出租车", picture: "🚕", sentence: "This is a taxi." },
-      { word: "bike", cn: "自行车", picture: "🚲", sentence: "I ride a bike." },
-      { word: "scooter", cn: "滑板车", picture: "🛴", sentence: "I ride a scooter." },
-      { word: "train", cn: "火车", picture: "🚆", sentence: "The train is long." },
-      { word: "subway", cn: "地铁", picture: "🚇", sentence: "The subway is here." },
-      { word: "plane", cn: "飞机", picture: "✈️", sentence: "The plane is high." },
-      { word: "boat", cn: "船", picture: "⛵", sentence: "The boat is on water." },
-      { word: "ship", cn: "轮船", picture: "🚢", sentence: "The ship is big." },
-      { word: "truck", cn: "卡车", picture: "🚚", sentence: "The truck is heavy." },
-      { word: "fire truck", cn: "消防车", picture: "🚒", sentence: "The fire truck is red." },
-      { word: "ambulance", cn: "救护车", picture: "🚑", sentence: "The ambulance is loud." },
-      { word: "rocket", cn: "火箭", picture: "🚀", sentence: "The rocket goes up." },
-    ],
-  },
-  {
-    id: "park",
-    title: "公园",
-    subtitle: "Park",
-    icon: "🌳",
-    colors: ["#c8efb5", "#fdf0a5"],
-    words: [
-      { word: "tree", cn: "树", picture: "🌳", sentence: "This is a tree." },
-      { word: "flower", cn: "花", picture: "🌸", sentence: "The flower is pretty." },
-      { word: "grass", cn: "草地", picture: "🌱", sentence: "The grass is green." },
-      { word: "leaf", cn: "叶子", picture: "🍃", sentence: "This is a leaf." },
-      { word: "bird", cn: "鸟", picture: "🐦", sentence: "I see a bird." },
-      { word: "dog", cn: "狗", picture: "🐶", sentence: "The dog can run." },
-      { word: "cat", cn: "猫", picture: "🐱", sentence: "The cat is cute." },
-      { word: "bench", cn: "长椅", picture: "🪑", sentence: "Sit on the bench." },
-      { word: "lake", cn: "湖", picture: "🏞️", sentence: "The lake is blue." },
-      { word: "bridge", cn: "桥", picture: "🌉", sentence: "Walk on the bridge." },
-      { word: "sun", cn: "太阳", picture: "☀️", sentence: "The sun is warm." },
-      { word: "cloud", cn: "云", picture: "☁️", sentence: "I see a cloud." },
-      { word: "rain", cn: "雨", picture: "🌧️", sentence: "The rain is falling." },
-      { word: "picnic", cn: "野餐", picture: "🧺", sentence: "We have a picnic." },
-    ],
-  },
-  {
-    id: "signs",
-    title: "指示牌",
-    subtitle: "Signs",
-    icon: "🚦",
-    colors: ["#d0f4de", "#ffd6a5"],
-    words: [
-      { word: "stop", cn: "停止", picture: "🛑", sentence: "Stop here, please." },
-      { word: "go", cn: "通行", picture: "🟢", sentence: "Go now, please." },
-      { word: "exit", cn: "出口", picture: "🚪", sentence: "This is the exit." },
-      { word: "entrance", cn: "入口", picture: "➡️", sentence: "This is the entrance." },
-      { word: "toilet", cn: "卫生间", picture: "🚻", sentence: "Where is the toilet?" },
-      { word: "stairs", cn: "楼梯", picture: "🪜", sentence: "Use the stairs." },
-      { word: "elevator", cn: "电梯", picture: "🛗", sentence: "Take the elevator." },
-      { word: "left", cn: "左边", picture: "⬅️", sentence: "Turn left." },
-      { word: "right", cn: "右边", picture: "➡️", sentence: "Turn right." },
-      { word: "up", cn: "向上", picture: "⬆️", sentence: "Go up." },
-      { word: "down", cn: "向下", picture: "⬇️", sentence: "Go down." },
-      { word: "push", cn: "推", picture: "👉", sentence: "Push the door." },
-      { word: "pull", cn: "拉", picture: "👈", sentence: "Pull the door." },
-      { word: "no", cn: "不可以", picture: "🚫", sentence: "No running here." },
-    ],
-  },
-];
+let scenes = [];
+const sceneCacheKey = "little-english-published-scenes";
+
+function getContentApiBase() {
+  return (window.CONTENT_API_BASE || "").replace(/\/$/, "");
+}
+
+function normalizeRemoteImageUrl(imageUrl) {
+  if (!imageUrl || /^https?:\/\//i.test(imageUrl) || imageUrl.startsWith("./") || imageUrl.startsWith("data:")) {
+    return imageUrl;
+  }
+
+  return `${getContentApiBase()}${imageUrl.startsWith("/") ? "" : "/"}${imageUrl}`;
+}
+
+function normalizeSceneImages(items) {
+  return items.map((scene) => ({
+    ...scene,
+    words: (scene.words || []).map((word) => ({
+      ...word,
+      image: normalizeRemoteImageUrl(word.image),
+    })),
+  }));
+}
+
+function readCachedScenes() {
+  try {
+    const cached = JSON.parse(localStorage.getItem(sceneCacheKey) || "[]");
+    return Array.isArray(cached) ? cached : [];
+  } catch {
+    return [];
+  }
+}
+
+async function loadPublishedScenes() {
+  try {
+    const response = await fetch(`${getContentApiBase()}/api/scenes/published`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`Scene data request failed: ${response.status}`);
+    const loadedScenes = normalizeSceneImages(await response.json());
+    if (!Array.isArray(loadedScenes) || loadedScenes.length === 0) {
+      throw new Error("Scene data is empty");
+    }
+    localStorage.setItem(sceneCacheKey, JSON.stringify(loadedScenes));
+    return loadedScenes;
+  } catch (error) {
+    console.error(error);
+    const cachedScenes = readCachedScenes();
+    if (cachedScenes.length > 0) return cachedScenes;
+  }
+
+  try {
+    const response = await fetch("./data/scenes.published.json", { cache: "no-cache" });
+    if (!response.ok) throw new Error(`Bundled scene data request failed: ${response.status}`);
+    return normalizeSceneImages(await response.json());
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+}
 
 const homeView = document.querySelector("#homeView");
 const sceneView = document.querySelector("#sceneView");
@@ -293,19 +89,20 @@ const AppEnv = Object.freeze({
   },
 });
 
-const DEBUG_SCENE_COMPLETE_AUDIO = "./audio/debug/amazing.m4a";
-
-let currentScene = scenes[0];
-let currentWord = scenes[0].words[0];
+let currentScene = null;
+let currentWord = null;
 let voices = [];
 let activeUtterance = null;
 let activeAudio = null;
 let audioToastTimer = null;
 let isRestoringHistory = false;
-const debugVisitedWordsByScene = new Map();
-const debugCompletedScenes = new Set();
 
 function renderScenes() {
+  if (scenes.length === 0) {
+    sceneGrid.innerHTML = "<p>还没有可用场景。</p>";
+    return;
+  }
+
   sceneGrid.innerHTML = scenes
     .map(
       (scene) => `
@@ -315,7 +112,11 @@ function renderScenes() {
             <h3>${scene.title}</h3>
             <p>${scene.subtitle} · ${scene.words.length} words</p>
           </span>
-          <span class="scene-arrow" aria-hidden="true">›</span>
+          <span class="scene-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="m9 18 6-6-6-6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
         </button>
       `
     )
@@ -348,6 +149,7 @@ function renderWords(scene) {
 
 function showScene(sceneId, options = {}) {
   currentScene = scenes.find((scene) => scene.id === sceneId) || scenes[0];
+  if (!currentScene) return;
   renderWords(currentScene);
   homeView.classList.add("is-hidden");
   sceneView.classList.remove("is-hidden");
@@ -450,23 +252,9 @@ function playLocalAudio(text, target, kind) {
   });
 }
 
-function playStandaloneAudio(audioUrl) {
-  const rewardAudio = new Audio(audioUrl);
-  rewardAudio.preload = "auto";
-  return rewardAudio.play().catch(() => {
-    showAudioMessage("奖励音频播放失败，请确认音频文件已打包。");
-  });
-}
-
 function wait(ms) {
   return new Promise((resolve) => {
     window.setTimeout(resolve, ms);
-  });
-}
-
-function playDebugCompletionAudioAfter(wordAudioPromise) {
-  Promise.race([wordAudioPromise.catch(() => undefined), wait(2200)]).then(() => {
-    playStandaloneAudio(DEBUG_SCENE_COMPLETE_AUDIO);
   });
 }
 
@@ -503,47 +291,39 @@ async function speak(text, target, kind, retried = false) {
   if (voice) utterance.voice = voice;
 
   if (target) target.classList.add("is-speaking");
-  utterance.onend = () => target?.classList.remove("is-speaking");
-  utterance.onerror = () => {
-    target?.classList.remove("is-speaking");
-    if (!retried) {
-      window.setTimeout(() => speak(text, target, kind, true), 180);
-      return;
-    }
-    showAudioMessage("朗读没有启动。请确认音频文件已部署，或换 Chrome/Safari 试试。");
-  };
-
   activeUtterance = utterance;
-  window.speechSynthesis.speak(utterance);
 
-  window.setTimeout(() => {
-    const synth = window.speechSynthesis;
-    if (!retried && !synth.speaking && !synth.pending) {
-      speak(text, target, kind, true);
-    }
-  }, 280);
-}
+  return new Promise((resolve) => {
+    utterance.onend = () => {
+      target?.classList.remove("is-speaking");
+      resolve();
+    };
+    utterance.onerror = () => {
+      target?.classList.remove("is-speaking");
+      if (!retried) {
+        window.setTimeout(() => {
+          speak(text, target, kind, true).finally(resolve);
+        }, 180);
+        return;
+      }
+      showAudioMessage("朗读没有启动。请确认音频文件已部署，或换 Chrome/Safari 试试。");
+      resolve();
+    };
 
-function markDebugWordVisited(scene, item) {
-  if (!AppEnv.isDebugApp) return false;
-  if (debugCompletedScenes.has(scene.id)) return false;
+    window.speechSynthesis.speak(utterance);
 
-  if (!debugVisitedWordsByScene.has(scene.id)) {
-    debugVisitedWordsByScene.set(scene.id, new Set());
-  }
-
-  const visitedWords = debugVisitedWordsByScene.get(scene.id);
-  visitedWords.add(item.word);
-
-  if (visitedWords.size < scene.words.length) return false;
-
-  debugCompletedScenes.add(scene.id);
-  return true;
+    window.setTimeout(() => {
+      const synth = window.speechSynthesis;
+      if (!retried && !synth.speaking && !synth.pending) {
+        speak(text, target, kind, true).finally(resolve);
+      }
+    }, 280);
+  });
 }
 
 function openWordSheet(item, scene, options = {}) {
+  if (!item || !scene) return;
   currentWord = item;
-  const shouldPlayDebugCompletion = options.skipVisit ? false : markDebugWordVisited(scene, item);
 
   sheetPicture.innerHTML = renderPicture(item);
   sheetPicture.style.setProperty("--accent-a", scene.colors[0]);
@@ -560,10 +340,7 @@ function openWordSheet(item, scene, options = {}) {
       `#${scene.id}/${slugify(item.word)}`
     );
   }
-  const wordAudioPromise = speak(item.word, wordSoundButton, "words");
-  if (shouldPlayDebugCompletion) {
-    playDebugCompletionAudioAfter(wordAudioPromise);
-  }
+  speak(item.word, wordSoundButton, "words");
 }
 
 function closeWordSheet(options = {}) {
@@ -601,17 +378,23 @@ function handleAppBack() {
   return false;
 }
 
-renderScenes();
-loadVoices();
-history.replaceState({ view: "home" }, "", location.pathname);
-if (canUseSpeech() && typeof window.speechSynthesis.addEventListener === "function") {
-  window.speechSynthesis.addEventListener("voiceschanged", loadVoices);
-} else if (canUseSpeech()) {
-  window.speechSynthesis.onvoiceschanged = loadVoices;
-}
+async function initApp() {
+  scenes = await loadPublishedScenes();
+  currentScene = scenes[0] || null;
+  currentWord = currentScene?.words?.[0] || null;
 
-document.addEventListener("pointerdown", primeSpeech, { once: true });
-window.littleEnglishHandleBack = handleAppBack;
+  renderScenes();
+  loadVoices();
+  history.replaceState({ view: "home" }, "", location.pathname);
+  if (canUseSpeech() && typeof window.speechSynthesis.addEventListener === "function") {
+    window.speechSynthesis.addEventListener("voiceschanged", loadVoices);
+  } else if (canUseSpeech()) {
+    window.speechSynthesis.onvoiceschanged = loadVoices;
+  }
+
+  document.addEventListener("pointerdown", primeSpeech, { once: true });
+  window.littleEnglishHandleBack = handleAppBack;
+}
 
 sceneGrid.addEventListener("click", (event) => {
   const card = event.target.closest("[data-scene]");
@@ -621,7 +404,7 @@ sceneGrid.addEventListener("click", (event) => {
 
 wordGrid.addEventListener("click", (event) => {
   const card = event.target.closest("[data-word]");
-  if (!card) return;
+  if (!card || !currentScene) return;
   const item = currentScene.words[Number(card.dataset.word)];
   openWordSheet(item, currentScene);
 });
@@ -632,6 +415,7 @@ window.addEventListener("popstate", (event) => {
 
   if (state.view === "word") {
     const scene = scenes.find((item) => item.id === state.sceneId) || scenes[0];
+    if (!scene) return;
     const word = scene.words.find((item) => item.word === state.word) || scene.words[0];
     showScene(scene.id, { skipHistory: true });
     openWordSheet(word, scene, { skipHistory: true, skipVisit: true });
@@ -648,5 +432,7 @@ window.addEventListener("popstate", (event) => {
 backButton.addEventListener("click", () => history.back());
 closeSheet.addEventListener("click", () => closeWordSheet());
 scrim.addEventListener("click", () => closeWordSheet());
-wordSoundButton.addEventListener("click", () => speak(currentWord.word, wordSoundButton, "words"));
-sentenceSoundButton.addEventListener("click", () => speak(currentWord.sentence, sentenceSoundButton, "sentences"));
+wordSoundButton.addEventListener("click", () => currentWord && speak(currentWord.word, wordSoundButton, "words"));
+sentenceSoundButton.addEventListener("click", () => currentWord && speak(currentWord.sentence, sentenceSoundButton, "sentences"));
+
+initApp();

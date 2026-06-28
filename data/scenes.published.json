@@ -1,0 +1,1480 @@
+[
+  {
+    "id": "living-room",
+    "title": "客厅",
+    "subtitle": "Living Room",
+    "icon": "🛋️",
+    "colors": [
+      "#ffe3a3",
+      "#bfe7ff"
+    ],
+    "words": [
+      {
+        "word": "sofa",
+        "cn": "沙发",
+        "picture": "🛋️",
+        "sentence": "I sit on the sofa.",
+        "image": "./assets/words/sticker/sofa.svg"
+      },
+      {
+        "word": "TV",
+        "cn": "电视",
+        "picture": "📺",
+        "sentence": "The TV is on.",
+        "image": "./assets/words/sticker/tv.svg"
+      },
+      {
+        "word": "table",
+        "cn": "桌子",
+        "picture": "🪑",
+        "image": "./assets/words/sticker/table.svg",
+        "sentence": "This is a table."
+      },
+      {
+        "word": "chair",
+        "cn": "椅子",
+        "picture": "🪑",
+        "sentence": "I sit on a chair.",
+        "image": "./assets/words/sticker/chair.svg"
+      },
+      {
+        "word": "lamp",
+        "cn": "台灯",
+        "picture": "💡",
+        "sentence": "The lamp is on.",
+        "image": "./assets/words/sticker/lamp.svg"
+      },
+      {
+        "word": "book",
+        "cn": "书",
+        "picture": "📘",
+        "sentence": "I read a book.",
+        "image": "./assets/words/sticker/book.svg"
+      },
+      {
+        "word": "toy",
+        "cn": "玩具",
+        "picture": "🧸",
+        "sentence": "This is my toy.",
+        "image": "./assets/words/sticker/toy.svg"
+      },
+      {
+        "word": "ball",
+        "cn": "球",
+        "picture": "⚽",
+        "sentence": "I kick the ball.",
+        "image": "./assets/words/sticker/ball.svg"
+      },
+      {
+        "word": "box",
+        "cn": "盒子",
+        "picture": "📦",
+        "sentence": "The toy is in the box.",
+        "image": "./assets/words/sticker/box.svg"
+      },
+      {
+        "word": "clock",
+        "cn": "钟",
+        "picture": "🕒",
+        "sentence": "This is a clock.",
+        "image": "./assets/words/sticker/clock.svg"
+      },
+      {
+        "word": "window",
+        "cn": "窗户",
+        "picture": "🪟",
+        "sentence": "Open the window.",
+        "image": "./assets/words/sticker/window.svg"
+      },
+      {
+        "word": "door",
+        "cn": "门",
+        "picture": "🚪",
+        "sentence": "Close the door.",
+        "image": "./assets/words/sticker/door.svg"
+      }
+    ]
+  },
+  {
+    "id": "bedroom",
+    "title": "卧室",
+    "subtitle": "Bedroom",
+    "icon": "🛏️",
+    "colors": [
+      "#e6d7ff",
+      "#c8f0ff"
+    ],
+    "words": [
+      {
+        "word": "bed",
+        "cn": "床",
+        "picture": "🛏️",
+        "sentence": "This is my bed.",
+        "image": "./assets/words/sticker/bed.svg"
+      },
+      {
+        "word": "pillow",
+        "cn": "枕头",
+        "picture": "🛏️",
+        "image": "./assets/words/sticker/pillow.svg",
+        "sentence": "My pillow is soft."
+      },
+      {
+        "word": "blanket",
+        "cn": "毯子",
+        "picture": "🧺",
+        "sentence": "I have a blanket.",
+        "image": "./assets/words/sticker/blanket.svg"
+      },
+      {
+        "word": "teddy bear",
+        "cn": "玩具熊",
+        "picture": "🧸",
+        "sentence": "I hug my teddy bear.",
+        "image": "./assets/words/sticker/teddy-bear.svg"
+      },
+      {
+        "word": "pajamas",
+        "cn": "睡衣",
+        "picture": "👕",
+        "sentence": "I wear pajamas.",
+        "image": "./assets/words/sticker/pajamas.svg"
+      },
+      {
+        "word": "shoes",
+        "cn": "鞋子",
+        "picture": "👟",
+        "sentence": "Put on your shoes.",
+        "image": "./assets/words/sticker/shoes.svg"
+      },
+      {
+        "word": "socks",
+        "cn": "袜子",
+        "picture": "🧦",
+        "sentence": "These are my socks.",
+        "image": "./assets/words/sticker/socks.svg"
+      },
+      {
+        "word": "shirt",
+        "cn": "衬衫",
+        "picture": "👕",
+        "sentence": "This is my shirt.",
+        "image": "./assets/words/sticker/shirt.svg"
+      },
+      {
+        "word": "pants",
+        "cn": "裤子",
+        "picture": "👖",
+        "sentence": "These are my pants.",
+        "image": "./assets/words/sticker/pants.svg"
+      },
+      {
+        "word": "mirror",
+        "cn": "镜子",
+        "picture": "🪞",
+        "sentence": "I see me in the mirror.",
+        "image": "./assets/words/sticker/mirror.svg"
+      },
+      {
+        "word": "bag",
+        "cn": "包",
+        "picture": "🎒",
+        "sentence": "My bag is here.",
+        "image": "./assets/words/sticker/bag.svg"
+      },
+      {
+        "word": "sleep",
+        "cn": "睡觉",
+        "picture": "😴",
+        "sentence": "I sleep at night.",
+        "image": "./assets/words/sticker/sleep.svg"
+      }
+    ]
+  },
+  {
+    "id": "kitchen",
+    "title": "厨房",
+    "subtitle": "Kitchen",
+    "icon": "🍽️",
+    "colors": [
+      "#ffd2c2",
+      "#fff0a8"
+    ],
+    "words": [
+      {
+        "word": "apple",
+        "cn": "苹果",
+        "picture": "🍎",
+        "image": "./assets/words/sticker/apple.svg",
+        "sentence": "This is an apple."
+      },
+      {
+        "word": "banana",
+        "cn": "香蕉",
+        "picture": "🍌",
+        "image": "./assets/words/sticker/banana.svg",
+        "sentence": "I like bananas."
+      },
+      {
+        "word": "orange",
+        "cn": "橙子",
+        "picture": "🍊",
+        "image": "./assets/words/sticker/orange.svg",
+        "sentence": "This is an orange."
+      },
+      {
+        "word": "bread",
+        "cn": "面包",
+        "picture": "🍞",
+        "image": "./assets/words/sticker/bread.svg",
+        "sentence": "I eat bread."
+      },
+      {
+        "word": "milk",
+        "cn": "牛奶",
+        "picture": "🥛",
+        "image": "./assets/words/sticker/milk.svg",
+        "sentence": "I drink milk."
+      },
+      {
+        "word": "water",
+        "cn": "水",
+        "picture": "💧",
+        "image": "./assets/words/sticker/water.svg",
+        "sentence": "I drink water."
+      },
+      {
+        "word": "egg",
+        "cn": "鸡蛋",
+        "picture": "🥚",
+        "image": "./assets/words/sticker/egg.svg",
+        "sentence": "This is an egg."
+      },
+      {
+        "word": "cup",
+        "cn": "杯子",
+        "picture": "☕",
+        "image": "./assets/words/sticker/cup.svg",
+        "sentence": "This is a cup."
+      },
+      {
+        "word": "bowl",
+        "cn": "碗",
+        "picture": "🥣",
+        "image": "./assets/words/sticker/bowl.svg",
+        "sentence": "This is a bowl."
+      },
+      {
+        "word": "plate",
+        "cn": "盘子",
+        "picture": "🍽️",
+        "image": "./assets/words/sticker/plate.svg",
+        "sentence": "This is a plate."
+      },
+      {
+        "word": "spoon",
+        "cn": "勺子",
+        "picture": "🥄",
+        "image": "./assets/words/sticker/spoon.svg",
+        "sentence": "I use a spoon."
+      },
+      {
+        "word": "fork",
+        "cn": "叉子",
+        "picture": "🍴",
+        "image": "./assets/words/sticker/fork.svg",
+        "sentence": "I use a fork."
+      },
+      {
+        "word": "rice",
+        "cn": "米饭",
+        "picture": "🍚",
+        "image": "./assets/words/sticker/rice.svg",
+        "sentence": "I eat rice."
+      },
+      {
+        "word": "soup",
+        "cn": "汤",
+        "picture": "🍲",
+        "image": "./assets/words/sticker/soup.svg",
+        "sentence": "The soup is hot."
+      }
+    ]
+  },
+  {
+    "id": "kindergarten",
+    "title": "幼儿园",
+    "subtitle": "Kindergarten",
+    "icon": "🎒",
+    "colors": [
+      "#bff0d8",
+      "#fff0a8"
+    ],
+    "words": [
+      {
+        "word": "teacher",
+        "cn": "老师",
+        "picture": "👩‍🏫",
+        "sentence": "This is my teacher.",
+        "image": "./assets/words/sticker/teacher.svg"
+      },
+      {
+        "word": "friend",
+        "cn": "朋友",
+        "picture": "🧒",
+        "sentence": "This is my friend.",
+        "image": "./assets/words/sticker/friend.svg"
+      },
+      {
+        "word": "bag",
+        "cn": "书包",
+        "picture": "🎒",
+        "sentence": "My bag is red.",
+        "image": "./assets/words/sticker/bag.svg"
+      },
+      {
+        "word": "book",
+        "cn": "书",
+        "picture": "📘",
+        "sentence": "Open your book.",
+        "image": "./assets/words/sticker/book.svg"
+      },
+      {
+        "word": "pencil",
+        "cn": "铅笔",
+        "picture": "✏️",
+        "sentence": "I have a pencil.",
+        "image": "./assets/words/sticker/pencil.svg"
+      },
+      {
+        "word": "crayon",
+        "cn": "蜡笔",
+        "picture": "🖍️",
+        "sentence": "I color with a crayon.",
+        "image": "./assets/words/sticker/crayon.svg"
+      },
+      {
+        "word": "paper",
+        "cn": "纸",
+        "picture": "📄",
+        "sentence": "Draw on the paper.",
+        "image": "./assets/words/sticker/paper.svg"
+      },
+      {
+        "word": "desk",
+        "cn": "课桌",
+        "picture": "🪑",
+        "image": "./assets/words/sticker/desk.svg",
+        "sentence": "This is my desk."
+      },
+      {
+        "word": "chair",
+        "cn": "椅子",
+        "picture": "🪑",
+        "sentence": "Sit on the chair.",
+        "image": "./assets/words/sticker/chair.svg"
+      },
+      {
+        "word": "blocks",
+        "cn": "积木",
+        "picture": "🧱",
+        "sentence": "I play with blocks.",
+        "image": "./assets/words/sticker/blocks.svg"
+      },
+      {
+        "word": "music",
+        "cn": "音乐",
+        "picture": "🎵",
+        "sentence": "I like music.",
+        "image": "./assets/words/sticker/music.svg"
+      },
+      {
+        "word": "nap",
+        "cn": "午睡",
+        "picture": "😴",
+        "sentence": "It is nap time.",
+        "image": "./assets/words/sticker/nap.svg"
+      }
+    ]
+  },
+  {
+    "id": "zoo",
+    "title": "动物园",
+    "subtitle": "Zoo",
+    "icon": "🦁",
+    "colors": [
+      "#c8efb5",
+      "#bfe4ff"
+    ],
+    "words": [
+      {
+        "word": "lion",
+        "cn": "狮子",
+        "picture": "🦁",
+        "sentence": "I see a lion.",
+        "image": "./assets/words/sticker/lion.svg"
+      },
+      {
+        "word": "tiger",
+        "cn": "老虎",
+        "picture": "🐯",
+        "sentence": "I see a tiger.",
+        "image": "./assets/words/sticker/tiger.svg"
+      },
+      {
+        "word": "monkey",
+        "cn": "猴子",
+        "picture": "🐵",
+        "sentence": "The monkey is funny.",
+        "image": "./assets/words/sticker/monkey.svg"
+      },
+      {
+        "word": "panda",
+        "cn": "熊猫",
+        "picture": "🐼",
+        "sentence": "I see a panda.",
+        "image": "./assets/words/sticker/panda.svg"
+      },
+      {
+        "word": "elephant",
+        "cn": "大象",
+        "picture": "🐘",
+        "sentence": "The elephant is big.",
+        "image": "./assets/words/sticker/elephant.svg"
+      },
+      {
+        "word": "giraffe",
+        "cn": "长颈鹿",
+        "picture": "🦒",
+        "sentence": "The giraffe is tall.",
+        "image": "./assets/words/sticker/giraffe.svg"
+      },
+      {
+        "word": "zebra",
+        "cn": "斑马",
+        "picture": "🦓",
+        "sentence": "The zebra has stripes.",
+        "image": "./assets/words/sticker/zebra.svg"
+      },
+      {
+        "word": "bear",
+        "cn": "熊",
+        "picture": "🐻",
+        "sentence": "The bear is big.",
+        "image": "./assets/words/sticker/bear.svg"
+      },
+      {
+        "word": "rabbit",
+        "cn": "兔子",
+        "picture": "🐰",
+        "sentence": "The rabbit can hop.",
+        "image": "./assets/words/sticker/rabbit.svg"
+      },
+      {
+        "word": "bird",
+        "cn": "鸟",
+        "picture": "🐦",
+        "sentence": "The bird can fly.",
+        "image": "./assets/words/sticker/bird.svg"
+      },
+      {
+        "word": "duck",
+        "cn": "鸭子",
+        "picture": "🦆",
+        "sentence": "The duck can swim.",
+        "image": "./assets/words/sticker/duck.svg"
+      },
+      {
+        "word": "fish",
+        "cn": "鱼",
+        "picture": "🐟",
+        "sentence": "The fish is small.",
+        "image": "./assets/words/sticker/fish.svg"
+      },
+      {
+        "word": "snake",
+        "cn": "蛇",
+        "picture": "🐍",
+        "sentence": "The snake is long.",
+        "image": "./assets/words/sticker/snake.svg"
+      }
+    ]
+  },
+  {
+    "id": "playground",
+    "title": "游乐场",
+    "subtitle": "Playground",
+    "icon": "🎠",
+    "colors": [
+      "#ffc2d1",
+      "#bde0fe"
+    ],
+    "words": [
+      {
+        "word": "slide",
+        "cn": "滑梯",
+        "picture": "🛝",
+        "sentence": "I go down the slide.",
+        "image": "./assets/words/sticker/slide.svg"
+      },
+      {
+        "word": "swing",
+        "cn": "秋千",
+        "picture": "🌈",
+        "sentence": "I play on the swing.",
+        "image": "./assets/words/sticker/swing.svg"
+      },
+      {
+        "word": "seesaw",
+        "cn": "跷跷板",
+        "picture": "🛝",
+        "image": "./assets/words/sticker/seesaw.svg",
+        "sentence": "I ride the seesaw."
+      },
+      {
+        "word": "sand",
+        "cn": "沙子",
+        "picture": "🏖️",
+        "sentence": "I play with sand.",
+        "image": "./assets/words/sticker/sand.svg"
+      },
+      {
+        "word": "bucket",
+        "cn": "桶",
+        "picture": "🪣",
+        "sentence": "This is a bucket.",
+        "image": "./assets/words/sticker/bucket.svg"
+      },
+      {
+        "word": "shovel",
+        "cn": "铲子",
+        "picture": "🪣",
+        "image": "./assets/words/sticker/shovel.svg",
+        "sentence": "I dig with a shovel."
+      },
+      {
+        "word": "ball",
+        "cn": "球",
+        "picture": "⚽",
+        "sentence": "Throw the ball.",
+        "image": "./assets/words/sticker/ball.svg"
+      },
+      {
+        "word": "kite",
+        "cn": "风筝",
+        "picture": "🪁",
+        "sentence": "The kite is up.",
+        "image": "./assets/words/sticker/kite.svg"
+      },
+      {
+        "word": "bike",
+        "cn": "自行车",
+        "picture": "🚲",
+        "sentence": "I ride a bike.",
+        "image": "./assets/words/sticker/bike.svg"
+      },
+      {
+        "word": "car",
+        "cn": "小车",
+        "picture": "🚗",
+        "sentence": "The car goes fast.",
+        "image": "./assets/words/sticker/car.svg"
+      },
+      {
+        "word": "train",
+        "cn": "小火车",
+        "picture": "🚂",
+        "sentence": "The train goes choo choo.",
+        "image": "./assets/words/sticker/train.svg"
+      },
+      {
+        "word": "ticket",
+        "cn": "票",
+        "picture": "🎟️",
+        "sentence": "I have a ticket.",
+        "image": "./assets/words/sticker/ticket.svg"
+      }
+    ]
+  },
+  {
+    "id": "subway-station",
+    "title": "地铁站",
+    "subtitle": "Subway Station",
+    "icon": "🚇",
+    "colors": [
+      "#c8f7dc",
+      "#cdd7ff"
+    ],
+    "words": [
+      {
+        "word": "subway",
+        "cn": "地铁",
+        "picture": "🚇",
+        "sentence": "I take the subway.",
+        "image": "./assets/words/sticker/subway.svg"
+      },
+      {
+        "word": "train",
+        "cn": "列车",
+        "picture": "🚆",
+        "sentence": "The train is here.",
+        "image": "./assets/words/sticker/train.svg"
+      },
+      {
+        "word": "station",
+        "cn": "车站",
+        "picture": "🚉",
+        "sentence": "This is the station.",
+        "image": "./assets/words/sticker/station.svg"
+      },
+      {
+        "word": "ticket",
+        "cn": "车票",
+        "picture": "🎫",
+        "sentence": "I have a ticket.",
+        "image": "./assets/words/sticker/ticket.svg"
+      },
+      {
+        "word": "gate",
+        "cn": "闸机",
+        "picture": "🚧",
+        "sentence": "Go through the gate.",
+        "image": "./assets/words/sticker/gate.svg"
+      },
+      {
+        "word": "map",
+        "cn": "地图",
+        "picture": "🗺️",
+        "sentence": "Look at the map.",
+        "image": "./assets/words/sticker/map.svg"
+      },
+      {
+        "word": "stairs",
+        "cn": "楼梯",
+        "picture": "🪜",
+        "sentence": "Go up the stairs.",
+        "image": "./assets/words/sticker/stairs.svg"
+      },
+      {
+        "word": "elevator",
+        "cn": "电梯",
+        "picture": "🛗",
+        "sentence": "Take the elevator.",
+        "image": "./assets/words/sticker/elevator.svg"
+      },
+      {
+        "word": "seat",
+        "cn": "座位",
+        "picture": "💺",
+        "sentence": "This is my seat.",
+        "image": "./assets/words/sticker/seat.svg"
+      },
+      {
+        "word": "door",
+        "cn": "门",
+        "picture": "🚪",
+        "sentence": "The door is open.",
+        "image": "./assets/words/sticker/door.svg"
+      },
+      {
+        "word": "line",
+        "cn": "排队",
+        "picture": "🚶",
+        "sentence": "Stand in line.",
+        "image": "./assets/words/sticker/line.svg"
+      },
+      {
+        "word": "exit",
+        "cn": "出口",
+        "picture": "🚪",
+        "sentence": "This is the exit.",
+        "image": "./assets/words/sticker/exit.svg"
+      }
+    ]
+  },
+  {
+    "id": "bus",
+    "title": "公交",
+    "subtitle": "Bus",
+    "icon": "🚌",
+    "colors": [
+      "#ffd166",
+      "#a8dadc"
+    ],
+    "words": [
+      {
+        "word": "bus",
+        "cn": "公交车",
+        "picture": "🚌",
+        "sentence": "I take the bus.",
+        "image": "./assets/words/sticker/bus.svg"
+      },
+      {
+        "word": "bus stop",
+        "cn": "公交站",
+        "picture": "🚏",
+        "sentence": "This is the bus stop.",
+        "image": "./assets/words/sticker/bus-stop.svg"
+      },
+      {
+        "word": "driver",
+        "cn": "司机",
+        "picture": "🧑‍✈️",
+        "sentence": "The driver is kind.",
+        "image": "./assets/words/sticker/driver.svg"
+      },
+      {
+        "word": "seat",
+        "cn": "座位",
+        "picture": "💺",
+        "sentence": "Sit on the seat.",
+        "image": "./assets/words/sticker/seat.svg"
+      },
+      {
+        "word": "door",
+        "cn": "车门",
+        "picture": "🚪",
+        "sentence": "The door is open.",
+        "image": "./assets/words/sticker/door.svg"
+      },
+      {
+        "word": "window",
+        "cn": "窗户",
+        "picture": "🪟",
+        "sentence": "Look out the window.",
+        "image": "./assets/words/sticker/window.svg"
+      },
+      {
+        "word": "card",
+        "cn": "卡",
+        "picture": "💳",
+        "sentence": "Tap the card.",
+        "image": "./assets/words/sticker/card.svg"
+      },
+      {
+        "word": "ticket",
+        "cn": "车票",
+        "picture": "🎫",
+        "sentence": "Here is my ticket.",
+        "image": "./assets/words/sticker/ticket.svg"
+      },
+      {
+        "word": "bell",
+        "cn": "铃",
+        "picture": "🔔",
+        "sentence": "Ring the bell.",
+        "image": "./assets/words/sticker/bell.svg"
+      },
+      {
+        "word": "wheel",
+        "cn": "轮子",
+        "picture": "🛞",
+        "sentence": "The wheel goes round.",
+        "image": "./assets/words/sticker/wheel.svg"
+      },
+      {
+        "word": "stop",
+        "cn": "停",
+        "picture": "🛑",
+        "sentence": "The bus will stop.",
+        "image": "./assets/words/sticker/stop.svg"
+      },
+      {
+        "word": "road",
+        "cn": "路",
+        "picture": "🛣️",
+        "sentence": "The bus is on the road.",
+        "image": "./assets/words/sticker/road.svg"
+      }
+    ]
+  },
+  {
+    "id": "bathroom",
+    "title": "卫生间",
+    "subtitle": "Bathroom",
+    "icon": "🧼",
+    "colors": [
+      "#bde0fe",
+      "#d9f99d"
+    ],
+    "words": [
+      {
+        "word": "toilet",
+        "cn": "马桶",
+        "picture": "🚽",
+        "sentence": "This is a toilet.",
+        "image": "./assets/words/sticker/toilet.svg"
+      },
+      {
+        "word": "sink",
+        "cn": "洗手池",
+        "picture": "🚰",
+        "sentence": "Wash at the sink.",
+        "image": "./assets/words/sticker/sink.svg"
+      },
+      {
+        "word": "soap",
+        "cn": "香皂",
+        "picture": "🧼",
+        "sentence": "Use the soap.",
+        "image": "./assets/words/sticker/soap.svg"
+      },
+      {
+        "word": "towel",
+        "cn": "毛巾",
+        "picture": "🧼",
+        "image": "./assets/words/sticker/towel.svg",
+        "sentence": "Dry with a towel."
+      },
+      {
+        "word": "water",
+        "cn": "水",
+        "picture": "💧",
+        "sentence": "The water is warm.",
+        "image": "./assets/words/sticker/water.svg"
+      },
+      {
+        "word": "bath",
+        "cn": "洗澡",
+        "picture": "🛁",
+        "sentence": "I take a bath.",
+        "image": "./assets/words/sticker/bath.svg"
+      },
+      {
+        "word": "shower",
+        "cn": "淋浴",
+        "picture": "🚿",
+        "sentence": "Take a shower.",
+        "image": "./assets/words/sticker/shower.svg"
+      },
+      {
+        "word": "toothbrush",
+        "cn": "牙刷",
+        "picture": "🪥",
+        "sentence": "Use a toothbrush.",
+        "image": "./assets/words/sticker/toothbrush.svg"
+      },
+      {
+        "word": "toothpaste",
+        "cn": "牙膏",
+        "picture": "🦷",
+        "image": "./assets/words/sticker/toothpaste.svg",
+        "sentence": "Put on toothpaste."
+      },
+      {
+        "word": "comb",
+        "cn": "梳子",
+        "picture": "💇",
+        "image": "./assets/words/sticker/comb.svg",
+        "sentence": "I use a comb."
+      },
+      {
+        "word": "mirror",
+        "cn": "镜子",
+        "picture": "🪞",
+        "sentence": "Look in the mirror.",
+        "image": "./assets/words/sticker/mirror.svg"
+      },
+      {
+        "word": "clean",
+        "cn": "干净",
+        "picture": "✨",
+        "sentence": "My hands are clean.",
+        "image": "./assets/words/sticker/clean.svg"
+      }
+    ]
+  },
+  {
+    "id": "vehicles",
+    "title": "交通工具",
+    "subtitle": "Vehicles",
+    "icon": "🚗",
+    "colors": [
+      "#fbc4ab",
+      "#a3cef1"
+    ],
+    "words": [
+      {
+        "word": "car",
+        "cn": "汽车",
+        "picture": "🚗",
+        "sentence": "The car is fast.",
+        "image": "./assets/words/sticker/car.svg"
+      },
+      {
+        "word": "bus",
+        "cn": "公交车",
+        "picture": "🚌",
+        "sentence": "The bus is big.",
+        "image": "./assets/words/sticker/bus.svg"
+      },
+      {
+        "word": "taxi",
+        "cn": "出租车",
+        "picture": "🚕",
+        "sentence": "This is a taxi.",
+        "image": "./assets/words/sticker/taxi.svg"
+      },
+      {
+        "word": "bike",
+        "cn": "自行车",
+        "picture": "🚲",
+        "sentence": "I ride a bike.",
+        "image": "./assets/words/sticker/bike.svg"
+      },
+      {
+        "word": "scooter",
+        "cn": "滑板车",
+        "picture": "🛴",
+        "sentence": "I ride a scooter.",
+        "image": "./assets/words/sticker/scooter.svg"
+      },
+      {
+        "word": "train",
+        "cn": "火车",
+        "picture": "🚆",
+        "sentence": "The train is long.",
+        "image": "./assets/words/sticker/train.svg"
+      },
+      {
+        "word": "subway",
+        "cn": "地铁",
+        "picture": "🚇",
+        "sentence": "The subway is here.",
+        "image": "./assets/words/sticker/subway.svg"
+      },
+      {
+        "word": "plane",
+        "cn": "飞机",
+        "picture": "✈️",
+        "sentence": "The plane is high.",
+        "image": "./assets/words/sticker/plane.svg"
+      },
+      {
+        "word": "boat",
+        "cn": "船",
+        "picture": "⛵",
+        "sentence": "The boat is on water.",
+        "image": "./assets/words/sticker/boat.svg"
+      },
+      {
+        "word": "ship",
+        "cn": "轮船",
+        "picture": "🚢",
+        "sentence": "The ship is big.",
+        "image": "./assets/words/sticker/ship.svg"
+      },
+      {
+        "word": "truck",
+        "cn": "卡车",
+        "picture": "🚚",
+        "sentence": "The truck is heavy.",
+        "image": "./assets/words/sticker/truck.svg"
+      },
+      {
+        "word": "fire truck",
+        "cn": "消防车",
+        "picture": "🚒",
+        "sentence": "The fire truck is red.",
+        "image": "./assets/words/sticker/fire-truck.svg"
+      },
+      {
+        "word": "ambulance",
+        "cn": "救护车",
+        "picture": "🚑",
+        "sentence": "The ambulance is loud.",
+        "image": "./assets/words/sticker/ambulance.svg"
+      },
+      {
+        "word": "rocket",
+        "cn": "火箭",
+        "picture": "🚀",
+        "sentence": "The rocket goes up.",
+        "image": "./assets/words/sticker/rocket.svg"
+      }
+    ]
+  },
+  {
+    "id": "park",
+    "title": "公园",
+    "subtitle": "Park",
+    "icon": "🌳",
+    "colors": [
+      "#c8efb5",
+      "#fdf0a5"
+    ],
+    "words": [
+      {
+        "word": "tree",
+        "cn": "树",
+        "picture": "🌳",
+        "sentence": "This is a tree.",
+        "image": "./assets/words/sticker/tree.svg"
+      },
+      {
+        "word": "flower",
+        "cn": "花",
+        "picture": "🌸",
+        "sentence": "The flower is pretty.",
+        "image": "./assets/words/sticker/flower.svg"
+      },
+      {
+        "word": "grass",
+        "cn": "草地",
+        "picture": "🌱",
+        "sentence": "The grass is green.",
+        "image": "./assets/words/sticker/grass.svg"
+      },
+      {
+        "word": "leaf",
+        "cn": "叶子",
+        "picture": "🍃",
+        "sentence": "This is a leaf.",
+        "image": "./assets/words/sticker/leaf.svg"
+      },
+      {
+        "word": "bird",
+        "cn": "鸟",
+        "picture": "🐦",
+        "sentence": "I see a bird.",
+        "image": "./assets/words/sticker/bird.svg"
+      },
+      {
+        "word": "dog",
+        "cn": "狗",
+        "picture": "🐶",
+        "sentence": "The dog can run.",
+        "image": "./assets/words/sticker/dog.svg"
+      },
+      {
+        "word": "cat",
+        "cn": "猫",
+        "picture": "🐱",
+        "sentence": "The cat is cute.",
+        "image": "./assets/words/sticker/cat.svg"
+      },
+      {
+        "word": "bench",
+        "cn": "长椅",
+        "picture": "🪑",
+        "sentence": "Sit on the bench.",
+        "image": "./assets/words/sticker/bench.svg"
+      },
+      {
+        "word": "lake",
+        "cn": "湖",
+        "picture": "🏞️",
+        "sentence": "The lake is blue.",
+        "image": "./assets/words/sticker/lake.svg"
+      },
+      {
+        "word": "bridge",
+        "cn": "桥",
+        "picture": "🌉",
+        "sentence": "Walk on the bridge.",
+        "image": "./assets/words/sticker/bridge.svg"
+      },
+      {
+        "word": "sun",
+        "cn": "太阳",
+        "picture": "☀️",
+        "sentence": "The sun is warm.",
+        "image": "./assets/words/sticker/sun.svg"
+      },
+      {
+        "word": "cloud",
+        "cn": "云",
+        "picture": "☁️",
+        "sentence": "I see a cloud.",
+        "image": "./assets/words/sticker/cloud.svg"
+      },
+      {
+        "word": "rain",
+        "cn": "雨",
+        "picture": "🌧️",
+        "sentence": "The rain is falling.",
+        "image": "./assets/words/sticker/rain.svg"
+      },
+      {
+        "word": "picnic",
+        "cn": "野餐",
+        "picture": "🧺",
+        "sentence": "We have a picnic.",
+        "image": "./assets/words/sticker/picnic.svg"
+      }
+    ]
+  },
+  {
+    "id": "military-museum",
+    "title": "军事博物馆",
+    "subtitle": "Military Museum",
+    "icon": "🏛️",
+    "colors": [
+      "#d8e2c8",
+      "#b7d7e8"
+    ],
+    "words": [
+      {
+        "word": "tank",
+        "cn": "坦克",
+        "picture": "🚙",
+        "image": "./assets/words/sticker/tank.svg",
+        "sentence": "The tank is big."
+      },
+      {
+        "word": "plane",
+        "cn": "飞机",
+        "picture": "✈️",
+        "image": "./assets/words/sticker/plane.svg",
+        "sentence": "The plane is high."
+      },
+      {
+        "word": "fighter jet",
+        "cn": "战斗机",
+        "picture": "✈️",
+        "image": "./assets/words/sticker/fighter-jet.svg",
+        "sentence": "The fighter jet is fast."
+      },
+      {
+        "word": "bomber",
+        "cn": "轰炸机",
+        "picture": "✈️",
+        "image": "./assets/words/sticker/bomber.svg",
+        "sentence": "The bomber is a big plane."
+      },
+      {
+        "word": "ship",
+        "cn": "船",
+        "picture": "🚢",
+        "image": "./assets/words/sticker/ship.svg",
+        "sentence": "The ship is big."
+      },
+      {
+        "word": "gun",
+        "cn": "枪",
+        "picture": "🔫",
+        "image": "./assets/words/sticker/gun.svg",
+        "sentence": "This is a gun."
+      },
+      {
+        "word": "cannon",
+        "cn": "大炮",
+        "picture": "⚫",
+        "image": "./assets/words/sticker/cannon.svg",
+        "sentence": "The cannon is old."
+      },
+      {
+        "word": "rocket",
+        "cn": "火箭",
+        "picture": "🚀",
+        "image": "./assets/words/sticker/rocket.svg",
+        "sentence": "The rocket goes up."
+      },
+      {
+        "word": "missile",
+        "cn": "导弹",
+        "picture": "🚀",
+        "image": "./assets/words/sticker/missile.svg",
+        "sentence": "The missile is long."
+      },
+      {
+        "word": "sea mine",
+        "cn": "水雷",
+        "picture": "⚫",
+        "image": "./assets/words/sticker/sea-mine.svg",
+        "sentence": "The sea mine is round."
+      },
+      {
+        "word": "helmet",
+        "cn": "头盔",
+        "picture": "🪖",
+        "image": "./assets/words/sticker/helmet.svg",
+        "sentence": "This is a helmet."
+      },
+      {
+        "word": "sword",
+        "cn": "剑",
+        "picture": "🗡️",
+        "image": "./assets/words/sticker/sword.svg",
+        "sentence": "This is a sword."
+      }
+    ]
+  },
+  {
+    "id": "nature-museum",
+    "title": "自然博物馆",
+    "subtitle": "Nature Museum",
+    "icon": "🦕",
+    "colors": [
+      "#c8efb5",
+      "#f8d7a8"
+    ],
+    "words": [
+      {
+        "word": "dinosaur",
+        "cn": "恐龙",
+        "picture": "🦕",
+        "image": "./assets/words/sticker/dinosaur.svg",
+        "sentence": "I see a dinosaur."
+      },
+      {
+        "word": "bone",
+        "cn": "骨头",
+        "picture": "🦴",
+        "image": "./assets/words/sticker/bone.svg",
+        "sentence": "This is a bone."
+      },
+      {
+        "word": "fossil",
+        "cn": "化石",
+        "picture": "🪨",
+        "image": "./assets/words/sticker/fossil.svg",
+        "sentence": "This is a fossil."
+      },
+      {
+        "word": "rock",
+        "cn": "石头",
+        "picture": "🪨",
+        "image": "./assets/words/sticker/rock.svg",
+        "sentence": "This is a rock."
+      },
+      {
+        "word": "shell",
+        "cn": "贝壳",
+        "picture": "🐚",
+        "image": "./assets/words/sticker/shell.svg",
+        "sentence": "This is a shell."
+      },
+      {
+        "word": "bear",
+        "cn": "熊",
+        "picture": "🐻",
+        "sentence": "The bear is big.",
+        "image": "./assets/words/sticker/bear.svg"
+      },
+      {
+        "word": "tiger",
+        "cn": "老虎",
+        "picture": "🐯",
+        "sentence": "I see a tiger.",
+        "image": "./assets/words/sticker/tiger.svg"
+      },
+      {
+        "word": "elephant",
+        "cn": "大象",
+        "picture": "🐘",
+        "sentence": "The elephant is big.",
+        "image": "./assets/words/sticker/elephant.svg"
+      },
+      {
+        "word": "butterfly",
+        "cn": "蝴蝶",
+        "picture": "🦋",
+        "image": "./assets/words/sticker/butterfly.svg",
+        "sentence": "The butterfly can fly."
+      },
+      {
+        "word": "insect",
+        "cn": "昆虫",
+        "picture": "🐞",
+        "image": "./assets/words/sticker/insect.svg",
+        "sentence": "This is an insect."
+      },
+      {
+        "word": "spider",
+        "cn": "蜘蛛",
+        "picture": "🕷️",
+        "sentence": "The spider is small.",
+        "image": "./assets/words/sticker/spider.svg"
+      },
+      {
+        "word": "snake",
+        "cn": "蛇",
+        "picture": "🐍",
+        "sentence": "The snake is long.",
+        "image": "./assets/words/sticker/snake.svg"
+      },
+      {
+        "word": "turtle",
+        "cn": "乌龟",
+        "picture": "🐢",
+        "sentence": "The turtle is slow.",
+        "image": "./assets/words/sticker/turtle.svg"
+      },
+      {
+        "word": "whale",
+        "cn": "鲸鱼",
+        "picture": "🐋",
+        "image": "./assets/words/sticker/whale.svg",
+        "sentence": "The whale is big."
+      },
+      {
+        "word": "shark",
+        "cn": "鲨鱼",
+        "picture": "🦈",
+        "image": "./assets/words/sticker/shark.svg",
+        "sentence": "The shark can swim."
+      },
+      {
+        "word": "volcano",
+        "cn": "火山",
+        "picture": "🌋",
+        "image": "./assets/words/sticker/volcano.svg",
+        "sentence": "This is a volcano."
+      },
+      {
+        "word": "mountain",
+        "cn": "山",
+        "picture": "⛰️",
+        "image": "./assets/words/sticker/mountain.svg",
+        "sentence": "This is a mountain."
+      }
+    ]
+  },
+  {
+    "id": "signs",
+    "title": "指示牌",
+    "subtitle": "Signs",
+    "icon": "🚦",
+    "colors": [
+      "#d0f4de",
+      "#ffd6a5"
+    ],
+    "words": [
+      {
+        "word": "stop",
+        "cn": "停止",
+        "picture": "🛑",
+        "sentence": "Stop here, please.",
+        "image": "./assets/words/sticker/stop.svg"
+      },
+      {
+        "word": "go",
+        "cn": "通行",
+        "picture": "🟢",
+        "sentence": "Go now, please.",
+        "image": "./assets/words/sticker/go.svg"
+      },
+      {
+        "word": "exit",
+        "cn": "出口",
+        "picture": "🚪",
+        "sentence": "This is the exit.",
+        "image": "./assets/words/sticker/exit.svg"
+      },
+      {
+        "word": "entrance",
+        "cn": "入口",
+        "picture": "➡️",
+        "sentence": "This is the entrance.",
+        "image": "./assets/words/sticker/entrance.svg"
+      },
+      {
+        "word": "toilet",
+        "cn": "卫生间",
+        "picture": "🚻",
+        "sentence": "Where is the toilet?",
+        "image": "./assets/words/sticker/toilet.svg"
+      },
+      {
+        "word": "stairs",
+        "cn": "楼梯",
+        "picture": "🪜",
+        "sentence": "Use the stairs.",
+        "image": "./assets/words/sticker/stairs.svg"
+      },
+      {
+        "word": "elevator",
+        "cn": "电梯",
+        "picture": "🛗",
+        "sentence": "Take the elevator.",
+        "image": "./assets/words/sticker/elevator.svg"
+      },
+      {
+        "word": "left",
+        "cn": "左边",
+        "picture": "⬅️",
+        "sentence": "Turn left.",
+        "image": "./assets/words/sticker/left.svg"
+      },
+      {
+        "word": "right",
+        "cn": "右边",
+        "picture": "➡️",
+        "sentence": "Turn right.",
+        "image": "./assets/words/sticker/right.svg"
+      },
+      {
+        "word": "up",
+        "cn": "向上",
+        "picture": "⬆️",
+        "sentence": "Go up.",
+        "image": "./assets/words/sticker/up.svg"
+      },
+      {
+        "word": "down",
+        "cn": "向下",
+        "picture": "⬇️",
+        "sentence": "Go down.",
+        "image": "./assets/words/sticker/down.svg"
+      },
+      {
+        "word": "push",
+        "cn": "推",
+        "picture": "👉",
+        "sentence": "Push the door.",
+        "image": "./assets/words/sticker/push.svg"
+      },
+      {
+        "word": "pull",
+        "cn": "拉",
+        "picture": "👈",
+        "sentence": "Pull the door.",
+        "image": "./assets/words/sticker/pull.svg"
+      },
+      {
+        "word": "no",
+        "cn": "不可以",
+        "picture": "🚫",
+        "sentence": "No running here.",
+        "image": "./assets/words/sticker/no.svg"
+      }
+    ]
+  },
+  {
+    "id": "fake-review-test",
+    "title": "测试场景",
+    "subtitle": "Review Test",
+    "icon": "🧪",
+    "colors": [
+      "#d8f3dc",
+      "#ffd6a5"
+    ],
+    "words": [
+      {
+        "word": "ball",
+        "cn": "球",
+        "picture": "⚽",
+        "sentence": "I play with a ball.",
+        "image": "/uploads/scenes/fake-review-test/words/ball-v1.svg",
+        "imageVersion": 1
+      },
+      {
+        "word": "book",
+        "cn": "书",
+        "picture": "📘",
+        "sentence": "I read a book.",
+        "image": "/uploads/scenes/fake-review-test/words/book-v1.svg",
+        "imageVersion": 1
+      },
+      {
+        "word": "apple",
+        "cn": "苹果",
+        "picture": "🍎",
+        "sentence": "This is an apple.",
+        "image": "/uploads/scenes/fake-review-test/words/apple-v1.svg",
+        "imageVersion": 1
+      }
+    ]
+  }
+]

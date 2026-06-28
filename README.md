@@ -35,7 +35,75 @@ npm run audio
 5. Output Directory 留空。
 6. 点击 Deploy。
 
-内容数据在 `app.js` 的 `scenes` 数组里。
+内容数据在 `data/scenes.published.json` 里，`app.js` 启动时读取已发布数据。
+
+## 内容审核后台
+
+当前内容数据已经拆到 `data/scenes.published.json`。本地审核后台使用文件模拟服务端存储：
+
+```sh
+npm run admin
+```
+
+打开 `http://localhost:4180/admin`。
+
+内容流转：
+
+- 草稿数据：`data/scenes.drafts.json`
+- 发布数据：`data/scenes.published.json`
+- 生成图片服务端存储：`server/uploads/`
+
+`imagegen` 生成图片后，先把图片注册到服务端存储并写回草稿：
+
+```sh
+npm run register:image -- --scene zoo --word lion --source /path/to/lion.png --prompt "imagegen prompt"
+```
+
+审核后台点击“审核通过并发布”后，会校验单词、例句和图片状态，再把干净数据写入发布数据。App 只读取已发布数据。
+
+## 线上内容服务
+
+上线到 Vercel 后，内容 API 会使用 Vercel Blob 存储草稿和发布数据，不依赖本地可写文件。
+
+需要在 Vercel 项目里配置环境变量：
+
+```sh
+CONTENT_BLOB_READ_WRITE_TOKEN=...
+ADMIN_TOKEN=...
+```
+
+接口：
+
+- App 读取已发布内容：`GET /api/scenes/published`
+- 后台读取内容：`GET /api/content`
+- 后台创建草稿：`POST /api/scenes/drafts`
+- 后台保存草稿：`PUT /api/scenes/drafts/:id`
+- 后台审核发布：`POST /api/scenes/drafts/:id/approve`
+
+后台地址：
+
+```text
+https://你的域名/admin
+```
+
+首次打开后台会要求输入 `ADMIN_TOKEN`。
+
+App 每次启动会优先请求服务器 `GET /api/scenes/published`，成功后写入本地缓存；网络失败时先使用本地缓存，再退回包内 `data/scenes.published.json`。
+
+打包 Android 时可以指定真实内容服务域名：
+
+```sh
+CONTENT_API_BASE=https://你的域名 npm run cap:copy:release
+```
+
+如果要把 `imagegen` 生成的图片直接注册到线上草稿，使用同一个脚本并提供线上环境变量：
+
+```sh
+CONTENT_API_BASE=https://你的域名 \
+ADMIN_TOKEN=... \
+CONTENT_BLOB_READ_WRITE_TOKEN=... \
+npm run register:image -- --scene zoo --word lion --source /path/to/lion.png --prompt "imagegen prompt"
+```
 
 ## 打包 Android APK
 

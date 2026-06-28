@@ -4,8 +4,9 @@ const { join } = require("node:path");
 const rootDir = join(__dirname, "..");
 const webDir = join(rootDir, "www");
 const buildType = process.argv.includes("--release") ? "release" : "debug";
+const contentApiBase = process.env.CONTENT_API_BASE || "";
 
-const entries = ["index.html", "styles.css", "app.js", "audio", "assets"];
+const entries = ["index.html", "styles.css", "app.js", "data", "audio", "assets"];
 
 async function main() {
   await rm(webDir, { recursive: true, force: true });
@@ -15,11 +16,10 @@ async function main() {
     await cp(join(rootDir, entry), join(webDir, entry), { recursive: true });
   }
 
-  if (buildType === "release") {
-    await rm(join(webDir, "audio", "debug"), { recursive: true, force: true });
-  }
-
-  await writeFile(join(webDir, "build-env.js"), `window.APP_BUILD_TYPE = "${buildType}";\n`);
+  await writeFile(
+    join(webDir, "build-env.js"),
+    `window.APP_BUILD_TYPE = "${buildType}";\nwindow.CONTENT_API_BASE = ${JSON.stringify(contentApiBase)};\n`
+  );
 
   console.log(`Prepared Capacitor ${buildType} web assets in ${webDir}`);
 }
