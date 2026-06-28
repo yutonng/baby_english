@@ -17,8 +17,8 @@
         "sentence": "I play with a ball.",
         "image": {
           "status": "ready",
-          "storageKey": "scenes/fake-review-test/words/ball-v1.svg",
-          "url": "/uploads/scenes/fake-review-test/words/ball-v1.svg",
+          "storageKey": "",
+          "url": "./assets/words/sticker/ball.svg",
           "prompt": "fake test image for ball",
           "version": 1,
           "width": null,
@@ -34,8 +34,8 @@
         "sentence": "I read a book.",
         "image": {
           "status": "ready",
-          "storageKey": "scenes/fake-review-test/words/book-v1.svg",
-          "url": "/uploads/scenes/fake-review-test/words/book-v1.svg",
+          "storageKey": "",
+          "url": "./assets/words/sticker/book.svg",
           "prompt": "fake test image for book",
           "version": 1,
           "width": null,
@@ -51,8 +51,8 @@
         "sentence": "This is an apple.",
         "image": {
           "status": "ready",
-          "storageKey": "scenes/fake-review-test/words/apple-v1.svg",
-          "url": "/uploads/scenes/fake-review-test/words/apple-v1.svg",
+          "storageKey": "",
+          "url": "./assets/words/sticker/apple.svg",
           "prompt": "fake test image for apple",
           "version": 1,
           "width": null,

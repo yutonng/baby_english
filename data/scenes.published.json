@@ -1456,7 +1456,7 @@
         "cn": "球",
         "picture": "⚽",
         "sentence": "I play with a ball.",
-        "image": "/uploads/scenes/fake-review-test/words/ball-v1.svg",
+        "image": "./assets/words/sticker/ball.svg",
         "imageVersion": 1
       },
       {
@@ -1464,7 +1464,7 @@
         "cn": "书",
         "picture": "📘",
         "sentence": "I read a book.",
-        "image": "/uploads/scenes/fake-review-test/words/book-v1.svg",
+        "image": "./assets/words/sticker/book.svg",
         "imageVersion": 1
       },
       {
@@ -1472,7 +1472,7 @@
         "cn": "苹果",
         "picture": "🍎",
         "sentence": "This is an apple.",
-        "image": "/uploads/scenes/fake-review-test/words/apple-v1.svg",
+        "image": "./assets/words/sticker/apple.svg",
         "imageVersion": 1
       }
     ]

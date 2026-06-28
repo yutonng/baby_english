@@ -146,11 +146,25 @@ function getImageStatus(word) {
   return `${word.image.status || "pending"} · v${word.image.version || 1}`;
 }
 
+function slugifyText(value) {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function getLegacyUploadFallback(word, src) {
+  if (!src || !src.startsWith("/uploads/")) return "";
+  return `./assets/words/sticker/${slugifyText(word.word)}.svg`;
+}
+
 function renderWordPreview(scene) {
   const disabled = isEditable() ? "" : "disabled";
   wordPreview.innerHTML = (scene.words || [])
     .map((word, index) => {
-      const src = getImageSource(word);
+      const src = getLegacyUploadFallback(word, getImageSource(word)) || getImageSource(word);
       return `
         <div class="word-preview-item">
           <div class="word-preview-media">

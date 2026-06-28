@@ -5,9 +5,13 @@ function getContentApiBase() {
   return (window.CONTENT_API_BASE || "").replace(/\/$/, "");
 }
 
-function normalizeRemoteImageUrl(imageUrl) {
+function normalizeRemoteImageUrl(imageUrl, word) {
   if (!imageUrl || /^https?:\/\//i.test(imageUrl) || imageUrl.startsWith("./") || imageUrl.startsWith("data:")) {
     return imageUrl;
+  }
+
+  if (imageUrl.startsWith("/uploads/")) {
+    return `./assets/words/sticker/${slugify(word?.word || "")}.svg`;
   }
 
   return `${getContentApiBase()}${imageUrl.startsWith("/") ? "" : "/"}${imageUrl}`;
@@ -18,7 +22,7 @@ function normalizeSceneImages(items) {
     ...scene,
     words: (scene.words || []).map((word) => ({
       ...word,
-      image: normalizeRemoteImageUrl(word.image),
+      image: normalizeRemoteImageUrl(word.image, word),
     })),
   }));
 }
