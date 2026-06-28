@@ -156,7 +156,7 @@ function showScene(sceneId, options = {}) {
   if (!options.skipHistory) {
     history.pushState({ view: "scene", sceneId: currentScene.id }, "", `#${currentScene.id}`);
   }
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo(0, 0);
 }
 
 function showHome(options = {}) {

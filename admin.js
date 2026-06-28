@@ -26,7 +26,13 @@ async function requestJson(url, options = {}) {
       ...options.headers,
     },
   });
-  const payload = await response.json();
+  const responseText = await response.text();
+  let payload = null;
+  try {
+    payload = responseText ? JSON.parse(responseText) : {};
+  } catch {
+    payload = { error: responseText || "服务端返回了非 JSON 响应" };
+  }
   if (response.status === 401) {
     const token = window.prompt("请输入后台管理员 Token");
     if (token) {

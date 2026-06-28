@@ -35,8 +35,16 @@ async function writeLocalJson(filePath, value) {
 
 async function readBlobJson(key, fallback, seedFilePath) {
   try {
-    const response = await get(key, { token: getBlobToken() });
-    return JSON.parse(await response.text());
+    const result = await get(key, {
+      access: "private",
+      token: getBlobToken(),
+    });
+    if (!result || !result.stream) {
+      if (seedFilePath) return readLocalJson(seedFilePath, fallback);
+      return fallback;
+    }
+    const text = await new Response(result.stream).text();
+    return JSON.parse(text);
   } catch (error) {
     if (error.status === 404 || error.statusCode === 404 || /not found/i.test(error.message || "")) {
       if (seedFilePath) return readLocalJson(seedFilePath, fallback);
