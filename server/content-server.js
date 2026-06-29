@@ -357,9 +357,9 @@ async function handleApi(req, res, pathname) {
     }
     published.unshift(publishedScene);
 
-    drafts[draftIndex] = { ...scene, status: "published", publishedAt };
+    drafts.splice(draftIndex, 1);
     await Promise.all([writeJson(draftsPath, drafts), writeJson(publishedPath, published)]);
-    sendJson(res, 200, { draft: drafts[draftIndex], published: publishedScene });
+    sendJson(res, 200, { draft: null, published: publishedScene });
     return;
   }
 

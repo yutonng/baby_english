@@ -12,8 +12,9 @@ const wordPreview = document.querySelector("#wordPreview");
 const message = document.querySelector("#message");
 const adminTokenKey = "little-english-admin-token";
 
-function showMessage(text) {
+function showMessage(text, type = "info") {
   message.textContent = text;
+  message.className = `admin-message ${type ? `is-${type}` : ""}`;
 }
 
 async function requestJson(url, options = {}) {
@@ -414,22 +415,22 @@ publishedList.addEventListener("click", (event) => {
 });
 
 document.querySelector("#refreshButton").addEventListener("click", () => {
-  loadContent().catch((error) => showMessage(error.message));
+  loadContent().catch((error) => showMessage(error.message, "error"));
 });
 
 document.querySelector("#newDraftButton").addEventListener("click", createDraftTemplate);
 document.querySelector("#copyPublishedButton").addEventListener("click", copySelectedPublishedToDraft);
 document.querySelector("#saveButton").addEventListener("click", () => {
-  saveDraft().catch((error) => showMessage(error.message));
+  saveDraft().catch((error) => showMessage(error.message, "error"));
 });
 document.querySelector("#approveButton").addEventListener("click", () => {
-  approveDraft().catch((error) => showMessage(error.message));
+  approveDraft().catch((error) => showMessage(error.message, "error"));
 });
 document.querySelector("#deleteSceneButton").addEventListener("click", () => {
-  deleteSelectedScene().catch((error) => showMessage(error.message));
+  deleteSelectedScene().catch((error) => showMessage(error.message, "error"));
 });
 
 sceneForm.addEventListener("input", (event) => updateSceneField(event.target));
 wordPreview.addEventListener("input", (event) => updateSceneField(event.target));
 
-loadContent().catch((error) => showMessage(error.message));
+loadContent().catch((error) => showMessage(error.message, "error"));

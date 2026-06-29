@@ -99,9 +99,9 @@ module.exports = async function handler(req, res) {
     }
     published.unshift(publishedScene);
 
-    drafts[draftIndex] = { ...scene, status: "published", publishedAt };
+    drafts.splice(draftIndex, 1);
     await Promise.all([writeDrafts(drafts), writePublished(published)]);
-    sendJson(res, 200, { draft: drafts[draftIndex], published: publishedScene });
+    sendJson(res, 200, { draft: null, published: publishedScene });
     return;
   }
 

@@ -68,6 +68,27 @@ button:hover {
   padding: 12px 24px;
 }
 
+.admin-message {
+  background: #fff;
+  border-bottom: 1px solid #e5e0d8;
+  color: #6b665e;
+  min-height: 0;
+  padding: 0 24px;
+}
+
+.admin-message:not(:empty) {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.admin-message.is-info {
+  color: #24634c;
+}
+
+.admin-message.is-error {
+  color: #9b2f1f;
+}
+
 .workspace {
   display: grid;
   grid-template-columns: 260px minmax(420px, 1fr);
