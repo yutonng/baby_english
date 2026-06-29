@@ -38,7 +38,7 @@ button {
   width: min(100%, 464px);
   min-height: 100vh;
   margin: 0 auto;
-  padding: max(34px, env(safe-area-inset-top)) 24px max(30px, env(safe-area-inset-bottom));
+  padding: max(42px, env(safe-area-inset-top)) 24px max(30px, env(safe-area-inset-bottom));
   overflow-x: hidden;
 }
 
@@ -52,7 +52,7 @@ button {
 }
 
 .home-view .top-bar {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .app-brand {
@@ -66,11 +66,7 @@ button {
   display: flex;
   flex: 0 0 auto;
   align-items: center;
-  gap: 0;
-}
-
-.top-actions #settingsButton {
-  display: none;
+  gap: 10px;
 }
 
 .top-icon-button {
@@ -80,7 +76,7 @@ button {
   place-items: center;
   border-radius: 50%;
   background: #ffffff;
-  box-shadow: 0 4px 14px rgba(45, 27, 105, 0.12);
+  box-shadow: 0 4px 14px rgba(45, 27, 105, 0.1);
 }
 
 .top-icon-button svg,
@@ -89,7 +85,7 @@ button {
   height: 18px;
   color: var(--ink);
   stroke: currentColor;
-  stroke-width: 2.3;
+  stroke-width: 2.25;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -110,7 +106,7 @@ h2 {
 h1 {
   color: var(--ink);
   font-family: "Nunito", ui-rounded, "Avenir Next", "Inter", ui-sans-serif, system-ui, sans-serif;
-  font-size: 30px;
+  font-size: 29px;
   font-weight: 800;
   line-height: 1.05;
 }
@@ -155,12 +151,12 @@ h2 {
 
 .inline-search {
   display: grid;
-  grid-template-columns: 1fr 28px;
+  grid-template-columns: 22px 1fr 24px;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   width: 100%;
   min-height: 52px;
-  padding: 8px 8px 8px 16px;
+  padding: 8px 12px 8px 16px;
   border-radius: 16px;
   background: #ffffff;
   box-shadow: var(--shadow);
@@ -179,7 +175,7 @@ h2 {
 
 .search-top {
   display: grid;
-  grid-template-columns: 30px minmax(0, 1fr);
+  grid-template-columns: 26px minmax(0, 1fr);
   align-items: center;
   gap: 8px;
   margin-bottom: 14px;
@@ -196,7 +192,7 @@ h2 {
 
 .search-back-button {
   display: grid;
-  width: 30px;
+  width: 26px;
   height: 42px;
   flex: 0 0 auto;
   place-items: center;
@@ -206,8 +202,8 @@ h2 {
 }
 
 .search-back-button svg {
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   color: #9b8bb4;
   stroke: currentColor;
   stroke-width: 2.4;
@@ -227,7 +223,7 @@ h2 {
   background: transparent;
   color: var(--ink);
   font: inherit;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -241,7 +237,7 @@ h2 {
 
 .inline-search button {
   display: grid;
-  width: 28px;
+  width: 24px;
   height: 34px;
   place-items: center;
   border-radius: 0;
@@ -250,6 +246,11 @@ h2 {
   font-size: 22px;
   font-weight: 600;
   line-height: 1;
+}
+
+.inline-search:not(.has-query) button {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .scene-grid {

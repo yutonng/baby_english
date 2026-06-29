@@ -119,6 +119,7 @@ const sentenceSoundButton = document.querySelector("#sentenceSoundButton");
 const audioToast = document.querySelector("#audioToast");
 const searchButton = document.querySelector("#searchButton");
 const closeSearch = document.querySelector("#closeSearch");
+const searchInputWrap = document.querySelector("#searchInputWrap");
 const sceneSearchInput = document.querySelector("#sceneSearchInput");
 const clearSearchButton = document.querySelector("#clearSearchButton");
 const settingsButton = document.querySelector("#settingsButton");
@@ -215,6 +216,8 @@ function getSearchMatches(query) {
 }
 
 function renderSearchResults() {
+  searchInputWrap.classList.toggle("has-query", sceneSearchQuery.trim().length > 0);
+
   if (!sceneSearchQuery.trim()) {
     searchGrid.innerHTML = "";
     return;
