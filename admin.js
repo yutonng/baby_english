@@ -10,11 +10,44 @@ const sceneTitle = document.querySelector("#sceneTitle");
 const statusText = document.querySelector("#statusText");
 const wordPreview = document.querySelector("#wordPreview");
 const message = document.querySelector("#message");
+const loginShell = document.querySelector("#loginShell");
+const adminShell = document.querySelector("#adminShell");
+const loginForm = document.querySelector("#loginForm");
+const loginMessage = document.querySelector("#loginMessage");
+const loginUsername = document.querySelector("#loginUsername");
+const loginPassword = document.querySelector("#loginPassword");
+const currentUser = document.querySelector("#currentUser");
 const adminTokenKey = "little-english-admin-token";
+const adminUsernameKey = "little-english-admin-username";
 
 function showMessage(text, type = "info") {
   message.textContent = text;
   message.className = `admin-message ${type ? `is-${type}` : ""}`;
+}
+
+function showLoginMessage(text, type = "error") {
+  loginMessage.textContent = text;
+  loginMessage.className = `admin-message ${type ? `is-${type}` : ""}`;
+}
+
+function showLogin() {
+  adminShell.hidden = true;
+  loginShell.hidden = false;
+  loginPassword.value = "";
+  loginUsername.value = localStorage.getItem(adminUsernameKey) || loginUsername.value || "admin";
+  loginUsername.focus();
+}
+
+function showAdmin() {
+  loginShell.hidden = true;
+  adminShell.hidden = false;
+  const username = localStorage.getItem(adminUsernameKey) || "";
+  currentUser.textContent = username ? `当前账号：${username}` : "";
+}
+
+function clearAdminSession() {
+  localStorage.removeItem(adminTokenKey);
+  localStorage.removeItem(adminUsernameKey);
 }
 
 async function requestJson(url, options = {}) {
@@ -35,16 +68,34 @@ async function requestJson(url, options = {}) {
     payload = { error: responseText || "服务端返回了非 JSON 响应" };
   }
   if (response.status === 401) {
-    const token = window.prompt("请输入后台管理员 Token");
-    if (token) {
-      localStorage.setItem(adminTokenKey, token);
-      return requestJson(url, options);
-    }
+    clearAdminSession();
+    showLogin();
+    throw new Error(payload.error || "需要登录");
   }
   if (!response.ok) {
     throw new Error(payload.error || "请求失败");
   }
   return payload;
+}
+
+async function loginAdmin(username, password) {
+  const response = await fetch("/api/admin/login", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({ username, password }),
+  });
+  const responseText = await response.text();
+  let payload = {};
+  try {
+    payload = responseText ? JSON.parse(responseText) : {};
+  } catch {
+    payload = { error: responseText || "服务端返回了非 JSON 响应" };
+  }
+  if (!response.ok) throw new Error(payload.error || "登录失败");
+  localStorage.setItem(adminTokenKey, payload.token);
+  localStorage.setItem(adminUsernameKey, payload.username || username);
 }
 
 function getSelectedDraft() {
@@ -429,8 +480,29 @@ document.querySelector("#approveButton").addEventListener("click", () => {
 document.querySelector("#deleteSceneButton").addEventListener("click", () => {
   deleteSelectedScene().catch((error) => showMessage(error.message, "error"));
 });
+document.querySelector("#logoutButton").addEventListener("click", () => {
+  clearAdminSession();
+  showLogin();
+});
+
+loginForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  showLoginMessage("", "info");
+  loginAdmin(loginUsername.value, loginPassword.value)
+    .then(async () => {
+      showAdmin();
+      await loadContent();
+      showMessage("已登录");
+    })
+    .catch((error) => showLoginMessage(error.message));
+});
 
 sceneForm.addEventListener("input", (event) => updateSceneField(event.target));
 wordPreview.addEventListener("input", (event) => updateSceneField(event.target));
 
-loadContent().catch((error) => showMessage(error.message, "error"));
+if (localStorage.getItem(adminTokenKey)) {
+  showAdmin();
+  loadContent().catch((error) => showMessage(error.message, "error"));
+} else {
+  showLogin();
+}

@@ -7,13 +7,34 @@
     <link rel="stylesheet" href="./admin.css" />
   </head>
   <body>
-    <main class="admin-shell">
+    <section class="login-shell" id="loginShell" hidden>
+      <form class="login-panel" id="loginForm">
+        <p>Little English</p>
+        <h1>登录审核后台</h1>
+        <label>
+          <span>账号</span>
+          <input type="text" id="loginUsername" autocomplete="username" value="admin" required />
+        </label>
+        <label>
+          <span>密码</span>
+          <input type="password" id="loginPassword" autocomplete="current-password" required />
+        </label>
+        <button type="submit">登录</button>
+        <div id="loginMessage" class="admin-message" role="status"></div>
+      </form>
+    </section>
+
+    <main class="admin-shell" id="adminShell" hidden>
       <header class="admin-header">
         <div>
           <p>Little English</p>
           <h1>内容审核后台</h1>
         </div>
-        <button type="button" id="refreshButton">刷新</button>
+        <div class="header-actions">
+          <span id="currentUser"></span>
+          <button type="button" id="logoutButton">退出</button>
+          <button type="button" id="refreshButton">刷新</button>
+        </div>
       </header>
 
       <section class="toolbar">

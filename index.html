@@ -13,7 +13,7 @@
     <meta property="og:type" content="website" />
     <title>Little English</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ffd166'/%3E%3Ctext x='32' y='42' font-size='34' text-anchor='middle'%3E📘%3C/text%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./styles.css?v=storybook-20260628a" />
+    <link rel="stylesheet" href="./styles.css?v=privacy-ios-20260629a" />
   </head>
   <body>
     <main class="app-shell">
@@ -86,6 +86,15 @@
           <span>版本号</span>
           <strong id="versionText">0.1.0</strong>
         </div>
+        <details class="privacy-details">
+          <summary>隐私协议</summary>
+          <div class="privacy-copy">
+            <p>Little English 是面向儿童的英语启蒙学习工具。我们不会要求孩子注册账号，也不会主动收集姓名、手机号、精确位置等个人身份信息。</p>
+            <p>应用会从服务器读取已发布的学习场景、图片、单词、例句和音频地址，用于展示和朗读学习内容。为了提升体验，应用可能在本机缓存场景数据和音频播放状态。</p>
+            <p>如果使用在线内容或在线音频播放，设备会向服务端请求对应资源。我们不会将这些请求用于广告追踪，也不会出售或共享儿童个人信息。</p>
+            <p>如需删除本机缓存，可以卸载应用或清除应用数据。</p>
+          </div>
+        </details>
       </div>
       <section class="search-view is-hidden" id="searchView" aria-label="搜索">
         <div class="search-top">
@@ -109,7 +118,7 @@
       <div class="audio-toast is-hidden" id="audioToast" role="status" aria-live="polite"></div>
     </main>
 
-    <script src="./build-env.js?v=storybook-20260628a"></script>
-    <script src="./app.js?v=storybook-20260628a"></script>
+    <script src="./build-env.js?v=privacy-ios-20260629a"></script>
+    <script src="./app.js?v=privacy-ios-20260629a"></script>
   </body>
 </html>

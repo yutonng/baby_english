@@ -1,4 +1,4 @@
-package com.littleenglish.h5;
+package com.littleenglish.app;
 
 import android.os.Bundle;
 import androidx.activity.OnBackPressedCallback;

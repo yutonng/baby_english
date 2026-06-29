@@ -1,4 +1,5 @@
 const fs = require("node:fs/promises");
+const crypto = require("node:crypto");
 const path = require("node:path");
 const { get, put } = require("@vercel/blob");
 
@@ -97,13 +98,76 @@ function sendError(res, statusCode, message, details) {
   sendJson(res, statusCode, { error: message, details });
 }
 
+function getAdminUsername() {
+  return process.env.ADMIN_USERNAME || "admin";
+}
+
+function getAdminPassword() {
+  return process.env.ADMIN_LOGIN_PASSWORD || process.env.ADMIN_PASSWORD || "";
+}
+
+function getAdminSessionSecret() {
+  return process.env.ADMIN_SESSION_SECRET || process.env.ADMIN_TOKEN || getAdminPassword();
+}
+
+function timingSafeEqualString(left, right) {
+  const leftBuffer = Buffer.from(String(left || ""));
+  const rightBuffer = Buffer.from(String(right || ""));
+  if (leftBuffer.length !== rightBuffer.length) return false;
+  return crypto.timingSafeEqual(leftBuffer, rightBuffer);
+}
+
+function base64UrlEncode(value) {
+  return Buffer.from(value).toString("base64url");
+}
+
+function base64UrlDecode(value) {
+  return Buffer.from(value, "base64url").toString("utf8");
+}
+
+function signAdminPayload(payload) {
+  return crypto.createHmac("sha256", getAdminSessionSecret()).update(payload).digest("base64url");
+}
+
+function createAdminSession(username) {
+  const payload = base64UrlEncode(
+    JSON.stringify({
+      username,
+      exp: Date.now() + 1000 * 60 * 60 * 24 * 14,
+    })
+  );
+  return `${payload}.${signAdminPayload(payload)}`;
+}
+
+function verifyAdminSession(token) {
+  if (!token || !token.includes(".") || !getAdminSessionSecret()) return false;
+  const [payload, signature] = token.split(".");
+  if (!payload || !signature) return false;
+  if (!timingSafeEqualString(signature, signAdminPayload(payload))) return false;
+
+  try {
+    const session = JSON.parse(base64UrlDecode(payload));
+    return session.exp && session.exp > Date.now();
+  } catch {
+    return false;
+  }
+}
+
+function verifyAdminLogin(username, password) {
+  const configuredPassword = getAdminPassword();
+  if (!configuredPassword) return false;
+  return timingSafeEqualString(username, getAdminUsername()) && timingSafeEqualString(password, configuredPassword);
+}
+
 function requireAdmin(req, res) {
   const configuredToken = process.env.ADMIN_TOKEN || process.env.ADMIN_PASSWORD;
-  if (!configuredToken) return true;
+  const configuredPassword = getAdminPassword();
+  if (!configuredToken && !configuredPassword) return true;
 
   const authorization = req.headers.authorization || "";
   const token = authorization.replace(/^Bearer\s+/i, "");
   if (token && token === configuredToken) return true;
+  if (verifyAdminSession(token)) return true;
 
   sendError(res, 401, "需要管理员授权");
   return false;
@@ -277,6 +341,7 @@ async function collectJson(req) {
 
 module.exports = {
   collectJson,
+  createAdminSession,
   normalizeScene,
   readDrafts,
   readPublished,
@@ -285,6 +350,7 @@ module.exports = {
   sendJson,
   toPublishedScene,
   validateScene,
+  verifyAdminLogin,
   writeDrafts,
   writePublished,
 };

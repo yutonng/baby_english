@@ -7,11 +7,11 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace = "com.littleenglish.h5"
+    namespace = "com.littleenglish.app"
     compileSdk = rootProject.ext.compileSdkVersion
     buildToolsVersion = "35.0.0"
     defaultConfig {
-        applicationId "com.littleenglish.h5"
+        applicationId "com.littleenglish.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

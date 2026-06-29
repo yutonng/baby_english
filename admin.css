@@ -12,6 +12,10 @@ body {
   margin: 0;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 button {
   border: 1px solid #d5d1c8;
   background: #fff;
@@ -41,6 +45,36 @@ button:hover {
   min-height: 100vh;
 }
 
+.login-shell {
+  align-items: center;
+  background: #f6f4ef;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.login-panel {
+  background: #fff;
+  border: 1px solid #e5e0d8;
+  border-radius: 8px;
+  display: grid;
+  gap: 14px;
+  max-width: 380px;
+  padding: 24px;
+  width: 100%;
+}
+
+.login-panel p {
+  color: #6b665e;
+  margin: 0;
+}
+
+.login-panel h1 {
+  font-size: 24px;
+  margin: 0 0 8px;
+}
+
 .admin-header {
   align-items: center;
   background: #ffffff;
@@ -48,6 +82,17 @@ button:hover {
   display: flex;
   justify-content: space-between;
   padding: 18px 24px;
+}
+
+.header-actions {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.header-actions span {
+  color: #6b665e;
+  font-size: 14px;
 }
 
 .admin-header p {
