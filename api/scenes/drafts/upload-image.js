@@ -105,16 +105,17 @@ module.exports = async function handler(req, res) {
     `${slugify(word.word)}-v${nextVersion}${ext}`
   );
   const blob = await put(storageKey, imageBuffer, {
-    access: "public",
+    access: "private",
     allowOverwrite: true,
     contentType,
     token,
   });
+  const imageUrl = `/api/assets?key=${encodeURIComponent(storageKey)}&v=${nextVersion}`;
 
   word.image = {
     status: "ready",
     storageKey,
-    url: blob.url,
+    url: imageUrl,
     prompt: body.prompt || currentImage.prompt || "",
     version: nextVersion,
     width: body.width || null,

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Noto+Sans+SC:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Noto+Sans+SC:wght@500;600;700&family=Nunito:wght@700;800&display=swap");
 
 :root {
   color-scheme: light;
@@ -38,7 +38,7 @@ button {
   width: min(100%, 464px);
   min-height: 100vh;
   margin: 0 auto;
-  padding: max(30px, env(safe-area-inset-top)) 24px max(30px, env(safe-area-inset-bottom));
+  padding: max(34px, env(safe-area-inset-top)) 24px max(30px, env(safe-area-inset-bottom));
   overflow-x: hidden;
 }
 
@@ -52,7 +52,7 @@ button {
 }
 
 .home-view .top-bar {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .app-brand {
@@ -66,24 +66,28 @@ button {
   display: flex;
   flex: 0 0 auto;
   align-items: center;
-  gap: 8px;
+  gap: 0;
+}
+
+.top-actions #settingsButton {
+  display: none;
 }
 
 .top-icon-button {
   display: grid;
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   place-items: center;
-  border-radius: 14px;
+  border-radius: 50%;
   background: #ffffff;
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 14px rgba(45, 27, 105, 0.12);
 }
 
 .top-icon-button svg,
 .inline-search svg {
-  width: 20px;
-  height: 20px;
-  color: #9b8bb4;
+  width: 18px;
+  height: 18px;
+  color: var(--ink);
   stroke: currentColor;
   stroke-width: 2.3;
   stroke-linecap: round;
@@ -105,9 +109,10 @@ h2 {
 
 h1 {
   color: var(--ink);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1;
+  font-family: "Nunito", ui-rounded, "Avenir Next", "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.05;
 }
 
 h2 {
