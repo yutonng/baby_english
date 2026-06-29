@@ -1,0 +1,13 @@
+.DS_Store
+.idea/
+.android-sdk/
+.android-user-home/
+.gradle-cache/
+.npm-cache/
+.python-packages/
+android/
+release/
+www/
+*.apk
+device-screen*.png
+node_modules/

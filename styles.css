@@ -69,14 +69,6 @@ button {
   gap: 8px;
 }
 
-.home-view.is-searching .app-brand {
-  display: none;
-}
-
-.home-view.is-searching .top-actions {
-  display: none;
-}
-
 .top-icon-button {
   display: grid;
   width: 42px;
@@ -158,15 +150,68 @@ h2 {
 
 .inline-search {
   display: grid;
-  grid-template-columns: 24px 1fr 34px;
+  grid-template-columns: 1fr 28px;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   width: 100%;
   min-height: 52px;
-  padding: 8px 10px 8px 14px;
+  padding: 8px 8px 8px 16px;
   border-radius: 16px;
   background: #ffffff;
   box-shadow: var(--shadow);
+}
+
+.search-view {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  width: 100%;
+  margin: 0 auto;
+  padding: max(30px, env(safe-area-inset-top)) 24px max(30px, env(safe-area-inset-bottom));
+  overflow-y: auto;
+  background: var(--page);
+}
+
+.search-top {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  width: min(100%, 416px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-view > .scene-grid {
+  width: min(100%, 416px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-back-button {
+  display: grid;
+  width: 30px;
+  height: 42px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.search-back-button svg {
+  width: 20px;
+  height: 20px;
+  color: #9b8bb4;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.search-view .inline-search {
+  margin-bottom: 0;
 }
 
 .inline-search input {
@@ -191,13 +236,14 @@ h2 {
 
 .inline-search button {
   display: grid;
-  width: 34px;
+  width: 28px;
   height: 34px;
   place-items: center;
-  border-radius: 12px;
-  background: #f5eee8;
+  border-radius: 0;
+  background: transparent;
   color: #9b8bb4;
   font-size: 22px;
+  font-weight: 600;
   line-height: 1;
 }
 
