@@ -157,12 +157,12 @@ function renderScenes() {
 
   sceneGrid.innerHTML = scenes
     .map(
-      (scene) => `
-        <button class="scene-card" type="button" data-scene="${scene.id}" style="--accent-a: ${scene.colors[0]}; --accent-b: ${scene.colors[1]}">
+      (scene, index) => `
+        <button class="scene-card" type="button" data-scene="${scene.id}" style="--accent-a: ${scene.colors[0]}; --accent-b: ${scene.colors[1]}; --tilt: ${getSceneTilt(index)}deg">
           <span class="scene-art" aria-hidden="true">${scene.icon}</span>
           <span>
             <h3>${scene.title}</h3>
-            <p>${scene.subtitle} · ${scene.words.length} words</p>
+            <p>${scene.subtitle}<span>${scene.words.length} words</span></p>
           </span>
           <span class="scene-arrow" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none">
@@ -183,12 +183,12 @@ function renderSceneCards(target, items) {
 
   target.innerHTML = items
     .map(
-      (scene) => `
-        <button class="scene-card" type="button" data-scene="${scene.id}" style="--accent-a: ${scene.colors[0]}; --accent-b: ${scene.colors[1]}">
+      (scene, index) => `
+        <button class="scene-card" type="button" data-scene="${scene.id}" style="--accent-a: ${scene.colors[0]}; --accent-b: ${scene.colors[1]}; --tilt: ${getSceneTilt(index)}deg">
           <span class="scene-art" aria-hidden="true">${scene.icon}</span>
           <span>
             <h3>${scene.title}</h3>
-            <p>${scene.subtitle} · ${scene.words.length} words</p>
+            <p>${scene.subtitle}<span>${scene.words.length} words</span></p>
           </span>
           <span class="scene-arrow" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none">
@@ -199,6 +199,10 @@ function renderSceneCards(target, items) {
       `
     )
     .join("");
+}
+
+function getSceneTilt(index) {
+  return [0, 0.4, -0.3, 0.2, -0.5, 0.3][index % 6];
 }
 
 function getSearchMatches(query) {

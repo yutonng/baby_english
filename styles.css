@@ -1,15 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Noto+Sans+SC:wght@500;600;700&family=Nunito:wght@700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Noto+Sans+SC:wght@500;600;700;800&display=swap");
 
 :root {
   color-scheme: light;
-  --ink: #2d1b69;
-  --muted: #9b8bb4;
+  --ink: #001858;
+  --muted: #a89070;
   --paper: #ffffff;
-  --page: #fff7ed;
+  --page: #fef6e4;
   --line: rgba(0, 0, 0, 0.1);
-  --shadow: 0 2px 12px rgba(45, 27, 105, 0.08);
-  --soft-shadow: 0 2px 10px rgba(45, 27, 105, 0.08);
-  font-family: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+  --shadow: 4px 4px 0 rgba(0, 24, 88, 0.12);
+  --soft-shadow: 3px 3px 0 rgba(0, 24, 88, 0.12);
+  font-family: "Baloo 2", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", ui-rounded, system-ui, sans-serif;
 }
 
 * {
@@ -21,7 +21,7 @@ body {
   min-height: 100vh;
   background: var(--page);
   color: var(--ink);
-  font-family: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Baloo 2", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", ui-rounded, system-ui, sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
@@ -75,8 +75,9 @@ button {
   height: 40px;
   place-items: center;
   border-radius: 50%;
+  border: 2px solid rgba(0, 24, 88, 0.08);
   background: #ffffff;
-  box-shadow: 0 4px 14px rgba(45, 27, 105, 0.1);
+  box-shadow: 3px 3px 0 rgba(0, 24, 88, 0.08);
 }
 
 .top-icon-button svg,
@@ -105,8 +106,8 @@ h2 {
 
 h1 {
   color: var(--ink);
-  font-family: "Nunito", ui-rounded, "Avenir Next", "Inter", ui-sans-serif, system-ui, sans-serif;
-  font-size: 29px;
+  font-family: "Baloo 2", "Noto Sans SC", ui-rounded, system-ui, sans-serif;
+  font-size: 30px;
   font-weight: 800;
   line-height: 1.05;
 }
@@ -158,6 +159,7 @@ h2 {
   min-height: 52px;
   padding: 8px 12px 8px 16px;
   border-radius: 16px;
+  border: 2px solid rgba(0, 24, 88, 0.08);
   background: #ffffff;
   box-shadow: var(--shadow);
 }
@@ -262,9 +264,10 @@ h2 {
 .empty-state {
   margin: 22px 0 0;
   padding: 18px;
+  border: 2px solid var(--ink);
   border-radius: 16px;
   background: #ffffff;
-  box-shadow: var(--shadow);
+  box-shadow: 4px 4px 0 #ffe4b5;
   color: var(--muted);
   font-size: 15px;
   font-weight: 500;
@@ -273,21 +276,23 @@ h2 {
 
 .scene-card {
   display: grid;
-  grid-template-columns: 64px 1fr 32px;
+  grid-template-columns: 56px 1fr 24px;
   align-items: center;
   gap: 16px;
   width: 100%;
-  padding: 16px;
+  padding: 14px 16px;
   border-radius: 16px;
-  border: 0;
+  border: 2px solid var(--ink);
   background: #ffffff;
-  box-shadow: var(--shadow);
+  box-shadow: 4px 4px 0 var(--accent-a);
   text-align: left;
-  transition: transform 180ms ease;
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
 .scene-card:active {
-  transform: scale(0.98);
+  box-shadow: 0 0 0 var(--accent-a);
+  transform: rotate(var(--tilt, 0deg)) translate(2px, 2px);
 }
 
 .scene-art,
@@ -296,9 +301,19 @@ h2 {
   display: grid;
   place-items: center;
   aspect-ratio: 1;
-  border-radius: 16px;
-  background: var(--accent-a);
+  border-radius: 12px;
   font-size: 30px;
+}
+
+.scene-art {
+  border: 2px solid var(--ink);
+  background: var(--accent-a);
+  font-size: 26px;
+}
+
+.picture-frame,
+.sheet-picture {
+  background: #ffffff;
 }
 
 .picture-frame img,
@@ -310,43 +325,57 @@ h2 {
 
 .scene-card h3 {
   margin: 0 0 2px;
-  color: rgb(45, 27, 105) !important;
-  -webkit-text-fill-color: rgb(45, 27, 105);
-  font-family: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.25;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink);
+  font-family: "Baloo 2", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", ui-rounded, system-ui, sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.1;
 }
 
 .scene-card p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
   margin: 0;
-  color: rgb(155, 139, 180) !important;
-  -webkit-text-fill-color: rgb(155, 139, 180);
-  font-family: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+  color: var(--muted) !important;
+  -webkit-text-fill-color: var(--muted);
+  font-family: "Baloo 2", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", ui-rounded, system-ui, sans-serif;
   font-size: 14px;
-  font-weight: 500;
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.scene-card p span {
+  display: inline-block;
+  padding: 2px 6px 1px;
+  border-radius: 6px;
+  background: var(--accent-a);
+  color: var(--ink);
+  -webkit-text-fill-color: var(--ink);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
 }
 
 .scene-arrow {
   display: grid;
   place-items: center;
-  width: 32px;
+  width: 24px;
   height: 32px;
-  border-radius: 50%;
-  background: var(--accent-a);
-  color: rgb(155, 139, 180) !important;
-  font-size: 0;
+  color: var(--ink) !important;
+  font-size: 26px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 900;
 }
 
 .scene-arrow svg {
-  width: 16px;
-  height: 16px;
-  color: rgb(155, 139, 180);
+  width: 19px;
+  height: 19px;
+  color: var(--ink);
   stroke: currentColor;
-  stroke-width: 2.4;
+  stroke-width: 3;
 }
 
 .word-grid {
