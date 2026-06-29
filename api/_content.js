@@ -151,6 +151,35 @@ function normalizeImage(image) {
   };
 }
 
+function normalizeAudioAsset(audio) {
+  if (typeof audio === "string") {
+    return {
+      status: "ready",
+      storageKey: "",
+      url: audio,
+      version: 1,
+      updatedAt: new Date().toISOString(),
+    };
+  }
+
+  const value = audio || {};
+  return {
+    status: value.status || (value.url || value.storageKey ? "ready" : "pending"),
+    storageKey: value.storageKey || "",
+    url: value.url || "",
+    version: Number(value.version || 1),
+    updatedAt: value.updatedAt || new Date().toISOString(),
+  };
+}
+
+function normalizeAudio(audio) {
+  const value = audio || {};
+  return {
+    word: normalizeAudioAsset(value.word || value.wordAudio),
+    sentence: normalizeAudioAsset(value.sentence || value.sentenceAudio),
+  };
+}
+
 function normalizeWord(word) {
   return {
     word: String(word.word || "").trim(),
@@ -158,6 +187,7 @@ function normalizeWord(word) {
     picture: String(word.picture || "").trim(),
     sentence: String(word.sentence || "").trim(),
     image: normalizeImage(word.image),
+    audio: normalizeAudio(word.audio),
   };
 }
 
@@ -200,6 +230,13 @@ function validateScene(scene, options = {}) {
       if (word.image?.status !== "ready") errors.push(`${label} 的图片还没有 ready`);
       if (!word.image?.url && !word.image?.storageKey) errors.push(`${label} 缺少服务端图片地址`);
     }
+
+    if (options.requireReadyAudio) {
+      if (word.audio?.word?.status !== "ready") errors.push(`${label} 的单词音频还没有 ready`);
+      if (!word.audio?.word?.url && !word.audio?.word?.storageKey) errors.push(`${label} 缺少服务端单词音频地址`);
+      if (word.audio?.sentence?.status !== "ready") errors.push(`${label} 的例句音频还没有 ready`);
+      if (!word.audio?.sentence?.url && !word.audio?.sentence?.storageKey) errors.push(`${label} 缺少服务端例句音频地址`);
+    }
   }
 
   return errors;
@@ -220,6 +257,11 @@ function toPublishedScene(scene) {
       sentence: word.sentence,
       image: word.image.url || word.image.storageKey,
       imageVersion: word.image.version || 1,
+      audio: {
+        word: word.audio?.word?.url || word.audio?.word?.storageKey || "",
+        sentence: word.audio?.sentence?.url || word.audio?.sentence?.storageKey || "",
+      },
+      audioVersion: Math.max(Number(word.audio?.word?.version || 1), Number(word.audio?.sentence?.version || 1)),
     })),
   };
 }

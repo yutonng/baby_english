@@ -27,16 +27,29 @@ function getContentApiBase() {
   return (window.CONTENT_API_BASE || "").replace(/\/$/, "");
 }
 
-function normalizeRemoteImageUrl(imageUrl, word) {
-  if (!imageUrl || /^https?:\/\//i.test(imageUrl) || imageUrl.startsWith("./") || imageUrl.startsWith("data:")) {
-    return imageUrl;
+function normalizeRemoteAssetUrl(assetUrl, word) {
+  if (!assetUrl || /^https?:\/\//i.test(assetUrl) || assetUrl.startsWith("./") || assetUrl.startsWith("data:")) {
+    return assetUrl;
   }
 
-  if (imageUrl.startsWith("/uploads/")) {
+  if (assetUrl.startsWith("/uploads/")) {
     return `./assets/words/sticker/${slugify(word?.word || "")}.svg`;
   }
 
-  return `${getContentApiBase()}${imageUrl.startsWith("/") ? "" : "/"}${imageUrl}`;
+  return `${getContentApiBase()}${assetUrl.startsWith("/") ? "" : "/"}${assetUrl}`;
+}
+
+function normalizeRemoteImageUrl(imageUrl, word) {
+  return normalizeRemoteAssetUrl(imageUrl, word);
+}
+
+function normalizeRemoteAudio(audio, word) {
+  if (!audio || typeof audio !== "object") return audio || null;
+  return {
+    ...audio,
+    word: normalizeRemoteAssetUrl(audio.word, word),
+    sentence: normalizeRemoteAssetUrl(audio.sentence, word),
+  };
 }
 
 function normalizeSceneImages(items) {
@@ -45,6 +58,7 @@ function normalizeSceneImages(items) {
     words: (scene.words || []).map((word) => ({
       ...word,
       image: normalizeRemoteImageUrl(word.image, word),
+      audio: normalizeRemoteAudio(word.audio, word),
     })),
   }));
 }
@@ -311,8 +325,10 @@ function slugify(text) {
     .replace(/^-+|-+$/g, "");
 }
 
-function getAudioUrl(text, kind) {
+function getAudioUrl(text, kind, item) {
   if (!kind) return "";
+  const remoteUrl = kind === "words" ? item?.audio?.word : item?.audio?.sentence;
+  if (remoteUrl) return remoteUrl;
   return `./audio/${kind}/${slugify(text)}.mp3`;
 }
 
@@ -349,8 +365,8 @@ function waitForVoices(timeout = 900) {
   });
 }
 
-function playLocalAudio(text, target, kind) {
-  const audioUrl = getAudioUrl(text, kind);
+function playLocalAudio(text, target, kind, item) {
+  const audioUrl = getAudioUrl(text, kind, item);
   if (!audioUrl) return Promise.reject(new Error("No local audio path"));
 
   if (activeAudio) {
@@ -388,11 +404,11 @@ function wait(ms) {
   });
 }
 
-async function speak(text, target, kind, retried = false) {
+async function speak(text, target, kind, item, retried = false) {
   document.querySelectorAll(".is-speaking").forEach((item) => item.classList.remove("is-speaking"));
 
   try {
-    await playLocalAudio(text, target, kind);
+    await playLocalAudio(text, target, kind, item);
     return;
   } catch {
     activeAudio = null;
@@ -432,7 +448,7 @@ async function speak(text, target, kind, retried = false) {
       target?.classList.remove("is-speaking");
       if (!retried) {
         window.setTimeout(() => {
-          speak(text, target, kind, true).finally(resolve);
+          speak(text, target, kind, item, true).finally(resolve);
         }, 180);
         return;
       }
@@ -445,7 +461,7 @@ async function speak(text, target, kind, retried = false) {
     window.setTimeout(() => {
       const synth = window.speechSynthesis;
       if (!retried && !synth.speaking && !synth.pending) {
-        speak(text, target, kind, true).finally(resolve);
+        speak(text, target, kind, item, true).finally(resolve);
       }
     }, 280);
   });
@@ -470,7 +486,7 @@ function openWordSheet(item, scene, options = {}) {
       `#${scene.id}/${slugify(item.word)}`
     );
   }
-  speak(item.word, wordSoundButton, "words");
+  speak(item.word, wordSoundButton, "words", item);
 }
 
 function closeWordSheet(options = {}) {
@@ -581,8 +597,8 @@ scrim.addEventListener("click", () => {
   }
   closeWordSheet();
 });
-wordSoundButton.addEventListener("click", () => currentWord && speak(currentWord.word, wordSoundButton, "words"));
-sentenceSoundButton.addEventListener("click", () => currentWord && speak(currentWord.sentence, sentenceSoundButton, "sentences"));
+wordSoundButton.addEventListener("click", () => currentWord && speak(currentWord.word, wordSoundButton, "words", currentWord));
+sentenceSoundButton.addEventListener("click", () => currentWord && speak(currentWord.sentence, sentenceSoundButton, "sentences", currentWord));
 searchButton.addEventListener("click", openSearchView);
 sceneSearchInput.addEventListener("input", () => {
   sceneSearchQuery = sceneSearchInput.value;

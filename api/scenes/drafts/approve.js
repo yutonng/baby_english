@@ -30,7 +30,7 @@ module.exports = async function handler(req, res) {
 
   const publishedAt = new Date().toISOString();
   const scene = { ...drafts[draftIndex], status: "approved", updatedAt: publishedAt, publishedAt };
-  const errors = validateScene(scene, { requireReadyImages: true });
+  const errors = validateScene(scene, { requireReadyImages: true, requireReadyAudio: true });
   if (errors.length) {
     sendError(res, 422, "审核通过失败", { errors });
     return;

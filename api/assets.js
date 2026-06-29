@@ -10,6 +10,7 @@ function getContentType(key) {
   if (ext === ".webp") return "image/webp";
   if (ext === ".png") return "image/png";
   if (ext === ".jpg" || ext === ".jpeg") return "image/jpeg";
+  if (ext === ".mp3") return "audio/mpeg";
   return "application/octet-stream";
 }
 
@@ -35,13 +36,13 @@ module.exports = async function handler(req, res) {
 
   const key = String(req.query.key || "").trim();
   if (!key || key.includes("..") || !key.startsWith("scenes/")) {
-    sendError(res, 400, "图片 key 不合法");
+    sendError(res, 400, "资源 key 不合法");
     return;
   }
 
   const blob = await get(key, { access: "private", token });
   if (!blob || !blob.stream) {
-    sendError(res, 404, "找不到图片");
+    sendError(res, 404, "找不到资源");
     return;
   }
 
