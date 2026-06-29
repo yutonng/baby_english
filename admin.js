@@ -253,14 +253,18 @@ async function saveDraft() {
   if (!scene) throw new Error("请选择草稿后再保存");
   if (!scene.id) throw new Error("草稿缺少 id");
 
-  const saved = await requestJson("/api/scenes/drafts/save", {
-    method: "POST",
-    body: JSON.stringify({ scene }),
-  });
+  const saved = await saveDraftScene(scene);
 
   selectedId = saved.id;
   await loadContent();
   showMessage("草稿已保存");
+}
+
+async function saveDraftScene(scene) {
+  return requestJson("/api/scenes/drafts/save", {
+    method: "POST",
+    body: JSON.stringify({ scene }),
+  });
 }
 
 async function approveDraft() {
@@ -268,11 +272,13 @@ async function approveDraft() {
   const scene = getSelectedDraft();
   if (!scene) throw new Error("请选择草稿后再审核发布");
   if (!scene.id) throw new Error("草稿缺少 id");
-  await saveDraft();
-  await requestJson("/api/scenes/drafts/approve", {
+  const saved = await saveDraftScene(scene);
+  const result = await requestJson("/api/scenes/drafts/approve", {
     method: "POST",
-    body: JSON.stringify({ sceneId: scene.id }),
+    body: JSON.stringify({ sceneId: saved.id }),
   });
+  selectedId = result.published?.id || saved.id;
+  selectedSource = "published";
   await loadContent();
   showMessage("已审核通过，并发布到 App 数据");
 }
