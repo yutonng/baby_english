@@ -21,6 +21,7 @@ const SCENE_COLOR_PALETTE = [
   "#B8C8FF",
   "#FFE6C8",
 ];
+const SCENE_TILTS = [0, 0.4, -0.3, 0.2, -0.5, 0.3];
 
 function getContentApiBase() {
   return (window.CONTENT_API_BASE || "").replace(/\/$/, "");
@@ -157,18 +158,14 @@ function renderScenes() {
 
   sceneGrid.innerHTML = scenes
     .map(
-      (scene) => `
-        <button class="scene-card" type="button" data-scene="${scene.id}" style="--accent-a: ${scene.colors[0]}; --accent-b: ${scene.colors[1]}">
+      (scene, index) => `
+        <button class="scene-card" type="button" data-scene="${scene.id}" style="--accent-a: ${scene.colors[0]}; --accent-b: ${scene.colors[1]}; --tilt: ${SCENE_TILTS[index % SCENE_TILTS.length]}deg">
           <span class="scene-art" aria-hidden="true">${scene.icon}</span>
           <span>
             <h3>${scene.title}</h3>
-            <p>${scene.subtitle} · ${scene.words.length} words</p>
+            <p>${scene.subtitle}<span class="word-count-badge">${scene.words.length} words</span></p>
           </span>
-          <span class="scene-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="m9 18 6-6-6-6" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </span>
+          <span class="scene-arrow" aria-hidden="true">›</span>
         </button>
       `
     )
@@ -183,18 +180,14 @@ function renderSceneCards(target, items) {
 
   target.innerHTML = items
     .map(
-      (scene) => `
-        <button class="scene-card" type="button" data-scene="${scene.id}" style="--accent-a: ${scene.colors[0]}; --accent-b: ${scene.colors[1]}">
+      (scene, index) => `
+        <button class="scene-card" type="button" data-scene="${scene.id}" style="--accent-a: ${scene.colors[0]}; --accent-b: ${scene.colors[1]}; --tilt: ${SCENE_TILTS[index % SCENE_TILTS.length]}deg">
           <span class="scene-art" aria-hidden="true">${scene.icon}</span>
           <span>
             <h3>${scene.title}</h3>
-            <p>${scene.subtitle} · ${scene.words.length} words</p>
+            <p>${scene.subtitle}<span class="word-count-badge">${scene.words.length} words</span></p>
           </span>
-          <span class="scene-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="m9 18 6-6-6-6" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </span>
+          <span class="scene-arrow" aria-hidden="true">›</span>
         </button>
       `
     )
