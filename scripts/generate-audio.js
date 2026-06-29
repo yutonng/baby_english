@@ -4,6 +4,7 @@ const { join } = require("node:path");
 
 const rootDir = join(__dirname, "..");
 const appFile = join(rootDir, "app.js");
+const publishedScenesFile = join(rootDir, "data", "scenes.published.json");
 const audioDir = join(rootDir, "audio");
 const pythonPackagesDir = join(rootDir, ".python-packages");
 const voice = "en-US-JennyNeural";
@@ -37,15 +38,28 @@ async function hasUsableAudio(path) {
   }
 }
 
-function readScenes(source) {
+function readBundledScenes(source) {
   const start = source.indexOf("const scenes = ");
   const end = source.indexOf("];", start);
   if (start === -1 || end === -1) {
-    throw new Error("Could not find scenes in app.js");
+    return null;
   }
 
   const scenesCode = source.slice(start + "const scenes = ".length, end + 1);
   return Function(`"use strict"; return (${scenesCode});`)();
+}
+
+async function readScenes() {
+  try {
+    return JSON.parse(await readFile(publishedScenesFile, "utf8"));
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
+  }
+
+  const source = await readFile(appFile, "utf8");
+  const scenes = readBundledScenes(source);
+  if (!scenes) throw new Error("Could not find scenes in data/scenes.published.json or app.js");
+  return scenes;
 }
 
 async function makeMp3(text, outputPath) {
@@ -68,8 +82,7 @@ async function makeMp3(text, outputPath) {
 }
 
 async function main() {
-  const source = await readFile(appFile, "utf8");
-  const scenes = readScenes(source);
+  const scenes = await readScenes();
   const words = new Map();
   const sentences = new Map();
 

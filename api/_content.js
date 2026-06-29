@@ -87,6 +87,9 @@ function sendJson(res, statusCode, payload, cacheControl = "no-store") {
   res.statusCode = statusCode;
   res.setHeader("content-type", "application/json; charset=utf-8");
   res.setHeader("cache-control", cacheControl);
+  res.setHeader("access-control-allow-origin", "*");
+  res.setHeader("access-control-allow-methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.setHeader("access-control-allow-headers", "content-type, authorization");
   res.end(JSON.stringify(payload));
 }
 

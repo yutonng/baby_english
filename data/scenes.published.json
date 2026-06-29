@@ -1,5 +1,223 @@
 [
   {
+    "id": "hospital",
+    "title": "医院",
+    "subtitle": "Hospital",
+    "icon": "🏥",
+    "colors": [
+      "#bfe7ff",
+      "#d8f3dc"
+    ],
+    "publishedAt": "2026-06-29T01:22:16.577Z",
+    "words": [
+      {
+        "word": "doctor",
+        "cn": "医生",
+        "picture": "👩‍⚕️",
+        "sentence": "The doctor helps me.",
+        "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fdoctor-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "nurse",
+        "cn": "护士",
+        "picture": "🧑‍⚕️",
+        "sentence": "The nurse is kind.",
+        "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fnurse-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "patient",
+        "cn": "病人",
+        "picture": "🤒",
+        "sentence": "The patient rests.",
+        "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fpatient-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "bed",
+        "cn": "病床",
+        "picture": "🛏️",
+        "sentence": "This is a bed.",
+        "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fbed-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "ambulance",
+        "cn": "救护车",
+        "picture": "🚑",
+        "sentence": "The ambulance is fast.",
+        "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fambulance-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "medicine",
+        "cn": "药",
+        "picture": "💊",
+        "sentence": "This is medicine.",
+        "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fmedicine-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "thermometer",
+        "cn": "体温计",
+        "picture": "🌡️",
+        "sentence": "This is a thermometer.",
+        "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fthermometer-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "bandage",
+        "cn": "绷带",
+        "picture": "🩹",
+        "sentence": "I use a bandage.",
+        "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fbandage-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "mask",
+        "cn": "口罩",
+        "picture": "😷",
+        "sentence": "I wear a mask.",
+        "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fmask-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "wheelchair",
+        "cn": "轮椅",
+        "picture": "♿",
+        "sentence": "This is a wheelchair.",
+        "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fwheelchair-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "stethoscope",
+        "cn": "听诊器",
+        "picture": "🩺",
+        "sentence": "This is a stethoscope.",
+        "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fstethoscope-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "nebulizer",
+        "cn": "雾化器",
+        "picture": "💨",
+        "sentence": "This is a nebulizer.",
+        "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fnebulizer-v1.webp&v=1",
+        "imageVersion": 1
+      }
+    ]
+  },
+  {
+    "id": "supermarket",
+    "title": "超市",
+    "subtitle": "Supermarket",
+    "icon": "🛒",
+    "colors": [
+      "#d8f3dc",
+      "#ffe3a3"
+    ],
+    "publishedAt": "2026-06-29T00:51:35.140Z",
+    "words": [
+      {
+        "word": "cart",
+        "cn": "购物车",
+        "picture": "🛒",
+        "sentence": "I push the cart.",
+        "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fcart-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "basket",
+        "cn": "篮子",
+        "picture": "🧺",
+        "sentence": "This is a basket.",
+        "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fbasket-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "shelf",
+        "cn": "货架",
+        "picture": "🗄️",
+        "sentence": "The shelf is tall.",
+        "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fshelf-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "milk",
+        "cn": "牛奶",
+        "picture": "🥛",
+        "sentence": "I drink milk.",
+        "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fmilk-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "bread",
+        "cn": "面包",
+        "picture": "🍞",
+        "sentence": "I buy bread.",
+        "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fbread-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "apple",
+        "cn": "苹果",
+        "picture": "🍎",
+        "sentence": "This is an apple.",
+        "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fapple-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "banana",
+        "cn": "香蕉",
+        "picture": "🍌",
+        "sentence": "This is a banana.",
+        "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fbanana-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "egg",
+        "cn": "鸡蛋",
+        "picture": "🥚",
+        "sentence": "This is an egg.",
+        "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fegg-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "juice",
+        "cn": "果汁",
+        "picture": "🧃",
+        "sentence": "I drink juice.",
+        "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fjuice-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "cashier",
+        "cn": "收银员",
+        "picture": "🧑‍💼",
+        "sentence": "The cashier helps me.",
+        "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fcashier-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "bag",
+        "cn": "袋子",
+        "picture": "🛍️",
+        "sentence": "I carry the bag.",
+        "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fbag-v1.webp&v=1",
+        "imageVersion": 1
+      },
+      {
+        "word": "receipt",
+        "cn": "小票",
+        "picture": "🧾",
+        "sentence": "This is a receipt.",
+        "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Freceipt-v1.webp&v=1",
+        "imageVersion": 1
+      }
+    ]
+  },
+  {
     "id": "living-room",
     "title": "客厅",
     "subtitle": "Living Room",
@@ -1438,42 +1656,6 @@
         "picture": "🚫",
         "sentence": "No running here.",
         "image": "./assets/words/sticker/no.svg"
-      }
-    ]
-  },
-  {
-    "id": "fake-review-test",
-    "title": "测试场景",
-    "subtitle": "Review Test",
-    "icon": "🧪",
-    "colors": [
-      "#d8f3dc",
-      "#ffd6a5"
-    ],
-    "words": [
-      {
-        "word": "ball",
-        "cn": "球",
-        "picture": "⚽",
-        "sentence": "I play with a ball.",
-        "image": "./assets/words/sticker/ball.svg",
-        "imageVersion": 1
-      },
-      {
-        "word": "book",
-        "cn": "书",
-        "picture": "📘",
-        "sentence": "I read a book.",
-        "image": "./assets/words/sticker/book.svg",
-        "imageVersion": 1
-      },
-      {
-        "word": "apple",
-        "cn": "苹果",
-        "picture": "🍎",
-        "sentence": "This is an apple.",
-        "image": "./assets/words/sticker/apple.svg",
-        "imageVersion": 1
       }
     ]
   }

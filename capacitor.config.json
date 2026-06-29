@@ -3,6 +3,11 @@
   "appName": "Little English",
   "webDir": "www",
   "bundledWebRuntime": false,
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": true
+    }
+  },
   "server": {
     "androidScheme": "https"
   }
