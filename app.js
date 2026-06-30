@@ -163,6 +163,8 @@ let activeAudio = null;
 let audioToastTimer = null;
 let isRestoringHistory = false;
 let sceneSearchQuery = "";
+let wordBackGesture = null;
+let sceneBackGesture = null;
 
 function renderScenes() {
   if (scenes.length === 0) {
@@ -507,6 +509,64 @@ function closeWordSheet(options = {}) {
   }
 }
 
+function handleWordGestureStart(event) {
+  if (wordSheet.classList.contains("is-hidden") || event.touches.length !== 1) return;
+  const touch = event.touches[0];
+  const target = event.target;
+  const startedOnWordLayer = wordSheet.contains(target) || scrim.contains(target);
+  if (!startedOnWordLayer && touch.clientX > 120) return;
+  wordBackGesture = {
+    startX: touch.clientX,
+    startY: touch.clientY,
+    startedAt: Date.now(),
+  };
+}
+
+function handleWordGestureEnd(event) {
+  if (!wordBackGesture || wordSheet.classList.contains("is-hidden")) {
+    wordBackGesture = null;
+    return;
+  }
+
+  const touch = event.changedTouches[0];
+  const deltaX = touch.clientX - wordBackGesture.startX;
+  const deltaY = touch.clientY - wordBackGesture.startY;
+  const elapsed = Date.now() - wordBackGesture.startedAt;
+  wordBackGesture = null;
+
+  if (deltaX > 58 && Math.abs(deltaY) < 72 && deltaX > Math.abs(deltaY) * 1.4 && elapsed < 900) {
+    closeWordSheet();
+  }
+}
+
+function handleSceneGestureStart(event) {
+  if (sceneView.classList.contains("is-hidden") || !wordSheet.classList.contains("is-hidden") || event.touches.length !== 1) return;
+  const touch = event.touches[0];
+  if (touch.clientX > 96) return;
+  sceneBackGesture = {
+    startX: touch.clientX,
+    startY: touch.clientY,
+    startedAt: Date.now(),
+  };
+}
+
+function handleSceneGestureEnd(event) {
+  if (!sceneBackGesture || sceneView.classList.contains("is-hidden") || !wordSheet.classList.contains("is-hidden")) {
+    sceneBackGesture = null;
+    return;
+  }
+
+  const touch = event.changedTouches[0];
+  const deltaX = touch.clientX - sceneBackGesture.startX;
+  const deltaY = touch.clientY - sceneBackGesture.startY;
+  const elapsed = Date.now() - sceneBackGesture.startedAt;
+  sceneBackGesture = null;
+
+  if (deltaX > 64 && Math.abs(deltaY) < 72 && deltaX > Math.abs(deltaY) * 1.35 && elapsed < 900) {
+    history.back();
+  }
+}
+
 function loadVoices() {
   refreshVoices();
 }
@@ -552,6 +612,10 @@ async function initApp() {
   }
 
   document.addEventListener("pointerdown", primeSpeech, { once: true });
+  document.addEventListener("touchstart", handleWordGestureStart, { passive: true });
+  document.addEventListener("touchend", handleWordGestureEnd, { passive: true });
+  document.addEventListener("touchstart", handleSceneGestureStart, { passive: true });
+  document.addEventListener("touchend", handleSceneGestureEnd, { passive: true });
   window.littleEnglishHandleBack = handleAppBack;
 }
 

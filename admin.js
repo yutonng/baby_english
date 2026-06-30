@@ -53,6 +53,7 @@ function clearAdminSession() {
 async function requestJson(url, options = {}) {
   const adminToken = localStorage.getItem(adminTokenKey) || "";
   const response = await fetch(url, {
+    cache: "no-store",
     ...options,
     headers: {
       "content-type": "application/json",
@@ -279,7 +280,7 @@ function updateSceneField(target) {
 }
 
 async function loadContent() {
-  const content = await requestJson("/api/content");
+  const content = await requestJson(`/api/content?t=${Date.now()}`);
   drafts = content.drafts || [];
   published = content.published || [];
   if (selectedSource === "draft" && selectedId && !drafts.some((scene) => scene.id === selectedId)) {
@@ -329,10 +330,22 @@ async function approveDraft() {
     method: "POST",
     body: JSON.stringify({ sceneId: saved.id }),
   });
+
+  drafts = drafts.filter((item) => item.id !== saved.id);
+  if (result.published) {
+    published = published.filter((item) => item.id !== result.published.id);
+    published.unshift(result.published);
+  }
+
   selectedId = result.published?.id || saved.id;
   selectedSource = "published";
-  await loadContent();
+  renderList();
+  renderEditor();
   showMessage("已审核通过，并发布到 App 数据");
+
+  window.setTimeout(() => {
+    loadContent().catch((error) => showMessage(error.message, "error"));
+  }, 1200);
 }
 
 async function deleteSelectedScene() {

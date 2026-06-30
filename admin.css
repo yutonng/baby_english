@@ -36,6 +36,10 @@ button:hover {
   color: #9b2f1f;
 }
 
+.toolbar .danger-button {
+  margin-left: auto;
+}
+
 .danger-button:hover {
   background: #fff4f1;
   border-color: #c45c49;
