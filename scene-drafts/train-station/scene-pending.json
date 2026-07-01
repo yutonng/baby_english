@@ -1,0 +1,238 @@
+{
+  "id": "train-station",
+  "title": "火车站",
+  "subtitle": "Train Station",
+  "icon": "🚆",
+  "colors": ["#BDE7F6", "#FFE0A8"],
+  "status": "draft",
+  "words": [
+    {
+      "word": "train",
+      "cn": "火车",
+      "picture": "🚆",
+      "sentence": "The train is here.",
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: train\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": { "status": "pending", "storageKey": "", "url": "", "version": 1 },
+        "sentence": { "status": "pending", "storageKey": "", "url": "", "version": 1 }
+      }
+    },
+    {
+      "word": "station",
+      "cn": "车站",
+      "picture": "🚉",
+      "sentence": "This is the station.",
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: station\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": { "status": "pending", "storageKey": "", "url": "", "version": 1 },
+        "sentence": { "status": "pending", "storageKey": "", "url": "", "version": 1 }
+      }
+    },
+    {
+      "word": "waiting room",
+      "cn": "候车室",
+      "picture": "🪑",
+      "sentence": "We sit in the waiting room.",
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: waiting room\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": { "status": "pending", "storageKey": "", "url": "", "version": 1 },
+        "sentence": { "status": "pending", "storageKey": "", "url": "", "version": 1 }
+      }
+    },
+    {
+      "word": "line",
+      "cn": "队伍",
+      "picture": "🧍",
+      "sentence": "We stand in line.",
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: line of people\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": { "status": "pending", "storageKey": "", "url": "", "version": 1 },
+        "sentence": { "status": "pending", "storageKey": "", "url": "", "version": 1 }
+      }
+    },
+    {
+      "word": "ticket gate",
+      "cn": "检票口",
+      "picture": "🚪",
+      "sentence": "Go through the ticket gate.",
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: ticket gate\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": { "status": "pending", "storageKey": "", "url": "", "version": 1 },
+        "sentence": { "status": "pending", "storageKey": "", "url": "", "version": 1 }
+      }
+    },
+    {
+      "word": "high-speed train",
+      "cn": "动车",
+      "picture": "🚄",
+      "sentence": "The high-speed train is fast.",
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: high-speed train\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": { "status": "pending", "storageKey": "", "url": "", "version": 1 },
+        "sentence": { "status": "pending", "storageKey": "", "url": "", "version": 1 }
+      }
+    },
+    {
+      "word": "attendant",
+      "cn": "乘务员",
+      "picture": "🧑‍✈️",
+      "sentence": "The attendant helps me.",
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: train attendant\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": { "status": "pending", "storageKey": "", "url": "", "version": 1 },
+        "sentence": { "status": "pending", "storageKey": "", "url": "", "version": 1 }
+      }
+    },
+    {
+      "word": "ticket",
+      "cn": "车票",
+      "picture": "🎫",
+      "sentence": "Here is my ticket.",
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: ticket\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": { "status": "pending", "storageKey": "", "url": "", "version": 1 },
+        "sentence": { "status": "pending", "storageKey": "", "url": "", "version": 1 }
+      }
+    },
+    {
+      "word": "platform",
+      "cn": "站台",
+      "picture": "🚉",
+      "sentence": "This is the platform.",
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: platform\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": { "status": "pending", "storageKey": "", "url": "", "version": 1 },
+        "sentence": { "status": "pending", "storageKey": "", "url": "", "version": 1 }
+      }
+    },
+    {
+      "word": "suitcase",
+      "cn": "行李箱",
+      "picture": "🧳",
+      "sentence": "This is my suitcase.",
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: suitcase\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": { "status": "pending", "storageKey": "", "url": "", "version": 1 },
+        "sentence": { "status": "pending", "storageKey": "", "url": "", "version": 1 }
+      }
+    },
+    {
+      "word": "track",
+      "cn": "铁轨",
+      "picture": "🛤️",
+      "sentence": "The track is long.",
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: train track\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": { "status": "pending", "storageKey": "", "url": "", "version": 1 },
+        "sentence": { "status": "pending", "storageKey": "", "url": "", "version": 1 }
+      }
+    },
+    {
+      "word": "clock",
+      "cn": "时钟",
+      "picture": "🕒",
+      "sentence": "This is a clock.",
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: clock\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": { "status": "pending", "storageKey": "", "url": "", "version": 1 },
+        "sentence": { "status": "pending", "storageKey": "", "url": "", "version": 1 }
+      }
+    }
+  ]
+}

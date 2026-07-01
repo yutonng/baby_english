@@ -2,6 +2,7 @@ const fs = require("node:fs/promises");
 const crypto = require("node:crypto");
 const path = require("node:path");
 const { get, put } = require("@vercel/blob");
+const { enrichSceneI18n, normalizeI18n } = require("../scripts/i18n-content");
 
 const rootDir = path.join(__dirname, "..");
 const dataDir = path.join(rootDir, "data");
@@ -65,8 +66,8 @@ async function writeBlobJson(key, value) {
 }
 
 async function readDrafts() {
-  if (hasBlobStorage()) return readBlobJson(draftsKey, [], draftsPath);
-  return readLocalJson(draftsPath, []);
+  const scenes = hasBlobStorage() ? await readBlobJson(draftsKey, [], draftsPath) : await readLocalJson(draftsPath, []);
+  return Array.isArray(scenes) ? scenes.map(enrichSceneI18n) : [];
 }
 
 async function writeDrafts(value) {
@@ -75,8 +76,8 @@ async function writeDrafts(value) {
 }
 
 async function readPublished() {
-  if (hasBlobStorage()) return readBlobJson(publishedKey, [], publishedPath);
-  return readLocalJson(publishedPath, []);
+  const scenes = hasBlobStorage() ? await readBlobJson(publishedKey, [], publishedPath) : await readLocalJson(publishedPath, []);
+  return Array.isArray(scenes) ? scenes.map(enrichSceneI18n) : [];
 }
 
 async function writePublished(value) {
@@ -250,6 +251,7 @@ function normalizeWord(word) {
     cn: String(word.cn || "").trim(),
     picture: String(word.picture || "").trim(),
     sentence: String(word.sentence || "").trim(),
+    i18n: normalizeI18n(word.i18n),
     image: normalizeImage(word.image),
     audio: normalizeAudio(word.audio),
   };
@@ -259,18 +261,19 @@ function normalizeScene(input, status = "draft") {
   const title = String(input.title || "").trim();
   const subtitle = String(input.subtitle || "").trim();
   const id = slugify(input.id || subtitle || title);
-  return {
+  return enrichSceneI18n({
     id,
     title,
     subtitle,
     icon: String(input.icon || "📘").trim(),
     colors: normalizeColors(input.colors),
     status: input.status || status,
+    i18n: normalizeI18n(input.i18n),
     words: Array.isArray(input.words) ? input.words.map(normalizeWord) : [],
     notes: input.notes || "",
     createdAt: input.createdAt || new Date().toISOString(),
     updatedAt: new Date().toISOString(),
-  };
+  });
 }
 
 function validateScene(scene, options = {}) {
@@ -313,12 +316,14 @@ function toPublishedScene(scene) {
     subtitle: scene.subtitle,
     icon: scene.icon,
     colors: scene.colors,
+    i18n: normalizeI18n(scene.i18n),
     publishedAt: scene.publishedAt || new Date().toISOString(),
     words: scene.words.map((word) => ({
       word: word.word,
       cn: word.cn,
       picture: word.picture,
       sentence: word.sentence,
+      i18n: normalizeI18n(word.i18n),
       image: word.image.url || word.image.storageKey,
       imageVersion: word.image.version || 1,
       audio: {

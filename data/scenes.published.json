@@ -16,7 +16,21 @@
         "picture": "👩‍⚕️",
         "sentence": "The doctor helps me.",
         "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fdoctor-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "医生",
+            "sentence": "这是医生。"
+          },
+          "en-US": {
+            "word": "doctor",
+            "sentence": "The doctor helps me."
+          },
+          "ja-JP": {
+            "word": "おいしゃさん",
+            "sentence": "これはおいしゃさんです。"
+          }
+        }
       },
       {
         "word": "nurse",
@@ -24,7 +38,21 @@
         "picture": "🧑‍⚕️",
         "sentence": "The nurse is kind.",
         "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fnurse-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "护士",
+            "sentence": "这是护士。"
+          },
+          "en-US": {
+            "word": "nurse",
+            "sentence": "The nurse is kind."
+          },
+          "ja-JP": {
+            "word": "かんごしさん",
+            "sentence": "これはかんごしさんです。"
+          }
+        }
       },
       {
         "word": "patient",
@@ -32,7 +60,21 @@
         "picture": "🤒",
         "sentence": "The patient rests.",
         "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fpatient-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "病人",
+            "sentence": "这是病人。"
+          },
+          "en-US": {
+            "word": "patient",
+            "sentence": "The patient rests."
+          },
+          "ja-JP": {
+            "word": "びょうにん",
+            "sentence": "これはびょうにんです。"
+          }
+        }
       },
       {
         "word": "bed",
@@ -40,7 +82,21 @@
         "picture": "🛏️",
         "sentence": "This is a bed.",
         "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fbed-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "病床",
+            "sentence": "这是病床。"
+          },
+          "en-US": {
+            "word": "bed",
+            "sentence": "This is a bed."
+          },
+          "ja-JP": {
+            "word": "ベッド",
+            "sentence": "これはベッドです。"
+          }
+        }
       },
       {
         "word": "ambulance",
@@ -48,7 +104,21 @@
         "picture": "🚑",
         "sentence": "The ambulance is fast.",
         "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fambulance-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "救护车",
+            "sentence": "这是救护车。"
+          },
+          "en-US": {
+            "word": "ambulance",
+            "sentence": "The ambulance is fast."
+          },
+          "ja-JP": {
+            "word": "きゅうきゅうしゃ",
+            "sentence": "これはきゅうきゅうしゃです。"
+          }
+        }
       },
       {
         "word": "medicine",
@@ -56,7 +126,21 @@
         "picture": "💊",
         "sentence": "This is medicine.",
         "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fmedicine-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "药",
+            "sentence": "这是药。"
+          },
+          "en-US": {
+            "word": "medicine",
+            "sentence": "This is medicine."
+          },
+          "ja-JP": {
+            "word": "くすり",
+            "sentence": "これはくすりです。"
+          }
+        }
       },
       {
         "word": "thermometer",
@@ -64,7 +148,21 @@
         "picture": "🌡️",
         "sentence": "This is a thermometer.",
         "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fthermometer-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "体温计",
+            "sentence": "这是体温计。"
+          },
+          "en-US": {
+            "word": "thermometer",
+            "sentence": "This is a thermometer."
+          },
+          "ja-JP": {
+            "word": "たいおんけい",
+            "sentence": "これはたいおんけいです。"
+          }
+        }
       },
       {
         "word": "bandage",
@@ -72,7 +170,21 @@
         "picture": "🩹",
         "sentence": "I use a bandage.",
         "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fbandage-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "绷带",
+            "sentence": "这是绷带。"
+          },
+          "en-US": {
+            "word": "bandage",
+            "sentence": "I use a bandage."
+          },
+          "ja-JP": {
+            "word": "ばんそうこう",
+            "sentence": "これはばんそうこうです。"
+          }
+        }
       },
       {
         "word": "mask",
@@ -80,7 +192,21 @@
         "picture": "😷",
         "sentence": "I wear a mask.",
         "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fmask-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "口罩",
+            "sentence": "这是口罩。"
+          },
+          "en-US": {
+            "word": "mask",
+            "sentence": "I wear a mask."
+          },
+          "ja-JP": {
+            "word": "マスク",
+            "sentence": "これはマスクです。"
+          }
+        }
       },
       {
         "word": "wheelchair",
@@ -88,7 +214,21 @@
         "picture": "♿",
         "sentence": "This is a wheelchair.",
         "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fwheelchair-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "轮椅",
+            "sentence": "这是轮椅。"
+          },
+          "en-US": {
+            "word": "wheelchair",
+            "sentence": "This is a wheelchair."
+          },
+          "ja-JP": {
+            "word": "くるまいす",
+            "sentence": "これはくるまいすです。"
+          }
+        }
       },
       {
         "word": "stethoscope",
@@ -96,7 +236,21 @@
         "picture": "🩺",
         "sentence": "This is a stethoscope.",
         "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fstethoscope-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "听诊器",
+            "sentence": "这是听诊器。"
+          },
+          "en-US": {
+            "word": "stethoscope",
+            "sentence": "This is a stethoscope."
+          },
+          "ja-JP": {
+            "word": "ちょうしんき",
+            "sentence": "これはちょうしんきです。"
+          }
+        }
       },
       {
         "word": "nebulizer",
@@ -104,9 +258,34 @@
         "picture": "💨",
         "sentence": "This is a nebulizer.",
         "image": "/api/assets?key=scenes%2Fhospital%2Fwords%2Fnebulizer-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "雾化器",
+            "sentence": "这是雾化器。"
+          },
+          "en-US": {
+            "word": "nebulizer",
+            "sentence": "This is a nebulizer."
+          },
+          "ja-JP": {
+            "word": "ネブライザー",
+            "sentence": "これはネブライザーです。"
+          }
+        }
       }
-    ]
+    ],
+    "i18n": {
+      "zh-CN": {
+        "title": "医院"
+      },
+      "en-US": {
+        "title": "Hospital"
+      },
+      "ja-JP": {
+        "title": "びょういん"
+      }
+    }
   },
   {
     "id": "supermarket",
@@ -125,7 +304,21 @@
         "picture": "🛒",
         "sentence": "I push the cart.",
         "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fcart-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "购物车",
+            "sentence": "这是购物车。"
+          },
+          "en-US": {
+            "word": "cart",
+            "sentence": "I push the cart."
+          },
+          "ja-JP": {
+            "word": "カート",
+            "sentence": "これはカートです。"
+          }
+        }
       },
       {
         "word": "basket",
@@ -133,7 +326,21 @@
         "picture": "🧺",
         "sentence": "This is a basket.",
         "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fbasket-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "篮子",
+            "sentence": "这是篮子。"
+          },
+          "en-US": {
+            "word": "basket",
+            "sentence": "This is a basket."
+          },
+          "ja-JP": {
+            "word": "かご",
+            "sentence": "これはかごです。"
+          }
+        }
       },
       {
         "word": "shelf",
@@ -141,7 +348,21 @@
         "picture": "🗄️",
         "sentence": "The shelf is tall.",
         "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fshelf-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "货架",
+            "sentence": "这是货架。"
+          },
+          "en-US": {
+            "word": "shelf",
+            "sentence": "The shelf is tall."
+          },
+          "ja-JP": {
+            "word": "たな",
+            "sentence": "これはたなです。"
+          }
+        }
       },
       {
         "word": "milk",
@@ -149,7 +370,21 @@
         "picture": "🥛",
         "sentence": "I drink milk.",
         "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fmilk-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "牛奶",
+            "sentence": "这是牛奶。"
+          },
+          "en-US": {
+            "word": "milk",
+            "sentence": "I drink milk."
+          },
+          "ja-JP": {
+            "word": "ミルク",
+            "sentence": "これはミルクです。"
+          }
+        }
       },
       {
         "word": "bread",
@@ -157,7 +392,21 @@
         "picture": "🍞",
         "sentence": "I buy bread.",
         "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fbread-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "面包",
+            "sentence": "这是面包。"
+          },
+          "en-US": {
+            "word": "bread",
+            "sentence": "I buy bread."
+          },
+          "ja-JP": {
+            "word": "パン",
+            "sentence": "これはパンです。"
+          }
+        }
       },
       {
         "word": "apple",
@@ -165,7 +414,21 @@
         "picture": "🍎",
         "sentence": "This is an apple.",
         "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fapple-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "苹果",
+            "sentence": "这是苹果。"
+          },
+          "en-US": {
+            "word": "apple",
+            "sentence": "This is an apple."
+          },
+          "ja-JP": {
+            "word": "りんご",
+            "sentence": "これはりんごです。"
+          }
+        }
       },
       {
         "word": "banana",
@@ -173,7 +436,21 @@
         "picture": "🍌",
         "sentence": "This is a banana.",
         "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fbanana-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "香蕉",
+            "sentence": "这是香蕉。"
+          },
+          "en-US": {
+            "word": "banana",
+            "sentence": "This is a banana."
+          },
+          "ja-JP": {
+            "word": "バナナ",
+            "sentence": "これはバナナです。"
+          }
+        }
       },
       {
         "word": "egg",
@@ -181,7 +458,21 @@
         "picture": "🥚",
         "sentence": "This is an egg.",
         "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fegg-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "鸡蛋",
+            "sentence": "这是鸡蛋。"
+          },
+          "en-US": {
+            "word": "egg",
+            "sentence": "This is an egg."
+          },
+          "ja-JP": {
+            "word": "たまご",
+            "sentence": "これはたまごです。"
+          }
+        }
       },
       {
         "word": "juice",
@@ -189,7 +480,21 @@
         "picture": "🧃",
         "sentence": "I drink juice.",
         "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fjuice-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "果汁",
+            "sentence": "这是果汁。"
+          },
+          "en-US": {
+            "word": "juice",
+            "sentence": "I drink juice."
+          },
+          "ja-JP": {
+            "word": "ジュース",
+            "sentence": "これはジュースです。"
+          }
+        }
       },
       {
         "word": "cashier",
@@ -197,7 +502,21 @@
         "picture": "🧑‍💼",
         "sentence": "The cashier helps me.",
         "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fcashier-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "收银员",
+            "sentence": "这是收银员。"
+          },
+          "en-US": {
+            "word": "cashier",
+            "sentence": "The cashier helps me."
+          },
+          "ja-JP": {
+            "word": "レジのひと",
+            "sentence": "これはレジのひとです。"
+          }
+        }
       },
       {
         "word": "bag",
@@ -205,7 +524,21 @@
         "picture": "🛍️",
         "sentence": "I carry the bag.",
         "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Fbag-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "袋子",
+            "sentence": "这是袋子。"
+          },
+          "en-US": {
+            "word": "bag",
+            "sentence": "I carry the bag."
+          },
+          "ja-JP": {
+            "word": "かばん",
+            "sentence": "これはかばんです。"
+          }
+        }
       },
       {
         "word": "receipt",
@@ -213,9 +546,34 @@
         "picture": "🧾",
         "sentence": "This is a receipt.",
         "image": "/api/assets?key=scenes%2Fsupermarket%2Fwords%2Freceipt-v1.webp&v=1",
-        "imageVersion": 1
+        "imageVersion": 1,
+        "i18n": {
+          "zh-CN": {
+            "word": "小票",
+            "sentence": "这是小票。"
+          },
+          "en-US": {
+            "word": "receipt",
+            "sentence": "This is a receipt."
+          },
+          "ja-JP": {
+            "word": "レシート",
+            "sentence": "これはレシートです。"
+          }
+        }
       }
-    ]
+    ],
+    "i18n": {
+      "zh-CN": {
+        "title": "超市"
+      },
+      "en-US": {
+        "title": "Supermarket"
+      },
+      "ja-JP": {
+        "title": "スーパー"
+      }
+    }
   },
   {
     "id": "living-room",
@@ -232,86 +590,265 @@
         "cn": "沙发",
         "picture": "🛋️",
         "sentence": "I sit on the sofa.",
-        "image": "./assets/words/sticker/sofa.svg"
+        "image": "./assets/words/sticker/sofa.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "沙发",
+            "sentence": "这是沙发。"
+          },
+          "en-US": {
+            "word": "sofa",
+            "sentence": "I sit on the sofa."
+          },
+          "ja-JP": {
+            "word": "ソファ",
+            "sentence": "これはソファです。"
+          }
+        }
       },
       {
         "word": "TV",
         "cn": "电视",
         "picture": "📺",
         "sentence": "The TV is on.",
-        "image": "./assets/words/sticker/tv.svg"
+        "image": "./assets/words/sticker/tv.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "电视",
+            "sentence": "这是电视。"
+          },
+          "en-US": {
+            "word": "TV",
+            "sentence": "The TV is on."
+          },
+          "ja-JP": {
+            "word": "テレビ",
+            "sentence": "これはテレビです。"
+          }
+        }
       },
       {
         "word": "table",
         "cn": "桌子",
         "picture": "🪑",
         "image": "./assets/words/sticker/table.svg",
-        "sentence": "This is a table."
+        "sentence": "This is a table.",
+        "i18n": {
+          "zh-CN": {
+            "word": "桌子",
+            "sentence": "这是桌子。"
+          },
+          "en-US": {
+            "word": "table",
+            "sentence": "This is a table."
+          },
+          "ja-JP": {
+            "word": "テーブル",
+            "sentence": "これはテーブルです。"
+          }
+        }
       },
       {
         "word": "chair",
         "cn": "椅子",
         "picture": "🪑",
         "sentence": "I sit on a chair.",
-        "image": "./assets/words/sticker/chair.svg"
+        "image": "./assets/words/sticker/chair.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "椅子",
+            "sentence": "这是椅子。"
+          },
+          "en-US": {
+            "word": "chair",
+            "sentence": "I sit on a chair."
+          },
+          "ja-JP": {
+            "word": "いす",
+            "sentence": "これはいすです。"
+          }
+        }
       },
       {
         "word": "lamp",
         "cn": "台灯",
         "picture": "💡",
         "sentence": "The lamp is on.",
-        "image": "./assets/words/sticker/lamp.svg"
+        "image": "./assets/words/sticker/lamp.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "台灯",
+            "sentence": "这是台灯。"
+          },
+          "en-US": {
+            "word": "lamp",
+            "sentence": "The lamp is on."
+          },
+          "ja-JP": {
+            "word": "ランプ",
+            "sentence": "これはランプです。"
+          }
+        }
       },
       {
         "word": "book",
         "cn": "书",
         "picture": "📘",
         "sentence": "I read a book.",
-        "image": "./assets/words/sticker/book.svg"
+        "image": "./assets/words/sticker/book.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "书",
+            "sentence": "这是书。"
+          },
+          "en-US": {
+            "word": "book",
+            "sentence": "I read a book."
+          },
+          "ja-JP": {
+            "word": "ほん",
+            "sentence": "これはほんです。"
+          }
+        }
       },
       {
         "word": "toy",
         "cn": "玩具",
         "picture": "🧸",
         "sentence": "This is my toy.",
-        "image": "./assets/words/sticker/toy.svg"
+        "image": "./assets/words/sticker/toy.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "玩具",
+            "sentence": "这是玩具。"
+          },
+          "en-US": {
+            "word": "toy",
+            "sentence": "This is my toy."
+          },
+          "ja-JP": {
+            "word": "おもちゃ",
+            "sentence": "これはおもちゃです。"
+          }
+        }
       },
       {
         "word": "ball",
         "cn": "球",
         "picture": "⚽",
         "sentence": "I kick the ball.",
-        "image": "./assets/words/sticker/ball.svg"
+        "image": "./assets/words/sticker/ball.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "球",
+            "sentence": "这是球。"
+          },
+          "en-US": {
+            "word": "ball",
+            "sentence": "I kick the ball."
+          },
+          "ja-JP": {
+            "word": "ボール",
+            "sentence": "これはボールです。"
+          }
+        }
       },
       {
         "word": "box",
         "cn": "盒子",
         "picture": "📦",
         "sentence": "The toy is in the box.",
-        "image": "./assets/words/sticker/box.svg"
+        "image": "./assets/words/sticker/box.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "盒子",
+            "sentence": "这是盒子。"
+          },
+          "en-US": {
+            "word": "box",
+            "sentence": "The toy is in the box."
+          },
+          "ja-JP": {
+            "word": "はこ",
+            "sentence": "これははこです。"
+          }
+        }
       },
       {
         "word": "clock",
         "cn": "钟",
         "picture": "🕒",
         "sentence": "This is a clock.",
-        "image": "./assets/words/sticker/clock.svg"
+        "image": "./assets/words/sticker/clock.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "钟",
+            "sentence": "这是钟。"
+          },
+          "en-US": {
+            "word": "clock",
+            "sentence": "This is a clock."
+          },
+          "ja-JP": {
+            "word": "とけい",
+            "sentence": "これはとけいです。"
+          }
+        }
       },
       {
         "word": "window",
         "cn": "窗户",
         "picture": "🪟",
         "sentence": "Open the window.",
-        "image": "./assets/words/sticker/window.svg"
+        "image": "./assets/words/sticker/window.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "窗户",
+            "sentence": "这是窗户。"
+          },
+          "en-US": {
+            "word": "window",
+            "sentence": "Open the window."
+          },
+          "ja-JP": {
+            "word": "まど",
+            "sentence": "これはまどです。"
+          }
+        }
       },
       {
         "word": "door",
         "cn": "门",
         "picture": "🚪",
         "sentence": "Close the door.",
-        "image": "./assets/words/sticker/door.svg"
+        "image": "./assets/words/sticker/door.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "门",
+            "sentence": "这是门。"
+          },
+          "en-US": {
+            "word": "door",
+            "sentence": "Close the door."
+          },
+          "ja-JP": {
+            "word": "ドア",
+            "sentence": "これはドアです。"
+          }
+        }
       }
-    ]
+    ],
+    "i18n": {
+      "zh-CN": {
+        "title": "客厅"
+      },
+      "en-US": {
+        "title": "Living Room"
+      },
+      "ja-JP": {
+        "title": "リビング"
+      }
+    }
   },
   {
     "id": "bedroom",
@@ -328,86 +865,265 @@
         "cn": "床",
         "picture": "🛏️",
         "sentence": "This is my bed.",
-        "image": "./assets/words/sticker/bed.svg"
+        "image": "./assets/words/sticker/bed.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "床",
+            "sentence": "这是床。"
+          },
+          "en-US": {
+            "word": "bed",
+            "sentence": "This is my bed."
+          },
+          "ja-JP": {
+            "word": "ベッド",
+            "sentence": "これはベッドです。"
+          }
+        }
       },
       {
         "word": "pillow",
         "cn": "枕头",
         "picture": "🛏️",
         "image": "./assets/words/sticker/pillow.svg",
-        "sentence": "My pillow is soft."
+        "sentence": "My pillow is soft.",
+        "i18n": {
+          "zh-CN": {
+            "word": "枕头",
+            "sentence": "这是枕头。"
+          },
+          "en-US": {
+            "word": "pillow",
+            "sentence": "My pillow is soft."
+          },
+          "ja-JP": {
+            "word": "まくら",
+            "sentence": "これはまくらです。"
+          }
+        }
       },
       {
         "word": "blanket",
         "cn": "毯子",
         "picture": "🧺",
         "sentence": "I have a blanket.",
-        "image": "./assets/words/sticker/blanket.svg"
+        "image": "./assets/words/sticker/blanket.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "毯子",
+            "sentence": "这是毯子。"
+          },
+          "en-US": {
+            "word": "blanket",
+            "sentence": "I have a blanket."
+          },
+          "ja-JP": {
+            "word": "もうふ",
+            "sentence": "これはもうふです。"
+          }
+        }
       },
       {
         "word": "teddy bear",
         "cn": "玩具熊",
         "picture": "🧸",
         "sentence": "I hug my teddy bear.",
-        "image": "./assets/words/sticker/teddy-bear.svg"
+        "image": "./assets/words/sticker/teddy-bear.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "玩具熊",
+            "sentence": "这是玩具熊。"
+          },
+          "en-US": {
+            "word": "teddy bear",
+            "sentence": "I hug my teddy bear."
+          },
+          "ja-JP": {
+            "word": "ぬいぐるみ",
+            "sentence": "これはぬいぐるみです。"
+          }
+        }
       },
       {
         "word": "pajamas",
         "cn": "睡衣",
         "picture": "👕",
         "sentence": "I wear pajamas.",
-        "image": "./assets/words/sticker/pajamas.svg"
+        "image": "./assets/words/sticker/pajamas.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "睡衣",
+            "sentence": "这是睡衣。"
+          },
+          "en-US": {
+            "word": "pajamas",
+            "sentence": "I wear pajamas."
+          },
+          "ja-JP": {
+            "word": "パジャマ",
+            "sentence": "これはパジャマです。"
+          }
+        }
       },
       {
         "word": "shoes",
         "cn": "鞋子",
         "picture": "👟",
         "sentence": "Put on your shoes.",
-        "image": "./assets/words/sticker/shoes.svg"
+        "image": "./assets/words/sticker/shoes.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "鞋子",
+            "sentence": "这是鞋子。"
+          },
+          "en-US": {
+            "word": "shoes",
+            "sentence": "Put on your shoes."
+          },
+          "ja-JP": {
+            "word": "くつ",
+            "sentence": "これはくつです。"
+          }
+        }
       },
       {
         "word": "socks",
         "cn": "袜子",
         "picture": "🧦",
         "sentence": "These are my socks.",
-        "image": "./assets/words/sticker/socks.svg"
+        "image": "./assets/words/sticker/socks.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "袜子",
+            "sentence": "这是袜子。"
+          },
+          "en-US": {
+            "word": "socks",
+            "sentence": "These are my socks."
+          },
+          "ja-JP": {
+            "word": "くつした",
+            "sentence": "これはくつしたです。"
+          }
+        }
       },
       {
         "word": "shirt",
         "cn": "衬衫",
         "picture": "👕",
         "sentence": "This is my shirt.",
-        "image": "./assets/words/sticker/shirt.svg"
+        "image": "./assets/words/sticker/shirt.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "衬衫",
+            "sentence": "这是衬衫。"
+          },
+          "en-US": {
+            "word": "shirt",
+            "sentence": "This is my shirt."
+          },
+          "ja-JP": {
+            "word": "シャツ",
+            "sentence": "これはシャツです。"
+          }
+        }
       },
       {
         "word": "pants",
         "cn": "裤子",
         "picture": "👖",
         "sentence": "These are my pants.",
-        "image": "./assets/words/sticker/pants.svg"
+        "image": "./assets/words/sticker/pants.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "裤子",
+            "sentence": "这是裤子。"
+          },
+          "en-US": {
+            "word": "pants",
+            "sentence": "These are my pants."
+          },
+          "ja-JP": {
+            "word": "ズボン",
+            "sentence": "これはズボンです。"
+          }
+        }
       },
       {
         "word": "mirror",
         "cn": "镜子",
         "picture": "🪞",
         "sentence": "I see me in the mirror.",
-        "image": "./assets/words/sticker/mirror.svg"
+        "image": "./assets/words/sticker/mirror.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "镜子",
+            "sentence": "这是镜子。"
+          },
+          "en-US": {
+            "word": "mirror",
+            "sentence": "I see me in the mirror."
+          },
+          "ja-JP": {
+            "word": "かがみ",
+            "sentence": "これはかがみです。"
+          }
+        }
       },
       {
         "word": "bag",
         "cn": "包",
         "picture": "🎒",
         "sentence": "My bag is here.",
-        "image": "./assets/words/sticker/bag.svg"
+        "image": "./assets/words/sticker/bag.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "包",
+            "sentence": "这是包。"
+          },
+          "en-US": {
+            "word": "bag",
+            "sentence": "My bag is here."
+          },
+          "ja-JP": {
+            "word": "かばん",
+            "sentence": "これはかばんです。"
+          }
+        }
       },
       {
         "word": "sleep",
         "cn": "睡觉",
         "picture": "😴",
         "sentence": "I sleep at night.",
-        "image": "./assets/words/sticker/sleep.svg"
+        "image": "./assets/words/sticker/sleep.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "睡觉",
+            "sentence": "这是睡觉。"
+          },
+          "en-US": {
+            "word": "sleep",
+            "sentence": "I sleep at night."
+          },
+          "ja-JP": {
+            "word": "ねる",
+            "sentence": "これはねるです。"
+          }
+        }
       }
-    ]
+    ],
+    "i18n": {
+      "zh-CN": {
+        "title": "卧室"
+      },
+      "en-US": {
+        "title": "Bedroom"
+      },
+      "ja-JP": {
+        "title": "ねしつ"
+      }
+    }
   },
   {
     "id": "kitchen",
@@ -424,100 +1140,307 @@
         "cn": "苹果",
         "picture": "🍎",
         "image": "./assets/words/sticker/apple.svg",
-        "sentence": "This is an apple."
+        "sentence": "This is an apple.",
+        "i18n": {
+          "zh-CN": {
+            "word": "苹果",
+            "sentence": "这是苹果。"
+          },
+          "en-US": {
+            "word": "apple",
+            "sentence": "This is an apple."
+          },
+          "ja-JP": {
+            "word": "りんご",
+            "sentence": "これはりんごです。"
+          }
+        }
       },
       {
         "word": "banana",
         "cn": "香蕉",
         "picture": "🍌",
         "image": "./assets/words/sticker/banana.svg",
-        "sentence": "I like bananas."
+        "sentence": "I like bananas.",
+        "i18n": {
+          "zh-CN": {
+            "word": "香蕉",
+            "sentence": "这是香蕉。"
+          },
+          "en-US": {
+            "word": "banana",
+            "sentence": "I like bananas."
+          },
+          "ja-JP": {
+            "word": "バナナ",
+            "sentence": "これはバナナです。"
+          }
+        }
       },
       {
         "word": "orange",
         "cn": "橙子",
         "picture": "🍊",
         "image": "./assets/words/sticker/orange.svg",
-        "sentence": "This is an orange."
+        "sentence": "This is an orange.",
+        "i18n": {
+          "zh-CN": {
+            "word": "橙子",
+            "sentence": "这是橙子。"
+          },
+          "en-US": {
+            "word": "orange",
+            "sentence": "This is an orange."
+          },
+          "ja-JP": {
+            "word": "オレンジ",
+            "sentence": "これはオレンジです。"
+          }
+        }
       },
       {
         "word": "bread",
         "cn": "面包",
         "picture": "🍞",
         "image": "./assets/words/sticker/bread.svg",
-        "sentence": "I eat bread."
+        "sentence": "I eat bread.",
+        "i18n": {
+          "zh-CN": {
+            "word": "面包",
+            "sentence": "这是面包。"
+          },
+          "en-US": {
+            "word": "bread",
+            "sentence": "I eat bread."
+          },
+          "ja-JP": {
+            "word": "パン",
+            "sentence": "これはパンです。"
+          }
+        }
       },
       {
         "word": "milk",
         "cn": "牛奶",
         "picture": "🥛",
         "image": "./assets/words/sticker/milk.svg",
-        "sentence": "I drink milk."
+        "sentence": "I drink milk.",
+        "i18n": {
+          "zh-CN": {
+            "word": "牛奶",
+            "sentence": "这是牛奶。"
+          },
+          "en-US": {
+            "word": "milk",
+            "sentence": "I drink milk."
+          },
+          "ja-JP": {
+            "word": "ミルク",
+            "sentence": "これはミルクです。"
+          }
+        }
       },
       {
         "word": "water",
         "cn": "水",
         "picture": "💧",
         "image": "./assets/words/sticker/water.svg",
-        "sentence": "I drink water."
+        "sentence": "I drink water.",
+        "i18n": {
+          "zh-CN": {
+            "word": "水",
+            "sentence": "这是水。"
+          },
+          "en-US": {
+            "word": "water",
+            "sentence": "I drink water."
+          },
+          "ja-JP": {
+            "word": "みず",
+            "sentence": "これはみずです。"
+          }
+        }
       },
       {
         "word": "egg",
         "cn": "鸡蛋",
         "picture": "🥚",
         "image": "./assets/words/sticker/egg.svg",
-        "sentence": "This is an egg."
+        "sentence": "This is an egg.",
+        "i18n": {
+          "zh-CN": {
+            "word": "鸡蛋",
+            "sentence": "这是鸡蛋。"
+          },
+          "en-US": {
+            "word": "egg",
+            "sentence": "This is an egg."
+          },
+          "ja-JP": {
+            "word": "たまご",
+            "sentence": "これはたまごです。"
+          }
+        }
       },
       {
         "word": "cup",
         "cn": "杯子",
         "picture": "☕",
         "image": "./assets/words/sticker/cup.svg",
-        "sentence": "This is a cup."
+        "sentence": "This is a cup.",
+        "i18n": {
+          "zh-CN": {
+            "word": "杯子",
+            "sentence": "这是杯子。"
+          },
+          "en-US": {
+            "word": "cup",
+            "sentence": "This is a cup."
+          },
+          "ja-JP": {
+            "word": "コップ",
+            "sentence": "これはコップです。"
+          }
+        }
       },
       {
         "word": "bowl",
         "cn": "碗",
         "picture": "🥣",
         "image": "./assets/words/sticker/bowl.svg",
-        "sentence": "This is a bowl."
+        "sentence": "This is a bowl.",
+        "i18n": {
+          "zh-CN": {
+            "word": "碗",
+            "sentence": "这是碗。"
+          },
+          "en-US": {
+            "word": "bowl",
+            "sentence": "This is a bowl."
+          },
+          "ja-JP": {
+            "word": "ボウル",
+            "sentence": "これはボウルです。"
+          }
+        }
       },
       {
         "word": "plate",
         "cn": "盘子",
         "picture": "🍽️",
         "image": "./assets/words/sticker/plate.svg",
-        "sentence": "This is a plate."
+        "sentence": "This is a plate.",
+        "i18n": {
+          "zh-CN": {
+            "word": "盘子",
+            "sentence": "这是盘子。"
+          },
+          "en-US": {
+            "word": "plate",
+            "sentence": "This is a plate."
+          },
+          "ja-JP": {
+            "word": "おさら",
+            "sentence": "これはおさらです。"
+          }
+        }
       },
       {
         "word": "spoon",
         "cn": "勺子",
         "picture": "🥄",
         "image": "./assets/words/sticker/spoon.svg",
-        "sentence": "I use a spoon."
+        "sentence": "I use a spoon.",
+        "i18n": {
+          "zh-CN": {
+            "word": "勺子",
+            "sentence": "这是勺子。"
+          },
+          "en-US": {
+            "word": "spoon",
+            "sentence": "I use a spoon."
+          },
+          "ja-JP": {
+            "word": "スプーン",
+            "sentence": "これはスプーンです。"
+          }
+        }
       },
       {
         "word": "fork",
         "cn": "叉子",
         "picture": "🍴",
         "image": "./assets/words/sticker/fork.svg",
-        "sentence": "I use a fork."
+        "sentence": "I use a fork.",
+        "i18n": {
+          "zh-CN": {
+            "word": "叉子",
+            "sentence": "这是叉子。"
+          },
+          "en-US": {
+            "word": "fork",
+            "sentence": "I use a fork."
+          },
+          "ja-JP": {
+            "word": "フォーク",
+            "sentence": "これはフォークです。"
+          }
+        }
       },
       {
         "word": "rice",
         "cn": "米饭",
         "picture": "🍚",
         "image": "./assets/words/sticker/rice.svg",
-        "sentence": "I eat rice."
+        "sentence": "I eat rice.",
+        "i18n": {
+          "zh-CN": {
+            "word": "米饭",
+            "sentence": "这是米饭。"
+          },
+          "en-US": {
+            "word": "rice",
+            "sentence": "I eat rice."
+          },
+          "ja-JP": {
+            "word": "ごはん",
+            "sentence": "これはごはんです。"
+          }
+        }
       },
       {
         "word": "soup",
         "cn": "汤",
         "picture": "🍲",
         "image": "./assets/words/sticker/soup.svg",
-        "sentence": "The soup is hot."
+        "sentence": "The soup is hot.",
+        "i18n": {
+          "zh-CN": {
+            "word": "汤",
+            "sentence": "这是汤。"
+          },
+          "en-US": {
+            "word": "soup",
+            "sentence": "The soup is hot."
+          },
+          "ja-JP": {
+            "word": "スープ",
+            "sentence": "これはスープです。"
+          }
+        }
       }
-    ]
+    ],
+    "i18n": {
+      "zh-CN": {
+        "title": "厨房"
+      },
+      "en-US": {
+        "title": "Kitchen"
+      },
+      "ja-JP": {
+        "title": "キッチン"
+      }
+    }
   },
   {
     "id": "kindergarten",
@@ -534,86 +1457,265 @@
         "cn": "老师",
         "picture": "👩‍🏫",
         "sentence": "This is my teacher.",
-        "image": "./assets/words/sticker/teacher.svg"
+        "image": "./assets/words/sticker/teacher.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "老师",
+            "sentence": "这是老师。"
+          },
+          "en-US": {
+            "word": "teacher",
+            "sentence": "This is my teacher."
+          },
+          "ja-JP": {
+            "word": "せんせい",
+            "sentence": "これはせんせいです。"
+          }
+        }
       },
       {
         "word": "friend",
         "cn": "朋友",
         "picture": "🧒",
         "sentence": "This is my friend.",
-        "image": "./assets/words/sticker/friend.svg"
+        "image": "./assets/words/sticker/friend.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "朋友",
+            "sentence": "这是朋友。"
+          },
+          "en-US": {
+            "word": "friend",
+            "sentence": "This is my friend."
+          },
+          "ja-JP": {
+            "word": "ともだち",
+            "sentence": "これはともだちです。"
+          }
+        }
       },
       {
         "word": "bag",
         "cn": "书包",
         "picture": "🎒",
         "sentence": "My bag is red.",
-        "image": "./assets/words/sticker/bag.svg"
+        "image": "./assets/words/sticker/bag.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "书包",
+            "sentence": "这是书包。"
+          },
+          "en-US": {
+            "word": "bag",
+            "sentence": "My bag is red."
+          },
+          "ja-JP": {
+            "word": "かばん",
+            "sentence": "これはかばんです。"
+          }
+        }
       },
       {
         "word": "book",
         "cn": "书",
         "picture": "📘",
         "sentence": "Open your book.",
-        "image": "./assets/words/sticker/book.svg"
+        "image": "./assets/words/sticker/book.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "书",
+            "sentence": "这是书。"
+          },
+          "en-US": {
+            "word": "book",
+            "sentence": "Open your book."
+          },
+          "ja-JP": {
+            "word": "ほん",
+            "sentence": "これはほんです。"
+          }
+        }
       },
       {
         "word": "pencil",
         "cn": "铅笔",
         "picture": "✏️",
         "sentence": "I have a pencil.",
-        "image": "./assets/words/sticker/pencil.svg"
+        "image": "./assets/words/sticker/pencil.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "铅笔",
+            "sentence": "这是铅笔。"
+          },
+          "en-US": {
+            "word": "pencil",
+            "sentence": "I have a pencil."
+          },
+          "ja-JP": {
+            "word": "えんぴつ",
+            "sentence": "これはえんぴつです。"
+          }
+        }
       },
       {
         "word": "crayon",
         "cn": "蜡笔",
         "picture": "🖍️",
         "sentence": "I color with a crayon.",
-        "image": "./assets/words/sticker/crayon.svg"
+        "image": "./assets/words/sticker/crayon.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "蜡笔",
+            "sentence": "这是蜡笔。"
+          },
+          "en-US": {
+            "word": "crayon",
+            "sentence": "I color with a crayon."
+          },
+          "ja-JP": {
+            "word": "クレヨン",
+            "sentence": "これはクレヨンです。"
+          }
+        }
       },
       {
         "word": "paper",
         "cn": "纸",
         "picture": "📄",
         "sentence": "Draw on the paper.",
-        "image": "./assets/words/sticker/paper.svg"
+        "image": "./assets/words/sticker/paper.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "纸",
+            "sentence": "这是纸。"
+          },
+          "en-US": {
+            "word": "paper",
+            "sentence": "Draw on the paper."
+          },
+          "ja-JP": {
+            "word": "かみ",
+            "sentence": "これはかみです。"
+          }
+        }
       },
       {
         "word": "desk",
         "cn": "课桌",
         "picture": "🪑",
         "image": "./assets/words/sticker/desk.svg",
-        "sentence": "This is my desk."
+        "sentence": "This is my desk.",
+        "i18n": {
+          "zh-CN": {
+            "word": "课桌",
+            "sentence": "这是课桌。"
+          },
+          "en-US": {
+            "word": "desk",
+            "sentence": "This is my desk."
+          },
+          "ja-JP": {
+            "word": "つくえ",
+            "sentence": "これはつくえです。"
+          }
+        }
       },
       {
         "word": "chair",
         "cn": "椅子",
         "picture": "🪑",
         "sentence": "Sit on the chair.",
-        "image": "./assets/words/sticker/chair.svg"
+        "image": "./assets/words/sticker/chair.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "椅子",
+            "sentence": "这是椅子。"
+          },
+          "en-US": {
+            "word": "chair",
+            "sentence": "Sit on the chair."
+          },
+          "ja-JP": {
+            "word": "いす",
+            "sentence": "これはいすです。"
+          }
+        }
       },
       {
         "word": "blocks",
         "cn": "积木",
         "picture": "🧱",
         "sentence": "I play with blocks.",
-        "image": "./assets/words/sticker/blocks.svg"
+        "image": "./assets/words/sticker/blocks.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "积木",
+            "sentence": "这是积木。"
+          },
+          "en-US": {
+            "word": "blocks",
+            "sentence": "I play with blocks."
+          },
+          "ja-JP": {
+            "word": "つみき",
+            "sentence": "これはつみきです。"
+          }
+        }
       },
       {
         "word": "music",
         "cn": "音乐",
         "picture": "🎵",
         "sentence": "I like music.",
-        "image": "./assets/words/sticker/music.svg"
+        "image": "./assets/words/sticker/music.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "音乐",
+            "sentence": "这是音乐。"
+          },
+          "en-US": {
+            "word": "music",
+            "sentence": "I like music."
+          },
+          "ja-JP": {
+            "word": "おんがく",
+            "sentence": "これはおんがくです。"
+          }
+        }
       },
       {
         "word": "nap",
         "cn": "午睡",
         "picture": "😴",
         "sentence": "It is nap time.",
-        "image": "./assets/words/sticker/nap.svg"
+        "image": "./assets/words/sticker/nap.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "午睡",
+            "sentence": "这是午睡。"
+          },
+          "en-US": {
+            "word": "nap",
+            "sentence": "It is nap time."
+          },
+          "ja-JP": {
+            "word": "おひるね",
+            "sentence": "これはおひるねです。"
+          }
+        }
       }
-    ]
+    ],
+    "i18n": {
+      "zh-CN": {
+        "title": "幼儿园"
+      },
+      "en-US": {
+        "title": "Kindergarten"
+      },
+      "ja-JP": {
+        "title": "ようちえん"
+      }
+    }
   },
   {
     "id": "zoo",
@@ -630,93 +1732,286 @@
         "cn": "狮子",
         "picture": "🦁",
         "sentence": "I see a lion.",
-        "image": "./assets/words/sticker/lion.svg"
+        "image": "./assets/words/sticker/lion.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "狮子",
+            "sentence": "这是狮子。"
+          },
+          "en-US": {
+            "word": "lion",
+            "sentence": "I see a lion."
+          },
+          "ja-JP": {
+            "word": "ライオン",
+            "sentence": "これはライオンです。"
+          }
+        }
       },
       {
         "word": "tiger",
         "cn": "老虎",
         "picture": "🐯",
         "sentence": "I see a tiger.",
-        "image": "./assets/words/sticker/tiger.svg"
+        "image": "./assets/words/sticker/tiger.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "老虎",
+            "sentence": "这是老虎。"
+          },
+          "en-US": {
+            "word": "tiger",
+            "sentence": "I see a tiger."
+          },
+          "ja-JP": {
+            "word": "とら",
+            "sentence": "これはとらです。"
+          }
+        }
       },
       {
         "word": "monkey",
         "cn": "猴子",
         "picture": "🐵",
         "sentence": "The monkey is funny.",
-        "image": "./assets/words/sticker/monkey.svg"
+        "image": "./assets/words/sticker/monkey.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "猴子",
+            "sentence": "这是猴子。"
+          },
+          "en-US": {
+            "word": "monkey",
+            "sentence": "The monkey is funny."
+          },
+          "ja-JP": {
+            "word": "さる",
+            "sentence": "これはさるです。"
+          }
+        }
       },
       {
         "word": "panda",
         "cn": "熊猫",
         "picture": "🐼",
         "sentence": "I see a panda.",
-        "image": "./assets/words/sticker/panda.svg"
+        "image": "./assets/words/sticker/panda.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "熊猫",
+            "sentence": "这是熊猫。"
+          },
+          "en-US": {
+            "word": "panda",
+            "sentence": "I see a panda."
+          },
+          "ja-JP": {
+            "word": "パンダ",
+            "sentence": "これはパンダです。"
+          }
+        }
       },
       {
         "word": "elephant",
         "cn": "大象",
         "picture": "🐘",
         "sentence": "The elephant is big.",
-        "image": "./assets/words/sticker/elephant.svg"
+        "image": "./assets/words/sticker/elephant.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "大象",
+            "sentence": "这是大象。"
+          },
+          "en-US": {
+            "word": "elephant",
+            "sentence": "The elephant is big."
+          },
+          "ja-JP": {
+            "word": "ぞう",
+            "sentence": "これはぞうです。"
+          }
+        }
       },
       {
         "word": "giraffe",
         "cn": "长颈鹿",
         "picture": "🦒",
         "sentence": "The giraffe is tall.",
-        "image": "./assets/words/sticker/giraffe.svg"
+        "image": "./assets/words/sticker/giraffe.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "长颈鹿",
+            "sentence": "这是长颈鹿。"
+          },
+          "en-US": {
+            "word": "giraffe",
+            "sentence": "The giraffe is tall."
+          },
+          "ja-JP": {
+            "word": "きりん",
+            "sentence": "これはきりんです。"
+          }
+        }
       },
       {
         "word": "zebra",
         "cn": "斑马",
         "picture": "🦓",
         "sentence": "The zebra has stripes.",
-        "image": "./assets/words/sticker/zebra.svg"
+        "image": "./assets/words/sticker/zebra.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "斑马",
+            "sentence": "这是斑马。"
+          },
+          "en-US": {
+            "word": "zebra",
+            "sentence": "The zebra has stripes."
+          },
+          "ja-JP": {
+            "word": "しまうま",
+            "sentence": "これはしまうまです。"
+          }
+        }
       },
       {
         "word": "bear",
         "cn": "熊",
         "picture": "🐻",
         "sentence": "The bear is big.",
-        "image": "./assets/words/sticker/bear.svg"
+        "image": "./assets/words/sticker/bear.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "熊",
+            "sentence": "这是熊。"
+          },
+          "en-US": {
+            "word": "bear",
+            "sentence": "The bear is big."
+          },
+          "ja-JP": {
+            "word": "くま",
+            "sentence": "これはくまです。"
+          }
+        }
       },
       {
         "word": "rabbit",
         "cn": "兔子",
         "picture": "🐰",
         "sentence": "The rabbit can hop.",
-        "image": "./assets/words/sticker/rabbit.svg"
+        "image": "./assets/words/sticker/rabbit.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "兔子",
+            "sentence": "这是兔子。"
+          },
+          "en-US": {
+            "word": "rabbit",
+            "sentence": "The rabbit can hop."
+          },
+          "ja-JP": {
+            "word": "うさぎ",
+            "sentence": "これはうさぎです。"
+          }
+        }
       },
       {
         "word": "bird",
         "cn": "鸟",
         "picture": "🐦",
         "sentence": "The bird can fly.",
-        "image": "./assets/words/sticker/bird.svg"
+        "image": "./assets/words/sticker/bird.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "鸟",
+            "sentence": "这是鸟。"
+          },
+          "en-US": {
+            "word": "bird",
+            "sentence": "The bird can fly."
+          },
+          "ja-JP": {
+            "word": "とり",
+            "sentence": "これはとりです。"
+          }
+        }
       },
       {
         "word": "duck",
         "cn": "鸭子",
         "picture": "🦆",
         "sentence": "The duck can swim.",
-        "image": "./assets/words/sticker/duck.svg"
+        "image": "./assets/words/sticker/duck.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "鸭子",
+            "sentence": "这是鸭子。"
+          },
+          "en-US": {
+            "word": "duck",
+            "sentence": "The duck can swim."
+          },
+          "ja-JP": {
+            "word": "あひる",
+            "sentence": "これはあひるです。"
+          }
+        }
       },
       {
         "word": "fish",
         "cn": "鱼",
         "picture": "🐟",
         "sentence": "The fish is small.",
-        "image": "./assets/words/sticker/fish.svg"
+        "image": "./assets/words/sticker/fish.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "鱼",
+            "sentence": "这是鱼。"
+          },
+          "en-US": {
+            "word": "fish",
+            "sentence": "The fish is small."
+          },
+          "ja-JP": {
+            "word": "さかな",
+            "sentence": "これはさかなです。"
+          }
+        }
       },
       {
         "word": "snake",
         "cn": "蛇",
         "picture": "🐍",
         "sentence": "The snake is long.",
-        "image": "./assets/words/sticker/snake.svg"
+        "image": "./assets/words/sticker/snake.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "蛇",
+            "sentence": "这是蛇。"
+          },
+          "en-US": {
+            "word": "snake",
+            "sentence": "The snake is long."
+          },
+          "ja-JP": {
+            "word": "へび",
+            "sentence": "これはへびです。"
+          }
+        }
       }
-    ]
+    ],
+    "i18n": {
+      "zh-CN": {
+        "title": "动物园"
+      },
+      "en-US": {
+        "title": "Zoo"
+      },
+      "ja-JP": {
+        "title": "どうぶつえん"
+      }
+    }
   },
   {
     "id": "playground",
@@ -733,86 +2028,265 @@
         "cn": "滑梯",
         "picture": "🛝",
         "sentence": "I go down the slide.",
-        "image": "./assets/words/sticker/slide.svg"
+        "image": "./assets/words/sticker/slide.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "滑梯",
+            "sentence": "这是滑梯。"
+          },
+          "en-US": {
+            "word": "slide",
+            "sentence": "I go down the slide."
+          },
+          "ja-JP": {
+            "word": "すべりだい",
+            "sentence": "これはすべりだいです。"
+          }
+        }
       },
       {
         "word": "swing",
         "cn": "秋千",
         "picture": "🌈",
         "sentence": "I play on the swing.",
-        "image": "./assets/words/sticker/swing.svg"
+        "image": "./assets/words/sticker/swing.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "秋千",
+            "sentence": "这是秋千。"
+          },
+          "en-US": {
+            "word": "swing",
+            "sentence": "I play on the swing."
+          },
+          "ja-JP": {
+            "word": "ブランコ",
+            "sentence": "これはブランコです。"
+          }
+        }
       },
       {
         "word": "seesaw",
         "cn": "跷跷板",
         "picture": "🛝",
         "image": "./assets/words/sticker/seesaw.svg",
-        "sentence": "I ride the seesaw."
+        "sentence": "I ride the seesaw.",
+        "i18n": {
+          "zh-CN": {
+            "word": "跷跷板",
+            "sentence": "这是跷跷板。"
+          },
+          "en-US": {
+            "word": "seesaw",
+            "sentence": "I ride the seesaw."
+          },
+          "ja-JP": {
+            "word": "シーソー",
+            "sentence": "これはシーソーです。"
+          }
+        }
       },
       {
         "word": "sand",
         "cn": "沙子",
         "picture": "🏖️",
         "sentence": "I play with sand.",
-        "image": "./assets/words/sticker/sand.svg"
+        "image": "./assets/words/sticker/sand.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "沙子",
+            "sentence": "这是沙子。"
+          },
+          "en-US": {
+            "word": "sand",
+            "sentence": "I play with sand."
+          },
+          "ja-JP": {
+            "word": "すな",
+            "sentence": "これはすなです。"
+          }
+        }
       },
       {
         "word": "bucket",
         "cn": "桶",
         "picture": "🪣",
         "sentence": "This is a bucket.",
-        "image": "./assets/words/sticker/bucket.svg"
+        "image": "./assets/words/sticker/bucket.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "桶",
+            "sentence": "这是桶。"
+          },
+          "en-US": {
+            "word": "bucket",
+            "sentence": "This is a bucket."
+          },
+          "ja-JP": {
+            "word": "バケツ",
+            "sentence": "これはバケツです。"
+          }
+        }
       },
       {
         "word": "shovel",
         "cn": "铲子",
         "picture": "🪣",
         "image": "./assets/words/sticker/shovel.svg",
-        "sentence": "I dig with a shovel."
+        "sentence": "I dig with a shovel.",
+        "i18n": {
+          "zh-CN": {
+            "word": "铲子",
+            "sentence": "这是铲子。"
+          },
+          "en-US": {
+            "word": "shovel",
+            "sentence": "I dig with a shovel."
+          },
+          "ja-JP": {
+            "word": "シャベル",
+            "sentence": "これはシャベルです。"
+          }
+        }
       },
       {
         "word": "ball",
         "cn": "球",
         "picture": "⚽",
         "sentence": "Throw the ball.",
-        "image": "./assets/words/sticker/ball.svg"
+        "image": "./assets/words/sticker/ball.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "球",
+            "sentence": "这是球。"
+          },
+          "en-US": {
+            "word": "ball",
+            "sentence": "Throw the ball."
+          },
+          "ja-JP": {
+            "word": "ボール",
+            "sentence": "これはボールです。"
+          }
+        }
       },
       {
         "word": "kite",
         "cn": "风筝",
         "picture": "🪁",
         "sentence": "The kite is up.",
-        "image": "./assets/words/sticker/kite.svg"
+        "image": "./assets/words/sticker/kite.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "风筝",
+            "sentence": "这是风筝。"
+          },
+          "en-US": {
+            "word": "kite",
+            "sentence": "The kite is up."
+          },
+          "ja-JP": {
+            "word": "たこ",
+            "sentence": "これはたこです。"
+          }
+        }
       },
       {
         "word": "bike",
         "cn": "自行车",
         "picture": "🚲",
         "sentence": "I ride a bike.",
-        "image": "./assets/words/sticker/bike.svg"
+        "image": "./assets/words/sticker/bike.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "自行车",
+            "sentence": "这是自行车。"
+          },
+          "en-US": {
+            "word": "bike",
+            "sentence": "I ride a bike."
+          },
+          "ja-JP": {
+            "word": "じてんしゃ",
+            "sentence": "これはじてんしゃです。"
+          }
+        }
       },
       {
         "word": "car",
         "cn": "小车",
         "picture": "🚗",
         "sentence": "The car goes fast.",
-        "image": "./assets/words/sticker/car.svg"
+        "image": "./assets/words/sticker/car.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "小车",
+            "sentence": "这是小车。"
+          },
+          "en-US": {
+            "word": "car",
+            "sentence": "The car goes fast."
+          },
+          "ja-JP": {
+            "word": "くるま",
+            "sentence": "これはくるまです。"
+          }
+        }
       },
       {
         "word": "train",
         "cn": "小火车",
         "picture": "🚂",
         "sentence": "The train goes choo choo.",
-        "image": "./assets/words/sticker/train.svg"
+        "image": "./assets/words/sticker/train.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "小火车",
+            "sentence": "这是小火车。"
+          },
+          "en-US": {
+            "word": "train",
+            "sentence": "The train goes choo choo."
+          },
+          "ja-JP": {
+            "word": "でんしゃ",
+            "sentence": "これはでんしゃです。"
+          }
+        }
       },
       {
         "word": "ticket",
         "cn": "票",
         "picture": "🎟️",
         "sentence": "I have a ticket.",
-        "image": "./assets/words/sticker/ticket.svg"
+        "image": "./assets/words/sticker/ticket.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "票",
+            "sentence": "这是票。"
+          },
+          "en-US": {
+            "word": "ticket",
+            "sentence": "I have a ticket."
+          },
+          "ja-JP": {
+            "word": "きっぷ",
+            "sentence": "これはきっぷです。"
+          }
+        }
       }
-    ]
+    ],
+    "i18n": {
+      "zh-CN": {
+        "title": "游乐场"
+      },
+      "en-US": {
+        "title": "Playground"
+      },
+      "ja-JP": {
+        "title": "あそびば"
+      }
+    }
   },
   {
     "id": "subway-station",
@@ -829,86 +2303,265 @@
         "cn": "地铁",
         "picture": "🚇",
         "sentence": "I take the subway.",
-        "image": "./assets/words/sticker/subway.svg"
+        "image": "./assets/words/sticker/subway.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "地铁",
+            "sentence": "这是地铁。"
+          },
+          "en-US": {
+            "word": "subway",
+            "sentence": "I take the subway."
+          },
+          "ja-JP": {
+            "word": "ちかてつ",
+            "sentence": "これはちかてつです。"
+          }
+        }
       },
       {
         "word": "train",
         "cn": "列车",
         "picture": "🚆",
         "sentence": "The train is here.",
-        "image": "./assets/words/sticker/train.svg"
+        "image": "./assets/words/sticker/train.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "列车",
+            "sentence": "这是列车。"
+          },
+          "en-US": {
+            "word": "train",
+            "sentence": "The train is here."
+          },
+          "ja-JP": {
+            "word": "でんしゃ",
+            "sentence": "これはでんしゃです。"
+          }
+        }
       },
       {
         "word": "station",
         "cn": "车站",
         "picture": "🚉",
         "sentence": "This is the station.",
-        "image": "./assets/words/sticker/station.svg"
+        "image": "./assets/words/sticker/station.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "车站",
+            "sentence": "这是车站。"
+          },
+          "en-US": {
+            "word": "station",
+            "sentence": "This is the station."
+          },
+          "ja-JP": {
+            "word": "えき",
+            "sentence": "これはえきです。"
+          }
+        }
       },
       {
         "word": "ticket",
         "cn": "车票",
         "picture": "🎫",
         "sentence": "I have a ticket.",
-        "image": "./assets/words/sticker/ticket.svg"
+        "image": "./assets/words/sticker/ticket.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "车票",
+            "sentence": "这是车票。"
+          },
+          "en-US": {
+            "word": "ticket",
+            "sentence": "I have a ticket."
+          },
+          "ja-JP": {
+            "word": "きっぷ",
+            "sentence": "これはきっぷです。"
+          }
+        }
       },
       {
         "word": "gate",
         "cn": "闸机",
         "picture": "🚧",
         "sentence": "Go through the gate.",
-        "image": "./assets/words/sticker/gate.svg"
+        "image": "./assets/words/sticker/gate.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "闸机",
+            "sentence": "这是闸机。"
+          },
+          "en-US": {
+            "word": "gate",
+            "sentence": "Go through the gate."
+          },
+          "ja-JP": {
+            "word": "もん",
+            "sentence": "これはもんです。"
+          }
+        }
       },
       {
         "word": "map",
         "cn": "地图",
         "picture": "🗺️",
         "sentence": "Look at the map.",
-        "image": "./assets/words/sticker/map.svg"
+        "image": "./assets/words/sticker/map.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "地图",
+            "sentence": "这是地图。"
+          },
+          "en-US": {
+            "word": "map",
+            "sentence": "Look at the map."
+          },
+          "ja-JP": {
+            "word": "ちず",
+            "sentence": "これはちずです。"
+          }
+        }
       },
       {
         "word": "stairs",
         "cn": "楼梯",
         "picture": "🪜",
         "sentence": "Go up the stairs.",
-        "image": "./assets/words/sticker/stairs.svg"
+        "image": "./assets/words/sticker/stairs.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "楼梯",
+            "sentence": "这是楼梯。"
+          },
+          "en-US": {
+            "word": "stairs",
+            "sentence": "Go up the stairs."
+          },
+          "ja-JP": {
+            "word": "かいだん",
+            "sentence": "これはかいだんです。"
+          }
+        }
       },
       {
         "word": "elevator",
         "cn": "电梯",
         "picture": "🛗",
         "sentence": "Take the elevator.",
-        "image": "./assets/words/sticker/elevator.svg"
+        "image": "./assets/words/sticker/elevator.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "电梯",
+            "sentence": "这是电梯。"
+          },
+          "en-US": {
+            "word": "elevator",
+            "sentence": "Take the elevator."
+          },
+          "ja-JP": {
+            "word": "エレベーター",
+            "sentence": "これはエレベーターです。"
+          }
+        }
       },
       {
         "word": "seat",
         "cn": "座位",
         "picture": "💺",
         "sentence": "This is my seat.",
-        "image": "./assets/words/sticker/seat.svg"
+        "image": "./assets/words/sticker/seat.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "座位",
+            "sentence": "这是座位。"
+          },
+          "en-US": {
+            "word": "seat",
+            "sentence": "This is my seat."
+          },
+          "ja-JP": {
+            "word": "せき",
+            "sentence": "これはせきです。"
+          }
+        }
       },
       {
         "word": "door",
         "cn": "门",
         "picture": "🚪",
         "sentence": "The door is open.",
-        "image": "./assets/words/sticker/door.svg"
+        "image": "./assets/words/sticker/door.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "门",
+            "sentence": "这是门。"
+          },
+          "en-US": {
+            "word": "door",
+            "sentence": "The door is open."
+          },
+          "ja-JP": {
+            "word": "ドア",
+            "sentence": "これはドアです。"
+          }
+        }
       },
       {
         "word": "line",
         "cn": "排队",
         "picture": "🚶",
         "sentence": "Stand in line.",
-        "image": "./assets/words/sticker/line.svg"
+        "image": "./assets/words/sticker/line.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "排队",
+            "sentence": "这是排队。"
+          },
+          "en-US": {
+            "word": "line",
+            "sentence": "Stand in line."
+          },
+          "ja-JP": {
+            "word": "れつ",
+            "sentence": "これはれつです。"
+          }
+        }
       },
       {
         "word": "exit",
         "cn": "出口",
         "picture": "🚪",
         "sentence": "This is the exit.",
-        "image": "./assets/words/sticker/exit.svg"
+        "image": "./assets/words/sticker/exit.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "出口",
+            "sentence": "这是出口。"
+          },
+          "en-US": {
+            "word": "exit",
+            "sentence": "This is the exit."
+          },
+          "ja-JP": {
+            "word": "でぐち",
+            "sentence": "これはでぐちです。"
+          }
+        }
       }
-    ]
+    ],
+    "i18n": {
+      "zh-CN": {
+        "title": "地铁站"
+      },
+      "en-US": {
+        "title": "Subway Station"
+      },
+      "ja-JP": {
+        "title": "ちかてつのえき"
+      }
+    }
   },
   {
     "id": "bus",
@@ -925,86 +2578,265 @@
         "cn": "公交车",
         "picture": "🚌",
         "sentence": "I take the bus.",
-        "image": "./assets/words/sticker/bus.svg"
+        "image": "./assets/words/sticker/bus.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "公交车",
+            "sentence": "这是公交车。"
+          },
+          "en-US": {
+            "word": "bus",
+            "sentence": "I take the bus."
+          },
+          "ja-JP": {
+            "word": "バス",
+            "sentence": "これはバスです。"
+          }
+        }
       },
       {
         "word": "bus stop",
         "cn": "公交站",
         "picture": "🚏",
         "sentence": "This is the bus stop.",
-        "image": "./assets/words/sticker/bus-stop.svg"
+        "image": "./assets/words/sticker/bus-stop.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "公交站",
+            "sentence": "这是公交站。"
+          },
+          "en-US": {
+            "word": "bus stop",
+            "sentence": "This is the bus stop."
+          },
+          "ja-JP": {
+            "word": "バスてい",
+            "sentence": "これはバスていです。"
+          }
+        }
       },
       {
         "word": "driver",
         "cn": "司机",
         "picture": "🧑‍✈️",
         "sentence": "The driver is kind.",
-        "image": "./assets/words/sticker/driver.svg"
+        "image": "./assets/words/sticker/driver.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "司机",
+            "sentence": "这是司机。"
+          },
+          "en-US": {
+            "word": "driver",
+            "sentence": "The driver is kind."
+          },
+          "ja-JP": {
+            "word": "うんてんしゅ",
+            "sentence": "これはうんてんしゅです。"
+          }
+        }
       },
       {
         "word": "seat",
         "cn": "座位",
         "picture": "💺",
         "sentence": "Sit on the seat.",
-        "image": "./assets/words/sticker/seat.svg"
+        "image": "./assets/words/sticker/seat.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "座位",
+            "sentence": "这是座位。"
+          },
+          "en-US": {
+            "word": "seat",
+            "sentence": "Sit on the seat."
+          },
+          "ja-JP": {
+            "word": "せき",
+            "sentence": "これはせきです。"
+          }
+        }
       },
       {
         "word": "door",
         "cn": "车门",
         "picture": "🚪",
         "sentence": "The door is open.",
-        "image": "./assets/words/sticker/door.svg"
+        "image": "./assets/words/sticker/door.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "车门",
+            "sentence": "这是车门。"
+          },
+          "en-US": {
+            "word": "door",
+            "sentence": "The door is open."
+          },
+          "ja-JP": {
+            "word": "ドア",
+            "sentence": "これはドアです。"
+          }
+        }
       },
       {
         "word": "window",
         "cn": "窗户",
         "picture": "🪟",
         "sentence": "Look out the window.",
-        "image": "./assets/words/sticker/window.svg"
+        "image": "./assets/words/sticker/window.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "窗户",
+            "sentence": "这是窗户。"
+          },
+          "en-US": {
+            "word": "window",
+            "sentence": "Look out the window."
+          },
+          "ja-JP": {
+            "word": "まど",
+            "sentence": "これはまどです。"
+          }
+        }
       },
       {
         "word": "card",
         "cn": "卡",
         "picture": "💳",
         "sentence": "Tap the card.",
-        "image": "./assets/words/sticker/card.svg"
+        "image": "./assets/words/sticker/card.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "卡",
+            "sentence": "这是卡。"
+          },
+          "en-US": {
+            "word": "card",
+            "sentence": "Tap the card."
+          },
+          "ja-JP": {
+            "word": "カード",
+            "sentence": "これはカードです。"
+          }
+        }
       },
       {
         "word": "ticket",
         "cn": "车票",
         "picture": "🎫",
         "sentence": "Here is my ticket.",
-        "image": "./assets/words/sticker/ticket.svg"
+        "image": "./assets/words/sticker/ticket.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "车票",
+            "sentence": "这是车票。"
+          },
+          "en-US": {
+            "word": "ticket",
+            "sentence": "Here is my ticket."
+          },
+          "ja-JP": {
+            "word": "きっぷ",
+            "sentence": "これはきっぷです。"
+          }
+        }
       },
       {
         "word": "bell",
         "cn": "铃",
         "picture": "🔔",
         "sentence": "Ring the bell.",
-        "image": "./assets/words/sticker/bell.svg"
+        "image": "./assets/words/sticker/bell.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "铃",
+            "sentence": "这是铃。"
+          },
+          "en-US": {
+            "word": "bell",
+            "sentence": "Ring the bell."
+          },
+          "ja-JP": {
+            "word": "ベル",
+            "sentence": "これはベルです。"
+          }
+        }
       },
       {
         "word": "wheel",
         "cn": "轮子",
         "picture": "🛞",
         "sentence": "The wheel goes round.",
-        "image": "./assets/words/sticker/wheel.svg"
+        "image": "./assets/words/sticker/wheel.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "轮子",
+            "sentence": "这是轮子。"
+          },
+          "en-US": {
+            "word": "wheel",
+            "sentence": "The wheel goes round."
+          },
+          "ja-JP": {
+            "word": "タイヤ",
+            "sentence": "これはタイヤです。"
+          }
+        }
       },
       {
         "word": "stop",
         "cn": "停",
         "picture": "🛑",
         "sentence": "The bus will stop.",
-        "image": "./assets/words/sticker/stop.svg"
+        "image": "./assets/words/sticker/stop.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "停",
+            "sentence": "这是停。"
+          },
+          "en-US": {
+            "word": "stop",
+            "sentence": "The bus will stop."
+          },
+          "ja-JP": {
+            "word": "とまれ",
+            "sentence": "これはとまれです。"
+          }
+        }
       },
       {
         "word": "road",
         "cn": "路",
         "picture": "🛣️",
         "sentence": "The bus is on the road.",
-        "image": "./assets/words/sticker/road.svg"
+        "image": "./assets/words/sticker/road.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "路",
+            "sentence": "这是路。"
+          },
+          "en-US": {
+            "word": "road",
+            "sentence": "The bus is on the road."
+          },
+          "ja-JP": {
+            "word": "みち",
+            "sentence": "これはみちです。"
+          }
+        }
       }
-    ]
+    ],
+    "i18n": {
+      "zh-CN": {
+        "title": "公交"
+      },
+      "en-US": {
+        "title": "Bus"
+      },
+      "ja-JP": {
+        "title": "バス"
+      }
+    }
   },
   {
     "id": "bathroom",
@@ -1021,86 +2853,265 @@
         "cn": "马桶",
         "picture": "🚽",
         "sentence": "This is a toilet.",
-        "image": "./assets/words/sticker/toilet.svg"
+        "image": "./assets/words/sticker/toilet.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "马桶",
+            "sentence": "这是马桶。"
+          },
+          "en-US": {
+            "word": "toilet",
+            "sentence": "This is a toilet."
+          },
+          "ja-JP": {
+            "word": "トイレ",
+            "sentence": "これはトイレです。"
+          }
+        }
       },
       {
         "word": "sink",
         "cn": "洗手池",
         "picture": "🚰",
         "sentence": "Wash at the sink.",
-        "image": "./assets/words/sticker/sink.svg"
+        "image": "./assets/words/sticker/sink.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "洗手池",
+            "sentence": "这是洗手池。"
+          },
+          "en-US": {
+            "word": "sink",
+            "sentence": "Wash at the sink."
+          },
+          "ja-JP": {
+            "word": "ながし",
+            "sentence": "これはながしです。"
+          }
+        }
       },
       {
         "word": "soap",
         "cn": "香皂",
         "picture": "🧼",
         "sentence": "Use the soap.",
-        "image": "./assets/words/sticker/soap.svg"
+        "image": "./assets/words/sticker/soap.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "香皂",
+            "sentence": "这是香皂。"
+          },
+          "en-US": {
+            "word": "soap",
+            "sentence": "Use the soap."
+          },
+          "ja-JP": {
+            "word": "せっけん",
+            "sentence": "これはせっけんです。"
+          }
+        }
       },
       {
         "word": "towel",
         "cn": "毛巾",
         "picture": "🧼",
         "image": "./assets/words/sticker/towel.svg",
-        "sentence": "Dry with a towel."
+        "sentence": "Dry with a towel.",
+        "i18n": {
+          "zh-CN": {
+            "word": "毛巾",
+            "sentence": "这是毛巾。"
+          },
+          "en-US": {
+            "word": "towel",
+            "sentence": "Dry with a towel."
+          },
+          "ja-JP": {
+            "word": "タオル",
+            "sentence": "これはタオルです。"
+          }
+        }
       },
       {
         "word": "water",
         "cn": "水",
         "picture": "💧",
         "sentence": "The water is warm.",
-        "image": "./assets/words/sticker/water.svg"
+        "image": "./assets/words/sticker/water.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "水",
+            "sentence": "这是水。"
+          },
+          "en-US": {
+            "word": "water",
+            "sentence": "The water is warm."
+          },
+          "ja-JP": {
+            "word": "みず",
+            "sentence": "これはみずです。"
+          }
+        }
       },
       {
         "word": "bath",
         "cn": "洗澡",
         "picture": "🛁",
         "sentence": "I take a bath.",
-        "image": "./assets/words/sticker/bath.svg"
+        "image": "./assets/words/sticker/bath.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "洗澡",
+            "sentence": "这是洗澡。"
+          },
+          "en-US": {
+            "word": "bath",
+            "sentence": "I take a bath."
+          },
+          "ja-JP": {
+            "word": "おふろ",
+            "sentence": "これはおふろです。"
+          }
+        }
       },
       {
         "word": "shower",
         "cn": "淋浴",
         "picture": "🚿",
         "sentence": "Take a shower.",
-        "image": "./assets/words/sticker/shower.svg"
+        "image": "./assets/words/sticker/shower.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "淋浴",
+            "sentence": "这是淋浴。"
+          },
+          "en-US": {
+            "word": "shower",
+            "sentence": "Take a shower."
+          },
+          "ja-JP": {
+            "word": "シャワー",
+            "sentence": "これはシャワーです。"
+          }
+        }
       },
       {
         "word": "toothbrush",
         "cn": "牙刷",
         "picture": "🪥",
         "sentence": "Use a toothbrush.",
-        "image": "./assets/words/sticker/toothbrush.svg"
+        "image": "./assets/words/sticker/toothbrush.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "牙刷",
+            "sentence": "这是牙刷。"
+          },
+          "en-US": {
+            "word": "toothbrush",
+            "sentence": "Use a toothbrush."
+          },
+          "ja-JP": {
+            "word": "はブラシ",
+            "sentence": "これははブラシです。"
+          }
+        }
       },
       {
         "word": "toothpaste",
         "cn": "牙膏",
         "picture": "🦷",
         "image": "./assets/words/sticker/toothpaste.svg",
-        "sentence": "Put on toothpaste."
+        "sentence": "Put on toothpaste.",
+        "i18n": {
+          "zh-CN": {
+            "word": "牙膏",
+            "sentence": "这是牙膏。"
+          },
+          "en-US": {
+            "word": "toothpaste",
+            "sentence": "Put on toothpaste."
+          },
+          "ja-JP": {
+            "word": "はみがきこ",
+            "sentence": "これははみがきこです。"
+          }
+        }
       },
       {
         "word": "comb",
         "cn": "梳子",
         "picture": "💇",
         "image": "./assets/words/sticker/comb.svg",
-        "sentence": "I use a comb."
+        "sentence": "I use a comb.",
+        "i18n": {
+          "zh-CN": {
+            "word": "梳子",
+            "sentence": "这是梳子。"
+          },
+          "en-US": {
+            "word": "comb",
+            "sentence": "I use a comb."
+          },
+          "ja-JP": {
+            "word": "くし",
+            "sentence": "これはくしです。"
+          }
+        }
       },
       {
         "word": "mirror",
         "cn": "镜子",
         "picture": "🪞",
         "sentence": "Look in the mirror.",
-        "image": "./assets/words/sticker/mirror.svg"
+        "image": "./assets/words/sticker/mirror.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "镜子",
+            "sentence": "这是镜子。"
+          },
+          "en-US": {
+            "word": "mirror",
+            "sentence": "Look in the mirror."
+          },
+          "ja-JP": {
+            "word": "かがみ",
+            "sentence": "これはかがみです。"
+          }
+        }
       },
       {
         "word": "clean",
         "cn": "干净",
         "picture": "✨",
         "sentence": "My hands are clean.",
-        "image": "./assets/words/sticker/clean.svg"
+        "image": "./assets/words/sticker/clean.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "干净",
+            "sentence": "这是干净。"
+          },
+          "en-US": {
+            "word": "clean",
+            "sentence": "My hands are clean."
+          },
+          "ja-JP": {
+            "word": "きれい",
+            "sentence": "これはきれいです。"
+          }
+        }
       }
-    ]
+    ],
+    "i18n": {
+      "zh-CN": {
+        "title": "卫生间"
+      },
+      "en-US": {
+        "title": "Bathroom"
+      },
+      "ja-JP": {
+        "title": "トイレ"
+      }
+    }
   },
   {
     "id": "vehicles",
@@ -1117,100 +3128,307 @@
         "cn": "汽车",
         "picture": "🚗",
         "sentence": "The car is fast.",
-        "image": "./assets/words/sticker/car.svg"
+        "image": "./assets/words/sticker/car.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "汽车",
+            "sentence": "这是汽车。"
+          },
+          "en-US": {
+            "word": "car",
+            "sentence": "The car is fast."
+          },
+          "ja-JP": {
+            "word": "くるま",
+            "sentence": "これはくるまです。"
+          }
+        }
       },
       {
         "word": "bus",
         "cn": "公交车",
         "picture": "🚌",
         "sentence": "The bus is big.",
-        "image": "./assets/words/sticker/bus.svg"
+        "image": "./assets/words/sticker/bus.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "公交车",
+            "sentence": "这是公交车。"
+          },
+          "en-US": {
+            "word": "bus",
+            "sentence": "The bus is big."
+          },
+          "ja-JP": {
+            "word": "バス",
+            "sentence": "これはバスです。"
+          }
+        }
       },
       {
         "word": "taxi",
         "cn": "出租车",
         "picture": "🚕",
         "sentence": "This is a taxi.",
-        "image": "./assets/words/sticker/taxi.svg"
+        "image": "./assets/words/sticker/taxi.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "出租车",
+            "sentence": "这是出租车。"
+          },
+          "en-US": {
+            "word": "taxi",
+            "sentence": "This is a taxi."
+          },
+          "ja-JP": {
+            "word": "タクシー",
+            "sentence": "これはタクシーです。"
+          }
+        }
       },
       {
         "word": "bike",
         "cn": "自行车",
         "picture": "🚲",
         "sentence": "I ride a bike.",
-        "image": "./assets/words/sticker/bike.svg"
+        "image": "./assets/words/sticker/bike.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "自行车",
+            "sentence": "这是自行车。"
+          },
+          "en-US": {
+            "word": "bike",
+            "sentence": "I ride a bike."
+          },
+          "ja-JP": {
+            "word": "じてんしゃ",
+            "sentence": "これはじてんしゃです。"
+          }
+        }
       },
       {
         "word": "scooter",
         "cn": "滑板车",
         "picture": "🛴",
         "sentence": "I ride a scooter.",
-        "image": "./assets/words/sticker/scooter.svg"
+        "image": "./assets/words/sticker/scooter.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "滑板车",
+            "sentence": "这是滑板车。"
+          },
+          "en-US": {
+            "word": "scooter",
+            "sentence": "I ride a scooter."
+          },
+          "ja-JP": {
+            "word": "スクーター",
+            "sentence": "これはスクーターです。"
+          }
+        }
       },
       {
         "word": "train",
         "cn": "火车",
         "picture": "🚆",
         "sentence": "The train is long.",
-        "image": "./assets/words/sticker/train.svg"
+        "image": "./assets/words/sticker/train.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "火车",
+            "sentence": "这是火车。"
+          },
+          "en-US": {
+            "word": "train",
+            "sentence": "The train is long."
+          },
+          "ja-JP": {
+            "word": "でんしゃ",
+            "sentence": "これはでんしゃです。"
+          }
+        }
       },
       {
         "word": "subway",
         "cn": "地铁",
         "picture": "🚇",
         "sentence": "The subway is here.",
-        "image": "./assets/words/sticker/subway.svg"
+        "image": "./assets/words/sticker/subway.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "地铁",
+            "sentence": "这是地铁。"
+          },
+          "en-US": {
+            "word": "subway",
+            "sentence": "The subway is here."
+          },
+          "ja-JP": {
+            "word": "ちかてつ",
+            "sentence": "これはちかてつです。"
+          }
+        }
       },
       {
         "word": "plane",
         "cn": "飞机",
         "picture": "✈️",
         "sentence": "The plane is high.",
-        "image": "./assets/words/sticker/plane.svg"
+        "image": "./assets/words/sticker/plane.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "飞机",
+            "sentence": "这是飞机。"
+          },
+          "en-US": {
+            "word": "plane",
+            "sentence": "The plane is high."
+          },
+          "ja-JP": {
+            "word": "ひこうき",
+            "sentence": "これはひこうきです。"
+          }
+        }
       },
       {
         "word": "boat",
         "cn": "船",
         "picture": "⛵",
         "sentence": "The boat is on water.",
-        "image": "./assets/words/sticker/boat.svg"
+        "image": "./assets/words/sticker/boat.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "船",
+            "sentence": "这是船。"
+          },
+          "en-US": {
+            "word": "boat",
+            "sentence": "The boat is on water."
+          },
+          "ja-JP": {
+            "word": "ボート",
+            "sentence": "これはボートです。"
+          }
+        }
       },
       {
         "word": "ship",
         "cn": "轮船",
         "picture": "🚢",
         "sentence": "The ship is big.",
-        "image": "./assets/words/sticker/ship.svg"
+        "image": "./assets/words/sticker/ship.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "轮船",
+            "sentence": "这是轮船。"
+          },
+          "en-US": {
+            "word": "ship",
+            "sentence": "The ship is big."
+          },
+          "ja-JP": {
+            "word": "ふね",
+            "sentence": "これはふねです。"
+          }
+        }
       },
       {
         "word": "truck",
         "cn": "卡车",
         "picture": "🚚",
         "sentence": "The truck is heavy.",
-        "image": "./assets/words/sticker/truck.svg"
+        "image": "./assets/words/sticker/truck.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "卡车",
+            "sentence": "这是卡车。"
+          },
+          "en-US": {
+            "word": "truck",
+            "sentence": "The truck is heavy."
+          },
+          "ja-JP": {
+            "word": "トラック",
+            "sentence": "これはトラックです。"
+          }
+        }
       },
       {
         "word": "fire truck",
         "cn": "消防车",
         "picture": "🚒",
         "sentence": "The fire truck is red.",
-        "image": "./assets/words/sticker/fire-truck.svg"
+        "image": "./assets/words/sticker/fire-truck.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "消防车",
+            "sentence": "这是消防车。"
+          },
+          "en-US": {
+            "word": "fire truck",
+            "sentence": "The fire truck is red."
+          },
+          "ja-JP": {
+            "word": "しょうぼうしゃ",
+            "sentence": "これはしょうぼうしゃです。"
+          }
+        }
       },
       {
         "word": "ambulance",
         "cn": "救护车",
         "picture": "🚑",
         "sentence": "The ambulance is loud.",
-        "image": "./assets/words/sticker/ambulance.svg"
+        "image": "./assets/words/sticker/ambulance.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "救护车",
+            "sentence": "这是救护车。"
+          },
+          "en-US": {
+            "word": "ambulance",
+            "sentence": "The ambulance is loud."
+          },
+          "ja-JP": {
+            "word": "きゅうきゅうしゃ",
+            "sentence": "これはきゅうきゅうしゃです。"
+          }
+        }
       },
       {
         "word": "rocket",
         "cn": "火箭",
         "picture": "🚀",
         "sentence": "The rocket goes up.",
-        "image": "./assets/words/sticker/rocket.svg"
+        "image": "./assets/words/sticker/rocket.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "火箭",
+            "sentence": "这是火箭。"
+          },
+          "en-US": {
+            "word": "rocket",
+            "sentence": "The rocket goes up."
+          },
+          "ja-JP": {
+            "word": "ロケット",
+            "sentence": "これはロケットです。"
+          }
+        }
       }
-    ]
+    ],
+    "i18n": {
+      "zh-CN": {
+        "title": "交通工具"
+      },
+      "en-US": {
+        "title": "Vehicles"
+      },
+      "ja-JP": {
+        "title": "のりもの"
+      }
+    }
   },
   {
     "id": "park",
@@ -1227,100 +3445,307 @@
         "cn": "树",
         "picture": "🌳",
         "sentence": "This is a tree.",
-        "image": "./assets/words/sticker/tree.svg"
+        "image": "./assets/words/sticker/tree.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "树",
+            "sentence": "这是树。"
+          },
+          "en-US": {
+            "word": "tree",
+            "sentence": "This is a tree."
+          },
+          "ja-JP": {
+            "word": "き",
+            "sentence": "これはきです。"
+          }
+        }
       },
       {
         "word": "flower",
         "cn": "花",
         "picture": "🌸",
         "sentence": "The flower is pretty.",
-        "image": "./assets/words/sticker/flower.svg"
+        "image": "./assets/words/sticker/flower.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "花",
+            "sentence": "这是花。"
+          },
+          "en-US": {
+            "word": "flower",
+            "sentence": "The flower is pretty."
+          },
+          "ja-JP": {
+            "word": "はな",
+            "sentence": "これははなです。"
+          }
+        }
       },
       {
         "word": "grass",
         "cn": "草地",
         "picture": "🌱",
         "sentence": "The grass is green.",
-        "image": "./assets/words/sticker/grass.svg"
+        "image": "./assets/words/sticker/grass.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "草地",
+            "sentence": "这是草地。"
+          },
+          "en-US": {
+            "word": "grass",
+            "sentence": "The grass is green."
+          },
+          "ja-JP": {
+            "word": "くさ",
+            "sentence": "これはくさです。"
+          }
+        }
       },
       {
         "word": "leaf",
         "cn": "叶子",
         "picture": "🍃",
         "sentence": "This is a leaf.",
-        "image": "./assets/words/sticker/leaf.svg"
+        "image": "./assets/words/sticker/leaf.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "叶子",
+            "sentence": "这是叶子。"
+          },
+          "en-US": {
+            "word": "leaf",
+            "sentence": "This is a leaf."
+          },
+          "ja-JP": {
+            "word": "はっぱ",
+            "sentence": "これははっぱです。"
+          }
+        }
       },
       {
         "word": "bird",
         "cn": "鸟",
         "picture": "🐦",
         "sentence": "I see a bird.",
-        "image": "./assets/words/sticker/bird.svg"
+        "image": "./assets/words/sticker/bird.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "鸟",
+            "sentence": "这是鸟。"
+          },
+          "en-US": {
+            "word": "bird",
+            "sentence": "I see a bird."
+          },
+          "ja-JP": {
+            "word": "とり",
+            "sentence": "これはとりです。"
+          }
+        }
       },
       {
         "word": "dog",
         "cn": "狗",
         "picture": "🐶",
         "sentence": "The dog can run.",
-        "image": "./assets/words/sticker/dog.svg"
+        "image": "./assets/words/sticker/dog.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "狗",
+            "sentence": "这是狗。"
+          },
+          "en-US": {
+            "word": "dog",
+            "sentence": "The dog can run."
+          },
+          "ja-JP": {
+            "word": "いぬ",
+            "sentence": "これはいぬです。"
+          }
+        }
       },
       {
         "word": "cat",
         "cn": "猫",
         "picture": "🐱",
         "sentence": "The cat is cute.",
-        "image": "./assets/words/sticker/cat.svg"
+        "image": "./assets/words/sticker/cat.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "猫",
+            "sentence": "这是猫。"
+          },
+          "en-US": {
+            "word": "cat",
+            "sentence": "The cat is cute."
+          },
+          "ja-JP": {
+            "word": "ねこ",
+            "sentence": "これはねこです。"
+          }
+        }
       },
       {
         "word": "bench",
         "cn": "长椅",
         "picture": "🪑",
         "sentence": "Sit on the bench.",
-        "image": "./assets/words/sticker/bench.svg"
+        "image": "./assets/words/sticker/bench.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "长椅",
+            "sentence": "这是长椅。"
+          },
+          "en-US": {
+            "word": "bench",
+            "sentence": "Sit on the bench."
+          },
+          "ja-JP": {
+            "word": "ベンチ",
+            "sentence": "これはベンチです。"
+          }
+        }
       },
       {
         "word": "lake",
         "cn": "湖",
         "picture": "🏞️",
         "sentence": "The lake is blue.",
-        "image": "./assets/words/sticker/lake.svg"
+        "image": "./assets/words/sticker/lake.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "湖",
+            "sentence": "这是湖。"
+          },
+          "en-US": {
+            "word": "lake",
+            "sentence": "The lake is blue."
+          },
+          "ja-JP": {
+            "word": "みずうみ",
+            "sentence": "これはみずうみです。"
+          }
+        }
       },
       {
         "word": "bridge",
         "cn": "桥",
         "picture": "🌉",
         "sentence": "Walk on the bridge.",
-        "image": "./assets/words/sticker/bridge.svg"
+        "image": "./assets/words/sticker/bridge.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "桥",
+            "sentence": "这是桥。"
+          },
+          "en-US": {
+            "word": "bridge",
+            "sentence": "Walk on the bridge."
+          },
+          "ja-JP": {
+            "word": "はし",
+            "sentence": "これははしです。"
+          }
+        }
       },
       {
         "word": "sun",
         "cn": "太阳",
         "picture": "☀️",
         "sentence": "The sun is warm.",
-        "image": "./assets/words/sticker/sun.svg"
+        "image": "./assets/words/sticker/sun.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "太阳",
+            "sentence": "这是太阳。"
+          },
+          "en-US": {
+            "word": "sun",
+            "sentence": "The sun is warm."
+          },
+          "ja-JP": {
+            "word": "たいよう",
+            "sentence": "これはたいようです。"
+          }
+        }
       },
       {
         "word": "cloud",
         "cn": "云",
         "picture": "☁️",
         "sentence": "I see a cloud.",
-        "image": "./assets/words/sticker/cloud.svg"
+        "image": "./assets/words/sticker/cloud.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "云",
+            "sentence": "这是云。"
+          },
+          "en-US": {
+            "word": "cloud",
+            "sentence": "I see a cloud."
+          },
+          "ja-JP": {
+            "word": "くも",
+            "sentence": "これはくもです。"
+          }
+        }
       },
       {
         "word": "rain",
         "cn": "雨",
         "picture": "🌧️",
         "sentence": "The rain is falling.",
-        "image": "./assets/words/sticker/rain.svg"
+        "image": "./assets/words/sticker/rain.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "雨",
+            "sentence": "这是雨。"
+          },
+          "en-US": {
+            "word": "rain",
+            "sentence": "The rain is falling."
+          },
+          "ja-JP": {
+            "word": "あめ",
+            "sentence": "これはあめです。"
+          }
+        }
       },
       {
         "word": "picnic",
         "cn": "野餐",
         "picture": "🧺",
         "sentence": "We have a picnic.",
-        "image": "./assets/words/sticker/picnic.svg"
+        "image": "./assets/words/sticker/picnic.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "野餐",
+            "sentence": "这是野餐。"
+          },
+          "en-US": {
+            "word": "picnic",
+            "sentence": "We have a picnic."
+          },
+          "ja-JP": {
+            "word": "ピクニック",
+            "sentence": "これはピクニックです。"
+          }
+        }
       }
-    ]
+    ],
+    "i18n": {
+      "zh-CN": {
+        "title": "公园"
+      },
+      "en-US": {
+        "title": "Park"
+      },
+      "ja-JP": {
+        "title": "こうえん"
+      }
+    }
   },
   {
     "id": "military-museum",
@@ -1337,86 +3762,265 @@
         "cn": "坦克",
         "picture": "🚙",
         "image": "./assets/words/sticker/tank.svg",
-        "sentence": "The tank is big."
+        "sentence": "The tank is big.",
+        "i18n": {
+          "zh-CN": {
+            "word": "坦克",
+            "sentence": "这是坦克。"
+          },
+          "en-US": {
+            "word": "tank",
+            "sentence": "The tank is big."
+          },
+          "ja-JP": {
+            "word": "せんしゃ",
+            "sentence": "これはせんしゃです。"
+          }
+        }
       },
       {
         "word": "plane",
         "cn": "飞机",
         "picture": "✈️",
         "image": "./assets/words/sticker/plane.svg",
-        "sentence": "The plane is high."
+        "sentence": "The plane is high.",
+        "i18n": {
+          "zh-CN": {
+            "word": "飞机",
+            "sentence": "这是飞机。"
+          },
+          "en-US": {
+            "word": "plane",
+            "sentence": "The plane is high."
+          },
+          "ja-JP": {
+            "word": "ひこうき",
+            "sentence": "これはひこうきです。"
+          }
+        }
       },
       {
         "word": "fighter jet",
         "cn": "战斗机",
         "picture": "✈️",
         "image": "./assets/words/sticker/fighter-jet.svg",
-        "sentence": "The fighter jet is fast."
+        "sentence": "The fighter jet is fast.",
+        "i18n": {
+          "zh-CN": {
+            "word": "战斗机",
+            "sentence": "这是战斗机。"
+          },
+          "en-US": {
+            "word": "fighter jet",
+            "sentence": "The fighter jet is fast."
+          },
+          "ja-JP": {
+            "word": "せんとうき",
+            "sentence": "これはせんとうきです。"
+          }
+        }
       },
       {
         "word": "bomber",
         "cn": "轰炸机",
         "picture": "✈️",
         "image": "./assets/words/sticker/bomber.svg",
-        "sentence": "The bomber is a big plane."
+        "sentence": "The bomber is a big plane.",
+        "i18n": {
+          "zh-CN": {
+            "word": "轰炸机",
+            "sentence": "这是轰炸机。"
+          },
+          "en-US": {
+            "word": "bomber",
+            "sentence": "The bomber is a big plane."
+          },
+          "ja-JP": {
+            "word": "ばくげきき",
+            "sentence": "これはばくげききです。"
+          }
+        }
       },
       {
         "word": "ship",
         "cn": "船",
         "picture": "🚢",
         "image": "./assets/words/sticker/ship.svg",
-        "sentence": "The ship is big."
+        "sentence": "The ship is big.",
+        "i18n": {
+          "zh-CN": {
+            "word": "船",
+            "sentence": "这是船。"
+          },
+          "en-US": {
+            "word": "ship",
+            "sentence": "The ship is big."
+          },
+          "ja-JP": {
+            "word": "ふね",
+            "sentence": "これはふねです。"
+          }
+        }
       },
       {
         "word": "gun",
         "cn": "枪",
         "picture": "🔫",
         "image": "./assets/words/sticker/gun.svg",
-        "sentence": "This is a gun."
+        "sentence": "This is a gun.",
+        "i18n": {
+          "zh-CN": {
+            "word": "枪",
+            "sentence": "这是枪。"
+          },
+          "en-US": {
+            "word": "gun",
+            "sentence": "This is a gun."
+          },
+          "ja-JP": {
+            "word": "じゅう",
+            "sentence": "これはじゅうです。"
+          }
+        }
       },
       {
         "word": "cannon",
         "cn": "大炮",
         "picture": "⚫",
         "image": "./assets/words/sticker/cannon.svg",
-        "sentence": "The cannon is old."
+        "sentence": "The cannon is old.",
+        "i18n": {
+          "zh-CN": {
+            "word": "大炮",
+            "sentence": "这是大炮。"
+          },
+          "en-US": {
+            "word": "cannon",
+            "sentence": "The cannon is old."
+          },
+          "ja-JP": {
+            "word": "たいほう",
+            "sentence": "これはたいほうです。"
+          }
+        }
       },
       {
         "word": "rocket",
         "cn": "火箭",
         "picture": "🚀",
         "image": "./assets/words/sticker/rocket.svg",
-        "sentence": "The rocket goes up."
+        "sentence": "The rocket goes up.",
+        "i18n": {
+          "zh-CN": {
+            "word": "火箭",
+            "sentence": "这是火箭。"
+          },
+          "en-US": {
+            "word": "rocket",
+            "sentence": "The rocket goes up."
+          },
+          "ja-JP": {
+            "word": "ロケット",
+            "sentence": "これはロケットです。"
+          }
+        }
       },
       {
         "word": "missile",
         "cn": "导弹",
         "picture": "🚀",
         "image": "./assets/words/sticker/missile.svg",
-        "sentence": "The missile is long."
+        "sentence": "The missile is long.",
+        "i18n": {
+          "zh-CN": {
+            "word": "导弹",
+            "sentence": "这是导弹。"
+          },
+          "en-US": {
+            "word": "missile",
+            "sentence": "The missile is long."
+          },
+          "ja-JP": {
+            "word": "ミサイル",
+            "sentence": "これはミサイルです。"
+          }
+        }
       },
       {
         "word": "sea mine",
         "cn": "水雷",
         "picture": "⚫",
         "image": "./assets/words/sticker/sea-mine.svg",
-        "sentence": "The sea mine is round."
+        "sentence": "The sea mine is round.",
+        "i18n": {
+          "zh-CN": {
+            "word": "水雷",
+            "sentence": "这是水雷。"
+          },
+          "en-US": {
+            "word": "sea mine",
+            "sentence": "The sea mine is round."
+          },
+          "ja-JP": {
+            "word": "すいらい",
+            "sentence": "これはすいらいです。"
+          }
+        }
       },
       {
         "word": "helmet",
         "cn": "头盔",
         "picture": "🪖",
         "image": "./assets/words/sticker/helmet.svg",
-        "sentence": "This is a helmet."
+        "sentence": "This is a helmet.",
+        "i18n": {
+          "zh-CN": {
+            "word": "头盔",
+            "sentence": "这是头盔。"
+          },
+          "en-US": {
+            "word": "helmet",
+            "sentence": "This is a helmet."
+          },
+          "ja-JP": {
+            "word": "ヘルメット",
+            "sentence": "これはヘルメットです。"
+          }
+        }
       },
       {
         "word": "sword",
         "cn": "剑",
         "picture": "🗡️",
         "image": "./assets/words/sticker/sword.svg",
-        "sentence": "This is a sword."
+        "sentence": "This is a sword.",
+        "i18n": {
+          "zh-CN": {
+            "word": "剑",
+            "sentence": "这是剑。"
+          },
+          "en-US": {
+            "word": "sword",
+            "sentence": "This is a sword."
+          },
+          "ja-JP": {
+            "word": "けん",
+            "sentence": "これはけんです。"
+          }
+        }
       }
-    ]
+    ],
+    "i18n": {
+      "zh-CN": {
+        "title": "军事博物馆"
+      },
+      "en-US": {
+        "title": "Military Museum"
+      },
+      "ja-JP": {
+        "title": "ぐんじはくぶつかん"
+      }
+    }
   },
   {
     "id": "nature-museum",
@@ -1433,121 +4037,370 @@
         "cn": "恐龙",
         "picture": "🦕",
         "image": "./assets/words/sticker/dinosaur.svg",
-        "sentence": "I see a dinosaur."
+        "sentence": "I see a dinosaur.",
+        "i18n": {
+          "zh-CN": {
+            "word": "恐龙",
+            "sentence": "这是恐龙。"
+          },
+          "en-US": {
+            "word": "dinosaur",
+            "sentence": "I see a dinosaur."
+          },
+          "ja-JP": {
+            "word": "きょうりゅう",
+            "sentence": "これはきょうりゅうです。"
+          }
+        }
       },
       {
         "word": "bone",
         "cn": "骨头",
         "picture": "🦴",
         "image": "./assets/words/sticker/bone.svg",
-        "sentence": "This is a bone."
+        "sentence": "This is a bone.",
+        "i18n": {
+          "zh-CN": {
+            "word": "骨头",
+            "sentence": "这是骨头。"
+          },
+          "en-US": {
+            "word": "bone",
+            "sentence": "This is a bone."
+          },
+          "ja-JP": {
+            "word": "ほね",
+            "sentence": "これはほねです。"
+          }
+        }
       },
       {
         "word": "fossil",
         "cn": "化石",
         "picture": "🪨",
         "image": "./assets/words/sticker/fossil.svg",
-        "sentence": "This is a fossil."
+        "sentence": "This is a fossil.",
+        "i18n": {
+          "zh-CN": {
+            "word": "化石",
+            "sentence": "这是化石。"
+          },
+          "en-US": {
+            "word": "fossil",
+            "sentence": "This is a fossil."
+          },
+          "ja-JP": {
+            "word": "かせき",
+            "sentence": "これはかせきです。"
+          }
+        }
       },
       {
         "word": "rock",
         "cn": "石头",
         "picture": "🪨",
         "image": "./assets/words/sticker/rock.svg",
-        "sentence": "This is a rock."
+        "sentence": "This is a rock.",
+        "i18n": {
+          "zh-CN": {
+            "word": "石头",
+            "sentence": "这是石头。"
+          },
+          "en-US": {
+            "word": "rock",
+            "sentence": "This is a rock."
+          },
+          "ja-JP": {
+            "word": "いわ",
+            "sentence": "これはいわです。"
+          }
+        }
       },
       {
         "word": "shell",
         "cn": "贝壳",
         "picture": "🐚",
         "image": "./assets/words/sticker/shell.svg",
-        "sentence": "This is a shell."
+        "sentence": "This is a shell.",
+        "i18n": {
+          "zh-CN": {
+            "word": "贝壳",
+            "sentence": "这是贝壳。"
+          },
+          "en-US": {
+            "word": "shell",
+            "sentence": "This is a shell."
+          },
+          "ja-JP": {
+            "word": "かいがら",
+            "sentence": "これはかいがらです。"
+          }
+        }
       },
       {
         "word": "bear",
         "cn": "熊",
         "picture": "🐻",
         "sentence": "The bear is big.",
-        "image": "./assets/words/sticker/bear.svg"
+        "image": "./assets/words/sticker/bear.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "熊",
+            "sentence": "这是熊。"
+          },
+          "en-US": {
+            "word": "bear",
+            "sentence": "The bear is big."
+          },
+          "ja-JP": {
+            "word": "くま",
+            "sentence": "これはくまです。"
+          }
+        }
       },
       {
         "word": "tiger",
         "cn": "老虎",
         "picture": "🐯",
         "sentence": "I see a tiger.",
-        "image": "./assets/words/sticker/tiger.svg"
+        "image": "./assets/words/sticker/tiger.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "老虎",
+            "sentence": "这是老虎。"
+          },
+          "en-US": {
+            "word": "tiger",
+            "sentence": "I see a tiger."
+          },
+          "ja-JP": {
+            "word": "とら",
+            "sentence": "これはとらです。"
+          }
+        }
       },
       {
         "word": "elephant",
         "cn": "大象",
         "picture": "🐘",
         "sentence": "The elephant is big.",
-        "image": "./assets/words/sticker/elephant.svg"
+        "image": "./assets/words/sticker/elephant.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "大象",
+            "sentence": "这是大象。"
+          },
+          "en-US": {
+            "word": "elephant",
+            "sentence": "The elephant is big."
+          },
+          "ja-JP": {
+            "word": "ぞう",
+            "sentence": "これはぞうです。"
+          }
+        }
       },
       {
         "word": "butterfly",
         "cn": "蝴蝶",
         "picture": "🦋",
         "image": "./assets/words/sticker/butterfly.svg",
-        "sentence": "The butterfly can fly."
+        "sentence": "The butterfly can fly.",
+        "i18n": {
+          "zh-CN": {
+            "word": "蝴蝶",
+            "sentence": "这是蝴蝶。"
+          },
+          "en-US": {
+            "word": "butterfly",
+            "sentence": "The butterfly can fly."
+          },
+          "ja-JP": {
+            "word": "ちょう",
+            "sentence": "これはちょうです。"
+          }
+        }
       },
       {
         "word": "insect",
         "cn": "昆虫",
         "picture": "🐞",
         "image": "./assets/words/sticker/insect.svg",
-        "sentence": "This is an insect."
+        "sentence": "This is an insect.",
+        "i18n": {
+          "zh-CN": {
+            "word": "昆虫",
+            "sentence": "这是昆虫。"
+          },
+          "en-US": {
+            "word": "insect",
+            "sentence": "This is an insect."
+          },
+          "ja-JP": {
+            "word": "むし",
+            "sentence": "これはむしです。"
+          }
+        }
       },
       {
         "word": "spider",
         "cn": "蜘蛛",
         "picture": "🕷️",
         "sentence": "The spider is small.",
-        "image": "./assets/words/sticker/spider.svg"
+        "image": "./assets/words/sticker/spider.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "蜘蛛",
+            "sentence": "这是蜘蛛。"
+          },
+          "en-US": {
+            "word": "spider",
+            "sentence": "The spider is small."
+          },
+          "ja-JP": {
+            "word": "くも",
+            "sentence": "これはくもです。"
+          }
+        }
       },
       {
         "word": "snake",
         "cn": "蛇",
         "picture": "🐍",
         "sentence": "The snake is long.",
-        "image": "./assets/words/sticker/snake.svg"
+        "image": "./assets/words/sticker/snake.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "蛇",
+            "sentence": "这是蛇。"
+          },
+          "en-US": {
+            "word": "snake",
+            "sentence": "The snake is long."
+          },
+          "ja-JP": {
+            "word": "へび",
+            "sentence": "これはへびです。"
+          }
+        }
       },
       {
         "word": "turtle",
         "cn": "乌龟",
         "picture": "🐢",
         "sentence": "The turtle is slow.",
-        "image": "./assets/words/sticker/turtle.svg"
+        "image": "./assets/words/sticker/turtle.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "乌龟",
+            "sentence": "这是乌龟。"
+          },
+          "en-US": {
+            "word": "turtle",
+            "sentence": "The turtle is slow."
+          },
+          "ja-JP": {
+            "word": "かめ",
+            "sentence": "これはかめです。"
+          }
+        }
       },
       {
         "word": "whale",
         "cn": "鲸鱼",
         "picture": "🐋",
         "image": "./assets/words/sticker/whale.svg",
-        "sentence": "The whale is big."
+        "sentence": "The whale is big.",
+        "i18n": {
+          "zh-CN": {
+            "word": "鲸鱼",
+            "sentence": "这是鲸鱼。"
+          },
+          "en-US": {
+            "word": "whale",
+            "sentence": "The whale is big."
+          },
+          "ja-JP": {
+            "word": "くじら",
+            "sentence": "これはくじらです。"
+          }
+        }
       },
       {
         "word": "shark",
         "cn": "鲨鱼",
         "picture": "🦈",
         "image": "./assets/words/sticker/shark.svg",
-        "sentence": "The shark can swim."
+        "sentence": "The shark can swim.",
+        "i18n": {
+          "zh-CN": {
+            "word": "鲨鱼",
+            "sentence": "这是鲨鱼。"
+          },
+          "en-US": {
+            "word": "shark",
+            "sentence": "The shark can swim."
+          },
+          "ja-JP": {
+            "word": "サメ",
+            "sentence": "これはサメです。"
+          }
+        }
       },
       {
         "word": "volcano",
         "cn": "火山",
         "picture": "🌋",
         "image": "./assets/words/sticker/volcano.svg",
-        "sentence": "This is a volcano."
+        "sentence": "This is a volcano.",
+        "i18n": {
+          "zh-CN": {
+            "word": "火山",
+            "sentence": "这是火山。"
+          },
+          "en-US": {
+            "word": "volcano",
+            "sentence": "This is a volcano."
+          },
+          "ja-JP": {
+            "word": "かざん",
+            "sentence": "これはかざんです。"
+          }
+        }
       },
       {
         "word": "mountain",
         "cn": "山",
         "picture": "⛰️",
         "image": "./assets/words/sticker/mountain.svg",
-        "sentence": "This is a mountain."
+        "sentence": "This is a mountain.",
+        "i18n": {
+          "zh-CN": {
+            "word": "山",
+            "sentence": "这是山。"
+          },
+          "en-US": {
+            "word": "mountain",
+            "sentence": "This is a mountain."
+          },
+          "ja-JP": {
+            "word": "やま",
+            "sentence": "これはやまです。"
+          }
+        }
       }
-    ]
+    ],
+    "i18n": {
+      "zh-CN": {
+        "title": "自然博物馆"
+      },
+      "en-US": {
+        "title": "Nature Museum"
+      },
+      "ja-JP": {
+        "title": "しぜんはくぶつかん"
+      }
+    }
   },
   {
     "id": "signs",
@@ -1564,99 +4417,306 @@
         "cn": "停止",
         "picture": "🛑",
         "sentence": "Stop here, please.",
-        "image": "./assets/words/sticker/stop.svg"
+        "image": "./assets/words/sticker/stop.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "停止",
+            "sentence": "这是停止。"
+          },
+          "en-US": {
+            "word": "stop",
+            "sentence": "Stop here, please."
+          },
+          "ja-JP": {
+            "word": "とまれ",
+            "sentence": "これはとまれです。"
+          }
+        }
       },
       {
         "word": "go",
         "cn": "通行",
         "picture": "🟢",
         "sentence": "Go now, please.",
-        "image": "./assets/words/sticker/go.svg"
+        "image": "./assets/words/sticker/go.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "通行",
+            "sentence": "这是通行。"
+          },
+          "en-US": {
+            "word": "go",
+            "sentence": "Go now, please."
+          },
+          "ja-JP": {
+            "word": "すすめ",
+            "sentence": "これはすすめです。"
+          }
+        }
       },
       {
         "word": "exit",
         "cn": "出口",
         "picture": "🚪",
         "sentence": "This is the exit.",
-        "image": "./assets/words/sticker/exit.svg"
+        "image": "./assets/words/sticker/exit.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "出口",
+            "sentence": "这是出口。"
+          },
+          "en-US": {
+            "word": "exit",
+            "sentence": "This is the exit."
+          },
+          "ja-JP": {
+            "word": "でぐち",
+            "sentence": "これはでぐちです。"
+          }
+        }
       },
       {
         "word": "entrance",
         "cn": "入口",
         "picture": "➡️",
         "sentence": "This is the entrance.",
-        "image": "./assets/words/sticker/entrance.svg"
+        "image": "./assets/words/sticker/entrance.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "入口",
+            "sentence": "这是入口。"
+          },
+          "en-US": {
+            "word": "entrance",
+            "sentence": "This is the entrance."
+          },
+          "ja-JP": {
+            "word": "いりぐち",
+            "sentence": "これはいりぐちです。"
+          }
+        }
       },
       {
         "word": "toilet",
         "cn": "卫生间",
         "picture": "🚻",
         "sentence": "Where is the toilet?",
-        "image": "./assets/words/sticker/toilet.svg"
+        "image": "./assets/words/sticker/toilet.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "卫生间",
+            "sentence": "这是卫生间。"
+          },
+          "en-US": {
+            "word": "toilet",
+            "sentence": "Where is the toilet?"
+          },
+          "ja-JP": {
+            "word": "トイレ",
+            "sentence": "これはトイレです。"
+          }
+        }
       },
       {
         "word": "stairs",
         "cn": "楼梯",
         "picture": "🪜",
         "sentence": "Use the stairs.",
-        "image": "./assets/words/sticker/stairs.svg"
+        "image": "./assets/words/sticker/stairs.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "楼梯",
+            "sentence": "这是楼梯。"
+          },
+          "en-US": {
+            "word": "stairs",
+            "sentence": "Use the stairs."
+          },
+          "ja-JP": {
+            "word": "かいだん",
+            "sentence": "これはかいだんです。"
+          }
+        }
       },
       {
         "word": "elevator",
         "cn": "电梯",
         "picture": "🛗",
         "sentence": "Take the elevator.",
-        "image": "./assets/words/sticker/elevator.svg"
+        "image": "./assets/words/sticker/elevator.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "电梯",
+            "sentence": "这是电梯。"
+          },
+          "en-US": {
+            "word": "elevator",
+            "sentence": "Take the elevator."
+          },
+          "ja-JP": {
+            "word": "エレベーター",
+            "sentence": "これはエレベーターです。"
+          }
+        }
       },
       {
         "word": "left",
         "cn": "左边",
         "picture": "⬅️",
         "sentence": "Turn left.",
-        "image": "./assets/words/sticker/left.svg"
+        "image": "./assets/words/sticker/left.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "左边",
+            "sentence": "这是左边。"
+          },
+          "en-US": {
+            "word": "left",
+            "sentence": "Turn left."
+          },
+          "ja-JP": {
+            "word": "ひだり",
+            "sentence": "これはひだりです。"
+          }
+        }
       },
       {
         "word": "right",
         "cn": "右边",
         "picture": "➡️",
         "sentence": "Turn right.",
-        "image": "./assets/words/sticker/right.svg"
+        "image": "./assets/words/sticker/right.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "右边",
+            "sentence": "这是右边。"
+          },
+          "en-US": {
+            "word": "right",
+            "sentence": "Turn right."
+          },
+          "ja-JP": {
+            "word": "みぎ",
+            "sentence": "これはみぎです。"
+          }
+        }
       },
       {
         "word": "up",
         "cn": "向上",
         "picture": "⬆️",
         "sentence": "Go up.",
-        "image": "./assets/words/sticker/up.svg"
+        "image": "./assets/words/sticker/up.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "向上",
+            "sentence": "这是向上。"
+          },
+          "en-US": {
+            "word": "up",
+            "sentence": "Go up."
+          },
+          "ja-JP": {
+            "word": "うえ",
+            "sentence": "これはうえです。"
+          }
+        }
       },
       {
         "word": "down",
         "cn": "向下",
         "picture": "⬇️",
         "sentence": "Go down.",
-        "image": "./assets/words/sticker/down.svg"
+        "image": "./assets/words/sticker/down.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "向下",
+            "sentence": "这是向下。"
+          },
+          "en-US": {
+            "word": "down",
+            "sentence": "Go down."
+          },
+          "ja-JP": {
+            "word": "した",
+            "sentence": "これはしたです。"
+          }
+        }
       },
       {
         "word": "push",
         "cn": "推",
         "picture": "👉",
         "sentence": "Push the door.",
-        "image": "./assets/words/sticker/push.svg"
+        "image": "./assets/words/sticker/push.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "推",
+            "sentence": "这是推。"
+          },
+          "en-US": {
+            "word": "push",
+            "sentence": "Push the door."
+          },
+          "ja-JP": {
+            "word": "おす",
+            "sentence": "これはおすです。"
+          }
+        }
       },
       {
         "word": "pull",
         "cn": "拉",
         "picture": "👈",
         "sentence": "Pull the door.",
-        "image": "./assets/words/sticker/pull.svg"
+        "image": "./assets/words/sticker/pull.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "拉",
+            "sentence": "这是拉。"
+          },
+          "en-US": {
+            "word": "pull",
+            "sentence": "Pull the door."
+          },
+          "ja-JP": {
+            "word": "ひく",
+            "sentence": "これはひくです。"
+          }
+        }
       },
       {
         "word": "no",
         "cn": "不可以",
         "picture": "🚫",
         "sentence": "No running here.",
-        "image": "./assets/words/sticker/no.svg"
+        "image": "./assets/words/sticker/no.svg",
+        "i18n": {
+          "zh-CN": {
+            "word": "不可以",
+            "sentence": "这是不可以。"
+          },
+          "en-US": {
+            "word": "no",
+            "sentence": "No running here."
+          },
+          "ja-JP": {
+            "word": "だめ",
+            "sentence": "これはだめです。"
+          }
+        }
       }
-    ]
+    ],
+    "i18n": {
+      "zh-CN": {
+        "title": "指示牌"
+      },
+      "en-US": {
+        "title": "Signs"
+      },
+      "ja-JP": {
+        "title": "ひょうしき"
+      }
+    }
   }
 ]

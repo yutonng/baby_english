@@ -1,0 +1,267 @@
+const SUPPORTED_LANGUAGES = [
+  { code: "zh-CN", label: "中文" },
+  { code: "en-US", label: "English" },
+  { code: "ja-JP", label: "日本語" },
+];
+
+const SCENE_TITLES = {
+  hospital: { "zh-CN": "医院", "en-US": "Hospital", "ja-JP": "びょういん" },
+  supermarket: { "zh-CN": "超市", "en-US": "Supermarket", "ja-JP": "スーパー" },
+  "living-room": { "zh-CN": "客厅", "en-US": "Living Room", "ja-JP": "リビング" },
+  bedroom: { "zh-CN": "卧室", "en-US": "Bedroom", "ja-JP": "ねしつ" },
+  kitchen: { "zh-CN": "厨房", "en-US": "Kitchen", "ja-JP": "キッチン" },
+  kindergarten: { "zh-CN": "幼儿园", "en-US": "Kindergarten", "ja-JP": "ようちえん" },
+  zoo: { "zh-CN": "动物园", "en-US": "Zoo", "ja-JP": "どうぶつえん" },
+  playground: { "zh-CN": "游乐场", "en-US": "Playground", "ja-JP": "あそびば" },
+  "subway-station": { "zh-CN": "地铁站", "en-US": "Subway Station", "ja-JP": "ちかてつのえき" },
+  bus: { "zh-CN": "公交", "en-US": "Bus", "ja-JP": "バス" },
+  bathroom: { "zh-CN": "卫生间", "en-US": "Bathroom", "ja-JP": "トイレ" },
+  vehicles: { "zh-CN": "交通工具", "en-US": "Vehicles", "ja-JP": "のりもの" },
+  park: { "zh-CN": "公园", "en-US": "Park", "ja-JP": "こうえん" },
+  "military-museum": { "zh-CN": "军事博物馆", "en-US": "Military Museum", "ja-JP": "ぐんじはくぶつかん" },
+  "nature-museum": { "zh-CN": "自然博物馆", "en-US": "Nature Museum", "ja-JP": "しぜんはくぶつかん" },
+  signs: { "zh-CN": "指示牌", "en-US": "Signs", "ja-JP": "ひょうしき" },
+};
+
+const JA_WORDS = {
+  TV: "テレビ",
+  ambulance: "きゅうきゅうしゃ",
+  apple: "りんご",
+  bag: "かばん",
+  ball: "ボール",
+  banana: "バナナ",
+  bandage: "ばんそうこう",
+  basket: "かご",
+  bath: "おふろ",
+  bear: "くま",
+  bed: "ベッド",
+  bell: "ベル",
+  bench: "ベンチ",
+  bike: "じてんしゃ",
+  bird: "とり",
+  blanket: "もうふ",
+  blocks: "つみき",
+  boat: "ボート",
+  bomber: "ばくげきき",
+  bone: "ほね",
+  book: "ほん",
+  bowl: "ボウル",
+  box: "はこ",
+  bread: "パン",
+  bridge: "はし",
+  bucket: "バケツ",
+  bus: "バス",
+  "bus stop": "バスてい",
+  butterfly: "ちょう",
+  cannon: "たいほう",
+  car: "くるま",
+  card: "カード",
+  cart: "カート",
+  cashier: "レジのひと",
+  cat: "ねこ",
+  chair: "いす",
+  clean: "きれい",
+  clock: "とけい",
+  cloud: "くも",
+  comb: "くし",
+  crayon: "クレヨン",
+  cup: "コップ",
+  desk: "つくえ",
+  dinosaur: "きょうりゅう",
+  doctor: "おいしゃさん",
+  dog: "いぬ",
+  door: "ドア",
+  down: "した",
+  driver: "うんてんしゅ",
+  duck: "あひる",
+  egg: "たまご",
+  elephant: "ぞう",
+  elevator: "エレベーター",
+  entrance: "いりぐち",
+  exit: "でぐち",
+  "fighter jet": "せんとうき",
+  "fire truck": "しょうぼうしゃ",
+  fish: "さかな",
+  flower: "はな",
+  fork: "フォーク",
+  fossil: "かせき",
+  friend: "ともだち",
+  gate: "もん",
+  giraffe: "きりん",
+  go: "すすめ",
+  grass: "くさ",
+  gun: "じゅう",
+  helmet: "ヘルメット",
+  insect: "むし",
+  juice: "ジュース",
+  kite: "たこ",
+  lake: "みずうみ",
+  lamp: "ランプ",
+  leaf: "はっぱ",
+  left: "ひだり",
+  line: "れつ",
+  lion: "ライオン",
+  map: "ちず",
+  mask: "マスク",
+  medicine: "くすり",
+  milk: "ミルク",
+  mirror: "かがみ",
+  missile: "ミサイル",
+  monkey: "さる",
+  mountain: "やま",
+  music: "おんがく",
+  nap: "おひるね",
+  nebulizer: "ネブライザー",
+  no: "だめ",
+  nurse: "かんごしさん",
+  orange: "オレンジ",
+  pajamas: "パジャマ",
+  panda: "パンダ",
+  pants: "ズボン",
+  paper: "かみ",
+  patient: "びょうにん",
+  pencil: "えんぴつ",
+  picnic: "ピクニック",
+  pillow: "まくら",
+  plane: "ひこうき",
+  plate: "おさら",
+  pull: "ひく",
+  push: "おす",
+  rabbit: "うさぎ",
+  rain: "あめ",
+  receipt: "レシート",
+  rice: "ごはん",
+  right: "みぎ",
+  road: "みち",
+  rock: "いわ",
+  rocket: "ロケット",
+  sand: "すな",
+  scooter: "スクーター",
+  "sea mine": "すいらい",
+  seat: "せき",
+  seesaw: "シーソー",
+  shark: "サメ",
+  shelf: "たな",
+  shell: "かいがら",
+  ship: "ふね",
+  shirt: "シャツ",
+  shoes: "くつ",
+  shovel: "シャベル",
+  shower: "シャワー",
+  sink: "ながし",
+  sleep: "ねる",
+  slide: "すべりだい",
+  snake: "へび",
+  soap: "せっけん",
+  socks: "くつした",
+  sofa: "ソファ",
+  soup: "スープ",
+  spider: "くも",
+  spoon: "スプーン",
+  stairs: "かいだん",
+  station: "えき",
+  stethoscope: "ちょうしんき",
+  stop: "とまれ",
+  subway: "ちかてつ",
+  sun: "たいよう",
+  swing: "ブランコ",
+  sword: "けん",
+  table: "テーブル",
+  tank: "せんしゃ",
+  taxi: "タクシー",
+  teacher: "せんせい",
+  "teddy bear": "ぬいぐるみ",
+  thermometer: "たいおんけい",
+  ticket: "きっぷ",
+  tiger: "とら",
+  toilet: "トイレ",
+  toothbrush: "はブラシ",
+  toothpaste: "はみがきこ",
+  towel: "タオル",
+  toy: "おもちゃ",
+  train: "でんしゃ",
+  tree: "き",
+  truck: "トラック",
+  turtle: "かめ",
+  up: "うえ",
+  volcano: "かざん",
+  water: "みず",
+  whale: "くじら",
+  wheel: "タイヤ",
+  wheelchair: "くるまいす",
+  window: "まど",
+  zebra: "しまうま",
+};
+
+function sentenceFor(language, word, fallbackSentence = "") {
+  if (language === "zh-CN") return `这是${word}。`;
+  if (language === "ja-JP") return `これは${word}です。`;
+  return fallbackSentence || `This is a ${word}.`;
+}
+
+function normalizeI18n(value) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+  return Object.fromEntries(
+    Object.entries(value).map(([language, content]) => [
+      language,
+      Object.fromEntries(
+        Object.entries(content || {}).map(([key, text]) => [key, String(text || "").trim()])
+      ),
+    ])
+  );
+}
+
+function buildSceneI18n(scene) {
+  return {
+    ...normalizeI18n(scene.i18n),
+    "zh-CN": {
+      title: scene.i18n?.["zh-CN"]?.title || SCENE_TITLES[scene.id]?.["zh-CN"] || scene.title || "",
+    },
+    "en-US": {
+      title: scene.i18n?.["en-US"]?.title || SCENE_TITLES[scene.id]?.["en-US"] || scene.subtitle || scene.title || "",
+    },
+    "ja-JP": {
+      title: scene.i18n?.["ja-JP"]?.title || SCENE_TITLES[scene.id]?.["ja-JP"] || scene.subtitle || scene.title || "",
+    },
+  };
+}
+
+function buildWordI18n(word) {
+  const english = String(word.word || "").trim();
+  const chinese = String(word.cn || "").trim();
+  const japanese = JA_WORDS[english] || english;
+  return {
+    ...normalizeI18n(word.i18n),
+    "zh-CN": {
+      word: word.i18n?.["zh-CN"]?.word || chinese || english,
+      sentence: word.i18n?.["zh-CN"]?.sentence || sentenceFor("zh-CN", chinese || english),
+    },
+    "en-US": {
+      word: word.i18n?.["en-US"]?.word || english,
+      sentence: word.i18n?.["en-US"]?.sentence || word.sentence || sentenceFor("en-US", english),
+    },
+    "ja-JP": {
+      word: word.i18n?.["ja-JP"]?.word || japanese,
+      sentence: word.i18n?.["ja-JP"]?.sentence || sentenceFor("ja-JP", japanese),
+    },
+  };
+}
+
+function enrichSceneI18n(scene) {
+  return {
+    ...scene,
+    i18n: buildSceneI18n(scene),
+    words: (scene.words || []).map((word) => ({
+      ...word,
+      i18n: buildWordI18n(word),
+    })),
+  };
+}
+
+module.exports = {
+  SUPPORTED_LANGUAGES,
+  buildSceneI18n,
+  buildWordI18n,
+  enrichSceneI18n,
+  normalizeI18n,
+};

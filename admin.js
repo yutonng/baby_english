@@ -19,6 +19,11 @@ const loginPassword = document.querySelector("#loginPassword");
 const currentUser = document.querySelector("#currentUser");
 const adminTokenKey = "little-english-admin-token";
 const adminUsernameKey = "little-english-admin-username";
+const supportedLanguages = [
+  { code: "zh-CN", label: "中文" },
+  { code: "en-US", label: "English" },
+  { code: "ja-JP", label: "日本語" },
+];
 
 function showMessage(text, type = "info") {
   message.textContent = text;
@@ -169,6 +174,64 @@ function escapeAttr(value) {
     .replace(/>/g, "&gt;");
 }
 
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function getSceneLanguageTitle(scene, language) {
+  return scene.i18n?.[language]?.title || "";
+}
+
+function getWordLanguageContent(word, language) {
+  return word.i18n?.[language] || {};
+}
+
+function renderSceneI18n(scene) {
+  return `
+    <div class="i18n-panel scene-i18n-panel">
+      <strong>多语言场景名</strong>
+      <div class="i18n-grid">
+        ${supportedLanguages
+          .map(
+            (language) => `
+              <div class="i18n-card">
+                <span>${language.label}</span>
+                <p>${escapeHtml(getSceneLanguageTitle(scene, language.code) || "未生成")}</p>
+              </div>
+            `
+          )
+          .join("")}
+      </div>
+    </div>
+  `;
+}
+
+function renderWordI18n(word) {
+  return `
+    <div class="i18n-panel">
+      <strong>多语言内容</strong>
+      <div class="i18n-grid">
+        ${supportedLanguages
+          .map((language) => {
+            const content = getWordLanguageContent(word, language.code);
+            return `
+              <div class="i18n-card">
+                <span>${language.label}</span>
+                <p>${escapeHtml(content.word || "未生成")}</p>
+                <small>${escapeHtml(content.sentence || "未生成")}</small>
+              </div>
+            `;
+          })
+          .join("")}
+      </div>
+    </div>
+  `;
+}
+
 function renderSceneForm(scene) {
   const disabled = isEditable() ? "" : "disabled";
   sceneForm.innerHTML = `
@@ -192,6 +255,7 @@ function renderSceneForm(scene) {
       <span>颜色 B</span>
       <input type="text" data-color-index="1" value="${escapeAttr(scene.colors?.[1] || "")}" ${disabled} />
     </label>
+    ${renderSceneI18n(scene)}
   `;
 }
 
@@ -246,6 +310,7 @@ function renderWordPreview(scene) {
                 <input type="text" data-word-index="${index}" data-word-field="sentence" value="${escapeAttr(word.sentence)}" ${disabled} />
               </label>
             </div>
+            ${renderWordI18n(word)}
             <small>${getImageStatus(word)}</small>
           </div>
         </div>
@@ -378,6 +443,8 @@ function publishedWordToDraftWord(word) {
     cn: word.cn || "",
     picture: word.picture || "",
     sentence: word.sentence || "",
+    i18n: word.i18n || {},
+    audio: word.audio || undefined,
     image: {
       status: word.image ? "ready" : "pending",
       storageKey: "",
@@ -405,6 +472,7 @@ function copySelectedPublishedToDraft() {
   const draft = {
     ...scene,
     status: "draft",
+    i18n: scene.i18n || {},
     words: (scene.words || []).map(publishedWordToDraftWord),
     notes: "Copied from published content for editing.",
     createdAt: new Date().toISOString(),
@@ -442,6 +510,20 @@ function createDraftTemplate() {
         cn: "示例",
         picture: "📘",
         sentence: "This is a sample.",
+        i18n: {
+          "zh-CN": {
+            word: "示例",
+            sentence: "这是示例。"
+          },
+          "en-US": {
+            word: "sample",
+            sentence: "This is a sample."
+          },
+          "ja-JP": {
+            word: "サンプル",
+            sentence: "これはサンプルです。"
+          }
+        },
         image: {
           status: "pending",
           storageKey: "",

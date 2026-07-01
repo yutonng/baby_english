@@ -189,6 +189,56 @@ button:hover {
   padding: 14px;
 }
 
+.scene-i18n-panel {
+  grid-column: 1 / -1;
+}
+
+.i18n-panel {
+  border-top: 1px solid #eee7dc;
+  margin-top: 12px;
+  padding-top: 12px;
+}
+
+.i18n-panel > strong {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.i18n-grid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.i18n-card {
+  background: #fbfaf7;
+  border: 1px solid #e5e0d8;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.i18n-card span {
+  color: #6b665e;
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.i18n-card p {
+  color: #202124;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+
+.i18n-card small {
+  color: #4f4a42;
+  display: block;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 label span {
   color: #6b665e;
   display: block;

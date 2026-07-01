@@ -4,6 +4,7 @@ const { access, mkdir, readFile, rename, stat, writeFile } = require("node:fs/pr
 const { createReadStream } = require("node:fs");
 const path = require("node:path");
 const { URL } = require("node:url");
+const { enrichSceneI18n, normalizeI18n } = require("../scripts/i18n-content");
 
 const rootDir = path.join(__dirname, "..");
 const dataDir = path.join(rootDir, "data");
@@ -150,6 +151,7 @@ function normalizeWord(word, sceneId, index) {
     cn: String(word.cn || "").trim(),
     picture: String(word.picture || "").trim(),
     sentence: String(word.sentence || "").trim(),
+    i18n: normalizeI18n(word.i18n),
     image: normalizeImage(word.image || word.imageMeta, sceneId, english, index),
   };
 }
@@ -160,18 +162,19 @@ function normalizeScene(input, currentStatus = "draft") {
   const id = stableId(input.id || subtitle || title || randomUUID());
   const words = Array.isArray(input.words) ? input.words.map((word, index) => normalizeWord(word, id, index)) : [];
 
-  return {
+  return enrichSceneI18n({
     id,
     title,
     subtitle,
     icon: String(input.icon || "📘").trim(),
     colors: normalizeColors(input.colors),
     status: input.status || currentStatus,
+    i18n: normalizeI18n(input.i18n),
     words,
     notes: input.notes || "",
     createdAt: input.createdAt || new Date().toISOString(),
     updatedAt: new Date().toISOString(),
-  };
+  });
 }
 
 function validateScene(scene, { requireReadyImages = false } = {}) {
@@ -207,12 +210,14 @@ function toPublishedScene(scene) {
     subtitle: scene.subtitle,
     icon: scene.icon,
     colors: scene.colors,
+    i18n: normalizeI18n(scene.i18n),
     publishedAt: scene.publishedAt || new Date().toISOString(),
     words: scene.words.map((word) => ({
       word: word.word,
       cn: word.cn,
       picture: word.picture,
       sentence: word.sentence,
+      i18n: normalizeI18n(word.i18n),
       image: word.image.url || `/uploads/${word.image.storageKey}`,
       imageVersion: word.image.version,
     })),

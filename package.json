@@ -7,6 +7,7 @@
     "dev": "python3 -m http.server 4173",
     "admin": "node server/content-server.js",
     "audio": "node scripts/generate-audio.js",
+    "i18n:enrich": "node scripts/enrich-i18n.js",
     "register:image": "node scripts/register-generated-image.js",
     "prepare:apk": "node scripts/prepare-capacitor-web.js",
     "prepare:apk:debug": "node scripts/prepare-capacitor-web.js --debug",

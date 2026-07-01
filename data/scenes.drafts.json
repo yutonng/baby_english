@@ -25,6 +25,20 @@
           "height": null,
           "updatedAt": "2026-06-28T04:36:32.413Z",
           "candidateName": "ball-v1.png"
+        },
+        "i18n": {
+          "zh-CN": {
+            "word": "球",
+            "sentence": "这是球。"
+          },
+          "en-US": {
+            "word": "ball",
+            "sentence": "I play with a ball."
+          },
+          "ja-JP": {
+            "word": "ボール",
+            "sentence": "これはボールです。"
+          }
         }
       },
       {
@@ -42,6 +56,20 @@
           "height": null,
           "updatedAt": "2026-06-28T04:36:51.647Z",
           "candidateName": "book-v1.png"
+        },
+        "i18n": {
+          "zh-CN": {
+            "word": "书",
+            "sentence": "这是书。"
+          },
+          "en-US": {
+            "word": "book",
+            "sentence": "I read a book."
+          },
+          "ja-JP": {
+            "word": "ほん",
+            "sentence": "これはほんです。"
+          }
         }
       },
       {
@@ -59,12 +87,37 @@
           "height": null,
           "updatedAt": "2026-06-28T04:36:51.829Z",
           "candidateName": "apple-v1.png"
+        },
+        "i18n": {
+          "zh-CN": {
+            "word": "苹果",
+            "sentence": "这是苹果。"
+          },
+          "en-US": {
+            "word": "apple",
+            "sentence": "This is an apple."
+          },
+          "ja-JP": {
+            "word": "りんご",
+            "sentence": "これはりんごです。"
+          }
         }
       }
     ],
     "notes": "",
     "createdAt": "2026-06-28T04:36:23.848Z",
     "updatedAt": "2026-06-28T08:11:25.904Z",
-    "publishedAt": "2026-06-28T08:11:25.905Z"
+    "publishedAt": "2026-06-28T08:11:25.905Z",
+    "i18n": {
+      "zh-CN": {
+        "title": "测试场景"
+      },
+      "en-US": {
+        "title": "Review Test"
+      },
+      "ja-JP": {
+        "title": "Review Test"
+      }
+    }
   }
 ]
