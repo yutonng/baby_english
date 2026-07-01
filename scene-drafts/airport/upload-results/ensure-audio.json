@@ -1,0 +1,190 @@
+{
+  "ok": true,
+  "created": 22,
+  "existing": 4,
+  "total": 26,
+  "results": [
+    {
+      "kind": "words",
+      "slug": "plane",
+      "text": "plane",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/words/plane.mp3",
+      "status": "exists"
+    },
+    {
+      "kind": "words",
+      "slug": "airport",
+      "text": "airport",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/words/airport.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "words",
+      "slug": "runway",
+      "text": "runway",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/words/runway.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "words",
+      "slug": "boarding-pass",
+      "text": "boarding pass",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/words/boarding-pass.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "words",
+      "slug": "suitcase",
+      "text": "suitcase",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/words/suitcase.mp3",
+      "status": "exists"
+    },
+    {
+      "kind": "words",
+      "slug": "passport",
+      "text": "passport",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/words/passport.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "words",
+      "slug": "gate",
+      "text": "gate",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/words/gate.mp3",
+      "status": "exists"
+    },
+    {
+      "kind": "words",
+      "slug": "seat",
+      "text": "seat",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/words/seat.mp3",
+      "status": "exists"
+    },
+    {
+      "kind": "words",
+      "slug": "pilot",
+      "text": "pilot",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/words/pilot.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "words",
+      "slug": "baggage",
+      "text": "baggage",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/words/baggage.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "words",
+      "slug": "seat-belt",
+      "text": "seat belt",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/words/seat-belt.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "words",
+      "slug": "engine",
+      "text": "engine",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/words/engine.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "words",
+      "slug": "wing",
+      "text": "wing",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/words/wing.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "sentences",
+      "slug": "the-plane-is-big",
+      "text": "The plane is big.",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/sentences/the-plane-is-big.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "sentences",
+      "slug": "the-airport-is-busy",
+      "text": "The airport is busy.",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/sentences/the-airport-is-busy.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "sentences",
+      "slug": "the-runway-is-long",
+      "text": "The runway is long.",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/sentences/the-runway-is-long.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "sentences",
+      "slug": "i-have-a-boarding-pass",
+      "text": "I have a boarding pass.",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/sentences/i-have-a-boarding-pass.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "sentences",
+      "slug": "the-suitcase-is-blue",
+      "text": "The suitcase is blue.",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/sentences/the-suitcase-is-blue.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "sentences",
+      "slug": "this-is-a-passport",
+      "text": "This is a passport.",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/sentences/this-is-a-passport.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "sentences",
+      "slug": "this-is-the-gate",
+      "text": "This is the gate.",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/sentences/this-is-the-gate.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "sentences",
+      "slug": "the-seat-is-soft",
+      "text": "The seat is soft.",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/sentences/the-seat-is-soft.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "sentences",
+      "slug": "the-pilot-can-fly",
+      "text": "The pilot can fly.",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/sentences/the-pilot-can-fly.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "sentences",
+      "slug": "the-baggage-is-heavy",
+      "text": "The baggage is heavy.",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/sentences/the-baggage-is-heavy.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "sentences",
+      "slug": "the-seat-belt-is-safe",
+      "text": "The seat belt is safe.",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/sentences/the-seat-belt-is-safe.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "sentences",
+      "slug": "the-engine-is-round",
+      "text": "The engine is round.",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/sentences/the-engine-is-round.mp3",
+      "status": "created"
+    },
+    {
+      "kind": "sentences",
+      "slug": "the-wing-is-wide",
+      "text": "The wing is wide.",
+      "path": "/Users/yutong/Documents/baby_Eng/audio/sentences/the-wing-is-wide.mp3",
+      "status": "created"
+    }
+  ]
+}

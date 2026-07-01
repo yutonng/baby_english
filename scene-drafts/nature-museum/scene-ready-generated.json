@@ -1,0 +1,397 @@
+{
+  "id": "nature-museum",
+  "title": "自然博物馆",
+  "subtitle": "Nature Museum",
+  "icon": "🏛️",
+  "colors": [
+    "#BFE8D4",
+    "#FFD6A5"
+  ],
+  "status": "draft",
+  "words": [
+    {
+      "word": "dinosaur",
+      "cn": "恐龙",
+      "picture": "🦕",
+      "sentence": "The dinosaur is big.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/nature-museum/words/dinosaur-v2.webp",
+        "url": "/api/assets?key=scenes%2Fnature-museum%2Fwords%2Fdinosaur-v2.webp&v=2",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: dinosaur\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 2,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:05:33.481Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/words/dinosaur-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fwords%2Fdinosaur-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:11.837Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/sentences/the-dinosaur-is-big-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fsentences%2Fthe-dinosaur-is-big-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:12.950Z"
+        }
+      }
+    },
+    {
+      "word": "fossil",
+      "cn": "化石",
+      "picture": "🪨",
+      "sentence": "I see a fossil.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/nature-museum/words/fossil-v2.webp",
+        "url": "/api/assets?key=scenes%2Fnature-museum%2Fwords%2Ffossil-v2.webp&v=2",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: fossil\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 2,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:05:34.708Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/words/fossil-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fwords%2Ffossil-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:13.857Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/sentences/i-see-a-fossil-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fsentences%2Fi-see-a-fossil-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:14.692Z"
+        }
+      }
+    },
+    {
+      "word": "skeleton",
+      "cn": "骨架",
+      "picture": "🦴",
+      "sentence": "The skeleton is white.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/nature-museum/words/skeleton-v2.webp",
+        "url": "/api/assets?key=scenes%2Fnature-museum%2Fwords%2Fskeleton-v2.webp&v=2",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: skeleton\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 2,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:05:35.727Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/words/skeleton-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fwords%2Fskeleton-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:15.629Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/sentences/the-skeleton-is-white-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fsentences%2Fthe-skeleton-is-white-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:16.413Z"
+        }
+      }
+    },
+    {
+      "word": "insect",
+      "cn": "昆虫",
+      "picture": "🐞",
+      "sentence": "The insect is small.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/nature-museum/words/insect-v2.webp",
+        "url": "/api/assets?key=scenes%2Fnature-museum%2Fwords%2Finsect-v2.webp&v=2",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: insect, a simple beetle insect, not a butterfly, not a spider\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 2,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:05:36.849Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/words/insect-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fwords%2Finsect-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:17.249Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/sentences/the-insect-is-small-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fsentences%2Fthe-insect-is-small-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:17.981Z"
+        }
+      }
+    },
+    {
+      "word": "turtle",
+      "cn": "乌龟",
+      "picture": "🐢",
+      "sentence": "The turtle is slow.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/nature-museum/words/turtle-v2.webp",
+        "url": "/api/assets?key=scenes%2Fnature-museum%2Fwords%2Fturtle-v2.webp&v=2",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: turtle\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 2,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:05:37.906Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/words/turtle-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fwords%2Fturtle-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:18.852Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/sentences/the-turtle-is-slow-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fsentences%2Fthe-turtle-is-slow-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:19.776Z"
+        }
+      }
+    },
+    {
+      "word": "whale",
+      "cn": "鲸鱼",
+      "picture": "🐋",
+      "sentence": "The whale is blue.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/nature-museum/words/whale-v2.webp",
+        "url": "/api/assets?key=scenes%2Fnature-museum%2Fwords%2Fwhale-v2.webp&v=2",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: whale\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 2,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:05:39.032Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/words/whale-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fwords%2Fwhale-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:20.901Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/sentences/the-whale-is-blue-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fsentences%2Fthe-whale-is-blue-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:21.663Z"
+        }
+      }
+    },
+    {
+      "word": "volcano",
+      "cn": "火山",
+      "picture": "🌋",
+      "sentence": "The volcano is tall.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/nature-museum/words/volcano-v2.webp",
+        "url": "/api/assets?key=scenes%2Fnature-museum%2Fwords%2Fvolcano-v2.webp&v=2",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: volcano\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 2,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:05:40.082Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/words/volcano-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fwords%2Fvolcano-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:22.356Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/sentences/the-volcano-is-tall-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fsentences%2Fthe-volcano-is-tall-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:23.183Z"
+        }
+      }
+    },
+    {
+      "word": "shell",
+      "cn": "贝壳",
+      "picture": "🐚",
+      "sentence": "I find a shell.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/nature-museum/words/shell-v2.webp",
+        "url": "/api/assets?key=scenes%2Fnature-museum%2Fwords%2Fshell-v2.webp&v=2",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: shell, a single seashell\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 2,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:05:41.137Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/words/shell-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fwords%2Fshell-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:24.098Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/sentences/i-find-a-shell-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fsentences%2Fi-find-a-shell-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:24.996Z"
+        }
+      }
+    },
+    {
+      "word": "rock",
+      "cn": "石头",
+      "picture": "🪨",
+      "sentence": "The rock is hard.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/nature-museum/words/rock-v2.webp",
+        "url": "/api/assets?key=scenes%2Fnature-museum%2Fwords%2Frock-v2.webp&v=2",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: rock, a single rounded gray rock\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 2,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:05:42.055Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/words/rock-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fwords%2Frock-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:26.018Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/sentences/the-rock-is-hard-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fsentences%2Fthe-rock-is-hard-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:26.839Z"
+        }
+      }
+    },
+    {
+      "word": "crystal",
+      "cn": "水晶",
+      "picture": "💎",
+      "sentence": "The crystal is shiny.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/nature-museum/words/crystal-v2.webp",
+        "url": "/api/assets?key=scenes%2Fnature-museum%2Fwords%2Fcrystal-v2.webp&v=2",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: crystal, a single clear blue crystal cluster\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 2,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:05:43.087Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/words/crystal-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fwords%2Fcrystal-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:27.835Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/sentences/the-crystal-is-shiny-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fsentences%2Fthe-crystal-is-shiny-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:28.736Z"
+        }
+      }
+    },
+    {
+      "word": "butterfly",
+      "cn": "蝴蝶",
+      "picture": "🦋",
+      "sentence": "The butterfly is pretty.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/nature-museum/words/butterfly-v2.webp",
+        "url": "/api/assets?key=scenes%2Fnature-museum%2Fwords%2Fbutterfly-v2.webp&v=2",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: butterfly\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 2,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:05:43.917Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/words/butterfly-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fwords%2Fbutterfly-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:29.454Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/sentences/the-butterfly-is-pretty-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fsentences%2Fthe-butterfly-is-pretty-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:30.402Z"
+        }
+      }
+    },
+    {
+      "word": "egg",
+      "cn": "蛋",
+      "picture": "🥚",
+      "sentence": "The egg is round.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/nature-museum/words/egg-v2.webp",
+        "url": "/api/assets?key=scenes%2Fnature-museum%2Fwords%2Fegg-v2.webp&v=2",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: egg, a single plain white egg\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 2,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:05:44.950Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/words/egg-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fwords%2Fegg-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:31.262Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/nature-museum/audio/sentences/the-egg-is-round-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fnature-museum%2Faudio%2Fsentences%2Fthe-egg-is-round-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-06-30T19:56:32.348Z"
+        }
+      }
+    }
+  ]
+}

@@ -541,6 +541,123 @@ h2 {
   line-height: 1.55;
 }
 
+.privacy-page {
+  width: min(100%, 760px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: max(42px, env(safe-area-inset-top)) 20px max(36px, env(safe-area-inset-bottom));
+}
+
+.privacy-hero {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.privacy-back-link {
+  display: grid;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.privacy-hero p {
+  margin: 0 0 2px;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.privacy-hero h1 {
+  font-size: 38px;
+}
+
+.privacy-document {
+  border: 2px solid var(--ink);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  padding: 24px 22px;
+}
+
+.privacy-updated {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.privacy-document section + section {
+  margin-top: 26px;
+}
+
+.privacy-document h2 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.privacy-document p,
+.privacy-document li {
+  color: #334155;
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.privacy-document p {
+  margin: 0 0 10px;
+}
+
+.privacy-document ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.support-document a {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.support-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.support-card {
+  border: 2px solid rgba(0, 24, 88, 0.16);
+  border-radius: 14px;
+  background: #fff7ed;
+  padding: 16px;
+}
+
+.support-card h2 {
+  font-size: 19px;
+}
+
+.support-card p {
+  margin-bottom: 0;
+}
+
+.support-link {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
 .sheet-close {
   position: absolute;
   top: 14px;

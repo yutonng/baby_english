@@ -1,0 +1,429 @@
+{
+  "id": "airport",
+  "title": "机场",
+  "subtitle": "Airport",
+  "icon": "✈️",
+  "colors": [
+    "#BFE7FF",
+    "#D8CCFF"
+  ],
+  "status": "draft",
+  "words": [
+    {
+      "word": "plane",
+      "cn": "飞机",
+      "picture": "✈️",
+      "sentence": "The plane is big.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/airport/words/plane-v1.webp",
+        "url": "/api/assets?key=scenes%2Fairport%2Fwords%2Fplane-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: plane, a passenger airplane, no airline logo\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T05:40:09.148Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/words/plane-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fwords%2Fplane-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:42.628Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/sentences/the-plane-is-big-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fsentences%2Fthe-plane-is-big-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:43.747Z"
+        }
+      }
+    },
+    {
+      "word": "airport",
+      "cn": "机场",
+      "picture": "🏢",
+      "sentence": "The airport is busy.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/airport/words/airport-v1.webp",
+        "url": "/api/assets?key=scenes%2Fairport%2Fwords%2Fairport-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: airport terminal building model, simple airport building icon-like object, no text, no crowds\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T05:40:10.347Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/words/airport-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fwords%2Fairport-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:44.852Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/sentences/the-airport-is-busy-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fsentences%2Fthe-airport-is-busy-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:45.940Z"
+        }
+      }
+    },
+    {
+      "word": "runway",
+      "cn": "跑道",
+      "picture": "🛬",
+      "sentence": "The runway is long.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/airport/words/runway-v1.webp",
+        "url": "/api/assets?key=scenes%2Fairport%2Fwords%2Frunway-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: airport runway strip model, a single runway slab with simple white lines, no text, no plane\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T05:40:11.525Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/words/runway-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fwords%2Frunway-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:46.814Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/sentences/the-runway-is-long-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fsentences%2Fthe-runway-is-long-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:47.898Z"
+        }
+      }
+    },
+    {
+      "word": "boarding pass",
+      "cn": "登机牌",
+      "picture": "🎫",
+      "sentence": "I have a boarding pass.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/airport/words/boarding-pass-v1.webp",
+        "url": "/api/assets?key=scenes%2Fairport%2Fwords%2Fboarding-pass-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: boarding pass card, simple blank boarding pass shape, no readable text, no barcode details\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T05:40:12.334Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/words/boarding-pass-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fwords%2Fboarding-pass-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:48.932Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/sentences/i-have-a-boarding-pass-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fsentences%2Fi-have-a-boarding-pass-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:50.054Z"
+        }
+      }
+    },
+    {
+      "word": "suitcase",
+      "cn": "行李箱",
+      "picture": "🧳",
+      "sentence": "The suitcase is blue.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/airport/words/suitcase-v1.webp",
+        "url": "/api/assets?key=scenes%2Fairport%2Fwords%2Fsuitcase-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: suitcase, a rolling travel suitcase\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T05:40:13.510Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/words/suitcase-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fwords%2Fsuitcase-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:51.243Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/sentences/the-suitcase-is-blue-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fsentences%2Fthe-suitcase-is-blue-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:52.327Z"
+        }
+      }
+    },
+    {
+      "word": "passport",
+      "cn": "护照",
+      "picture": "📘",
+      "sentence": "This is a passport.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/airport/words/passport-v1.webp",
+        "url": "/api/assets?key=scenes%2Fairport%2Fwords%2Fpassport-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: passport booklet, plain cover, no readable text, no national emblem\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T05:40:14.659Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/words/passport-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fwords%2Fpassport-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:53.343Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/sentences/this-is-a-passport-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fsentences%2Fthis-is-a-passport-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:54.329Z"
+        }
+      }
+    },
+    {
+      "word": "gate",
+      "cn": "登机口",
+      "picture": "🚪",
+      "sentence": "This is the gate.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/airport/words/gate-v1.webp",
+        "url": "/api/assets?key=scenes%2Fairport%2Fwords%2Fgate-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: airport boarding gate doorway model, simple gate arch with no text, no people\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T05:40:15.738Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/words/gate-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fwords%2Fgate-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:55.218Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/sentences/this-is-the-gate-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fsentences%2Fthis-is-the-gate-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:56.284Z"
+        }
+      }
+    },
+    {
+      "word": "seat",
+      "cn": "座位",
+      "picture": "💺",
+      "sentence": "The seat is soft.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/airport/words/seat-v1.webp",
+        "url": "/api/assets?key=scenes%2Fairport%2Fwords%2Fseat-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: airplane passenger seat, single seat, no person\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T05:40:16.896Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/words/seat-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fwords%2Fseat-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:57.221Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/sentences/the-seat-is-soft-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fsentences%2Fthe-seat-is-soft-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:58.147Z"
+        }
+      }
+    },
+    {
+      "word": "pilot",
+      "cn": "飞行员",
+      "picture": "👨‍✈️",
+      "sentence": "The pilot can fly.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/airport/words/pilot-v1.webp",
+        "url": "/api/assets?key=scenes%2Fairport%2Fwords%2Fpilot-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: pilot cap, a single pilot hat as a child-safe object, no person face, no text\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T05:40:17.919Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/words/pilot-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fwords%2Fpilot-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:40:59.243Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/sentences/the-pilot-can-fly-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fsentences%2Fthe-pilot-can-fly-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:41:00.271Z"
+        }
+      }
+    },
+    {
+      "word": "baggage",
+      "cn": "行李",
+      "picture": "🧳",
+      "sentence": "The baggage is heavy.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/airport/words/baggage-v1.webp",
+        "url": "/api/assets?key=scenes%2Fairport%2Fwords%2Fbaggage-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: baggage, a small stack of two travel bags, no text or logos\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T05:40:18.792Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/words/baggage-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fwords%2Fbaggage-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:41:01.355Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/sentences/the-baggage-is-heavy-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fsentences%2Fthe-baggage-is-heavy-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:41:02.586Z"
+        }
+      }
+    },
+    {
+      "word": "seat belt",
+      "cn": "安全带",
+      "picture": "🔒",
+      "sentence": "The seat belt is safe.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/airport/words/seat-belt-v1.webp",
+        "url": "/api/assets?key=scenes%2Fairport%2Fwords%2Fseat-belt-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: airplane seat belt buckle and strap, single object, unfastened, no person\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T05:40:19.546Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/words/seat-belt-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fwords%2Fseat-belt-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:41:03.418Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/sentences/the-seat-belt-is-safe-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fsentences%2Fthe-seat-belt-is-safe-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:41:04.535Z"
+        }
+      }
+    },
+    {
+      "word": "engine",
+      "cn": "发动机",
+      "picture": "⚙️",
+      "sentence": "The engine is round.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/airport/words/engine-v1.webp",
+        "url": "/api/assets?key=scenes%2Fairport%2Fwords%2Fengine-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: airplane jet engine, single detached engine nacelle, no flames, no smoke\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T05:40:20.415Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/words/engine-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fwords%2Fengine-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:41:05.530Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/sentences/the-engine-is-round-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fsentences%2Fthe-engine-is-round-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:41:06.540Z"
+        }
+      }
+    },
+    {
+      "word": "wing",
+      "cn": "机翼",
+      "picture": "🪽",
+      "sentence": "The wing is wide.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/airport/words/wing-v1.webp",
+        "url": "/api/assets?key=scenes%2Fairport%2Fwords%2Fwing-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: airplane wing model, single detached airplane wing, no full plane, no logos\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T05:40:21.488Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/words/wing-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fwords%2Fwing-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:41:07.363Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/airport/audio/sentences/the-wing-is-wide-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fairport%2Faudio%2Fsentences%2Fthe-wing-is-wide-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T05:41:08.460Z"
+        }
+      }
+    }
+  ]
+}

@@ -6,7 +6,7 @@ const webDir = join(rootDir, "www");
 const buildType = process.argv.includes("--release") ? "release" : "debug";
 const contentApiBase = process.env.CONTENT_API_BASE || "";
 
-const entries = ["index.html", "styles.css", "app.js", "data", "audio", "assets"];
+const entries = ["index.html", "privacy.html", "styles.css", "app.js", "data", "audio", "assets"];
 
 async function main() {
   await rm(webDir, { recursive: true, force: true });

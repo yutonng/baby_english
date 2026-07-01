@@ -1,0 +1,429 @@
+{
+  "id": "vehicles",
+  "title": "交通工具",
+  "subtitle": "Vehicles",
+  "icon": "🚗",
+  "colors": [
+    "#BFE7FF",
+    "#FFE8A3"
+  ],
+  "status": "draft",
+  "words": [
+    {
+      "word": "car",
+      "cn": "小汽车",
+      "picture": "🚗",
+      "sentence": "The car is red.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/vehicles/words/car-v1.webp",
+        "url": "/api/assets?key=scenes%2Fvehicles%2Fwords%2Fcar-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: car, a small family car\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T04:00:12.943Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/words/car-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fwords%2Fcar-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:36.025Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/sentences/the-car-is-red-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fsentences%2Fthe-car-is-red-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:37.202Z"
+        }
+      }
+    },
+    {
+      "word": "bus",
+      "cn": "公交车",
+      "picture": "🚌",
+      "sentence": "The bus is big.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/vehicles/words/bus-v1.webp",
+        "url": "/api/assets?key=scenes%2Fvehicles%2Fwords%2Fbus-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: bus, a city bus\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T04:00:14.011Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/words/bus-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fwords%2Fbus-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:38.133Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/sentences/the-bus-is-big-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fsentences%2Fthe-bus-is-big-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:39.246Z"
+        }
+      }
+    },
+    {
+      "word": "taxi",
+      "cn": "出租车",
+      "picture": "🚕",
+      "sentence": "The taxi is yellow.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/vehicles/words/taxi-v1.webp",
+        "url": "/api/assets?key=scenes%2Fvehicles%2Fwords%2Ftaxi-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: taxi, a yellow taxi car, no text or logo\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T04:00:14.930Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/words/taxi-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fwords%2Ftaxi-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:40.128Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/sentences/the-taxi-is-yellow-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fsentences%2Fthe-taxi-is-yellow-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:40.880Z"
+        }
+      }
+    },
+    {
+      "word": "truck",
+      "cn": "卡车",
+      "picture": "🚚",
+      "sentence": "The truck is strong.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/vehicles/words/truck-v1.webp",
+        "url": "/api/assets?key=scenes%2Fvehicles%2Fwords%2Ftruck-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: truck, a simple delivery truck, no text or logo\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T04:00:16.111Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/words/truck-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fwords%2Ftruck-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:41.583Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/sentences/the-truck-is-strong-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fsentences%2Fthe-truck-is-strong-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:42.431Z"
+        }
+      }
+    },
+    {
+      "word": "train",
+      "cn": "火车",
+      "picture": "🚆",
+      "sentence": "The train is long.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/vehicles/words/train-v1.webp",
+        "url": "/api/assets?key=scenes%2Fvehicles%2Fwords%2Ftrain-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: train, a passenger train engine\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T04:00:17.174Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/words/train-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fwords%2Ftrain-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:43.290Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/sentences/the-train-is-long-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fsentences%2Fthe-train-is-long-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:44.325Z"
+        }
+      }
+    },
+    {
+      "word": "subway",
+      "cn": "地铁",
+      "picture": "🚇",
+      "sentence": "The subway is fast.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/vehicles/words/subway-v1.webp",
+        "url": "/api/assets?key=scenes%2Fvehicles%2Fwords%2Fsubway-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: subway train, a metro train car, no station scene\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T04:00:18.168Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/words/subway-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fwords%2Fsubway-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:45.140Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/sentences/the-subway-is-fast-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fsentences%2Fthe-subway-is-fast-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:45.883Z"
+        }
+      }
+    },
+    {
+      "word": "bike",
+      "cn": "自行车",
+      "picture": "🚲",
+      "sentence": "The bike has two wheels.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/vehicles/words/bike-v1.webp",
+        "url": "/api/assets?key=scenes%2Fvehicles%2Fwords%2Fbike-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: bike, a child-friendly bicycle\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T04:00:18.955Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/words/bike-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fwords%2Fbike-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:46.917Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/sentences/the-bike-has-two-wheels-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fsentences%2Fthe-bike-has-two-wheels-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:47.773Z"
+        }
+      }
+    },
+    {
+      "word": "plane",
+      "cn": "飞机",
+      "picture": "✈️",
+      "sentence": "The plane is in the sky.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/vehicles/words/plane-v1.webp",
+        "url": "/api/assets?key=scenes%2Fvehicles%2Fwords%2Fplane-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: plane, a passenger airplane, no airline logo\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T04:00:19.705Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/words/plane-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fwords%2Fplane-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:48.782Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/sentences/the-plane-is-in-the-sky-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fsentences%2Fthe-plane-is-in-the-sky-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:49.680Z"
+        }
+      }
+    },
+    {
+      "word": "boat",
+      "cn": "小船",
+      "picture": "⛵",
+      "sentence": "The boat is small.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/vehicles/words/boat-v2.webp",
+        "url": "/api/assets?key=scenes%2Fvehicles%2Fwords%2Fboat-v2.webp&v=2",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: boat, a small wooden rowboat dinghy with two oars resting inside, open top, no sail, no cabin, not a ship, not a yacht\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child\n",
+        "version": 2,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T04:59:02.694Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/words/boat-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fwords%2Fboat-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:50.482Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/sentences/the-boat-is-small-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fsentences%2Fthe-boat-is-small-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:51.539Z"
+        }
+      }
+    },
+    {
+      "word": "ship",
+      "cn": "轮船",
+      "picture": "🚢",
+      "sentence": "The ship is large.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/vehicles/words/ship-v1.webp",
+        "url": "/api/assets?key=scenes%2Fvehicles%2Fwords%2Fship-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: ship, a large passenger ship, no text or logo\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T04:00:21.516Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/words/ship-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fwords%2Fship-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:52.463Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/sentences/the-ship-is-large-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fsentences%2Fthe-ship-is-large-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:53.331Z"
+        }
+      }
+    },
+    {
+      "word": "ambulance",
+      "cn": "救护车",
+      "picture": "🚑",
+      "sentence": "The ambulance helps people.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/vehicles/words/ambulance-v1.webp",
+        "url": "/api/assets?key=scenes%2Fvehicles%2Fwords%2Fambulance-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: ambulance vehicle, no text, no medical emergency scene\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T04:00:22.390Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/words/ambulance-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fwords%2Fambulance-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:54.351Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/sentences/the-ambulance-helps-people-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fsentences%2Fthe-ambulance-helps-people-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:55.178Z"
+        }
+      }
+    },
+    {
+      "word": "stroller",
+      "cn": "婴儿车",
+      "picture": "🛒",
+      "sentence": "The stroller is safe.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/vehicles/words/stroller-v1.webp",
+        "url": "/api/assets?key=scenes%2Fvehicles%2Fwords%2Fstroller-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: baby stroller, no baby, no person\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T04:00:23.248Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/words/stroller-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fwords%2Fstroller-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:56.305Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/sentences/the-stroller-is-safe-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fsentences%2Fthe-stroller-is-safe-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:57.310Z"
+        }
+      }
+    },
+    {
+      "word": "balance bike",
+      "cn": "平衡车",
+      "picture": "🚲",
+      "sentence": "The balance bike is small.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/vehicles/words/balance-bike-v1.webp",
+        "url": "/api/assets?key=scenes%2Fvehicles%2Fwords%2Fbalance-bike-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: balance bike for a child, no pedals, no person\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T04:00:23.960Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/words/balance-bike-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fwords%2Fbalance-bike-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:58.100Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/vehicles/audio/sentences/the-balance-bike-is-small-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fvehicles%2Faudio%2Fsentences%2Fthe-balance-bike-is-small-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T04:00:58.908Z"
+        }
+      }
+    }
+  ]
+}

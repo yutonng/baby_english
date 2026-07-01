@@ -1,0 +1,397 @@
+{
+  "id": "military-museum",
+  "title": "军事博物馆",
+  "subtitle": "Military Museum",
+  "icon": "🎖️",
+  "colors": [
+    "#CFE8C9",
+    "#C8D7E8"
+  ],
+  "status": "draft",
+  "words": [
+    {
+      "word": "tank",
+      "cn": "坦克",
+      "picture": "🚜",
+      "sentence": "The tank is green.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/military-museum/words/tank-v1.webp",
+        "url": "/api/assets?key=scenes%2Fmilitary-museum%2Fwords%2Ftank-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: tank, museum display vehicle, no firing, no battle scene\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:36:00.636Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/words/tank-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fwords%2Ftank-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:26.160Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/sentences/the-tank-is-green-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fsentences%2Fthe-tank-is-green-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:27.225Z"
+        }
+      }
+    },
+    {
+      "word": "helmet",
+      "cn": "头盔",
+      "picture": "🪖",
+      "sentence": "The helmet is strong.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/military-museum/words/helmet-v1.webp",
+        "url": "/api/assets?key=scenes%2Fmilitary-museum%2Fwords%2Fhelmet-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: military helmet, museum display object\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:36:01.591Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/words/helmet-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fwords%2Fhelmet-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:28.289Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/sentences/the-helmet-is-strong-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fsentences%2Fthe-helmet-is-strong-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:29.367Z"
+        }
+      }
+    },
+    {
+      "word": "uniform",
+      "cn": "制服",
+      "picture": "🧥",
+      "sentence": "The uniform is neat.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/military-museum/words/uniform-v1.webp",
+        "url": "/api/assets?key=scenes%2Fmilitary-museum%2Fwords%2Funiform-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: military uniform jacket on a simple mannequin torso, museum display object, no person face\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:36:02.463Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/words/uniform-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fwords%2Funiform-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:30.320Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/sentences/the-uniform-is-neat-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fsentences%2Fthe-uniform-is-neat-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:31.424Z"
+        }
+      }
+    },
+    {
+      "word": "flag",
+      "cn": "旗帜",
+      "picture": "🚩",
+      "sentence": "The flag is bright.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/military-museum/words/flag-v1.webp",
+        "url": "/api/assets?key=scenes%2Fmilitary-museum%2Fwords%2Fflag-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: plain display flag on a small pole, museum object, no national symbols, no text\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:36:03.437Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/words/flag-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fwords%2Fflag-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:32.439Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/sentences/the-flag-is-bright-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fsentences%2Fthe-flag-is-bright-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:33.696Z"
+        }
+      }
+    },
+    {
+      "word": "missile",
+      "cn": "导弹",
+      "picture": "🚀",
+      "sentence": "The missile is long.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/military-museum/words/missile-v1.webp",
+        "url": "/api/assets?key=scenes%2Fmilitary-museum%2Fwords%2Fmissile-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: missile as an inert museum display model, no launch, no explosion, no smoke, no battle scene\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:36:04.581Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/words/missile-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fwords%2Fmissile-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:34.460Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/sentences/the-missile-is-long-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fsentences%2Fthe-missile-is-long-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:35.361Z"
+        }
+      }
+    },
+    {
+      "word": "fighter jet",
+      "cn": "战斗机",
+      "picture": "✈️",
+      "sentence": "The fighter jet is fast.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/military-museum/words/fighter-jet-v1.webp",
+        "url": "/api/assets?key=scenes%2Fmilitary-museum%2Fwords%2Ffighter-jet-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: fighter jet aircraft as a museum display model, no weapons firing, no battle scene\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:36:05.614Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/words/fighter-jet-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fwords%2Ffighter-jet-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:36.194Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/sentences/the-fighter-jet-is-fast-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fsentences%2Fthe-fighter-jet-is-fast-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:37.202Z"
+        }
+      }
+    },
+    {
+      "word": "bomber",
+      "cn": "轰炸机",
+      "picture": "✈️",
+      "sentence": "The bomber is large.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/military-museum/words/bomber-v1.webp",
+        "url": "/api/assets?key=scenes%2Fmilitary-museum%2Fwords%2Fbomber-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: bomber aircraft as a museum display model, no bombs dropping, no battle scene\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:36:06.676Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/words/bomber-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fwords%2Fbomber-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:38.160Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/sentences/the-bomber-is-large-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fsentences%2Fthe-bomber-is-large-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:39.197Z"
+        }
+      }
+    },
+    {
+      "word": "rocket",
+      "cn": "火箭",
+      "picture": "🚀",
+      "sentence": "The rocket is tall.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/military-museum/words/rocket-v1.webp",
+        "url": "/api/assets?key=scenes%2Fmilitary-museum%2Fwords%2Frocket-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: space rocket or museum rocket model, standing upright, no launch fire, no smoke\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:36:07.714Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/words/rocket-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fwords%2Frocket-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:40.064Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/sentences/the-rocket-is-tall-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fsentences%2Fthe-rocket-is-tall-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:41.104Z"
+        }
+      }
+    },
+    {
+      "word": "submarine",
+      "cn": "潜艇",
+      "picture": "🚢",
+      "sentence": "The submarine is long.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/military-museum/words/submarine-v1.webp",
+        "url": "/api/assets?key=scenes%2Fmilitary-museum%2Fwords%2Fsubmarine-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: submarine as a museum display model, no underwater scene\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:36:08.718Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/words/submarine-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fwords%2Fsubmarine-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:41.926Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/sentences/the-submarine-is-long-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fsentences%2Fthe-submarine-is-long-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:42.707Z"
+        }
+      }
+    },
+    {
+      "word": "wreckage",
+      "cn": "残骸",
+      "picture": "🧩",
+      "sentence": "The wreckage is old.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/military-museum/words/wreckage-v1.webp",
+        "url": "/api/assets?key=scenes%2Fmilitary-museum%2Fwords%2Fwreckage-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: old aircraft wreckage fragment as a museum display object, safe, no fire, no injury, no battlefield\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:36:09.727Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/words/wreckage-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fwords%2Fwreckage-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:43.557Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/sentences/the-wreckage-is-old-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fsentences%2Fthe-wreckage-is-old-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:44.478Z"
+        }
+      }
+    },
+    {
+      "word": "cannon",
+      "cn": "大炮",
+      "picture": "🛞",
+      "sentence": "The cannon is heavy.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/military-museum/words/cannon-v1.webp",
+        "url": "/api/assets?key=scenes%2Fmilitary-museum%2Fwords%2Fcannon-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: historic cannon as a museum display object, no firing, no smoke\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:36:10.760Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/words/cannon-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fwords%2Fcannon-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:45.423Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/sentences/the-cannon-is-heavy-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fsentences%2Fthe-cannon-is-heavy-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:46.488Z"
+        }
+      }
+    },
+    {
+      "word": "machine gun",
+      "cn": "机枪",
+      "picture": "🔧",
+      "sentence": "The machine gun is on display.",
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/military-museum/words/machine-gun-v1.webp",
+        "url": "/api/assets?key=scenes%2Fmilitary-museum%2Fwords%2Fmachine-gun-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: historic machine gun as an inert museum display object on a simple stand, no firing, no bullets, no person\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": "512",
+        "height": "512",
+        "updatedAt": "2026-07-01T02:36:11.553Z"
+      },
+      "audio": {
+        "word": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/words/machine-gun-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fwords%2Fmachine-gun-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:47.518Z"
+        },
+        "sentence": {
+          "status": "ready",
+          "storageKey": "scenes/military-museum/audio/sentences/the-machine-gun-is-on-display-v1.mp3",
+          "url": "/api/assets?key=scenes%2Fmilitary-museum%2Faudio%2Fsentences%2Fthe-machine-gun-is-on-display-v1.mp3&v=1",
+          "version": 1,
+          "updatedAt": "2026-07-01T02:36:48.446Z"
+        }
+      }
+    }
+  ]
+}
