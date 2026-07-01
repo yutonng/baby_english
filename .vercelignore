@@ -11,3 +11,4 @@ www/
 *.apk
 device-screen*.png
 node_modules/
+audio/

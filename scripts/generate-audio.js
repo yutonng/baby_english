@@ -3,11 +3,15 @@ const { mkdir, readFile, stat } = require("node:fs/promises");
 const { join } = require("node:path");
 
 const rootDir = join(__dirname, "..");
-const appFile = join(rootDir, "app.js");
 const publishedScenesFile = join(rootDir, "data", "scenes.published.json");
 const audioDir = join(rootDir, "audio");
 const pythonPackagesDir = join(rootDir, ".python-packages");
-const voice = "en-US-JennyNeural";
+const apiBase = (process.env.CONTENT_API_BASE || "").replace(/\/$/, "");
+const languageVoices = {
+  "zh-CN": "zh-CN-XiaoxiaoNeural",
+  "en-US": "en-US-JennyNeural",
+  "ja-JP": "ja-JP-NanamiNeural",
+};
 
 function run(command, args, options = {}) {
   return new Promise((resolve, reject) => {
@@ -22,7 +26,7 @@ function run(command, args, options = {}) {
 }
 
 function slugify(text) {
-  return text
+  return String(text || "")
     .toLowerCase()
     .replace(/&/g, " and ")
     .replace(/[^a-z0-9]+/g, "-")
@@ -38,36 +42,23 @@ async function hasUsableAudio(path) {
   }
 }
 
-function readBundledScenes(source) {
-  const start = source.indexOf("const scenes = ");
-  const end = source.indexOf("];", start);
-  if (start === -1 || end === -1) {
-    return null;
-  }
-
-  const scenesCode = source.slice(start + "const scenes = ".length, end + 1);
-  return Function(`"use strict"; return (${scenesCode});`)();
-}
-
 async function readScenes() {
-  try {
-    return JSON.parse(await readFile(publishedScenesFile, "utf8"));
-  } catch (error) {
-    if (error.code !== "ENOENT") throw error;
+  if (apiBase) {
+    const response = await fetch(`${apiBase}/api/scenes/published`);
+    if (!response.ok) {
+      throw new Error(`Failed to read remote scenes: ${response.status} ${await response.text()}`);
+    }
+    return response.json();
   }
-
-  const source = await readFile(appFile, "utf8");
-  const scenes = readBundledScenes(source);
-  if (!scenes) throw new Error("Could not find scenes in data/scenes.published.json or app.js");
-  return scenes;
+  return JSON.parse(await readFile(publishedScenesFile, "utf8"));
 }
 
-async function makeMp3(text, outputPath) {
+async function makeMp3(text, outputPath, language) {
   await run("python3", [
     "-m",
     "edge_tts",
     "--voice",
-    voice,
+    languageVoices[language],
     "--rate=-8%",
     "--text",
     text,
@@ -81,46 +72,50 @@ async function makeMp3(text, outputPath) {
   });
 }
 
+function getLanguageContent(item, language) {
+  return {
+    word: item.i18n?.[language]?.word || (language === "zh-CN" ? item.cn : item.word),
+    sentence: item.i18n?.[language]?.sentence || item.sentence,
+  };
+}
+
 async function main() {
   const scenes = await readScenes();
-  const words = new Map();
-  const sentences = new Map();
+  const taskMap = new Map();
 
   for (const scene of scenes) {
-    for (const item of scene.words) {
-      words.set(slugify(item.word), item.word);
-      sentences.set(slugify(item.sentence), item.sentence);
+    for (const item of scene.words || []) {
+      const concept = slugify(item.word);
+      if (!concept) continue;
+      for (const language of Object.keys(languageVoices)) {
+        const content = getLanguageContent(item, language);
+        if (content.word) taskMap.set(`${language}:words:${concept}`, { language, kind: "words", concept, text: content.word });
+        if (content.sentence) taskMap.set(`${language}:sentences:${concept}`, { language, kind: "sentences", concept, text: content.sentence });
+      }
     }
   }
 
-  await mkdir(join(audioDir, "words"), { recursive: true });
-  await mkdir(join(audioDir, "sentences"), { recursive: true });
-
+  const tasks = [...taskMap.values()];
   let created = 0;
   let skipped = 0;
 
-  for (const [slug, text] of words) {
-    const outputPath = join(audioDir, "words", `${slug}.mp3`);
+  for (const [index, task] of tasks.entries()) {
+    const dir = join(audioDir, task.language, task.kind);
+    const outputPath = join(dir, `${task.concept}.mp3`);
+    await mkdir(dir, { recursive: true });
     if (await hasUsableAudio(outputPath)) {
       skipped += 1;
       continue;
     }
-    await makeMp3(text, outputPath);
+    await makeMp3(task.text, outputPath, task.language);
     created += 1;
-  }
-
-  for (const [slug, text] of sentences) {
-    const outputPath = join(audioDir, "sentences", `${slug}.mp3`);
-    if (await hasUsableAudio(outputPath)) {
-      skipped += 1;
-      continue;
+    if (created % 20 === 0 || index === tasks.length - 1) {
+      console.log(`Audio progress ${index + 1}/${tasks.length}. Created ${created}, skipped ${skipped}.`);
     }
-    await makeMp3(text, outputPath);
-    created += 1;
   }
 
   console.log(`Audio ready. Created ${created}, skipped ${skipped}.`);
-  console.log(`Words: ${words.size}, sentences: ${sentences.size}.`);
+  console.log(`Tasks: ${tasks.length}.`);
 }
 
 main().catch((error) => {

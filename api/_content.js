@@ -239,10 +239,19 @@ function normalizeAudioAsset(audio) {
 
 function normalizeAudio(audio) {
   const value = audio || {};
-  return {
+  const normalized = {
     word: normalizeAudioAsset(value.word || value.wordAudio),
     sentence: normalizeAudioAsset(value.sentence || value.sentenceAudio),
   };
+  for (const language of ["zh-CN", "en-US", "ja-JP"]) {
+    if (value[language]) {
+      normalized[language] = {
+        word: normalizeAudioAsset(value[language].word || value[language].wordAudio),
+        sentence: normalizeAudioAsset(value[language].sentence || value[language].sentenceAudio),
+      };
+    }
+  }
+  return normalized;
 }
 
 function normalizeWord(word) {
@@ -299,10 +308,13 @@ function validateScene(scene, options = {}) {
     }
 
     if (options.requireReadyAudio) {
-      if (word.audio?.word?.status !== "ready") errors.push(`${label} 的单词音频还没有 ready`);
-      if (!word.audio?.word?.url && !word.audio?.word?.storageKey) errors.push(`${label} 缺少服务端单词音频地址`);
-      if (word.audio?.sentence?.status !== "ready") errors.push(`${label} 的例句音频还没有 ready`);
-      if (!word.audio?.sentence?.url && !word.audio?.sentence?.storageKey) errors.push(`${label} 缺少服务端例句音频地址`);
+      for (const language of ["zh-CN", "en-US", "ja-JP"]) {
+        const audio = word.audio?.[language] || {};
+        if (audio.word?.status !== "ready") errors.push(`${label} 的 ${language} 单词音频还没有 ready`);
+        if (!audio.word?.url && !audio.word?.storageKey) errors.push(`${label} 缺少 ${language} 服务端单词音频地址`);
+        if (audio.sentence?.status !== "ready") errors.push(`${label} 的 ${language} 例句音频还没有 ready`);
+        if (!audio.sentence?.url && !audio.sentence?.storageKey) errors.push(`${label} 缺少 ${language} 服务端例句音频地址`);
+      }
     }
   }
 
@@ -329,6 +341,18 @@ function toPublishedScene(scene) {
       audio: {
         word: word.audio?.word?.url || word.audio?.word?.storageKey || "",
         sentence: word.audio?.sentence?.url || word.audio?.sentence?.storageKey || "",
+        "zh-CN": {
+          word: word.audio?.["zh-CN"]?.word?.url || word.audio?.["zh-CN"]?.word?.storageKey || "",
+          sentence: word.audio?.["zh-CN"]?.sentence?.url || word.audio?.["zh-CN"]?.sentence?.storageKey || "",
+        },
+        "en-US": {
+          word: word.audio?.["en-US"]?.word?.url || word.audio?.["en-US"]?.word?.storageKey || "",
+          sentence: word.audio?.["en-US"]?.sentence?.url || word.audio?.["en-US"]?.sentence?.storageKey || "",
+        },
+        "ja-JP": {
+          word: word.audio?.["ja-JP"]?.word?.url || word.audio?.["ja-JP"]?.word?.storageKey || "",
+          sentence: word.audio?.["ja-JP"]?.sentence?.url || word.audio?.["ja-JP"]?.sentence?.storageKey || "",
+        },
       },
       audioVersion: Math.max(Number(word.audio?.word?.version || 1), Number(word.audio?.sentence?.version || 1)),
     })),

@@ -3,10 +3,12 @@ const { put } = require("@vercel/blob");
 const {
   collectJson,
   readDrafts,
+  readPublished,
   requireAdmin,
   sendError,
   sendJson,
   writeDrafts,
+  writePublished,
 } = require("../../_content");
 
 function getBlobToken() {
@@ -20,6 +22,85 @@ function slugify(value) {
     .replace(/&/g, " and ")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+}
+
+async function applyAudioItem({ scenes, token, item, metadataOnly }) {
+  const sceneId = String(item.sceneId || "").trim();
+  const wordName = String(item.word || "").trim();
+  const kind = String(item.kind || "").trim();
+  const hasExplicitLanguage = Boolean(item.language);
+  const language = String(item.language || "en-US").trim();
+  const dataBase64 = String(item.dataBase64 || "").trim();
+
+  if (!sceneId) throw Object.assign(new Error("缺少 sceneId"), { statusCode: 400 });
+  if (!["word", "sentence"].includes(kind)) throw Object.assign(new Error("音频 kind 必须是 word 或 sentence"), { statusCode: 400 });
+  if (!["zh-CN", "en-US", "ja-JP"].includes(language)) throw Object.assign(new Error("不支持的音频语言"), { statusCode: 400 });
+  if (!metadataOnly && !dataBase64) throw Object.assign(new Error("缺少音频数据"), { statusCode: 400 });
+
+  const scene = scenes.find((candidate) => candidate.id === sceneId);
+  if (!scene) throw Object.assign(new Error(`找不到场景：${sceneId}`), { statusCode: 404 });
+
+  const wordIndex =
+    item.wordIndex === undefined
+      ? scene.words.findIndex((candidate) => String(candidate.word || "").toLowerCase() === wordName.toLowerCase())
+      : Number(item.wordIndex);
+  const word = scene.words[wordIndex];
+  if (!word) throw Object.assign(new Error(`找不到对应单词：${sceneId}/${wordName}`), { statusCode: 404 });
+
+  const audio = word.audio || {};
+  const languageAudio = audio[language] || {};
+  const current = languageAudio[kind] || {};
+  const currentVersion = Number(current.version || 1);
+  const nextVersion = Number(item.version || (current.status === "ready" && !metadataOnly ? currentVersion + 1 : currentVersion));
+  const maxBytes = 512 * 1024;
+
+  const storageKey = path.posix.join(
+    "scenes",
+    slugify(sceneId),
+    "audio",
+    language,
+    kind === "word" ? "words" : "sentences",
+    `${slugify(word.word)}-v${nextVersion}.mp3`
+  );
+  if (!metadataOnly) {
+    const audioBuffer = Buffer.from(dataBase64, "base64");
+    if (!audioBuffer.length || audioBuffer.length > maxBytes) throw Object.assign(new Error("音频大小不合法"), { statusCode: 400 });
+    await put(storageKey, audioBuffer, {
+      access: "private",
+      allowOverwrite: true,
+      contentType: "audio/mpeg",
+      token,
+    });
+  }
+  const audioUrl = `/api/assets?key=${encodeURIComponent(storageKey)}&v=${nextVersion}`;
+  const updatedAt = new Date().toISOString();
+
+  word.audio = {
+    ...audio,
+    ...(!hasExplicitLanguage
+      ? {
+          [kind]: {
+            status: "ready",
+            storageKey,
+            url: audioUrl,
+            version: nextVersion,
+            updatedAt,
+          },
+        }
+      : {}),
+    [language]: {
+      ...languageAudio,
+      [kind]: {
+        status: "ready",
+        storageKey,
+        url: audioUrl,
+        version: nextVersion,
+        updatedAt,
+      },
+    },
+  };
+  scene.updatedAt = updatedAt;
+  return word;
 }
 
 module.exports = async function handler(req, res) {
@@ -37,61 +118,33 @@ module.exports = async function handler(req, res) {
   }
 
   const body = await collectJson(req);
-  const sceneId = String(body.sceneId || "").trim();
-  const wordName = String(body.word || "").trim();
-  const kind = String(body.kind || "").trim();
-  const dataBase64 = String(body.dataBase64 || "").trim();
+  const target = String(body.target || "draft").trim();
+  const metadataOnly = Boolean(body.metadataOnly);
 
-  if (!sceneId) return sendError(res, 400, "缺少 sceneId");
-  if (!["word", "sentence"].includes(kind)) return sendError(res, 400, "音频 kind 必须是 word 或 sentence");
-  if (!dataBase64) return sendError(res, 400, "缺少音频数据");
+  if (!["draft", "published"].includes(target)) return sendError(res, 400, "target 必须是 draft 或 published");
 
-  const drafts = await readDrafts();
-  const scene = drafts.find((item) => item.id === sceneId);
-  if (!scene) return sendError(res, 404, `找不到草稿：${sceneId}`);
+  const scenes = target === "published" ? await readPublished() : await readDrafts();
+  const items = Array.isArray(body.items) ? body.items : [body];
+  const maxItems = metadataOnly ? 2000 : 30;
+  if (!items.length || items.length > maxItems) return sendError(res, 400, `items 数量必须在 1 到 ${maxItems} 之间`);
 
-  const wordIndex =
-    body.wordIndex === undefined
-      ? scene.words.findIndex((item) => String(item.word || "").toLowerCase() === wordName.toLowerCase())
-      : Number(body.wordIndex);
-  const word = scene.words[wordIndex];
-  if (!word) return sendError(res, 404, "找不到对应单词");
+  let lastWord = null;
+  try {
+    for (const item of items) {
+      lastWord = await applyAudioItem({ scenes, token, item, metadataOnly });
+    }
+  } catch (error) {
+    return sendError(res, error.statusCode || 500, error.message || "音频上传失败");
+  }
 
-  const audio = word.audio || {};
-  const current = audio[kind] || {};
-  const currentVersion = Number(current.version || 1);
-  const nextVersion = current.status === "ready" ? currentVersion + 1 : currentVersion;
-  const audioBuffer = Buffer.from(dataBase64, "base64");
-  const maxBytes = 512 * 1024;
-  if (!audioBuffer.length || audioBuffer.length > maxBytes) return sendError(res, 400, "音频大小不合法");
-
-  const storageKey = path.posix.join(
-    "scenes",
-    slugify(sceneId),
-    "audio",
-    kind === "word" ? "words" : "sentences",
-    `${slugify(kind === "word" ? word.word : word.sentence)}-v${nextVersion}.mp3`
-  );
-  await put(storageKey, audioBuffer, {
-    access: "private",
-    allowOverwrite: true,
-    contentType: "audio/mpeg",
-    token,
-  });
-  const audioUrl = `/api/assets?key=${encodeURIComponent(storageKey)}&v=${nextVersion}`;
-
-  word.audio = {
-    ...audio,
-    [kind]: {
-      status: "ready",
-      storageKey,
-      url: audioUrl,
-      version: nextVersion,
-      updatedAt: new Date().toISOString(),
-    },
-  };
-  scene.updatedAt = new Date().toISOString();
-
-  await writeDrafts(drafts);
-  sendJson(res, 200, word);
+  if (target === "published") {
+    await writePublished(scenes);
+  } else {
+    await writeDrafts(scenes);
+  }
+  if (Array.isArray(body.items)) {
+    sendJson(res, 200, { uploaded: items.length });
+  } else {
+    sendJson(res, 200, lastWord);
+  }
 };

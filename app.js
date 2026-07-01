@@ -1,6 +1,50 @@
 let scenes = [];
 const sceneCacheKey = "little-english-published-scenes";
+const languageSettingsKey = "little-english-language-settings";
 const APP_VERSION = "0.1.0";
+const SUPPORTED_LANGUAGES = [
+  { code: "zh-CN", label: "中文" },
+  { code: "en-US", label: "English" },
+  { code: "ja-JP", label: "日本語" },
+];
+const UI_TEXT = {
+  "zh-CN": {
+    settings: "设置",
+    version: "版本号",
+    sourceLanguage: "源语言",
+    targetLanguage: "目标语言",
+    privacy: "隐私协议",
+    searchPlaceholder: "搜索场景或单词",
+    emptyScenes: "还没有可用场景。",
+    noSearchResults: "没有找到对应内容。",
+    audioUnavailable: "这个浏览器不能播放朗读。请确认音频文件已部署，或换 Chrome/Safari 试试。",
+    speechFailed: "朗读没有启动。请确认音频文件已部署，或换 Chrome/Safari 试试。",
+  },
+  "en-US": {
+    settings: "Settings",
+    version: "Version",
+    sourceLanguage: "Source language",
+    targetLanguage: "Target language",
+    privacy: "Privacy Policy",
+    searchPlaceholder: "Search scenes or words",
+    emptyScenes: "No scenes yet.",
+    noSearchResults: "No matching content.",
+    audioUnavailable: "This browser cannot play speech. Please check audio files or try Chrome/Safari.",
+    speechFailed: "Speech did not start. Please check audio files or try Chrome/Safari.",
+  },
+  "ja-JP": {
+    settings: "設定",
+    version: "バージョン",
+    sourceLanguage: "母語",
+    targetLanguage: "学習言語",
+    privacy: "プライバシーポリシー",
+    searchPlaceholder: "シーンや単語を検索",
+    emptyScenes: "利用できるシーンはまだありません。",
+    noSearchResults: "一致する内容がありません。",
+    audioUnavailable: "このブラウザでは音声を再生できません。音声ファイルを確認するか、Chrome/Safari をお試しください。",
+    speechFailed: "音声が開始されませんでした。音声ファイルを確認するか、Chrome/Safari をお試しください。",
+  },
+};
 const SCENE_COLOR_PALETTE = [
   "#FFE2A3",
   "#E3D2FF",
@@ -28,6 +72,10 @@ function getContentApiBase() {
 }
 
 function normalizeRemoteAssetUrl(assetUrl, word) {
+  if (assetUrl && typeof assetUrl === "object") {
+    return normalizeRemoteAssetUrl(assetUrl.url || assetUrl.storageKey || "", word);
+  }
+
   if (!assetUrl || /^https?:\/\//i.test(assetUrl) || assetUrl.startsWith("./") || assetUrl.startsWith("data:")) {
     return assetUrl;
   }
@@ -45,11 +93,21 @@ function normalizeRemoteImageUrl(imageUrl, word) {
 
 function normalizeRemoteAudio(audio, word) {
   if (!audio || typeof audio !== "object") return audio || null;
-  return {
-    ...audio,
-    word: normalizeRemoteAssetUrl(audio.word, word),
-    sentence: normalizeRemoteAssetUrl(audio.sentence, word),
-  };
+  const normalized = {};
+  for (const [key, value] of Object.entries(audio)) {
+    if (value && typeof value === "object" && ("word" in value || "sentence" in value)) {
+      normalized[key] = {
+        ...value,
+        word: normalizeRemoteAssetUrl(value.word, word),
+        sentence: normalizeRemoteAssetUrl(value.sentence, word),
+      };
+    } else {
+      normalized[key] = normalizeRemoteAssetUrl(value, word);
+    }
+  }
+  if (audio.word) normalized.word = normalizeRemoteAssetUrl(audio.word, word);
+  if (audio.sentence) normalized.sentence = normalizeRemoteAssetUrl(audio.sentence, word);
+  return normalized;
 }
 
 function normalizeSceneImages(items) {
@@ -141,6 +199,12 @@ const settingsButton = document.querySelector("#settingsButton");
 const settingsSheet = document.querySelector("#settingsSheet");
 const closeSettings = document.querySelector("#closeSettings");
 const versionText = document.querySelector("#versionText");
+const settingsTitle = document.querySelector("#settingsTitle");
+const sourceLanguageLabel = document.querySelector("#sourceLanguageLabel");
+const targetLanguageLabel = document.querySelector("#targetLanguageLabel");
+const sourceLanguageSelect = document.querySelector("#sourceLanguageSelect");
+const targetLanguageSelect = document.querySelector("#targetLanguageSelect");
+const privacySummary = document.querySelector("#privacySummary");
 
 const AppEnv = Object.freeze({
   buildType: window.APP_BUILD_TYPE || "web",
@@ -165,47 +229,120 @@ let isRestoringHistory = false;
 let sceneSearchQuery = "";
 let wordBackGesture = null;
 let sceneBackGesture = null;
+let languageSettings = readLanguageSettings();
+
+function normalizeLanguage(language) {
+  const value = String(language || "");
+  if (value.startsWith("zh")) return "zh-CN";
+  if (value.startsWith("ja")) return "ja-JP";
+  if (value.startsWith("en")) return "en-US";
+  return "";
+}
+
+function getDefaultSourceLanguage() {
+  return normalizeLanguage(navigator.language) || "zh-CN";
+}
+
+function getDefaultTargetLanguage(sourceLanguage) {
+  return sourceLanguage === "en-US" ? "zh-CN" : "en-US";
+}
+
+function readLanguageSettings() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(languageSettingsKey) || "{}");
+    const sourceLanguage = normalizeLanguage(saved.sourceLanguage) || getDefaultSourceLanguage();
+    const targetLanguage = normalizeLanguage(saved.targetLanguage) || getDefaultTargetLanguage(sourceLanguage);
+    return {
+      sourceLanguage,
+      targetLanguage: targetLanguage === sourceLanguage ? getDefaultTargetLanguage(sourceLanguage) : targetLanguage,
+    };
+  } catch {
+    const sourceLanguage = getDefaultSourceLanguage();
+    return { sourceLanguage, targetLanguage: getDefaultTargetLanguage(sourceLanguage) };
+  }
+}
+
+function saveLanguageSettings() {
+  localStorage.setItem(languageSettingsKey, JSON.stringify(languageSettings));
+}
+
+function t(key) {
+  return UI_TEXT[languageSettings.sourceLanguage]?.[key] || UI_TEXT["en-US"][key] || key;
+}
+
+function getSceneText(scene, language) {
+  return scene.i18n?.[language]?.title || (language === "zh-CN" ? scene.title : scene.subtitle) || scene.title || scene.subtitle || "";
+}
+
+function getWordContent(item, language) {
+  const fallbackWord = language === "zh-CN" ? item.cn : item.word;
+  const fallbackSentence = language === "en-US" ? item.sentence : "";
+  return {
+    word: item.i18n?.[language]?.word || fallbackWord || item.word || item.cn || "",
+    sentence: item.i18n?.[language]?.sentence || fallbackSentence || item.sentence || "",
+  };
+}
+
+function getTargetWord(item) {
+  return getWordContent(item, languageSettings.targetLanguage);
+}
+
+function getSourceWord(item) {
+  return getWordContent(item, languageSettings.sourceLanguage);
+}
+
+function getConceptSlug(item) {
+  return slugify(item.word || item.i18n?.["en-US"]?.word || item.cn || "");
+}
 
 function renderScenes() {
   if (scenes.length === 0) {
-    sceneGrid.innerHTML = '<p class="empty-state">还没有可用场景。</p>';
+    sceneGrid.innerHTML = `<p class="empty-state">${t("emptyScenes")}</p>`;
     return;
   }
 
   sceneGrid.innerHTML = scenes
     .map(
-      (scene, index) => `
+      (scene, index) => {
+        const sourceTitle = getSceneText(scene, languageSettings.sourceLanguage);
+        const targetTitle = getSceneText(scene, languageSettings.targetLanguage);
+        return `
         <button class="scene-card" type="button" data-scene="${scene.id}" style="--accent-a: ${scene.colors[0]}; --accent-b: ${scene.colors[1]}; --tilt: ${SCENE_TILTS[index % SCENE_TILTS.length]}deg">
           <span class="scene-art" aria-hidden="true">${scene.icon}</span>
           <span>
-            <h3>${scene.title}</h3>
-            <p>${scene.subtitle}<span class="word-count-badge">${scene.words.length} words</span></p>
+            <h3>${sourceTitle}</h3>
+            <p>${targetTitle}<span class="word-count-badge">${scene.words.length} words</span></p>
           </span>
           <span class="scene-arrow" aria-hidden="true">›</span>
         </button>
-      `
+      `;
+      }
     )
     .join("");
 }
 
 function renderSceneCards(target, items) {
   if (items.length === 0) {
-    target.innerHTML = '<p class="empty-state">没有找到对应内容。</p>';
+    target.innerHTML = `<p class="empty-state">${t("noSearchResults")}</p>`;
     return;
   }
 
   target.innerHTML = items
     .map(
-      (scene, index) => `
+      (scene, index) => {
+        const sourceTitle = getSceneText(scene, languageSettings.sourceLanguage);
+        const targetTitle = getSceneText(scene, languageSettings.targetLanguage);
+        return `
         <button class="scene-card" type="button" data-scene="${scene.id}" style="--accent-a: ${scene.colors[0]}; --accent-b: ${scene.colors[1]}; --tilt: ${SCENE_TILTS[index % SCENE_TILTS.length]}deg">
           <span class="scene-art" aria-hidden="true">${scene.icon}</span>
           <span>
-            <h3>${scene.title}</h3>
-            <p>${scene.subtitle}<span class="word-count-badge">${scene.words.length} words</span></p>
+            <h3>${sourceTitle}</h3>
+            <p>${targetTitle}<span class="word-count-badge">${scene.words.length} words</span></p>
           </span>
           <span class="scene-arrow" aria-hidden="true">›</span>
         </button>
-      `
+      `;
+      }
     )
     .join("");
 }
@@ -215,9 +352,21 @@ function getSearchMatches(query) {
   if (!normalizedQuery) return scenes;
 
   return scenes.filter((scene) => {
-    const sceneText = `${scene.title} ${scene.subtitle}`.toLowerCase();
+    const sceneText = [
+      scene.title,
+      scene.subtitle,
+      ...SUPPORTED_LANGUAGES.map((language) => getSceneText(scene, language.code)),
+    ].join(" ").toLowerCase();
     const wordsText = (scene.words || [])
-      .map((word) => `${word.word} ${word.cn}`)
+      .map((word) => [
+        word.word,
+        word.cn,
+        word.sentence,
+        ...SUPPORTED_LANGUAGES.flatMap((language) => {
+          const content = getWordContent(word, language.code);
+          return [content.word, content.sentence];
+        }),
+      ].join(" "))
       .join(" ")
       .toLowerCase();
     return sceneText.includes(normalizedQuery) || wordsText.includes(normalizedQuery);
@@ -256,8 +405,53 @@ function clearSearch() {
   sceneSearchInput.focus();
 }
 
+function renderLanguageOptions(select, selectedValue) {
+  select.innerHTML = SUPPORTED_LANGUAGES
+    .map((language) => `<option value="${language.code}" ${language.code === selectedValue ? "selected" : ""}>${language.label}</option>`)
+    .join("");
+}
+
+function applyUiText() {
+  settingsTitle.textContent = t("settings");
+  sourceLanguageLabel.textContent = t("sourceLanguage");
+  targetLanguageLabel.textContent = t("targetLanguage");
+  privacySummary.textContent = t("privacy");
+  sceneSearchInput.placeholder = t("searchPlaceholder");
+  document.querySelector(".settings-row span").textContent = t("version");
+}
+
+function renderLanguageSettings() {
+  applyUiText();
+  renderLanguageOptions(sourceLanguageSelect, languageSettings.sourceLanguage);
+  renderLanguageOptions(targetLanguageSelect, languageSettings.targetLanguage);
+}
+
+function updateLanguageSettings(field, value) {
+  const normalized = normalizeLanguage(value);
+  if (!normalized) return;
+  languageSettings = {
+    ...languageSettings,
+    [field]: normalized,
+  };
+  if (languageSettings.sourceLanguage === languageSettings.targetLanguage) {
+    languageSettings.targetLanguage = getDefaultTargetLanguage(languageSettings.sourceLanguage);
+  }
+  saveLanguageSettings();
+  applyUiText();
+  renderLanguageSettings();
+  renderScenes();
+  renderSearchResults();
+  if (currentScene && !sceneView.classList.contains("is-hidden")) {
+    renderWords(currentScene);
+  }
+  if (currentWord && !wordSheet.classList.contains("is-hidden")) {
+    renderWordSheetContent(currentWord, currentScene);
+  }
+}
+
 function openSettings() {
   versionText.textContent = APP_VERSION;
+  renderLanguageSettings();
   settingsSheet.classList.remove("is-hidden");
   scrim.classList.remove("is-hidden");
 }
@@ -278,18 +472,20 @@ function renderPicture(item) {
 }
 
 function renderWords(scene) {
-  sceneTitle.textContent = scene.title;
-  sceneSubtitle.textContent = scene.subtitle;
+  sceneTitle.textContent = getSceneText(scene, languageSettings.sourceLanguage);
+  sceneSubtitle.textContent = getSceneText(scene, languageSettings.targetLanguage);
   wordGrid.innerHTML = scene.words
-    .map(
-      (item, index) => `
+    .map((item, index) => {
+      const target = getTargetWord(item);
+      const source = getSourceWord(item);
+      return `
         <button class="word-card" type="button" data-word="${index}" style="--accent-a: ${scene.colors[0]}; --accent-b: ${scene.colors[1]}">
           <span class="picture-frame" aria-hidden="true">${renderPicture(item)}</span>
-          <strong>${item.word}</strong>
-          <span>${item.cn}</span>
+          <strong>${target.word}</strong>
+          <span>${source.word}</span>
         </button>
-      `
-    )
+      `;
+    })
     .join("");
 }
 
@@ -314,9 +510,9 @@ function showHome(options = {}) {
   }
 }
 
-function getEnglishVoice() {
-  const preferred = voices.find((voice) => voice.lang === "en-US" && /female|samantha|victoria|ava/i.test(voice.name));
-  return preferred || voices.find((voice) => voice.lang === "en-US") || voices.find((voice) => voice.lang.startsWith("en")) || null;
+function getPreferredVoice(language) {
+  const preferred = voices.find((voice) => voice.lang === language && /female|samantha|victoria|ava|kyoko|tingting|mei/i.test(voice.name));
+  return preferred || voices.find((voice) => voice.lang === language) || voices.find((voice) => voice.lang.startsWith(language.split("-")[0])) || null;
 }
 
 function slugify(text) {
@@ -327,11 +523,14 @@ function slugify(text) {
     .replace(/^-+|-+$/g, "");
 }
 
-function getAudioUrl(text, kind, item) {
+function getAudioUrl(kind, item) {
   if (!kind) return "";
-  const remoteUrl = kind === "words" ? item?.audio?.word : item?.audio?.sentence;
+  const languageAudio = item?.audio?.[languageSettings.targetLanguage];
+  const remoteUrl = kind === "words" ? languageAudio?.word || item?.audio?.word : languageAudio?.sentence || item?.audio?.sentence;
   if (remoteUrl) return remoteUrl;
-  return `./audio/${kind}/${slugify(text)}.mp3`;
+  const concept = getConceptSlug(item);
+  if (!concept) return "";
+  return `./audio/${languageSettings.targetLanguage}/${kind}/${concept}.mp3`;
 }
 
 function showAudioMessage(message) {
@@ -368,7 +567,7 @@ function waitForVoices(timeout = 900) {
 }
 
 function playLocalAudio(text, target, kind, item) {
-  const audioUrl = getAudioUrl(text, kind, item);
+  const audioUrl = getAudioUrl(kind, item);
   if (!audioUrl) return Promise.reject(new Error("No local audio path"));
 
   if (activeAudio) {
@@ -417,7 +616,7 @@ async function speak(text, target, kind, item, retried = false) {
   }
 
   if (!canUseSpeech()) {
-    showAudioMessage("这个浏览器不能播放朗读。请确认音频文件已部署，或换 Chrome/Safari 试试。");
+    showAudioMessage(t("audioUnavailable"));
     return;
   }
 
@@ -431,11 +630,11 @@ async function speak(text, target, kind, item, retried = false) {
   window.speechSynthesis.resume();
 
   const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "en-US";
+  utterance.lang = languageSettings.targetLanguage;
   utterance.rate = text.split(" ").length > 2 ? 0.78 : 0.82;
   utterance.pitch = 1.08;
 
-  const voice = getEnglishVoice();
+  const voice = getPreferredVoice(languageSettings.targetLanguage);
   if (voice) utterance.voice = voice;
 
   if (target) target.classList.add("is-speaking");
@@ -454,7 +653,7 @@ async function speak(text, target, kind, item, retried = false) {
         }, 180);
         return;
       }
-      showAudioMessage("朗读没有启动。请确认音频文件已部署，或换 Chrome/Safari 试试。");
+      showAudioMessage(t("speechFailed"));
       resolve();
     };
 
@@ -469,16 +668,22 @@ async function speak(text, target, kind, item, retried = false) {
   });
 }
 
+function renderWordSheetContent(item, scene) {
+  const target = getTargetWord(item);
+  sheetPicture.innerHTML = renderPicture(item);
+  sheetPicture.style.setProperty("--accent-a", scene.colors[0]);
+  sheetPicture.style.setProperty("--accent-b", scene.colors[1]);
+  sheetWord.textContent = target.word;
+  wordSoundText.textContent = target.word;
+  sheetSentence.textContent = target.sentence;
+}
+
 function openWordSheet(item, scene, options = {}) {
   if (!item || !scene) return;
   currentWord = item;
 
-  sheetPicture.innerHTML = renderPicture(item);
-  sheetPicture.style.setProperty("--accent-a", scene.colors[0]);
-  sheetPicture.style.setProperty("--accent-b", scene.colors[1]);
-  sheetWord.textContent = item.word;
-  wordSoundText.textContent = item.word;
-  sheetSentence.textContent = item.sentence;
+  const target = getTargetWord(item);
+  renderWordSheetContent(item, scene);
   wordSheet.classList.remove("is-hidden");
   scrim.classList.remove("is-hidden");
   if (!options.skipHistory) {
@@ -488,7 +693,7 @@ function openWordSheet(item, scene, options = {}) {
       `#${scene.id}/${slugify(item.word)}`
     );
   }
-  speak(item.word, wordSoundButton, "words", item);
+  speak(target.word, wordSoundButton, "words", item);
 }
 
 function closeWordSheet(options = {}) {
@@ -602,6 +807,7 @@ async function initApp() {
   currentWord = currentScene?.words?.[0] || null;
   versionText.textContent = APP_VERSION;
 
+  renderLanguageSettings();
   renderScenes();
   loadVoices();
   history.replaceState({ view: "home" }, "", location.pathname);
@@ -661,8 +867,8 @@ scrim.addEventListener("click", () => {
   }
   closeWordSheet();
 });
-wordSoundButton.addEventListener("click", () => currentWord && speak(currentWord.word, wordSoundButton, "words", currentWord));
-sentenceSoundButton.addEventListener("click", () => currentWord && speak(currentWord.sentence, sentenceSoundButton, "sentences", currentWord));
+wordSoundButton.addEventListener("click", () => currentWord && speak(getTargetWord(currentWord).word, wordSoundButton, "words", currentWord));
+sentenceSoundButton.addEventListener("click", () => currentWord && speak(getTargetWord(currentWord).sentence, sentenceSoundButton, "sentences", currentWord));
 searchButton.addEventListener("click", openSearchView);
 sceneSearchInput.addEventListener("input", () => {
   sceneSearchQuery = sceneSearchInput.value;
@@ -678,5 +884,7 @@ searchGrid.addEventListener("click", (event) => {
 });
 settingsButton.addEventListener("click", openSettings);
 closeSettings.addEventListener("click", closeSettingsSheet);
+sourceLanguageSelect.addEventListener("change", () => updateLanguageSettings("sourceLanguage", sourceLanguageSelect.value));
+targetLanguageSelect.addEventListener("change", () => updateLanguageSettings("targetLanguage", targetLanguageSelect.value));
 
 initApp();
