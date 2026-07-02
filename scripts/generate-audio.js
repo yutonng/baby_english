@@ -1,5 +1,5 @@
 const { execFile } = require("node:child_process");
-const { mkdir, readFile, stat } = require("node:fs/promises");
+const { mkdir, readFile, stat, writeFile } = require("node:fs/promises");
 const { join } = require("node:path");
 
 const rootDir = join(__dirname, "..");
@@ -33,10 +33,18 @@ function slugify(text) {
     .replace(/^-+|-+$/g, "");
 }
 
-async function hasUsableAudio(path) {
+async function hasUsableAudio(path, task) {
   try {
     const fileStat = await stat(path);
-    return fileStat.size > 1000;
+    if (fileStat.size <= 1000) return false;
+    if (task.kind !== "sentences") return true;
+
+    try {
+      const meta = JSON.parse(await readFile(`${path}.json`, "utf8"));
+      return meta.text === task.text && meta.language === task.language;
+    } catch {
+      return false;
+    }
   } catch {
     return false;
   }
@@ -103,11 +111,18 @@ async function main() {
     const dir = join(audioDir, task.language, task.kind);
     const outputPath = join(dir, `${task.concept}.mp3`);
     await mkdir(dir, { recursive: true });
-    if (await hasUsableAudio(outputPath)) {
+    if (await hasUsableAudio(outputPath, task)) {
       skipped += 1;
       continue;
     }
     await makeMp3(task.text, outputPath, task.language);
+    await writeFile(`${outputPath}.json`, JSON.stringify({
+      language: task.language,
+      kind: task.kind,
+      concept: task.concept,
+      text: task.text,
+      updatedAt: new Date().toISOString(),
+    }, null, 2));
     created += 1;
     if (created % 20 === 0 || index === tasks.length - 1) {
       console.log(`Audio progress ${index + 1}/${tasks.length}. Created ${created}, skipped ${skipped}.`);

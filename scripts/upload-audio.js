@@ -9,6 +9,7 @@ const adminToken = process.env.ADMIN_TOKEN || process.env.ADMIN_PASSWORD || "";
 const languages = ["zh-CN", "en-US", "ja-JP"];
 const requestTimeoutMs = Number(process.env.AUDIO_UPLOAD_TIMEOUT_MS || 30000);
 const batchSize = Number(process.env.AUDIO_UPLOAD_BATCH_SIZE || 20);
+const uploadKind = process.env.AUDIO_UPLOAD_KIND || "";
 
 function slugify(text) {
   return String(text || "")
@@ -126,6 +127,7 @@ async function main() {
       if (!concept) continue;
       for (const language of languages) {
         for (const kind of ["words", "sentences"]) {
+          if (uploadKind && kind !== uploadKind) continue;
           const filePath = join(audioDir, language, kind, `${concept}.mp3`);
           if (!(await fileExists(filePath))) {
             missing += 1;

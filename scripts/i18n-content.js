@@ -303,6 +303,11 @@ function normalizeI18n(value) {
 }
 
 function buildSceneI18n(scene) {
+  const existingJapaneseTitle = scene.i18n?.["ja-JP"]?.title || "";
+  const englishTitle = scene.subtitle || scene.title || "";
+  const japaneseTitle = SCENE_TITLES[scene.id]?.["ja-JP"] || englishTitle;
+  const shouldReplaceJapaneseTitle =
+    !existingJapaneseTitle || existingJapaneseTitle.toLowerCase() === String(englishTitle).toLowerCase();
   return {
     ...normalizeI18n(scene.i18n),
     "zh-CN": {
@@ -312,7 +317,7 @@ function buildSceneI18n(scene) {
       title: scene.i18n?.["en-US"]?.title || SCENE_TITLES[scene.id]?.["en-US"] || scene.subtitle || scene.title || "",
     },
     "ja-JP": {
-      title: scene.i18n?.["ja-JP"]?.title || SCENE_TITLES[scene.id]?.["ja-JP"] || scene.subtitle || scene.title || "",
+      title: shouldReplaceJapaneseTitle ? japaneseTitle : existingJapaneseTitle,
     },
   };
 }

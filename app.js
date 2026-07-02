@@ -202,8 +202,8 @@ const versionText = document.querySelector("#versionText");
 const settingsTitle = document.querySelector("#settingsTitle");
 const sourceLanguageLabel = document.querySelector("#sourceLanguageLabel");
 const targetLanguageLabel = document.querySelector("#targetLanguageLabel");
-const sourceLanguageSelect = document.querySelector("#sourceLanguageSelect");
-const targetLanguageSelect = document.querySelector("#targetLanguageSelect");
+const sourceLanguageChoices = document.querySelector("#sourceLanguageChoices");
+const targetLanguageChoices = document.querySelector("#targetLanguageChoices");
 const privacySummary = document.querySelector("#privacySummary");
 
 const AppEnv = Object.freeze({
@@ -405,9 +405,23 @@ function clearSearch() {
   sceneSearchInput.focus();
 }
 
-function renderLanguageOptions(select, selectedValue) {
-  select.innerHTML = SUPPORTED_LANGUAGES
-    .map((language) => `<option value="${language.code}" ${language.code === selectedValue ? "selected" : ""}>${language.label}</option>`)
+function renderLanguageChoices(container, field, selectedValue) {
+  container.innerHTML = SUPPORTED_LANGUAGES
+    .map((language) => {
+      const isSelected = language.code === selectedValue;
+      return `
+        <button
+          class="language-choice ${isSelected ? "is-selected" : ""}"
+          type="button"
+          role="radio"
+          aria-checked="${isSelected ? "true" : "false"}"
+          data-language-field="${field}"
+          data-language-code="${language.code}"
+        >
+          <span>${language.label}</span>
+        </button>
+      `;
+    })
     .join("");
 }
 
@@ -422,8 +436,8 @@ function applyUiText() {
 
 function renderLanguageSettings() {
   applyUiText();
-  renderLanguageOptions(sourceLanguageSelect, languageSettings.sourceLanguage);
-  renderLanguageOptions(targetLanguageSelect, languageSettings.targetLanguage);
+  renderLanguageChoices(sourceLanguageChoices, "sourceLanguage", languageSettings.sourceLanguage);
+  renderLanguageChoices(targetLanguageChoices, "targetLanguage", languageSettings.targetLanguage);
 }
 
 function updateLanguageSettings(field, value) {
@@ -884,7 +898,10 @@ searchGrid.addEventListener("click", (event) => {
 });
 settingsButton.addEventListener("click", openSettings);
 closeSettings.addEventListener("click", closeSettingsSheet);
-sourceLanguageSelect.addEventListener("change", () => updateLanguageSettings("sourceLanguage", sourceLanguageSelect.value));
-targetLanguageSelect.addEventListener("change", () => updateLanguageSettings("targetLanguage", targetLanguageSelect.value));
+settingsSheet.addEventListener("click", (event) => {
+  const choice = event.target.closest("[data-language-field][data-language-code]");
+  if (!choice) return;
+  updateLanguageSettings(choice.dataset.languageField, choice.dataset.languageCode);
+});
 
 initApp();
