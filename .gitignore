@@ -14,5 +14,6 @@ build/
 *.jks
 keystore.properties
 release/
+audio/
 .vercel
 .env*
