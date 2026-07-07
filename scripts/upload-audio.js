@@ -1,15 +1,37 @@
 const { readFile, stat } = require("node:fs/promises");
+const { readFileSync } = require("node:fs");
 const { join } = require("node:path");
 
 const rootDir = join(__dirname, "..");
 const publishedScenesFile = join(rootDir, "data", "scenes.published.json");
 const audioDir = join(rootDir, "audio");
 const apiBase = (process.env.CONTENT_API_BASE || "https://babyeng.nihaoya.cloud").replace(/\/$/, "");
-const adminToken = process.env.ADMIN_TOKEN || process.env.ADMIN_PASSWORD || "";
+let adminToken = process.env.ADMIN_TOKEN || "";
 const languages = ["zh-CN", "en-US", "ja-JP"];
 const requestTimeoutMs = Number(process.env.AUDIO_UPLOAD_TIMEOUT_MS || 30000);
 const batchSize = Number(process.env.AUDIO_UPLOAD_BATCH_SIZE || 20);
 const uploadKind = process.env.AUDIO_UPLOAD_KIND || "";
+
+function parseEnv(filePath) {
+  const out = {};
+  try {
+    const text = readFileSync(filePath, "utf8");
+    for (const raw of text.split(/\r?\n/)) {
+      const line = raw.trim();
+      if (!line || line.startsWith("#") || !line.includes("=")) continue;
+      const index = line.indexOf("=");
+      const key = line.slice(0, index).trim();
+      let value = line.slice(index + 1).trim();
+      if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+        value = value.slice(1, -1);
+      }
+      out[key] = value;
+    }
+  } catch {
+    return out;
+  }
+  return out;
+}
 
 function slugify(text) {
   return String(text || "")
@@ -75,6 +97,41 @@ async function uploadAudioBatch(tasks) {
   }
 }
 
+async function requestJson(url, options = {}) {
+  const response = await fetch(url, options);
+  const text = await response.text();
+  let payload = {};
+  try {
+    payload = text ? JSON.parse(text) : {};
+  } catch {
+    payload = { raw: text };
+  }
+  if (!response.ok) {
+    throw new Error(payload.error || `${response.status}: ${text}`);
+  }
+  return payload;
+}
+
+async function login() {
+  if (adminToken) return adminToken;
+  const env = {
+    ...parseEnv(join(rootDir, ".env.production.local")),
+    ...process.env,
+  };
+  if (env.ADMIN_TOKEN) return env.ADMIN_TOKEN;
+
+  const username = env.ADMIN_USERNAME || "";
+  const password = env.ADMIN_LOGIN_PASSWORD || env.ADMIN_PASSWORD || "";
+  if (!username || !password) throw new Error("Missing ADMIN_TOKEN or ADMIN_USERNAME/ADMIN_LOGIN_PASSWORD");
+
+  const payload = await requestJson(`${apiBase}/api/admin/login`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ username, password }),
+  });
+  return payload.token;
+}
+
 async function syncAudioMetadata(tasks) {
   const items = tasks.map(buildMetadataItem);
   const controller = new AbortController();
@@ -114,7 +171,7 @@ async function readScenes() {
 }
 
 async function main() {
-  if (!adminToken) throw new Error("Missing ADMIN_TOKEN or ADMIN_PASSWORD");
+  adminToken = await login();
   const scenes = await readScenes();
   const tasks = [];
   let uploaded = 0;

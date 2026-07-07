@@ -38,8 +38,21 @@ function getLegacyBlobClientOptions() {
   return {};
 }
 
+function getLegacyBlobClientOptionsList() {
+  const options = [];
+  const token = process.env.BLOB_READ_WRITE_TOKEN || process.env.CONTENT_BLOB_READ_WRITE_TOKEN || "";
+  if (token) options.push({ token });
+
+  const oidcToken = process.env.VERCEL_OIDC_TOKEN || "";
+  const storeId = process.env.BLOB_STORE_ID || process.env.CONTENT_BLOB_STORE_ID || "";
+  if (oidcToken && storeId) options.push({ oidcToken, storeId });
+
+  if (!options.length) options.push({});
+  return options;
+}
+
 function hasLegacyBlobCredentials() {
-  return Object.keys(getLegacyBlobClientOptions()).length > 0;
+  return getLegacyBlobClientOptionsList().some((options) => Object.keys(options).length > 0);
 }
 
 function isNotFoundError(error) {
@@ -65,8 +78,18 @@ async function bodyToBuffer(body) {
 }
 
 async function readLegacyBlobBuffer(ref) {
-  const options = getLegacyBlobClientOptions();
-  const attempts = /^https?:\/\//i.test(ref) ? [options] : [{ access: "private", ...options }, options];
+  if (/^https?:\/\//i.test(ref)) {
+    const response = await fetch(ref);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch legacy Blob URL ${ref}: ${response.status}`);
+    }
+    return Buffer.from(await response.arrayBuffer());
+  }
+
+  const attempts = getLegacyBlobClientOptionsList().flatMap((options) => [
+    { access: "private", ...options },
+    { access: "public", ...options },
+  ]);
   let lastError = null;
 
   for (const blobOptions of attempts) {
@@ -77,14 +100,6 @@ async function readLegacyBlobBuffer(ref) {
     } catch (error) {
       lastError = error;
     }
-  }
-
-  if (/^https?:\/\//i.test(ref)) {
-    const response = await fetch(ref);
-    if (!response.ok) {
-      throw new Error(`Failed to fetch legacy Blob URL ${ref}: ${response.status}`);
-    }
-    return Buffer.from(await response.arrayBuffer());
   }
 
   if (lastError) throw lastError;

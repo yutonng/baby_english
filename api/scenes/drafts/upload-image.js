@@ -98,7 +98,7 @@ module.exports = async function handler(req, res) {
   const storageKey = path.posix.join(
     "scenes",
     slugify(sceneId),
-    "words",
+    "images",
     `${slugify(word.word)}-v${nextVersion}${ext}`
   );
   const object = await putObject(storageKey, imageBuffer, {

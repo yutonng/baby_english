@@ -15,5 +15,16 @@ build/
 keystore.properties
 release/
 audio/
+backups/
+local-scene-backups/
+scene-drafts/
+output/
+app_store_pic/
+marketing-assets/
+*.apk
+device-screen*.png
+fruit-style-preview.html
+*.mp4
+*.MP4
 .vercel
 .env*
