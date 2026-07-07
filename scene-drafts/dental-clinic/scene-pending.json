@@ -1,0 +1,1044 @@
+{
+  "id": "dental-clinic",
+  "title": "牙科诊所",
+  "subtitle": "Dental Clinic",
+  "icon": "🦷",
+  "colors": [
+    "#BFEAD8",
+    "#BDE7F6"
+  ],
+  "status": "draft",
+  "i18n": {
+    "zh-CN": {
+      "title": "牙科诊所"
+    },
+    "en-US": {
+      "title": "Dental Clinic"
+    },
+    "ja-JP": {
+      "title": "歯医者さん"
+    }
+  },
+  "words": [
+    {
+      "word": "tooth",
+      "cn": "牙齿",
+      "picture": "🦷",
+      "sentence": "This is a tooth.",
+      "i18n": {
+        "zh-CN": {
+          "word": "牙齿",
+          "sentence": "这是牙齿。"
+        },
+        "en-US": {
+          "word": "tooth",
+          "sentence": "This is a tooth."
+        },
+        "ja-JP": {
+          "word": "歯",
+          "sentence": "これは歯です。"
+        }
+      },
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: single clean tooth\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "dentist",
+      "cn": "牙医",
+      "picture": "🧑‍⚕️",
+      "sentence": "This is a dentist.",
+      "i18n": {
+        "zh-CN": {
+          "word": "牙医",
+          "sentence": "这是牙医。"
+        },
+        "en-US": {
+          "word": "dentist",
+          "sentence": "This is a dentist."
+        },
+        "ja-JP": {
+          "word": "はいしゃさん",
+          "sentence": "これははいしゃさんです。"
+        }
+      },
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: friendly dentist in clean coat, standing, no tools\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "chair",
+      "cn": "牙科椅",
+      "picture": "💺",
+      "sentence": "This is a dental chair.",
+      "i18n": {
+        "zh-CN": {
+          "word": "牙科椅",
+          "sentence": "这是牙科椅。"
+        },
+        "en-US": {
+          "word": "chair",
+          "sentence": "This is a dental chair."
+        },
+        "ja-JP": {
+          "word": "しんさついす",
+          "sentence": "これはしんさついすです。"
+        }
+      },
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: dental chair\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "toothbrush",
+      "cn": "牙刷",
+      "picture": "🪥",
+      "sentence": "This is a toothbrush.",
+      "i18n": {
+        "zh-CN": {
+          "word": "牙刷",
+          "sentence": "这是牙刷。"
+        },
+        "en-US": {
+          "word": "toothbrush",
+          "sentence": "This is a toothbrush."
+        },
+        "ja-JP": {
+          "word": "はブラシ",
+          "sentence": "これははブラシです。"
+        }
+      },
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: toothbrush\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "toothpaste",
+      "cn": "牙膏",
+      "picture": "🪥",
+      "sentence": "This is toothpaste.",
+      "i18n": {
+        "zh-CN": {
+          "word": "牙膏",
+          "sentence": "这是牙膏。"
+        },
+        "en-US": {
+          "word": "toothpaste",
+          "sentence": "This is toothpaste."
+        },
+        "ja-JP": {
+          "word": "はみがきこ",
+          "sentence": "これははみがきこです。"
+        }
+      },
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: toothpaste tube, no text\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "mirror",
+      "cn": "小镜子",
+      "picture": "🪞",
+      "sentence": "This is a mirror.",
+      "i18n": {
+        "zh-CN": {
+          "word": "小镜子",
+          "sentence": "这是小镜子。"
+        },
+        "en-US": {
+          "word": "mirror",
+          "sentence": "This is a mirror."
+        },
+        "ja-JP": {
+          "word": "ミラー",
+          "sentence": "これはミラーです。"
+        }
+      },
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: small dental mirror\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "cup",
+      "cn": "杯子",
+      "picture": "🥤",
+      "sentence": "This is a cup.",
+      "i18n": {
+        "zh-CN": {
+          "word": "杯子",
+          "sentence": "这是杯子。"
+        },
+        "en-US": {
+          "word": "cup",
+          "sentence": "This is a cup."
+        },
+        "ja-JP": {
+          "word": "コップ",
+          "sentence": "これはコップです。"
+        }
+      },
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: simple rinsing cup\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "sink",
+      "cn": "洗手池",
+      "picture": "🚰",
+      "sentence": "This is a sink.",
+      "i18n": {
+        "zh-CN": {
+          "word": "洗手池",
+          "sentence": "这是洗手池。"
+        },
+        "en-US": {
+          "word": "sink",
+          "sentence": "This is a sink."
+        },
+        "ja-JP": {
+          "word": "シンク",
+          "sentence": "これはシンクです。"
+        }
+      },
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: clean small sink\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "mask",
+      "cn": "口罩",
+      "picture": "😷",
+      "sentence": "This is a mask.",
+      "i18n": {
+        "zh-CN": {
+          "word": "口罩",
+          "sentence": "这是口罩。"
+        },
+        "en-US": {
+          "word": "mask",
+          "sentence": "This is a mask."
+        },
+        "ja-JP": {
+          "word": "マスク",
+          "sentence": "これはマスクです。"
+        }
+      },
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: medical face mask\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "gloves",
+      "cn": "手套",
+      "picture": "🧤",
+      "sentence": "These are gloves.",
+      "i18n": {
+        "zh-CN": {
+          "word": "手套",
+          "sentence": "这是手套。"
+        },
+        "en-US": {
+          "word": "gloves",
+          "sentence": "These are gloves."
+        },
+        "ja-JP": {
+          "word": "てぶくろ",
+          "sentence": "これはてぶくろです。"
+        }
+      },
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: pair of medical gloves\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "light",
+      "cn": "诊疗灯",
+      "picture": "💡",
+      "sentence": "This is a dental light.",
+      "i18n": {
+        "zh-CN": {
+          "word": "诊疗灯",
+          "sentence": "这是诊疗灯。"
+        },
+        "en-US": {
+          "word": "light",
+          "sentence": "This is a dental light."
+        },
+        "ja-JP": {
+          "word": "ライト",
+          "sentence": "これはライトです。"
+        }
+      },
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: dental examination light\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "floss",
+      "cn": "牙线",
+      "picture": "🧵",
+      "sentence": "This is floss.",
+      "i18n": {
+        "zh-CN": {
+          "word": "牙线",
+          "sentence": "这是牙线。"
+        },
+        "en-US": {
+          "word": "floss",
+          "sentence": "This is floss."
+        },
+        "ja-JP": {
+          "word": "デンタルフロス",
+          "sentence": "これはデンタルフロスです。"
+        }
+      },
+      "image": {
+        "status": "pending",
+        "storageKey": "",
+        "url": "",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: dental floss container and floss, no text\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": null,
+        "height": null
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          },
+          "sentence": {
+            "status": "pending",
+            "storageKey": "",
+            "url": "",
+            "version": 1
+          }
+        }
+      }
+    }
+  ]
+}

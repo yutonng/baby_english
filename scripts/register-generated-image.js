@@ -1,7 +1,5 @@
 const { copyFile, mkdir, open, readFile, rename, rm, stat, writeFile } = require("node:fs/promises");
-const { createReadStream } = require("node:fs");
 const path = require("node:path");
-const { put } = require("@vercel/blob");
 
 const rootDir = path.join(__dirname, "..");
 const draftsPath = path.join(rootDir, "data", "scenes.drafts.json");
@@ -10,7 +8,6 @@ const uploadDir = path.join(rootDir, "server", "uploads");
 
 const contentApiBase = (process.env.CONTENT_API_BASE || "").replace(/\/$/, "");
 const adminToken = process.env.ADMIN_TOKEN || process.env.ADMIN_PASSWORD || "";
-const blobToken = process.env.BLOB_READ_WRITE_TOKEN || process.env.CONTENT_BLOB_READ_WRITE_TOKEN || "";
 
 function readArgs() {
   const args = new Map();
@@ -96,46 +93,30 @@ async function requestRemoteJson(url, options = {}) {
   return payload;
 }
 
+function getImageContentType(filePath) {
+  const ext = path.extname(filePath || "").toLowerCase();
+  if (ext === ".webp") return "image/webp";
+  if (ext === ".png") return "image/png";
+  if (ext === ".jpg" || ext === ".jpeg") return "image/jpeg";
+  throw new Error(`Unsupported image extension: ${ext || "(none)"}`);
+}
+
 async function registerRemoteImage({ sceneId, word, source, prompt, width, height }) {
-  if (!blobToken) {
-    throw new Error("BLOB_READ_WRITE_TOKEN or CONTENT_BLOB_READ_WRITE_TOKEN is required for remote image upload");
-  }
-
-  const content = await requestRemoteJson(`${contentApiBase}/api/content`);
-  const scene = (content.drafts || []).find((item) => item.id === sceneId);
-  if (!scene) throw new Error(`Remote draft scene not found: ${sceneId}`);
-
-  const wordIndex = scene.words.findIndex((item) => item.word.toLowerCase() === word.toLowerCase());
-  if (wordIndex === -1) throw new Error(`Word not found in remote ${sceneId}: ${word}`);
-
-  const currentImage = scene.words[wordIndex].image || {};
-  const currentVersion = Number(currentImage.version || 1);
-  const nextVersion = currentImage.status === "ready" ? currentVersion + 1 : currentVersion;
-  const ext = path.extname(source).toLowerCase() || ".png";
-  const storageKey = path.posix.join("scenes", slugify(sceneId), "words", `${slugify(word)}-v${nextVersion}${ext}`);
-  const blob = await put(storageKey, createReadStream(source), {
-    access: "public",
-    allowOverwrite: true,
-    token: blobToken,
-  });
-
-  const image = {
-    status: "ready",
-    storageKey,
-    url: blob.url,
-    prompt: prompt || currentImage.prompt || "",
-    version: nextVersion,
-    width,
-    height,
-    updatedAt: new Date().toISOString(),
-  };
-
-  await requestRemoteJson(`${contentApiBase}/api/scenes/drafts/image`, {
+  const wordResult = await requestRemoteJson(`${contentApiBase}/api/scenes/drafts/upload-image`, {
     method: "POST",
-    body: JSON.stringify({ sceneId, wordIndex, image }),
+    body: JSON.stringify({
+      sceneId,
+      word,
+      fileName: path.basename(source),
+      contentType: getImageContentType(source),
+      dataBase64: await readFile(source, "base64"),
+      prompt,
+      width,
+      height,
+    }),
   });
 
-  console.log(JSON.stringify(image, null, 2));
+  console.log(JSON.stringify(wordResult.image || wordResult, null, 2));
 }
 
 async function main() {

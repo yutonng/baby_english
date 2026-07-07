@@ -1,5 +1,4 @@
 const path = require("node:path");
-const { put } = require("@vercel/blob");
 const {
   collectJson,
   readDrafts,
@@ -8,10 +7,7 @@ const {
   sendJson,
   writeDrafts,
 } = require("../../_content");
-
-function getBlobToken() {
-  return process.env.BLOB_READ_WRITE_TOKEN || process.env.CONTENT_BLOB_READ_WRITE_TOKEN || "";
-}
+const { assertR2UploadConfig, putObject } = require("../../../lib/r2-storage");
 
 function slugify(value) {
   return String(value || "")
@@ -39,9 +35,10 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  const token = getBlobToken();
-  if (!token) {
-    sendError(res, 500, "服务端缺少 Blob 写入 Token");
+  try {
+    assertR2UploadConfig();
+  } catch (error) {
+    sendError(res, 500, "服务端缺少 R2 写入配置");
     return;
   }
 
@@ -104,13 +101,11 @@ module.exports = async function handler(req, res) {
     "words",
     `${slugify(word.word)}-v${nextVersion}${ext}`
   );
-  const blob = await put(storageKey, imageBuffer, {
-    access: "private",
-    allowOverwrite: true,
+  const object = await putObject(storageKey, imageBuffer, {
     contentType,
-    token,
+    cacheControl: "public, max-age=31536000, immutable",
   });
-  const imageUrl = `/api/assets?key=${encodeURIComponent(storageKey)}&v=${nextVersion}`;
+  const imageUrl = object.url;
 
   word.image = {
     status: "ready",

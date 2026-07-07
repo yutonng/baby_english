@@ -63,14 +63,20 @@ npm run register:image -- --scene zoo --word lion --source /path/to/lion.png --p
 
 ## 线上内容服务
 
-上线到 Vercel 后，内容 API 会使用 Vercel Blob 存储草稿和发布数据，不依赖本地可写文件。
+上线到 Vercel 后，内容 API 会使用 Cloudflare R2 存储草稿、发布数据、图片和音频，不依赖本地可写文件。
 
 需要在 Vercel 项目里配置环境变量：
 
 ```sh
-CONTENT_BLOB_READ_WRITE_TOKEN=...
 ADMIN_TOKEN=...
+R2_ACCOUNT_ID=...
+R2_ACCESS_KEY_ID=...
+R2_SECRET_ACCESS_KEY=...
+R2_BUCKET=...
+R2_PUBLIC_BASE_URL=https://assets.example.com
 ```
+
+`R2_PUBLIC_BASE_URL` 应该使用绑定到 R2 bucket 的自定义公开域名。不要长期使用 `r2.dev`。
 
 接口：
 
@@ -101,9 +107,32 @@ CONTENT_API_BASE=https://你的域名 npm run cap:copy:release
 ```sh
 CONTENT_API_BASE=https://你的域名 \
 ADMIN_TOKEN=... \
-CONTENT_BLOB_READ_WRITE_TOKEN=... \
 npm run register:image -- --scene zoo --word lion --source /path/to/lion.png --prompt "imagegen prompt"
 ```
+
+## 从 Vercel Blob 迁移到 R2
+
+迁移前先保留旧 Blob token，并配置好 R2 环境变量。默认 dry run 不写入 R2：
+
+```sh
+CONTENT_BLOB_READ_WRITE_TOKEN=... \
+R2_PUBLIC_BASE_URL=https://assets.example.com \
+npm run assets:migrate-r2
+```
+
+确认输出的 `assetCount` 和 `jsonRewrites` 后再执行真实迁移：
+
+```sh
+CONTENT_BLOB_READ_WRITE_TOKEN=... \
+R2_ACCOUNT_ID=... \
+R2_ACCESS_KEY_ID=... \
+R2_SECRET_ACCESS_KEY=... \
+R2_BUCKET=... \
+R2_PUBLIC_BASE_URL=https://assets.example.com \
+npm run assets:migrate-r2 -- --apply
+```
+
+迁移验证通过后，再从 Vercel 删除旧的 `CONTENT_BLOB_READ_WRITE_TOKEN`。
 
 ## 打包 Android APK
 

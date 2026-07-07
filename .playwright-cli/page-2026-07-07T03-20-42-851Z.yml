@@ -1,0 +1,141 @@
+- main [ref=e2]:
+  - region "Little English" [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e6]:
+        - heading "Little English" [level=1] [ref=e7]
+        - img [ref=e8]
+      - generic "工具" [ref=e10]:
+        - button "搜索" [ref=e11]:
+          - img [ref=e12]
+        - button "设置" [ref=e15]:
+          - img [ref=e16]
+    - generic [ref=e19]:
+      - button "医院 Hospital 12 words" [ref=e20]:
+        - generic [ref=e21]: 🏥
+        - generic [ref=e22]:
+          - heading "医院" [level=3] [ref=e23]
+          - paragraph [ref=e24]:
+            - text: Hospital
+            - generic [ref=e25]: 12 words
+        - generic [ref=e26]: ›
+      - button "超市 Supermarket 12 words" [ref=e27]:
+        - generic [ref=e28]: 🛒
+        - generic [ref=e29]:
+          - heading "超市" [level=3] [ref=e30]
+          - paragraph [ref=e31]:
+            - text: Supermarket
+            - generic [ref=e32]: 12 words
+        - generic [ref=e33]: ›
+      - button "客厅 Living Room 12 words" [ref=e34]:
+        - generic [ref=e35]: 🛋️
+        - generic [ref=e36]:
+          - heading "客厅" [level=3] [ref=e37]
+          - paragraph [ref=e38]:
+            - text: Living Room
+            - generic [ref=e39]: 12 words
+        - generic [ref=e40]: ›
+      - button "卧室 Bedroom 12 words" [ref=e41]:
+        - generic [ref=e42]: 🛏️
+        - generic [ref=e43]:
+          - heading "卧室" [level=3] [ref=e44]
+          - paragraph [ref=e45]:
+            - text: Bedroom
+            - generic [ref=e46]: 12 words
+        - generic [ref=e47]: ›
+      - button "厨房 Kitchen 14 words" [ref=e48]:
+        - generic [ref=e49]: 🍽️
+        - generic [ref=e50]:
+          - heading "厨房" [level=3] [ref=e51]
+          - paragraph [ref=e52]:
+            - text: Kitchen
+            - generic [ref=e53]: 14 words
+        - generic [ref=e54]: ›
+      - button "幼儿园 Kindergarten 12 words" [ref=e55]:
+        - generic [ref=e56]: 🎒
+        - generic [ref=e57]:
+          - heading "幼儿园" [level=3] [ref=e58]
+          - paragraph [ref=e59]:
+            - text: Kindergarten
+            - generic [ref=e60]: 12 words
+        - generic [ref=e61]: ›
+      - button "动物园 Zoo 13 words" [ref=e62]:
+        - generic [ref=e63]: 🦁
+        - generic [ref=e64]:
+          - heading "动物园" [level=3] [ref=e65]
+          - paragraph [ref=e66]:
+            - text: Zoo
+            - generic [ref=e67]: 13 words
+        - generic [ref=e68]: ›
+      - button "游乐场 Playground 12 words" [ref=e69]:
+        - generic [ref=e70]: 🎠
+        - generic [ref=e71]:
+          - heading "游乐场" [level=3] [ref=e72]
+          - paragraph [ref=e73]:
+            - text: Playground
+            - generic [ref=e74]: 12 words
+        - generic [ref=e75]: ›
+      - button "地铁站 Subway Station 12 words" [ref=e76]:
+        - generic [ref=e77]: 🚇
+        - generic [ref=e78]:
+          - heading "地铁站" [level=3] [ref=e79]
+          - paragraph [ref=e80]:
+            - text: Subway Station
+            - generic [ref=e81]: 12 words
+        - generic [ref=e82]: ›
+      - button "公交 Bus 12 words" [ref=e83]:
+        - generic [ref=e84]: 🚌
+        - generic [ref=e85]:
+          - heading "公交" [level=3] [ref=e86]
+          - paragraph [ref=e87]:
+            - text: Bus
+            - generic [ref=e88]: 12 words
+        - generic [ref=e89]: ›
+      - button "卫生间 Bathroom 12 words" [ref=e90]:
+        - generic [ref=e91]: 🧼
+        - generic [ref=e92]:
+          - heading "卫生间" [level=3] [ref=e93]
+          - paragraph [ref=e94]:
+            - text: Bathroom
+            - generic [ref=e95]: 12 words
+        - generic [ref=e96]: ›
+      - button "交通工具 Vehicles 14 words" [ref=e97]:
+        - generic [ref=e98]: 🚗
+        - generic [ref=e99]:
+          - heading "交通工具" [level=3] [ref=e100]
+          - paragraph [ref=e101]:
+            - text: Vehicles
+            - generic [ref=e102]: 14 words
+        - generic [ref=e103]: ›
+      - button "公园 Park 14 words" [ref=e104]:
+        - generic [ref=e105]: 🌳
+        - generic [ref=e106]:
+          - heading "公园" [level=3] [ref=e107]
+          - paragraph [ref=e108]:
+            - text: Park
+            - generic [ref=e109]: 14 words
+        - generic [ref=e110]: ›
+      - button "军事博物馆 Military Museum 12 words" [ref=e111]:
+        - generic [ref=e112]: 🏛️
+        - generic [ref=e113]:
+          - heading "军事博物馆" [level=3] [ref=e114]
+          - paragraph [ref=e115]:
+            - text: Military Museum
+            - generic [ref=e116]: 12 words
+        - generic [ref=e117]: ›
+      - button "自然博物馆 Nature Museum 17 words" [ref=e118]:
+        - generic [ref=e119]: 🦕
+        - generic [ref=e120]:
+          - heading "自然博物馆" [level=3] [ref=e121]
+          - paragraph [ref=e122]:
+            - text: Nature Museum
+            - generic [ref=e123]: 17 words
+        - generic [ref=e124]: ›
+      - button "指示牌 Signs 14 words" [ref=e125]:
+        - generic [ref=e126]: 🚦
+        - generic [ref=e127]:
+          - heading "指示牌" [level=3] [ref=e128]
+          - paragraph [ref=e129]:
+            - text: Signs
+            - generic [ref=e130]: 14 words
+        - generic [ref=e131]: ›
+  - text: ›

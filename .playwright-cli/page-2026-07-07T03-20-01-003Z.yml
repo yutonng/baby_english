@@ -1,0 +1,12 @@
+- main [ref=e2]:
+  - region "Little English" [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e6]:
+        - heading "Little English" [level=1] [ref=e7]
+        - img [ref=e8]
+      - generic "工具" [ref=e10]:
+        - button "搜索" [ref=e11]:
+          - img [ref=e12]
+        - button "设置" [ref=e15]:
+          - img [ref=e16]
+  - text: ›

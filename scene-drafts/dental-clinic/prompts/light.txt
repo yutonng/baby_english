@@ -1,0 +1,7 @@
+Use case: preschool English learning word image
+Asset type: single object word card image
+Subject: dental examination light
+Style: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow
+Composition: one centered subject, square image, full object visible, generous padding, no crop, no extra props
+Background: pure white
+Constraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child

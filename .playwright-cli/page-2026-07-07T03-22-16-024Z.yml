@@ -1,0 +1,16 @@
+- main "BabyEng Xiaohongshu cover" [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - generic [ref=f1e4]: 2-6岁英语启蒙
+    - heading "不是背单词 是在场景里听懂" [level=1] [ref=f1e5]:
+      - text: 不是背单词
+      - generic [ref=f1e6]: 是在场景里听懂
+    - generic [ref=f1e7]: 厨房、超市、动物园这些孩子熟悉的地方，更容易开口。
+  - generic [ref=f1e8]: Little English
+  - region "App screenshot" [ref=f1e9]:
+    - img "Little English 厨房场景词卡截图" [ref=f1e11]
+  - complementary [ref=f1e12]:
+    - generic [ref=f1e13]: 每天 5 分钟
+    - generic [ref=f1e14]: 先让孩子把英语和真实生活连起来。
+  - generic [ref=f1e15]:
+    - text: 亲子
+    - text: 不鸡娃

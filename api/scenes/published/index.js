@@ -12,5 +12,5 @@ module.exports = async function handler(req, res) {
   }
 
   const scenes = (await readPublished()).sort((a, b) => getSceneTime(b) - getSceneTime(a));
-  sendJson(res, 200, scenes, "no-store, max-age=0");
+  sendJson(res, 200, scenes, "public, s-maxage=60, stale-while-revalidate=300");
 };

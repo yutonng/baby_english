@@ -46,7 +46,6 @@ function buildMetadataItem({ sceneId, wordIndex, word, language, kind }) {
     word,
     language,
     kind: kind === "words" ? "word" : "sentence",
-    version: 1,
   };
 }
 

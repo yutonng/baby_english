@@ -1,0 +1,12 @@
+- main [ref=f6e2]:
+  - img "Little English 厨房场景真实截图" [ref=f6e3]
+  - generic [ref=f6e4]:
+    - generic [ref=f6e5]: 2-6岁英语启蒙
+    - heading "不是背单词 是在场景里 听懂英语" [level=1] [ref=f6e6]:
+      - text: 不是背单词
+      - text: 是在场景里
+      - generic [ref=f6e7]: 听懂英语
+    - generic [ref=f6e8]: 孩子熟悉的东西，更容易开口。
+  - generic [ref=f6e9]:
+    - generic [ref=f6e10]: 真实 App 截图
+    - generic [ref=f6e11]: 每天 5 分钟，把英语和生活里的东西连起来。

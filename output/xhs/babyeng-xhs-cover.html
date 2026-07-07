@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BabyEng Xiaohongshu Cover</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      width: 1080px;
+      height: 1080px;
+      overflow: hidden;
+      background: #fff6e8;
+      font-family: "Hiragino Sans GB", "STHeiti", "PingFang SC", "Arial", sans-serif;
+    }
+
+    .cover {
+      position: relative;
+      width: 1080px;
+      height: 1080px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 20px 20px, rgba(238, 179, 103, 0.32) 0 3px, transparent 4px) 0 0 / 42px 42px,
+        linear-gradient(135deg, #fff8ed 0%, #f8fff7 58%, #eef8ff 100%);
+      color: #061852;
+    }
+
+    .copy {
+      position: absolute;
+      z-index: 3;
+      top: 58px;
+      left: 58px;
+      width: 630px;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      height: 50px;
+      padding: 0 22px;
+      border: 3px solid #061852;
+      border-radius: 999px;
+      background: #fff;
+      color: #061852;
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 0;
+      box-shadow: 5px 5px 0 #f2b35f;
+    }
+
+    h1 {
+      margin: 34px 0 0;
+      color: #061852;
+      font-size: 72px;
+      line-height: 1.08;
+      font-weight: 950;
+      letter-spacing: 0;
+    }
+
+    .highlight {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 0 14px 6px;
+      background: #ffe36a;
+      border-radius: 10px;
+      transform: rotate(-1.2deg);
+    }
+
+    .subtitle {
+      margin-top: 26px;
+      width: 510px;
+      color: #243160;
+      font-size: 31px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    .brand {
+      position: absolute;
+      z-index: 3;
+      top: 60px;
+      right: 58px;
+      padding: 16px 20px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.86);
+      color: #061852;
+      border: 3px solid rgba(6, 24, 82, 0.12);
+      font-size: 26px;
+      font-weight: 950;
+      box-shadow: 0 14px 34px rgba(6, 24, 82, 0.08);
+    }
+
+    .phone {
+      position: absolute;
+      z-index: 2;
+      right: 54px;
+      bottom: -92px;
+      width: 470px;
+      height: 1018px;
+      padding: 18px;
+      border-radius: 64px;
+      background: #061852;
+      box-shadow: 0 34px 80px rgba(6, 24, 82, 0.2);
+      transform: rotate(4deg);
+    }
+
+    .screen {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 48px;
+      background: #fff6e8;
+    }
+
+    .screen img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .mini-card {
+      position: absolute;
+      z-index: 3;
+      left: 58px;
+      bottom: 74px;
+      width: 520px;
+      padding: 25px 28px;
+      border: 4px solid #061852;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 9px 9px 0 #9bddc4;
+    }
+
+    .mini-title {
+      color: #061852;
+      font-size: 34px;
+      line-height: 1.25;
+      font-weight: 950;
+    }
+
+    .mini-text {
+      margin-top: 12px;
+      color: #5a6480;
+      font-size: 24px;
+      line-height: 1.32;
+      font-weight: 800;
+    }
+
+    .badge {
+      position: absolute;
+      z-index: 4;
+      right: 410px;
+      bottom: 272px;
+      width: 146px;
+      height: 146px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 4px solid #061852;
+      background: #ff8ea0;
+      color: white;
+      font-size: 27px;
+      line-height: 1.08;
+      font-weight: 950;
+      text-align: center;
+      box-shadow: 8px 8px 0 #061852;
+      transform: rotate(-9deg);
+    }
+  </style>
+</head>
+<body>
+  <main class="cover" aria-label="BabyEng Xiaohongshu cover">
+    <section class="copy">
+      <div class="kicker">2-6岁英语启蒙</div>
+      <h1>
+        不是背单词<br />
+        <span class="highlight">是在场景里听懂</span>
+      </h1>
+      <div class="subtitle">厨房、超市、动物园这些孩子熟悉的地方，更容易开口。</div>
+    </section>
+
+    <div class="brand">Little English</div>
+
+    <section class="phone" aria-label="App screenshot">
+      <div class="screen">
+        <img src="babyeng-kitchen-detail-mobile.png" alt="Little English 厨房场景词卡截图" />
+      </div>
+    </section>
+
+    <aside class="mini-card">
+      <div class="mini-title">每天 5 分钟</div>
+      <div class="mini-text">先让孩子把英语和真实生活连起来。</div>
+    </aside>
+
+    <div class="badge">亲子<br />不鸡娃</div>
+  </main>
+</body>
+</html>

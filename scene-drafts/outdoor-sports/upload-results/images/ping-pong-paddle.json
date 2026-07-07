@@ -1,0 +1,17 @@
+{
+  "out": "/var/folders/8t/lh34gqrn0zb42mhhzycc93zc0000gn/T/babyeng-image-HLppEB/ping-pong-paddle-512-q30.webp",
+  "width": 512,
+  "height": 512,
+  "sizeBytes": 3692,
+  "quality": 30
+}
+{
+  "status": "ready",
+  "storageKey": "scenes/outdoor-sports/words/ping-pong-paddle-v1.webp",
+  "url": "/api/assets?key=scenes%2Foutdoor-sports%2Fwords%2Fping-pong-paddle-v1.webp&v=1",
+  "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: ping-pong paddle with one small ball, no text\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+  "version": 1,
+  "width": "512",
+  "height": "512",
+  "updatedAt": "2026-07-02T06:27:10.024Z"
+}

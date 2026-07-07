@@ -1,5 +1,5 @@
 let scenes = [];
-const sceneCacheKey = "little-english-published-scenes";
+const sceneCacheKey = "little-english-published-scenes-v2";
 const languageSettingsKey = "little-english-language-settings";
 const APP_VERSION = "0.1.0";
 const SUPPORTED_LANGUAGES = [
@@ -144,19 +144,24 @@ function readCachedScenes() {
   }
 }
 
+async function fetchPublishedScenesFromServer() {
+  const remoteUrl = `${getContentApiBase()}/api/scenes/published`;
+  const response = await fetch(remoteUrl);
+  if (!response.ok) throw new Error(`Scene data request failed: ${response.status}`);
+  const loadedScenes = assignSceneColors(normalizeSceneImages(await response.json()));
+  if (!Array.isArray(loadedScenes) || loadedScenes.length === 0) {
+    throw new Error("Scene data is empty");
+  }
+  localStorage.setItem(sceneCacheKey, JSON.stringify(loadedScenes));
+  return loadedScenes;
+}
+
 async function loadPublishedScenes() {
   try {
-    const remoteUrl = `${getContentApiBase()}/api/scenes/published?t=${Date.now()}`;
-    const response = await fetch(remoteUrl, { cache: "no-store" });
-    if (!response.ok) throw new Error(`Scene data request failed: ${response.status}`);
-    const loadedScenes = assignSceneColors(normalizeSceneImages(await response.json()));
-    if (!Array.isArray(loadedScenes) || loadedScenes.length === 0) {
-      throw new Error("Scene data is empty");
-    }
-    localStorage.setItem(sceneCacheKey, JSON.stringify(loadedScenes));
-    return loadedScenes;
+    return await fetchPublishedScenesFromServer();
   } catch (error) {
     console.error(error);
+    scheduleSceneRefreshRetries();
     const cachedScenes = readCachedScenes();
     if (cachedScenes.length > 0) return assignSceneColors(cachedScenes);
   }
@@ -229,6 +234,8 @@ let isRestoringHistory = false;
 let sceneSearchQuery = "";
 let wordBackGesture = null;
 let sceneBackGesture = null;
+let sceneRefreshInFlight = null;
+let sceneRetryTimers = [];
 let languageSettings = readLanguageSettings();
 
 function normalizeLanguage(language) {
@@ -293,6 +300,69 @@ function getSourceWord(item) {
 
 function getConceptSlug(item) {
   return slugify(item.word || item.i18n?.["en-US"]?.word || item.cn || "");
+}
+
+function clearSceneRefreshRetries() {
+  sceneRetryTimers.forEach((timer) => clearTimeout(timer));
+  sceneRetryTimers = [];
+}
+
+function scheduleSceneRefreshRetries() {
+  if (sceneRetryTimers.length > 0) return;
+  [800, 2500, 6000, 12000].forEach((delay) => {
+    const timer = setTimeout(() => {
+      sceneRetryTimers = sceneRetryTimers.filter((item) => item !== timer);
+      refreshPublishedScenes();
+    }, delay);
+    sceneRetryTimers.push(timer);
+  });
+}
+
+function syncCurrentSceneAfterRefresh() {
+  if (currentScene) {
+    currentScene = scenes.find((scene) => scene.id === currentScene.id) || scenes[0] || null;
+  } else {
+    currentScene = scenes[0] || null;
+  }
+
+  if (currentWord && currentScene) {
+    currentWord = currentScene.words.find((item) => item.word === currentWord.word) || currentScene.words[0] || null;
+  } else {
+    currentWord = currentScene?.words?.[0] || null;
+  }
+}
+
+function renderAfterSceneRefresh() {
+  renderScenes();
+  renderSearchResults();
+  if (currentScene && !sceneView.classList.contains("is-hidden")) {
+    renderWords(currentScene);
+  }
+  if (currentWord && !wordSheet.classList.contains("is-hidden")) {
+    renderWordSheetContent(currentWord, currentScene);
+  }
+}
+
+async function refreshPublishedScenes() {
+  if (sceneRefreshInFlight) return sceneRefreshInFlight;
+
+  sceneRefreshInFlight = fetchPublishedScenesFromServer()
+    .then((loadedScenes) => {
+      scenes = loadedScenes;
+      syncCurrentSceneAfterRefresh();
+      renderAfterSceneRefresh();
+      clearSceneRefreshRetries();
+      return loadedScenes;
+    })
+    .catch((error) => {
+      console.error(error);
+      return null;
+    })
+    .finally(() => {
+      sceneRefreshInFlight = null;
+    });
+
+  return sceneRefreshInFlight;
 }
 
 function renderScenes() {
@@ -836,6 +906,11 @@ async function initApp() {
   document.addEventListener("touchend", handleWordGestureEnd, { passive: true });
   document.addEventListener("touchstart", handleSceneGestureStart, { passive: true });
   document.addEventListener("touchend", handleSceneGestureEnd, { passive: true });
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) refreshPublishedScenes();
+  });
+  window.addEventListener("focus", refreshPublishedScenes);
+  window.addEventListener("online", refreshPublishedScenes);
   window.littleEnglishHandleBack = handleAppBack;
 }
 

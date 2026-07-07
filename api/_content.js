@@ -1,8 +1,8 @@
 const fs = require("node:fs/promises");
 const crypto = require("node:crypto");
 const path = require("node:path");
-const { get, put } = require("@vercel/blob");
 const { enrichSceneI18n, normalizeI18n } = require("../scripts/i18n-content");
+const { hasR2Credentials, readJsonObject, writeJsonObject } = require("../lib/r2-storage");
 
 const rootDir = path.join(__dirname, "..");
 const dataDir = path.join(rootDir, "data");
@@ -10,14 +10,6 @@ const draftsPath = path.join(dataDir, "scenes.drafts.json");
 const publishedPath = path.join(dataDir, "scenes.published.json");
 const draftsKey = "content/scenes.drafts.json";
 const publishedKey = "content/scenes.published.json";
-
-function getBlobToken() {
-  return process.env.BLOB_READ_WRITE_TOKEN || process.env.CONTENT_BLOB_READ_WRITE_TOKEN || "";
-}
-
-function hasBlobStorage() {
-  return Boolean(getBlobToken());
-}
 
 async function readLocalJson(filePath, fallback) {
   try {
@@ -35,53 +27,40 @@ async function writeLocalJson(filePath, value) {
   await fs.rename(tmpPath, filePath);
 }
 
-async function readBlobJson(key, fallback, seedFilePath) {
+async function readRemoteJson(key, fallback, seedFilePath) {
   try {
-    const result = await get(key, {
-      access: "private",
-      token: getBlobToken(),
-    });
-    if (!result || !result.stream) {
+    const value = await readJsonObject(key);
+    if (!value) {
       if (seedFilePath) return readLocalJson(seedFilePath, fallback);
       return fallback;
     }
-    const text = await new Response(result.stream).text();
-    return JSON.parse(text);
+    return value;
   } catch (error) {
-    if (error.status === 404 || error.statusCode === 404 || /not found/i.test(error.message || "")) {
-      if (seedFilePath) return readLocalJson(seedFilePath, fallback);
-      return fallback;
-    }
     throw error;
   }
 }
 
-async function writeBlobJson(key, value) {
-  await put(key, JSON.stringify(value, null, 2), {
-    access: "private",
-    contentType: "application/json; charset=utf-8",
-    allowOverwrite: true,
-    token: getBlobToken(),
-  });
+async function writeRemoteJson(key, value) {
+  await writeJsonObject(key, value);
 }
 
 async function readDrafts() {
-  const scenes = hasBlobStorage() ? await readBlobJson(draftsKey, [], draftsPath) : await readLocalJson(draftsPath, []);
+  const scenes = hasR2Credentials() ? await readRemoteJson(draftsKey, [], draftsPath) : await readLocalJson(draftsPath, []);
   return Array.isArray(scenes) ? scenes.map(enrichSceneI18n) : [];
 }
 
 async function writeDrafts(value) {
-  if (hasBlobStorage()) return writeBlobJson(draftsKey, value);
+  if (hasR2Credentials()) return writeRemoteJson(draftsKey, value);
   return writeLocalJson(draftsPath, value);
 }
 
 async function readPublished() {
-  const scenes = hasBlobStorage() ? await readBlobJson(publishedKey, [], publishedPath) : await readLocalJson(publishedPath, []);
+  const scenes = hasR2Credentials() ? await readRemoteJson(publishedKey, [], publishedPath) : await readLocalJson(publishedPath, []);
   return Array.isArray(scenes) ? scenes.map(enrichSceneI18n) : [];
 }
 
 async function writePublished(value) {
-  if (hasBlobStorage()) return writeBlobJson(publishedKey, value);
+  if (hasR2Credentials()) return writeRemoteJson(publishedKey, value);
   return writeLocalJson(publishedPath, value);
 }
 

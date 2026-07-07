@@ -1,11 +1,7 @@
 const path = require("node:path");
-const { get } = require("@vercel/blob");
+const { getContentType, hasR2Credentials, readObjectBuffer } = require("../lib/r2-storage");
 
-function getBlobToken() {
-  return process.env.BLOB_READ_WRITE_TOKEN || process.env.CONTENT_BLOB_READ_WRITE_TOKEN || "";
-}
-
-function getContentType(key) {
+function getFallbackContentType(key) {
   const ext = path.extname(key || "").toLowerCase();
   if (ext === ".webp") return "image/webp";
   if (ext === ".png") return "image/png";
@@ -28,9 +24,8 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  const token = getBlobToken();
-  if (!token) {
-    sendError(res, 500, "服务端缺少 Blob 读取 Token");
+  if (!hasR2Credentials()) {
+    sendError(res, 500, "服务端缺少 R2 读取配置");
     return;
   }
 
@@ -40,20 +35,19 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  const blob = await get(key, { access: "private", token });
-  if (!blob || !blob.stream) {
+  const buffer = await readObjectBuffer(key);
+  if (!buffer) {
     sendError(res, 404, "找不到资源");
     return;
   }
 
   res.statusCode = 200;
-  res.setHeader("content-type", getContentType(key));
+  res.setHeader("content-type", getContentType(key) || getFallbackContentType(key));
   res.setHeader("cache-control", "public, max-age=31536000, immutable");
   if (req.method === "HEAD") {
     res.end();
     return;
   }
 
-  const arrayBuffer = await new Response(blob.stream).arrayBuffer();
-  res.end(Buffer.from(arrayBuffer));
+  res.end(buffer);
 };

@@ -1,0 +1,1044 @@
+{
+  "id": "dental-clinic",
+  "title": "牙科诊所",
+  "subtitle": "Dental Clinic",
+  "icon": "🦷",
+  "colors": [
+    "#BFEAD8",
+    "#BDE7F6"
+  ],
+  "status": "draft",
+  "i18n": {
+    "zh-CN": {
+      "title": "牙科诊所"
+    },
+    "en-US": {
+      "title": "Dental Clinic"
+    },
+    "ja-JP": {
+      "title": "歯医者さん"
+    }
+  },
+  "words": [
+    {
+      "word": "tooth",
+      "cn": "牙齿",
+      "picture": "🦷",
+      "sentence": "This is a tooth.",
+      "i18n": {
+        "zh-CN": {
+          "word": "牙齿",
+          "sentence": "这是牙齿。"
+        },
+        "en-US": {
+          "word": "tooth",
+          "sentence": "This is a tooth."
+        },
+        "ja-JP": {
+          "word": "歯",
+          "sentence": "これは歯です。"
+        }
+      },
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/dental-clinic/words/tooth-v1.webp",
+        "url": "/api/assets?key=scenes%2Fdental-clinic%2Fwords%2Ftooth-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: single clean tooth\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": 512,
+        "height": 512
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/words/tooth-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fwords%2Ftooth-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/sentences/tooth-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fsentences%2Ftooth-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/words/tooth-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fwords%2Ftooth-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/sentences/tooth-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fsentences%2Ftooth-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/words/tooth-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fwords%2Ftooth-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/sentences/tooth-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fsentences%2Ftooth-v1.mp3&v=1",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "dentist",
+      "cn": "牙医",
+      "picture": "🧑‍⚕️",
+      "sentence": "This is a dentist.",
+      "i18n": {
+        "zh-CN": {
+          "word": "牙医",
+          "sentence": "这是牙医。"
+        },
+        "en-US": {
+          "word": "dentist",
+          "sentence": "This is a dentist."
+        },
+        "ja-JP": {
+          "word": "はいしゃさん",
+          "sentence": "これははいしゃさんです。"
+        }
+      },
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/dental-clinic/words/dentist-v1.webp",
+        "url": "/api/assets?key=scenes%2Fdental-clinic%2Fwords%2Fdentist-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: friendly dentist in clean coat, standing, no tools\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": 512,
+        "height": 512
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/words/dentist-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fwords%2Fdentist-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/sentences/dentist-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fsentences%2Fdentist-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/words/dentist-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fwords%2Fdentist-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/sentences/dentist-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fsentences%2Fdentist-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/words/dentist-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fwords%2Fdentist-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/sentences/dentist-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fsentences%2Fdentist-v1.mp3&v=1",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "chair",
+      "cn": "牙科椅",
+      "picture": "💺",
+      "sentence": "This is a dental chair.",
+      "i18n": {
+        "zh-CN": {
+          "word": "牙科椅",
+          "sentence": "这是牙科椅。"
+        },
+        "en-US": {
+          "word": "chair",
+          "sentence": "This is a dental chair."
+        },
+        "ja-JP": {
+          "word": "しんさついす",
+          "sentence": "これはしんさついすです。"
+        }
+      },
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/dental-clinic/words/chair-v1.webp",
+        "url": "/api/assets?key=scenes%2Fdental-clinic%2Fwords%2Fchair-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: dental chair\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": 512,
+        "height": 512
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/words/chair-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fwords%2Fchair-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/sentences/chair-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fsentences%2Fchair-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/words/chair-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fwords%2Fchair-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/sentences/chair-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fsentences%2Fchair-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/words/chair-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fwords%2Fchair-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/sentences/chair-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fsentences%2Fchair-v1.mp3&v=1",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "toothbrush",
+      "cn": "牙刷",
+      "picture": "🪥",
+      "sentence": "This is a toothbrush.",
+      "i18n": {
+        "zh-CN": {
+          "word": "牙刷",
+          "sentence": "这是牙刷。"
+        },
+        "en-US": {
+          "word": "toothbrush",
+          "sentence": "This is a toothbrush."
+        },
+        "ja-JP": {
+          "word": "はブラシ",
+          "sentence": "これははブラシです。"
+        }
+      },
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/dental-clinic/words/toothbrush-v1.webp",
+        "url": "/api/assets?key=scenes%2Fdental-clinic%2Fwords%2Ftoothbrush-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: toothbrush\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": 512,
+        "height": 512
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/words/toothbrush-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fwords%2Ftoothbrush-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/sentences/toothbrush-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fsentences%2Ftoothbrush-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/words/toothbrush-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fwords%2Ftoothbrush-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/sentences/toothbrush-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fsentences%2Ftoothbrush-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/words/toothbrush-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fwords%2Ftoothbrush-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/sentences/toothbrush-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fsentences%2Ftoothbrush-v1.mp3&v=1",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "toothpaste",
+      "cn": "牙膏",
+      "picture": "🪥",
+      "sentence": "This is toothpaste.",
+      "i18n": {
+        "zh-CN": {
+          "word": "牙膏",
+          "sentence": "这是牙膏。"
+        },
+        "en-US": {
+          "word": "toothpaste",
+          "sentence": "This is toothpaste."
+        },
+        "ja-JP": {
+          "word": "はみがきこ",
+          "sentence": "これははみがきこです。"
+        }
+      },
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/dental-clinic/words/toothpaste-v1.webp",
+        "url": "/api/assets?key=scenes%2Fdental-clinic%2Fwords%2Ftoothpaste-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: toothpaste tube, no text\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": 512,
+        "height": 512
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/words/toothpaste-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fwords%2Ftoothpaste-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/sentences/toothpaste-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fsentences%2Ftoothpaste-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/words/toothpaste-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fwords%2Ftoothpaste-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/sentences/toothpaste-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fsentences%2Ftoothpaste-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/words/toothpaste-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fwords%2Ftoothpaste-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/sentences/toothpaste-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fsentences%2Ftoothpaste-v1.mp3&v=1",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "mirror",
+      "cn": "小镜子",
+      "picture": "🪞",
+      "sentence": "This is a mirror.",
+      "i18n": {
+        "zh-CN": {
+          "word": "小镜子",
+          "sentence": "这是小镜子。"
+        },
+        "en-US": {
+          "word": "mirror",
+          "sentence": "This is a mirror."
+        },
+        "ja-JP": {
+          "word": "ミラー",
+          "sentence": "これはミラーです。"
+        }
+      },
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/dental-clinic/words/mirror-v1.webp",
+        "url": "/api/assets?key=scenes%2Fdental-clinic%2Fwords%2Fmirror-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: small dental mirror\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": 512,
+        "height": 512
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/words/mirror-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fwords%2Fmirror-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/sentences/mirror-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fsentences%2Fmirror-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/words/mirror-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fwords%2Fmirror-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/sentences/mirror-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fsentences%2Fmirror-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/words/mirror-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fwords%2Fmirror-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/sentences/mirror-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fsentences%2Fmirror-v1.mp3&v=1",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "cup",
+      "cn": "杯子",
+      "picture": "🥤",
+      "sentence": "This is a cup.",
+      "i18n": {
+        "zh-CN": {
+          "word": "杯子",
+          "sentence": "这是杯子。"
+        },
+        "en-US": {
+          "word": "cup",
+          "sentence": "This is a cup."
+        },
+        "ja-JP": {
+          "word": "コップ",
+          "sentence": "これはコップです。"
+        }
+      },
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/dental-clinic/words/cup-v1.webp",
+        "url": "/api/assets?key=scenes%2Fdental-clinic%2Fwords%2Fcup-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: simple rinsing cup\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": 512,
+        "height": 512
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/words/cup-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fwords%2Fcup-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/sentences/cup-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fsentences%2Fcup-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/words/cup-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fwords%2Fcup-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/sentences/cup-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fsentences%2Fcup-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/words/cup-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fwords%2Fcup-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/sentences/cup-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fsentences%2Fcup-v1.mp3&v=1",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "sink",
+      "cn": "洗手池",
+      "picture": "🚰",
+      "sentence": "This is a sink.",
+      "i18n": {
+        "zh-CN": {
+          "word": "洗手池",
+          "sentence": "这是洗手池。"
+        },
+        "en-US": {
+          "word": "sink",
+          "sentence": "This is a sink."
+        },
+        "ja-JP": {
+          "word": "シンク",
+          "sentence": "これはシンクです。"
+        }
+      },
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/dental-clinic/words/sink-v1.webp",
+        "url": "/api/assets?key=scenes%2Fdental-clinic%2Fwords%2Fsink-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: clean small sink\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": 512,
+        "height": 512
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/words/sink-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fwords%2Fsink-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/sentences/sink-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fsentences%2Fsink-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/words/sink-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fwords%2Fsink-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/sentences/sink-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fsentences%2Fsink-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/words/sink-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fwords%2Fsink-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/sentences/sink-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fsentences%2Fsink-v1.mp3&v=1",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "mask",
+      "cn": "口罩",
+      "picture": "😷",
+      "sentence": "This is a mask.",
+      "i18n": {
+        "zh-CN": {
+          "word": "口罩",
+          "sentence": "这是口罩。"
+        },
+        "en-US": {
+          "word": "mask",
+          "sentence": "This is a mask."
+        },
+        "ja-JP": {
+          "word": "マスク",
+          "sentence": "これはマスクです。"
+        }
+      },
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/dental-clinic/words/mask-v1.webp",
+        "url": "/api/assets?key=scenes%2Fdental-clinic%2Fwords%2Fmask-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: medical face mask\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": 512,
+        "height": 512
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/words/mask-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fwords%2Fmask-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/sentences/mask-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fsentences%2Fmask-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/words/mask-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fwords%2Fmask-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/sentences/mask-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fsentences%2Fmask-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/words/mask-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fwords%2Fmask-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/sentences/mask-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fsentences%2Fmask-v1.mp3&v=1",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "gloves",
+      "cn": "手套",
+      "picture": "🧤",
+      "sentence": "These are gloves.",
+      "i18n": {
+        "zh-CN": {
+          "word": "手套",
+          "sentence": "这是手套。"
+        },
+        "en-US": {
+          "word": "gloves",
+          "sentence": "These are gloves."
+        },
+        "ja-JP": {
+          "word": "てぶくろ",
+          "sentence": "これはてぶくろです。"
+        }
+      },
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/dental-clinic/words/gloves-v1.webp",
+        "url": "/api/assets?key=scenes%2Fdental-clinic%2Fwords%2Fgloves-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: pair of medical gloves\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": 512,
+        "height": 512
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/words/gloves-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fwords%2Fgloves-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/sentences/gloves-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fsentences%2Fgloves-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/words/gloves-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fwords%2Fgloves-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/sentences/gloves-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fsentences%2Fgloves-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/words/gloves-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fwords%2Fgloves-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/sentences/gloves-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fsentences%2Fgloves-v1.mp3&v=1",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "light",
+      "cn": "诊疗灯",
+      "picture": "💡",
+      "sentence": "This is a dental light.",
+      "i18n": {
+        "zh-CN": {
+          "word": "诊疗灯",
+          "sentence": "这是诊疗灯。"
+        },
+        "en-US": {
+          "word": "light",
+          "sentence": "This is a dental light."
+        },
+        "ja-JP": {
+          "word": "ライト",
+          "sentence": "これはライトです。"
+        }
+      },
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/dental-clinic/words/light-v1.webp",
+        "url": "/api/assets?key=scenes%2Fdental-clinic%2Fwords%2Flight-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: dental examination light\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": 512,
+        "height": 512
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/words/light-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fwords%2Flight-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/sentences/light-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fsentences%2Flight-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/words/light-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fwords%2Flight-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/sentences/light-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fsentences%2Flight-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/words/light-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fwords%2Flight-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/sentences/light-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fsentences%2Flight-v1.mp3&v=1",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "word": "floss",
+      "cn": "牙线",
+      "picture": "🧵",
+      "sentence": "This is floss.",
+      "i18n": {
+        "zh-CN": {
+          "word": "牙线",
+          "sentence": "这是牙线。"
+        },
+        "en-US": {
+          "word": "floss",
+          "sentence": "This is floss."
+        },
+        "ja-JP": {
+          "word": "デンタルフロス",
+          "sentence": "これはデンタルフロスです。"
+        }
+      },
+      "image": {
+        "status": "ready",
+        "storageKey": "scenes/dental-clinic/words/floss-v1.webp",
+        "url": "/api/assets?key=scenes%2Fdental-clinic%2Fwords%2Ffloss-v1.webp&v=1",
+        "prompt": "Use case: preschool English learning word image\nAsset type: single object word card image\nSubject: dental floss container and floss, no text\nStyle: simple realistic object illustration, softly polished, natural proportions, clear and easy to recognize at small size, child-friendly, clean edges, gentle light and shadow\nComposition: one centered subject, square image, full object visible, generous padding, no crop, no extra props\nBackground: pure white\nConstraints: no text, no watermark, no labels, no busy background, no abstract shape language, no cartoon face, no exaggerated stylization, no decorative scene, safe for a 4-year-old child",
+        "version": 1,
+        "width": 512,
+        "height": 512
+      },
+      "audio": {
+        "word": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "sentence": {
+          "status": "pending",
+          "storageKey": "",
+          "url": "",
+          "version": 1
+        },
+        "zh-CN": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/words/floss-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fwords%2Ffloss-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/zh-CN/sentences/floss-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fzh-CN%2Fsentences%2Ffloss-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "en-US": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/words/floss-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fwords%2Ffloss-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/en-US/sentences/floss-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fen-US%2Fsentences%2Ffloss-v1.mp3&v=1",
+            "version": 1
+          }
+        },
+        "ja-JP": {
+          "word": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/words/floss-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fwords%2Ffloss-v1.mp3&v=1",
+            "version": 1
+          },
+          "sentence": {
+            "status": "ready",
+            "storageKey": "scenes/dental-clinic/audio/ja-JP/sentences/floss-v1.mp3",
+            "url": "/api/assets?key=scenes%2Fdental-clinic%2Faudio%2Fja-JP%2Fsentences%2Ffloss-v1.mp3&v=1",
+            "version": 1
+          }
+        }
+      }
+    }
+  ]
+}
