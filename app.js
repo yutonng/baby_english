@@ -1,5 +1,12 @@
 let scenes = [];
-const sceneCacheKey = "little-english-published-scenes-v2";
+const sceneCacheKey = "little-english-published-scenes-v3";
+const SCENE_ICON_BY_ID = {
+  "living-room": "🛋️",
+  kindergarten: "🎒",
+  hotel: "🏨",
+  airport: "✈️",
+  "train-station": "🚉",
+};
 const languageSettingsKey = "little-english-language-settings";
 const APP_VERSION = "0.1.0";
 const SUPPORTED_LANGUAGES = [
@@ -18,7 +25,7 @@ const UI_TEXT = {
     emptyScenes: "还没有可用场景。",
     noSearchResults: "没有找到对应内容。",
     audioUnavailable: "这个浏览器不能播放朗读。请确认音频文件已部署，或换 Chrome/Safari 试试。",
-    speechFailed: "朗读没有启动。请确认音频文件已部署，或换 Chrome/Safari 试试。",
+    speechFailed: "朗读暂时不可用，请再试一次。",
   },
   "en-US": {
     settings: "Settings",
@@ -30,7 +37,7 @@ const UI_TEXT = {
     emptyScenes: "No scenes yet.",
     noSearchResults: "No matching content.",
     audioUnavailable: "This browser cannot play speech. Please check audio files or try Chrome/Safari.",
-    speechFailed: "Speech did not start. Please check audio files or try Chrome/Safari.",
+    speechFailed: "Speech is temporarily unavailable. Please try again.",
   },
   "ja-JP": {
     settings: "設定",
@@ -42,7 +49,7 @@ const UI_TEXT = {
     emptyScenes: "利用できるシーンはまだありません。",
     noSearchResults: "一致する内容がありません。",
     audioUnavailable: "このブラウザでは音声を再生できません。音声ファイルを確認するか、Chrome/Safari をお試しください。",
-    speechFailed: "音声が開始されませんでした。音声ファイルを確認するか、Chrome/Safari をお試しください。",
+    speechFailed: "音声を再生できません。もう一度お試しください。",
   },
 };
 const SCENE_COLOR_PALETTE = [
@@ -113,6 +120,7 @@ function normalizeRemoteAudio(audio, word) {
 function normalizeSceneImages(items) {
   return [...items].sort((a, b) => getSceneTime(b) - getSceneTime(a)).map((scene) => ({
     ...scene,
+    icon: SCENE_ICON_BY_ID[scene.id] || scene.icon,
     words: (scene.words || []).map((word) => ({
       ...word,
       image: normalizeRemoteImageUrl(word.image, word),
@@ -163,7 +171,7 @@ async function loadPublishedScenes() {
     console.error(error);
     scheduleSceneRefreshRetries();
     const cachedScenes = readCachedScenes();
-    if (cachedScenes.length > 0) return assignSceneColors(cachedScenes);
+    if (cachedScenes.length > 0) return assignSceneColors(normalizeSceneImages(cachedScenes));
   }
 
   try {
@@ -725,16 +733,25 @@ async function speak(text, target, kind, item, retried = false) {
   activeUtterance = utterance;
 
   return new Promise((resolve) => {
+    let speechStarted = false;
+    let fallbackTimer = null;
+
     utterance.onend = () => {
+      window.clearTimeout(fallbackTimer);
       target?.classList.remove("is-speaking");
       resolve();
     };
+    utterance.onstart = () => {
+      speechStarted = true;
+      window.clearTimeout(fallbackTimer);
+    };
     utterance.onerror = () => {
+      window.clearTimeout(fallbackTimer);
       target?.classList.remove("is-speaking");
-      if (!retried) {
+      if (!retried && !speechStarted) {
         window.setTimeout(() => {
           speak(text, target, kind, item, true).finally(resolve);
-        }, 180);
+        }, 300);
         return;
       }
       showAudioMessage(t("speechFailed"));
@@ -743,12 +760,14 @@ async function speak(text, target, kind, item, retried = false) {
 
     window.speechSynthesis.speak(utterance);
 
-    window.setTimeout(() => {
+    // WKWebView can take noticeably longer than Safari to update speaking/pending.
+    // Retrying after 280ms cancels speech that is about to start.
+    fallbackTimer = window.setTimeout(() => {
       const synth = window.speechSynthesis;
-      if (!retried && !synth.speaking && !synth.pending) {
+      if (!retried && !speechStarted && !synth.speaking && !synth.pending) {
         speak(text, target, kind, item, true).finally(resolve);
       }
-    }, 280);
+    }, 1500);
   });
 }
 

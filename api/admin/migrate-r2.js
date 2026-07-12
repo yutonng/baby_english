@@ -199,6 +199,40 @@ function isR2SceneImage(value) {
   return /^https:\/\/assets\.babyeng\.nihaoya\.cloud\/scenes\/[^/]+\/(?:images|words)\/[^/]+\.webp$/i.test(url);
 }
 
+function applySentenceRewrites(scenes, replacements, stats) {
+  const bySceneWord = new Map(
+    replacements.map((item) => [`${String(item.sceneId || "").trim()}::${slugify(item.word)}`, item])
+  );
+
+  return scenes.map((scene) => {
+    if (!Array.isArray(scene.words)) return scene;
+    let sceneChanged = false;
+    const words = scene.words.map((word) => {
+      const replacement = bySceneWord.get(`${scene.id}::${slugify(word.word)}`);
+      if (!replacement) return word;
+
+      const nextI18n = {
+        ...(word.i18n || {}),
+        ...(replacement.i18n || {}),
+      };
+      const nextSentence = String(replacement.sentence || replacement.i18n?.["en-US"]?.sentence || word.sentence || "").trim();
+      const changed =
+        word.sentence !== nextSentence ||
+        JSON.stringify(word.i18n || {}) !== JSON.stringify(nextI18n);
+
+      if (!changed) return word;
+      sceneChanged = true;
+      stats.rewrites += 1;
+      return {
+        ...word,
+        sentence: nextSentence,
+        i18n: nextI18n,
+      };
+    });
+    return sceneChanged ? { ...scene, words, updatedAt: new Date().toISOString() } : scene;
+  });
+}
+
 module.exports = async function handler(req, res) {
   if (!requireAdmin(req, res)) return;
   if (req.method !== "POST") {
@@ -343,6 +377,33 @@ module.exports = async function handler(req, res) {
 
       if (pruned.length && body.apply !== false) await writePublished(nextPublished);
       sendJson(res, 200, { applied: body.apply !== false, prunedCount: pruned.length, pruned });
+      return;
+    }
+
+    if (body.action === "rewriteSentences") {
+      const target = String(body.target || "published").trim();
+      const replacements = Array.isArray(body.replacements) ? body.replacements : [];
+      if (!["draft", "published", "both"].includes(target)) return sendError(res, 400, "target 必须是 draft、published 或 both");
+      if (!replacements.length || replacements.length > 1000) return sendError(res, 400, "replacements 数量必须在 1 到 1000 之间");
+
+      const stats = { rewrites: 0 };
+      const changedTargets = [];
+      if (target === "published" || target === "both") {
+        const published = applySentenceRewrites(await readPublished(), replacements, stats);
+        if (stats.rewrites) {
+          await writePublished(published);
+          changedTargets.push("published");
+        }
+      }
+      if (target === "draft" || target === "both") {
+        const before = stats.rewrites;
+        const drafts = applySentenceRewrites(await readDrafts(), replacements, stats);
+        if (stats.rewrites > before) {
+          await writeDrafts(drafts);
+          changedTargets.push("draft");
+        }
+      }
+      sendJson(res, 200, { rewrites: stats.rewrites, targets: changedTargets });
       return;
     }
 

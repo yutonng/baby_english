@@ -10,6 +10,13 @@ const draftsPath = path.join(dataDir, "scenes.drafts.json");
 const publishedPath = path.join(dataDir, "scenes.published.json");
 const draftsKey = "content/scenes.drafts.json";
 const publishedKey = "content/scenes.published.json";
+const sceneIconById = {
+  "living-room": "🛋️",
+  kindergarten: "🎒",
+  hotel: "🏨",
+  airport: "✈️",
+  "train-station": "🚉",
+};
 
 async function readLocalJson(filePath, fallback) {
   try {
@@ -46,7 +53,7 @@ async function writeRemoteJson(key, value) {
 
 async function readDrafts() {
   const scenes = hasR2Credentials() ? await readRemoteJson(draftsKey, [], draftsPath) : await readLocalJson(draftsPath, []);
-  return Array.isArray(scenes) ? scenes.map(enrichSceneI18n) : [];
+  return Array.isArray(scenes) ? scenes.map(normalizeSceneMetadata).map(enrichSceneI18n) : [];
 }
 
 async function writeDrafts(value) {
@@ -56,7 +63,7 @@ async function writeDrafts(value) {
 
 async function readPublished() {
   const scenes = hasR2Credentials() ? await readRemoteJson(publishedKey, [], publishedPath) : await readLocalJson(publishedPath, []);
-  return Array.isArray(scenes) ? scenes.map(enrichSceneI18n) : [];
+  return Array.isArray(scenes) ? scenes.map(normalizeSceneMetadata).map(enrichSceneI18n) : [];
 }
 
 async function writePublished(value) {
@@ -166,6 +173,12 @@ function normalizeColors(colors) {
   const fallback = ["#ffe3a3", "#bfe7ff"];
   if (!Array.isArray(colors) || colors.length < 2) return fallback;
   return colors.slice(0, 2).map((color, index) => String(color || fallback[index]));
+}
+
+function normalizeSceneMetadata(scene) {
+  if (!scene || typeof scene !== "object") return scene;
+  const icon = sceneIconById[scene.id] || scene.icon;
+  return icon === scene.icon ? scene : { ...scene, icon };
 }
 
 function normalizeImage(image) {
