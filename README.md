@@ -2,6 +2,14 @@
 
 一个给中文母语儿童使用的英语启蒙 H5。当前版本是纯静态页面，可以直接部署到 Vercel。
 
+## OpenAI Build Week: Codex 与 GPT-5.6
+
+Little English 的产品与工程迭代主要在 Codex 中完成。Codex 被用作工程协作伙伴，帮助梳理需求、跨 Web/iOS/Android/API 排查问题、实现内容审核与发布流程，并把图片、音频、缓存和移动端打包中的一次性修复整理为可重复执行的工作流。
+
+在 OpenAI Build Week 的最终迭代中，GPT-5.6 用于审查发布就绪状态、追踪线上内容读取与离线回退链路、核对多语言内容和资源一致性，并整理评委可复现的项目说明。项目运行时保持轻量：学习端不需要 AI 请求或儿童账号，AI 主要参与开发、验证和内容生产流程。
+
+The product and engineering workflow was developed primarily with Codex as an engineering partner. During the final OpenAI Build Week pass, GPT-5.6 was used to audit release readiness, trace the online-content and offline-fallback paths, verify multilingual asset consistency, and turn operational fixes into reproducible workflows. The learner-facing app remains lightweight and does not require a child account or runtime AI request.
+
 ## 本地预览
 
 ```sh
